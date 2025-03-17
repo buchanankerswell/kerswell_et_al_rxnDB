@@ -10,9 +10,12 @@ setup(
     packages=find_packages(),
     install_requires=[
         "shiny",
-        "pandas"
+        "pandas",
+        "seaborn",
+        "faicons",
+        "pytest"
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.13",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

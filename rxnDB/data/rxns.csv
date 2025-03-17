@@ -1,0 +1,115 @@
+id,enabled,formula,reaction_type,reactant1,reactant2,reactant3,product1,product2,product3,rxn,b,t1,t2,t3,t4,pmin,pmax,tmin,tmax,p_measurement,t_measurement,calibration_confidence,data_constraint_confidence,misc,ref
+1,1,CdGeO3,1:1,Pyx,,,Gt,,,Pyx=>Gt,-0.4934,0.0017,,,,0.4,2.6,1073,1773,Not stated,Not stated,Poor,Good,Experimental+Calorimetrics,1
+2,1,CdGeO3,1:1,Gt,,,Ilm,,,Gt=>Ilm,5.3258,0.0021,,,,6.5,8,1073,1773,Not stated,Not stated,Poor,Good,Experimental+Calorimetrics,1
+3,0,CdGeO3,1:1,Ilm,,,Pv,,,Ilm=>Pv,11.8934,-0.0017,,,,10,11,1073,1773,Not stated,Not stated,Poor,Good,Experimental+Calorimetrics,1
+4,0,CaGeO3,1:1,Gr,,,Pv,,,Gt=>Pv,6.9,-0.0008,,,,5.8,6.2,900,1140,NaCl (Decker 1971),Pt/Pt-Rh13,Good,Good,In situ X-ray,2
+5,1,CaGeO3,1:1,Wol,,,Gt,,,Wol=>Gt,0.098,0.001,,,,0.7,1.3,600,1100,RT,Pt/Pt-Rh13,Fair,Good,Experimental+Calorimetrics,3
+6,1,CaGeO3,1:1,Gt,,,Pv,,,Gt=>Pv (Calc),7.8,-0.0022,,,,5.3,7,600,1300,RT,Pt/Pt-Rh13,Fair,Good,Experimental+Calorimetrics (Calculated),3
+7,1,CaGeO3,1:1,Gt,,,Pv,,,Gt=>Pv (Exp),7.227,-0.001,,,,5.8,6.7,600,1300,RT,Pt/Pt-Rh13,Fair,Good,Experimental+Calorimetrics (Experimental),3
+8,1,CaSiO3,1:1,Wol,,,Wal,,,Wol=>Wal,4.9,-0.0015,,,,2.5,3.7,900,1600,RT+HT,Pt/Pt-Rh13,Good,Good,Experimental+Calorimetrics,4
+9,1,CaSiO3,1:2,Wal,,,Lar,Tit,,Wal=>Lar+Tit,6.2,0.003,,,,9,10.8,900,1600,RT+HT,Pt/Pt-Rh13,Good,Good,Experimental+Calorimetrics,4
+10,1,MgGeO3,1:1,Cpx,,,Ilm,,,Cpx=>Ilm,2.4044,0.0018,,,,3.5,5,800,1300,RT+HT,Pt/Pt-Rh13,Good,Good,Experimental+Calorimetrics,5
+11,1,NaAlSi3O8,1:2,Al,Nl,,Jd,,,Al+Nl=>Jd,-0.39,0.0021,,,,0.1,2,200,1100,,,,Fair,Calorimetrics,6
+12,1,NaAlSi3O8,1:2,Al,,,Jd,Qtz,,Al=>Jd+Qtz,0.42,0.0019,,,,0.3,2.4,50,1100,,,,Fair,Calorimetrics,6
+13,1,KAlSi3O8,1:3,San,,,Wd,Ky,Coe,San=>Wd+Ky+Coe,3.55,0.0026,,,,5,7.6,525,1525,Not stated,W3-Re97/W25-Re75,Fair,Good,Experimental+Calorimetrics,7
+14,1,KAlSi3O8,1:3,Wd,Ky,Coe,Hol,,,Wd+Ky+Coe=>Hol,8.13,0.0011,,,,8.7,9.8,525,1525,Not stated,W3-Re97/W25-Re75,Fair,Good,Experimental+Calorimetrics,7
+15,1,CaMgSi2O6,Melt,Di,,,Melt,,,Di=>Melt,-102.02,0.0606,,,,14.2,17.6,1900,1970,After Funamori et al 1996,W95-Re5/ W74-Re26,Good,Poor,Experimental,8
+16,1,CaMgSi2O6,Melt,Gt,CaPv,,Melt,,,Gt+CaPv=>Melt,-58.902,0.0388,,,,17.6,24.2,1970,2150,After Funamori et al 1996,W95-Re5/ W74-Re26,Good,Poor,Experimental,8
+17,1,CaMgSi2O6,Melt,MgPv,CaPv,,Melt,,,MgPv+CaPv=>Melt,-6.677,0.0144,,,,24.1,25.7,2140,2250,After Funamori et al 1996,W95-Re5/ W74-Re26,Good,Poor,Experimental,8
+18,1,CaMgSi2O6,2:2,Gt,CaPv,,MgPv,CaPv,,Gt+CaPv=>MgPv+CaPv,16.834,0.0034,,,,23.3,24.2,1900,2150,After Funamori et al 1996,W95-Re5/ W74-Re26,Good,Poor,Experimental,8
+19,1,CaMgSi2O6,1:3,Di,,,Wd,St,CaPv,Di=>Wd+St+CaPv,15.138,0.0022,,,,17.2,18.2,940,1400,RT+HT,Pt/Pt-Rh13,Good,Good,Experimental,4
+20,1,CaMgSi2O6,1:2,Di,,,Gt,CaPv,,Di=>Gt+CaPv,19.646,-0.001,,,,17.7,18.2,1400,1860,RT+HT,Pt/Pt-Rh13,Good,Good,Experimental,4
+21,1,CaMgSi2O6,3:2,Wd,St,CaPv,Gt,CaPv,,Wd+St+CaPv=>Gt+CaPV,-14.027,0.023,,,,18.2,19.45,1400,1450,RT+HT,Pt/Pt-Rh13,Good,Good,Experimental,4
+22,1,CaMgSi2O6,3:3,Wd,St,CaPv,Rw,St,CaPv,Wd+St+CaPv=>Rw+St+CaPv,15.275,0.0029,,,,17.9,19.5,940,1450,RT+HT,Pt/Pt-Rh13,Good,Good,Experimental,4
+23,1,CaMgSi2O6,3:2,Rw,St,CaPv,Gt,CaPv,,Rw+St+CaPv=>Ilm+CaPv,23.128,-0.002,,,,20.1,21.1,1000,1500,RT+HT,Pt/Pt-Rh13,Good,Good,Experimental,4
+24,1,CaMgSi2O6,3:2,Rw,St,CaPv,Gt,CaPv,,Rw+St+CaPv=>Gt+CaPv,-1.4574,0.0144,,,,19.45,20.1,1450,1500,RT+HT,Pt/Pt-Rh13,Good,Good,Experimental,4
+25,1,CaMgSi2O6,2:2,Gt,CaPv,,Ilm,CaPv,,Gt+CaPv=>Ilm+CaPv,13.38,0.0045,,,,20.1,21.75,1495,1860,RT+HT,Pt/Pt-Rh13,Good,Good,Experimental,4
+26,1,CaMgSi2O6,2:2,Ilm,CaPv,,MgPv,CaPv,,Ilm+CaPv=>MgPv+CaPv,26.015,-0.0021,,,,22.1,31.1,1380,1860,RT+HT,Pt/Pt-Rh13,Good,Good,Experimental,4
+27,0,Al2SiO5,1:1,Ky,,,And,,,Ky=>And,-0.2545,0.0013,,,,0,0.42,200,530,Not stated,Pt/Pt90-Rh10,Fair,Good,Experimental,9
+28,0,Al2SiO5,1:1,Ky,,,Sil,,,Ky=>Sil,-0.7334,0.0022,,,,0.42,1.1,530,850,Not stated,Pt/Pt90-Rh10,Fair,Good,Experimental,9
+29,0,Al2SiO5,1:1,And,,,Sil,,,And=>Sil,1.4214,-0.0024,0.0000009,,,0,0.42,530,920,Not stated,Pt/Pt90-Rh10,Fair,Good,Experimental,9
+30,0,Al2SiO5,Trip Point,Triple Point,,,Triple Point,,,Trip Point,,,,,,0.42,0.42,530,530,,,,Good,Experimental,9
+31,1,Al2SiO5,1:2,Ky,,,Cor,St,,Ky=>Cor+St,15.6,0.0011,,,,0.42,0.42,530,530,NaCl (unstated),,Poor,Poor,X-Ray DAC,10
+32,1,Al2SiO5,1:2,Ky,,,Cor,St,,Ky=>Cor+St,10.256,0.0035,,,,12.2,18,650,2000,HT,Pt/Pt90-Rh10,Good,Good,Experimental,11
+33,1,Al2SiO5,1:2,Ky,,,Cor,St,,Ky=>Cor+St,10.637,0.0016,,,,5,15,900,1600,Pt (Holmes et al 1989),W3-Re97/W25-Re75,Good,Good,In situ X-ray,12
+34,1,CaCO3,1:1,Arg,,,CaV,,,Arg=>CaV,-4,0.008,,,,2,8,600,1400,NaCl (Decker 1971),Pt/Pt-Rh13,Good,Good,In situ X-ray,13
+35,1,CaMg(CO3)2,1:2,Dol,,,Arg,Mgst,,Dol=>Arg+Mgst,1.75,0.0016,,,,5,8.5,600,1200,HT,W97-Re3/W75-Re25,Good,Good,Experimental,14
+36,1,SiO2,1:1,Qtz,,,Coe,,,Qtz=>Coe,2.383,0.00069,,,,2.7,3.2,500,1200,NBS Standard,W/Re,Good,Good,PC Experimental,15
+37,1,SiO2,1:1,Coe,,,St,,,Coe=>St,6.1,0.0026,,,,7.5,11.5,500,1530,NaCl (Decker 1971),W86-Re24/W94-Re6,Good,Good,In situ X-ray,16
+38,0,MgSiO3,1:1,Oen,,,Cen,,,Oen=>Cen,4.978,0.003125,,,,,,700,2200,,,,,Thermodynamic Calcs,17
+39,0,MgSiO3,1:2,Cen,,,Wd,St,,Cen=>Wd+St,13.49898,0.002133,,,,,,700,1600,,,,,Thermodynamic Calcs,17
+40,0,MgSiO3,1:2,Wd,St,,Ak,,,Wd+St=>Ak,18.538,-0.000632,,,,,,1100,1600,,,,,Thermodynamic Calcs,17
+41,0,MgSiO3,1:2,Rw,St,,Ak,,,Rw+St=>Ak,32.068,-0.01257,,,,,,600,1100,,,,,Thermodynamic Calcs,17
+42,0,MgSiO3,1:1,Wd,,,Rw,,,Wd=>Rw,10.6546,0.006333,,,,,,600,1100,,,,,Thermodynamic Calcs,17
+43,0,MgSiO3,1:1,Ak,,,MgPv,,,Ak=>MgPv,26.7624,0.002095,,,,,,600,1900,,,,,Thermodynamic Calcs,17
+44,0,MgSiO3,1:1,Cen,,,MgMj,,,Cen=>MgMj,15.972,0.0016,-0.0000006,,,16.3,16.9,1600,2300,,,,,Thermodynamic Calcs,17
+45,0,MgSiO3,1:2,MgMj,,,Wd,St,,MgMj=>Wd+St,-39487,42.329,-0.0113,,,16.5,17.5,1596,1603,,,,,Thermodynamic Calcs,17
+46,0,MgSiO3,1:1,MgMj,,,Ak,,,MgMj=>Ak,1.1852,0.0102,,,,17.5,21.6,1600,2000,,,,,Thermodynamic Calcs,17
+47,0,MgSiO3,1:1,MgMj,,,MgPv,,,MgMj=>MgPv,17.902,0.0018,,,,21.3,22.4,1900,2500,,,,,Thermodynamic Calcs,17
+48,1,MgSiO3,1:1,Ilm,,,Pv,,,Ilm=>Pv,25,-0.003,,,,19.7,22.4,1000,1800,Au (Anderson et al 1989),W75-Re25/W93-Re7,Good,Good,In situ X-ray,18
+49,1,Ni2SiO4,1:1,Ol,,,Sp,,,Ol=>Sp,2.33,0.00118,,,,2,4,650,1200,HT,Pt/Pt -Rh10,Good,Good,Experimental,19
+50,1,Ni2SiO4,1:2,Sp,,,Bn,St,,Sp=>Bn+St,12.1,0.0046,,,,12,20,1400,1800,NaCl (Weaver et al 1971),,Fair,Good,X-Ray DAC,20
+51,1,Fe2SiO4,1:1,Ol,,,Sp,,,Ol=>Sp,2.75,0.0025,,,,4.2,6.2,800,1200,NaCl (Decker 1971),Pt/Pt-Rh13,Good,Good,In situ X-ray,21
+52,1,Fe2SiO4,1:1,Ol,,,Sp,,,Ol=>Sp,2,0.0033,,,,4.4,6.4,725,1425,,,,,Calorimetrics,22
+53,1,Mg2SiO4,1:1,Ol,,,Wd,,,Ol=>Wd,9.3,0.0036,,,,12,15,700,1400,NaCl (Decker 1971),W3-Re97/W25-Re75,Good,Good,In situ X-ray,23
+54,1,Mg2SiO4,1:1,Wd,,,Rw,,,Wd=>Rw,10.32,0.00691,,,,14.8,19.5,650,1200,NaCl (Brown 1999),W3-Re97/W25-Re75,Good,Good,In situ X-ray,24
+55,1,Mg2SiO4,1:2,Rw,,,Pv,Pc,,Rw=>Pv+Pc,27.9,-0.00275,,,,22.5,25.5,1673,2373,Pt (Holmes et al 1989),,Good,Good,X-Ray DAC,25
+56,1,Mg2SiO4,1:2,Rw,,,Pv,Pc,,Rw=>Pv+Pc,25.12,-0.0013,,,,22.8,23.5,1400,1900,Au&MgO (Anderson 1989 & Speziale 2001),W5-Re95/W26-Re74,Good,Good,In situ X-ray,26
+57,1,Mg2SiO4,1:1,Wd,,,Rw,,,Wd=>Rw,14.219,0.0041,,,,18.5,19.5,1200,1500,Au (Anderson et al 1989 & Shim et al 2002),W75-Re25/W97-Re3,Good,Good,In situ X-ray,27
+58,1,Mg2SiO4,1:1,Ol,,,Wd,,,Ol=>Wd,9.906,0.0031,,,,11.25,14.5,525,1525,,,,,Calorimetrics,28
+59,0,Mg2SiO4,1:1,Wd,,,Rw,,,Wd=>Rw,11.8,0.0052,,,,15.75,19.5,525,1525,,,,,Calorimetrics,28
+60,1,Mg2SiO4,1:2,Rw,,,Pv,Pc,,Rw=>Pv+Pc,18.95,-0.0026,,,,23.75,27,1000,2200,,,,,Calorimetrics,28
+61,1,Mg2SiO4,1:2,Rw,,,Pv,Pc,,Rw=>Pv+Pc,27,-0.002,,,,21,28,1400,1800,RT+HT,Pt/Pt-Rh13,Good,Good,Experimental,29
+62,1,Mg2SiO4,1:1,Wd,,,Rw,,,Wd=>Rw,9.35,0.0077,,,,21.3,23.2,1550,1800,RT+HT,Pt/Pt-Rh13,Good,Good,Experimental,29
+63,1,Mg2SiO4,1:1,Wd,,,Pv,Pc,,Wd=>Pv+Pc,16.02,0.004,,,,23.2,23.5,1800,1850,RT+HT,Pt/Pt-Rh13,Good,Good,Experimental,29
+64,1,Mg2SiO4,1:1,Rw,,,Pv,Pc,,Rw=>Pv+Pc,27.5,-0.0024,,,,23.6,24.2,1350,1650,RT+HT,Pt/Pt-Rh13,Good,Good,Experimental,29
+65,1,Co2SiO4,1:1,Ol,,,Sp,,,Ol=>Sp,3.6753,0.0034,,,,5.9,6.9,680,940,RT,Pt/Pt-Rh13,Good,Good,Experimental,30
+66,1,Co2SiO4,1:1,Ol,,,II,,,Ol=>II,3.0499,0.00556,-0.000001634,,,6.9,7.75,940,1550,RT,Pt/Pt-Rh13,Good,Good,Experimental,30
+67,1,Co2SiO4,1:1,II,,,Sp,,,II=>Sp,2.9907,0.0041,,,,6.9,9.4,940,1600,RT,Pt/Pt-Rh13,Good,Good,Experimental,30
+68,1,TiO2,1:1,Rt,,,aPbO2,,,Rutile=>aPbO2,3.5,0.0038,,,,4.6,8.5,500,900,NaCl (Decker 1971),Pt/Pt-Rh13,Good,Good,In situ X-ray,31
+69,1,TiO2,1:1,aPbO2,,,Bdy,,,aPbO2=>baddeleyite,11.619,0.005299,,,,11,16,100,900,NaCl (Decker 1971),Pt/Pt-Rh13,Good,Good,In situ X-ray,32
+70,0,TiO2,1:1,Rt,,,aPbO2,,,Rutile=>aPbO2,12.55,0.01146,0.000015594,-3.225E-08,2.2323E-11,6,12,200,1200,NaCl (Decker 1971),Not stated,Poor,Fair,In situ X-ray,33
+71,0,Ge,Melt,Ge,,,Melt,,,Melt,-31.245,0.15703,-0.0002,0.00000007,,0,6.5,680,936,Not stated,Pt/Pt-Rh90,Good,Good,Experimental,34
+72,0,Au,Melt,Au,,,Melt,,,Melt,-82.174,0.18343,-0.00014,0.00000004,,0,6.5,1062,1404,Not stated,Pt/Pt-Rh90,Good,Good,Experimental,35
+73,0,Ag,Melt,Ag,,,Melt,,,Melt,-19.891,0.03278,0.00002,8000000000,,0,6.5,959,1304.4,Not stated,Pt/Pt-Rh90,Good,Good,Experimental,35
+74,0,Cu,Melt,Cu,,,Melt,,,Melt,-229.07,0.54991,-0.00046,0.0000001,,0,6.5,1082,1310,Not stated,Pt/Pt-Rh90,Good,Good,Experimental,35
+75,0,Pb,Melt,Pb,,,Melt,,,Melt,-3.0158,0.00642,0.000009,,,0,65,325.7,715,Not stated,K-type,Good,Good,Experimental,36
+76,0,Ag,Melt,Ag,,,Melt,,,Melt,-12.693,0.0146,-0.000005,0.000000004,,0,30,960,2086,Not stated,Pt/Pt-Rh90,Good,Good,Experimental,37
+77,0,Au,Melt,Au,,,Melt,,,Melt,-15.399,0.0137,-0.0000009,0.000000002,,0,30,1063,2295,Not stated,Pt/Pt-Rh90,Good,Good,Experimental,37
+78,0,Cu,Melt,Cu,,,Melt,,,Melt,-26.25,0.0331,-0.00002,0.000000008,,0,30,1085,1897,Not stated,Pt/Pt-Rh90,Good,Good,Experimental,37
+79,0,Pt,Melt,Pt,,,Melt,,,Melt,-26.661,-0.0057,0.00001,,,0,80,1800,2800,Ruby,,Good,Good,X-Ray DAC,38
+80,0,Ni,Melt,Ni,,,Melt,,,Melt,-578.64,0.972,-0.0005573,0.000000111,,0,120,1500,2600,Not stated,,Fair,Good,X-Ray DAC,39
+81,0,Ni,Melt,Ni,,,Melt,,,Melt,335.458,-0.5509,0.000271,-3.53E-08,,0,120,1450,2250,Ruby,,Good,Good,X-Ray DAC,40
+82,0,Pb,Melt,Pb,,,Melt,,,Melt,-4.0905,0.0108,0.000005,,,0,100,1200,2800,NaCl/Ar Ross1986/Ono2006,,Good,Good,X-Ray DAC,41
+83,0,Zn,Melt,Zn,,,Melt,,,Melt,-11.057,0.0261,0.0000003,,,0,12,450,1000,After Errandonea et al 2006,K-type,Good,Good,Experimental,42
+84,1,Bi,RT,Bi I,,,Bi II,,,I=>II,,,,,,2.55,2.55,25,25,,,,,,43
+85,1,Bi,RT,Bi III,,,Bi V,,,III=>V,,,,,,7.7,7.7,25,25,,,,,,43
+86,1,Ba,RT,Ba I,,,Ba II,,,I=>II,,,,,,5.5,5.5,25,25,,,,,,43
+87,1,Ba,RT,,,,,,,,,,,,,14,14,25,25,,,,,,43
+88,1,Sn,RT,,,,,,,,,,,,,10,10,25,25,,,,,,43
+89,1,Fe,RT,,,,Fe-e,,,a=>e,,,,,,12.6,12.6,25,25,,,,,,43
+90,1,Pb,RT,,,,,,,,,,,,,12,16,25,25,,,,,,43
+91,1,ZnTe,RT,,,,,,,,,,,,,12.9,12.9,25,25,,,,,,44
+92,1,ZnS,RT,,,,,,,,,,,,,15.5,15.5,25,25,,,,,,44
+93,1,GaAs,RT,,,,,,,,,,,,,18.8,18.8,25,25,,,,,,44
+94,1,GaP,RT,,,,,,,,,,,,,25.3,25.3,25,25,,,,,,44
+95,1,Mg2TiO4,1:2,,,,Ilm,Rt,,Sp=>Ilm+Ox,-1.8,0.0019,,,,0,1.5,960,1620,After Kennedy & LaMori 1962,Pt/Pt-Rh13,Good,Fair,Experimental,45
+96,1,Fe2TiO4,1:2,,,,Ilm,Rt,,Sp=>Ilm+Ox,1.1,0.0025,,,,3,4.5,830,1300,After Kennedy & LaMori 1962,Pt/Pt-Rh13,Good,Fair,Experimental,45
+97,1,Co2TiO4,1:2,,,,Ilm,Rt,,Sp=>Ilm+Ox,-0.9,0.0035,,,,1.9,4,1020,1370,After Kennedy & LaMori 1962,Pt/Pt-Rh13,Good,Good,Experimental,45
+98,1,MnTiO3,1:1,,,,Pv,,,Ilm=>Pv,11,-0.0044,,,,4.5,7.5,900,1400,After Jeffery et al 1966,Pt/Pt-Rh13,Good,Good,Experimental,45
+99,1,MnTiO3,1:1,,,,Pv,,,Ilm=>Pv,-0.9,0.0035,,,,3.5,7.5,800,1600,HT,Unstated,Good,Good,In situ X-ray+Calorimetrics,46
+100,1,Mg3Al2Si3O12,1:2,,,,Pv,Cor,,Gt=>Pv+Cor,25.072,0.009,,,,26.3,27,1365,2000,RT+HT,Pt/Pt-Rh13,Good,Good,Experimental,47
+101,1,Mg3Al2Si3O12,1:1,,,,Ilm,,,Gt=>Ilm,23.876,0.0018,,,,25.3,26.3,800,1365,RT+HT,Pt/Pt-Rh14,Good,Poor,Experimental,47
+102,1,Mg3Al2Si3O12,1:2,,,,Pv,Cor,,Ilm=>Pv+Cor,29.495,0.0023,,,,26.3,27.7,800,1365,RT+HT,Pt/Pt-Rh15,Good,Poor,Experimental,47
+103,1,Mg3Al2Si3O12,1:2,,,,Pv,Cor,,Gt=>Pv+Cor,26.157,-0.0008,,,,24.5,25.2,1200,2000,Gold (Anderson et al 1989),W5-Re95/W26-Re74,Good,Good,In situ X-ray,48
+104,1,CaIrO3,1:1,,,,pPv,,,Pv=>pPv,-21.085,0.0158,,,,0.6,3.5,1370,1560,Takahashi (1986),W5-Re95/W26-Re74,,,Experimental,49
+105,1,CaIrO3,1:1,,,,pPv,,,Pv=>pPv,-56.18,0.04,,,,0,4,1377,1477,RT+HT,Pt/Pt-Rh13,Good,Fair,Experimental+Calorimetrics,50
+106,1,Mg2GeO4,1:1,,,,Sp,,,Ol=>Sp,-2.767,0.0035,,,,0,4,737,1900,,,,,Vibrational Spectroscopy+review,51
+107,1,Mg2GeO4,1:1,,,,Ilm,Pc,,Sp=>Ilm+Ox,12.016,0.0049,,,,13.5,18.8,300,1400,,,,,,52
+108,1,FeSiO3,2:1,,Qtz,,Opx,,,Fay+Qtz=>Ortho,0.27,0.0014,,,,1.1,2.2,600,1300,RT,Pt/Pt-Rh13,Fair,Good,Experimental,53
+109,1,FeSiO3,1:1,,,,Cpx,,,Ortho=>Clino,-0.9,0.0067,,,,3,8,600,1300,RT,Pt/Pt-Rh13,Fair,Good,Experimental,53
+110,1,CoSiO3,2:1,,Qtz,,Opx,,,Ol+Qtz=>Opx,15,0.0007,,,,2,2.5,600,1300,RT,Pt/Pt-Rh14,Fair,Good,Experimental,53
+111,1,CoSiO4,1:1,,,,Cpx,,,Opx=>Cpx,11,0.0044,,,,4,7,600,1300,RT,Pt/Pt-Rh15,Fair,Good,Experimental,53
+112,1,CaIrO3,1:1,,,,pPv,,,Pv=>pPv,-21.085,0.0158,,,,1,3,1375,1550,After Takahashi 1986,W5-Re95/W26-Re74,Good,Good,Experimental,54
+113,0,NaCoF3,1:1,,,,pPv,,,Pv=>pPv,,,,,,,,,,,,Good,Good,Experimental,55
+114,0,NaCoF3,1:1,,,,pPv,,,Pv=>pPv,,,,,,,,,,,,,,Experimental,56

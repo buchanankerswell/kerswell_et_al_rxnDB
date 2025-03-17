@@ -6,8 +6,22 @@ build-backend = "setuptools.build_meta"
 name = "rxnDB"
 version = "0.1.0"
 description = "A Python Shiny app for reaction database management."
+readme = "README.md"
+requires-python = ">=3.13"
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
 authors = [{ name = "Buchanan Kerswell", email = "buck.kerswell@gmail.com" }]
 dependencies = [
     "shiny",
-    "pandas"
+    "pandas",
+    "seaborn",
+    "faicons",
+    "pytest"
 ]
+
+[tool.setuptools]
+packages = ["rxnDB"]

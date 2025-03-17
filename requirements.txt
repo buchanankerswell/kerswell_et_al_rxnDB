@@ -1,3 +1,5 @@
+faicons
 shiny
+seaborn
 pandas
 pytest

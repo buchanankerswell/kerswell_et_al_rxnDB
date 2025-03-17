@@ -1,6 +1,10 @@
 name: rxnDB
+channels:
+  - conda-forge
 dependencies:
   - python=3.13
   - shiny
   - pandas
+  - seaborn
+  - faicons
   - pytest
