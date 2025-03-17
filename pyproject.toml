@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rxnDB"
+version = "0.1.0"
+description = "A Python Shiny app for reaction database management."
+authors = [{ name = "Buchanan Kerswell", email = "buck.kerswell@gmail.com" }]
+dependencies = [
+    "shiny",
+    "pandas"
+]

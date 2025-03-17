@@ -1,0 +1,6 @@
+name: rxnDB
+dependencies:
+  - python=3.13
+  - shiny
+  - pandas
+  - pytest
