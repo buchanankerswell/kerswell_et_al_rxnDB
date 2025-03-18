@@ -4,8 +4,10 @@ channels:
 dependencies:
   - python=3.13
   - shiny
+  - shinywidgets
+  - anywidget
   - pandas
-  - seaborn
+  - plotly
   - faicons
   - pytest
   - pip

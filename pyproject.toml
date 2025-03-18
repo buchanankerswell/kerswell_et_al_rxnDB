@@ -21,10 +21,13 @@ classifiers = [
 authors = [{ name = "Buchanan Kerswell", email = "buck.kerswell@gmail.com" }]
 dependencies = [
     "shiny",
+    "shinywidgets",
+    "anywidget",
     "pandas",
-    "seaborn",
+    "plotly",
     "faicons",
     "pytest"
+    "pip"
 ]
 
 [project.urls]
