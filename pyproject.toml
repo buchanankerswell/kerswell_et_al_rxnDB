@@ -36,3 +36,6 @@ Repository = "https://github.com/buchanankerswell/kerswell_et_al_rxnDB"
 [tool.setuptools]
 packages = ["rxnDB"]
 license-files = ["LICENSE"]
+
+[tool.setuptools.package_data]
+rxnDB = ["data/*", "data/**/*", "*.css"]
