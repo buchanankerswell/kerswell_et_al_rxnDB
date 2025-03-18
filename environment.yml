@@ -8,3 +8,6 @@ dependencies:
   - seaborn
   - faicons
   - pytest
+  - pip
+  - pip:
+    - rxnDB
