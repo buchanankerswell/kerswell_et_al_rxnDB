@@ -2,3 +2,4 @@ include README.md
 include LICENSE
 recursive-include rxnDB/data *
 recursive-include rxnDB *.css
+recursive-include rxnDB *.py
