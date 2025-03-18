@@ -25,27 +25,10 @@ create_conda_env: $(CONDA_SPECS_FILE)
 		echo "  Conda environment $(CONDA_ENV_NAME) created!"; \
 	fi
 
-update_version:
-	@if uname | grep -q "Darwin"; then \
-		sed -i '' 's/^version = ".*"/version = "$(VERSION)"/' pyproject.toml; \
-	else \
-		sed -i 's/^version = ".*"/version = "$(VERSION)"/' pyproject.toml; \
-	fi
-	@echo "Updated pyproject.toml to version $(VERSION)."
-
-upload: build
-	@twine upload dist/*
-	@echo "Uploaded to PyPI."
-
-build:
-	@rm -rf build dist *.egg-info
-	@python -m build
-	@echo "Package built successfully."
-
 purge:
 	@rm -rf $(DATAPURGE)
 
 clean: purge
 	@rm -rf $(DATACLEAN)
 
-.PHONY: clean purge build upload update_version create_conda_env all
+.PHONY: clean purge create_conda_env all

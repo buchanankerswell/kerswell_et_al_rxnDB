@@ -10,4 +10,4 @@ dependencies:
   - pytest
   - pip
   - pip:
-      - -e .
+      - rxnDB
