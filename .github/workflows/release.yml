@@ -25,7 +25,7 @@ jobs:
 
     - name: Build the distribution
       run: |
-        python -m build --wheel
+        python -m build
 
     - name: Upload to PyPI
       run: |
