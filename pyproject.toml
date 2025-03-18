@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rxnDB"
-version = "0.1.0"
+version = "0.1.0-alpha.1"
 description = "A Python Shiny app for reaction database management"
 readme = "README.md"
 requires-python = ">=3.13"
