@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools", "wheel", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "rxnDB"
-version = "0.1.0-alpha.6"
+dynamic = ["version"]
 description = "A Python Shiny app for reaction database management"
 readme = "README.md"
 requires-python = ">=3.13"
@@ -25,14 +25,30 @@ dependencies = [
     "anywidget",
     "pandas",
     "plotly",
-    "faicons",
-    "pytest",
-    "pip"
+    "faicons"
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pip"]
+docs = [
+    "sphinx<7.0",
+    "sphinx-rtd-theme",
+    "sphinx-autoapi",
+    "sphinxcontrib-httpdomain",
+    "git+https://github.com/revitron/revitron-sphinx-theme/archive/master.zip"
 ]
 
 [project.urls]
 Repository = "https://github.com/buchanankerswell/kerswell_et_al_rxnDB"
 
+[project.scripts]
+rxndb = "rxnDB.cli:main"
+
 [tool.setuptools]
-packages = ["rxnDB"]
 license-files = ["LICENSE"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["rxnDB*"]
+
+[tool.setuptools_scm]

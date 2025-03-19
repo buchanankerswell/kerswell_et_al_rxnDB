@@ -5,6 +5,19 @@ from rxnDB.utils import app_dir
 def load_data(filename: str="rxns.csv") -> pd.DataFrame:
     """
     Loads the data from a CSV file located in the 'data' directory of the application.
+
+    This function reads a CSV file containing reaction data and returns it as a
+    pandas DataFrame.  The file is expected to be located in the 'data' subdirectory
+    within the application directory.
+
+    Args:
+        filename (str, optional): The name of the CSV file to load. Defaults to "rxns.csv".
+
+    Returns:
+        pd.DataFrame: The loaded data as a pandas DataFrame.
+
+    Raises:
+        FileNotFoundError: If the specified file is not found in the 'data' directory.
     """
     # Construct the full file path for the data file
     filepath: Path = app_dir / "data" / filename
@@ -19,7 +32,22 @@ def filter_data(df: pd.DataFrame, reactants: list[str], products: list[str],
                 ignore_rxn_ids: list[int]=[45, 73, 74]):
     """
     Filter the dataframe based on the given reactants, products, and exclusion of
-    specific reaction IDs.  Also, filters out rows where 'b' is NaN.
+    specific reaction IDs. Also, filters out rows where 'b' is NaN.
+
+    This function applies several filters to the input dataframe, including filtering
+    by reactant and product phases, excluding specific reaction IDs, and removing rows
+    with NaN values in the 'b' column. It also generates a polynomial representation
+    of the reactions for each row.
+
+    Args:
+        df (pd.DataFrame): The input DataFrame containing reaction data.
+        reactants (list[str]): A list of reactants to filter by.
+        products (list[str]): A list of products to filter by.
+        ignore_rxn_ids (list[int], optional): A list of reaction IDs to exclude from the
+                                              results. Defaults to [45, 73, 74].
+
+    Returns:
+        pd.DataFrame: The filtered DataFrame with a 'polynomial' column added.
     """
     # Create a mask for the reactants
     reactant_mask: pd.Series = (
@@ -74,6 +102,15 @@ def get_unique_phases(df: pd.DataFrame) -> list[str]:
     """
     Get a sorted list of unique chemical phases (reactants + products)
     from the given dataframe.
+
+    This function extracts the unique chemical phases from the reactant and product columns
+    of the input DataFrame, removes any duplicates, and returns the sorted list of phases.
+
+    Args:
+        df (pd.DataFrame): The input DataFrame containing reaction data.
+
+    Returns:
+        list[str]: A sorted list of unique chemical phases.
     """
     # Combine reactants, ensuring each unique phase is captured
     reacts: list[str] = pd.concat(
@@ -100,6 +137,20 @@ def get_unique_phases(df: pd.DataFrame) -> list[str]:
 def get_reaction_line_and_midpoint_dfs(df: pd.DataFrame, nsteps: int=1000) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
     Calculate the reaction curves and midpoints for each row in the DataFrame.
+
+    This function computes reaction curves by calculating pressure as a function of
+    temperature using the polynomial terms for each reaction in the input DataFrame. It
+    also calculates the midpoints for each reaction and returns two DataFrames: one with
+    the reaction curves and another with the midpoints.
+
+    Args:
+        df (pd.DataFrame): The input DataFrame containing reaction data.
+        nsteps (int, optional): The number of temperature steps to calculate.
+                                Defaults to 1000.
+
+    Returns:
+        tuple[pd.DataFrame, pd.DataFrame]: A tuple containing two DataFrames: one with the
+        reaction curves and another with the midpoints for each reaction.
     """
     # Initialize lists to store reaction curve data and midpoints
     rxn_curves: list[dict] = []

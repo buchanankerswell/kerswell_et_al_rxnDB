@@ -1,5 +1,6 @@
 include README.md
 include LICENSE
-recursive-include rxnDB/data *
-recursive-include rxnDB *.css
-recursive-include rxnDB *.py
+include pyproject.toml
+recursive-include rxnDB/data *.csv *.py
+recursive-include rxnDB *.css *.py
+recursive-include tests *.py

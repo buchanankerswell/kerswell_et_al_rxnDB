@@ -9,7 +9,6 @@ dependencies:
   - pandas
   - plotly
   - faicons
-  - pytest
   - pip
   - pip:
-      - rxnDB
+      - "rxnDB[dev,docs]"

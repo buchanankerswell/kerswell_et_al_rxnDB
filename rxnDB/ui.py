@@ -5,7 +5,20 @@ from shinywidgets import output_widget
 
 def configure_ui(phases: list[str], init_phases: list[str]) -> ui.page_sidebar:
     """
-    Creates the user interface for the rxnDB Shiny app.
+    Creates and configures the user interface for the rxnDB Shiny app.
+
+    This function generates a sidebar layout with interactive components
+    such as checkbox groups for selecting reactants and products, as well
+    as action buttons for selecting all reactants or products. It also
+    includes a phase diagram section, a data table section, and custom
+    styling for the app's layout.
+
+    Args:
+        phases (list[str]): The list of available phases to select from.
+        init_phases (list[str]): The initial phases selected by default.
+
+    Returns:
+        ui.page_sidebar: The configured UI layout for the rxnDB Shiny app.
     """
     return ui.page_sidebar(
         ui.sidebar(
@@ -31,6 +44,9 @@ def configure_ui(phases: list[str], init_phases: list[str]) -> ui.page_sidebar:
 
         # Main content layout with columns for sliders and action buttons
         ui.layout_column_wrap(
+            # Action button to select all reactants
+            ui.input_action_button("show_plot_labels", "Show Plot Labels"),
+
             # Action button to select all reactants
             ui.input_action_button("toggle_reactants", "Select All Reactants"),
 
