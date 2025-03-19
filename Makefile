@@ -33,7 +33,7 @@ create_conda_env: $(CONDA_SPECS_FILE)
 	@echo "  Installing rxnDB in editable mode ..."
 	@conda run -n $(CONDA_ENV_NAME) pip install -e ".[dev,docs]"
 	@echo "  Installing documentation dependencies ..."
-	@conda run -n $(CONDA_ENV_NAME) pip install $(DOC_DEPS)
+	@conda run -n $(CONDA_ENV_NAME) pip install -r $(DOC_DEPS)
 
 purge:
 	@rm -rf $(DATAPURGE)
