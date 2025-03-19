@@ -7,6 +7,7 @@ CONDA_ENV_NAME := rxnDB
 CONDA_SPECS_FILE := environment.yml
 CONDA_PYTHON = $$(conda run -n $(CONDA_ENV_NAME) which python)
 CONDA_SHINY = $$(conda run -n $(CONDA_ENV_NAME) which shiny)
+DOC_DEPS = docs/requirements.txt
 
 # Shiny app
 APP := rxnDB/app.py
@@ -29,6 +30,10 @@ create_conda_env: $(CONDA_SPECS_FILE)
 		conda env create --file $(CONDA_SPECS_FILE); \
 		echo "  Conda environment $(CONDA_ENV_NAME) created!"; \
 	fi
+	@echo "  Installing rxnDB in editable mode ..."
+	@conda run -n $(CONDA_ENV_NAME) pip install -e ".[dev,docs]"
+	@echo "  Installing documentation dependencies ..."
+	@conda run -n $(CONDA_ENV_NAME) pip install $(DOC_DEPS)
 
 purge:
 	@rm -rf $(DATAPURGE)

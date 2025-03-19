@@ -22,10 +22,9 @@ If you want to install the development version locally for testing in "editable"
     git clone https://github.com/buchanankerswell/kerswell_et_al_rxnDB.git
     cd kerswell_et_al_rxnDB
 
-    # Create conda environment
-    make create_conda_env
-    conda activate rxnDB
+    # Checkout develop branch
+    git checkout develop
 
-    # Uninstall rxnDB and reinstall locally in editable mode (incl. optional dependencies)
-    pip uninstall rxnDB
-    pip install -e ".[dev,docs]"
+    # Create conda environment and install rxnDB locally in editable mode
+    # including optional development and documentation dependencies
+    make create_conda_env
