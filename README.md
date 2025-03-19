@@ -1,2 +1,2 @@
-# kerswell_et_al_rxnDB
-A Python Shiny app for reaction database management
+# rxnDB: a mineral reaction database
+See the [documentation](https://kerswell-et-al-rxndb.readthedocs.io/en/latest/) for installation and usage.
