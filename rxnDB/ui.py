@@ -45,7 +45,7 @@ def configure_ui(phases: list[str], init_phases: list[str]) -> ui.page_sidebar:
         # Main content layout with columns for sliders and action buttons
         ui.layout_column_wrap(
             # Action button to select all reactants
-            ui.input_action_button("show_plot_labels", "Show Plot Labels"),
+            ui.input_action_button("show_plot_labels", "Show Rxn ID Labels"),
 
             # Action button to select all reactants
             ui.input_action_button("toggle_reactants", "Select All Reactants"),

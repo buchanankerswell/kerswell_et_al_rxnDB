@@ -20,7 +20,7 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     df: pd.DataFrame = db.data
 
     # Keeps track of plot labels on/off
-    plot_labels = reactive.value(True)
+    plot_labels: reactive.Value[bool] = reactive.value(True)
 
     @reactive.effect
     @reactive.event(input.show_plot_labels)
@@ -37,8 +37,8 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
         plot_labels.set(not plot_labels())
 
     # Keeps track of whether all reactants or products are selected
-    selected_all_reactants = reactive.value(False)
-    selected_all_products = reactive.value(False)
+    selected_all_reactants: reactive.Value[bool] = reactive.value(False)
+    selected_all_products: reactive.Value[bool] = reactive.value(False)
 
     @reactive.effect
     @reactive.event(input.toggle_reactants)
@@ -116,14 +116,16 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
         """
         # Configure plotting styles
         dark_mode: bool = input.mode() == "dark"
-        show_labels = plot_labels()
+        show_labels: bool = plot_labels()
 
         # Get reaction lines and midpoints
         plot_df, mp_df = db.get_reaction_line_and_midpoint_dfs(filtered_df())
 
         # Draw Supergraph
-        fig = plot_reaction_lines(plot_df, mp_df, filtered_df()["id"], dark_mode,
-                                  color_palette="Alphabet", show_labels=show_labels)
+        fig: go.FigureWidget = plot_reaction_lines(
+            plot_df, mp_df, filtered_df()["id"], dark_mode, color_palette="Alphabet",
+            show_labels=show_labels
+        )
 
         return fig
 

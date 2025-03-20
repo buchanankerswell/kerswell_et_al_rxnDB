@@ -91,12 +91,16 @@ def configure_layout(dark_mode: bool, font_size: float=20) -> dict:
     grid_color: str = "#999999" if dark_mode else "#E5E5E5"
     tick_color: str = "#E5E5E5" if dark_mode else "black"
     label_color: str = "#E5E5E5" if dark_mode else "black"
+    plot_bgcolor: str = "#1D1F21" if dark_mode else "#FFF"
+    paper_bgcolor: str = "#1D1F21" if dark_mode else "#FFF"
+    font_color: str = "#E5E5E5" if dark_mode else "black"
+    legend_bgcolor: str = "#404040" if dark_mode else "#FFF"
 
     return {
         "template": "plotly_dark" if dark_mode else "plotly_white",
-        "font": {"size": font_size, "color": "#E5E5E5" if dark_mode else "black"},
-        "plot_bgcolor": "#404040" if dark_mode else "white",
-        "paper_bgcolor": "#1D1F21" if dark_mode else "white",
+        "font": {"size": font_size, "color": font_color},
+        "plot_bgcolor": plot_bgcolor,
+        "paper_bgcolor": paper_bgcolor,
         "xaxis": {
             "range": (0, 1650),
             "gridcolor": grid_color,
@@ -118,8 +122,8 @@ def configure_layout(dark_mode: bool, font_size: float=20) -> dict:
             "mirror": True
         },
         "legend": {
-            "font": {"color": "#E5E5E5" if dark_mode else "black"},
-            "bgcolor": "#404040" if dark_mode else "white",
+            "font": {"color": font_color},
+            "bgcolor": legend_bgcolor,
         }
     }
 
