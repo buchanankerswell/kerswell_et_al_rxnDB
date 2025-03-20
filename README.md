@@ -6,9 +6,9 @@
 
 ## Prerequisite software
 
-This project is written in [python](https://www.python.org). For most users, I recommend installing the [miniforge](https://github.com/conda-forge/miniforge) python distribution. This distributions includes a minimal installation of python and the package manager [conda](https://docs.conda.io/en/latest/), which is required to build the necessary python environment for this software. Miniforge can be installed (for macOS users) with homebrew.
+This project is written in [python](https://www.python.org). For most users, I recommend installing the [miniforge](https://github.com/conda-forge/miniforge) python distribution. This distributions includes a minimal installation of python and the package manager [conda](https://docs.conda.io/en/latest/), which is required to build the necessary python environment for this software.
 
-Follow the instructions at [Hombrew's homepage](https://brew.sh) to download and install Homebrew on your machine. Once Homebrew is installed, use any of the following to install python and conda:
+For macOS users, miniforge can be installed with [homebrew](https://brew.sh):
 
 ```bash
 brew install miniforge
@@ -74,8 +74,8 @@ For more advanced usage, you can use the following options:
 
 ## Coauthors
 
- - [Simon Hunt](https://research.manchester.ac.uk/en/persons/simon.hunt) (U. of Manchester)
- - [John Wheeler](https://scholar.google.co.uk/citations?user=jsfp2-8AAAAJ&hl=en) (U. of Liverpool)
+ - [Simon Hunt](https://research.manchester.ac.uk/en/persons/simon.hunt) (University of Manchester)
+ - [John Wheeler](https://scholar.google.co.uk/citations?user=jsfp2-8AAAAJ&hl=en) (University of Liverpool)
 
 ## Acknowledgement
 
