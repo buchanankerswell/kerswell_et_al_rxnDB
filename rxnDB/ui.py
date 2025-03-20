@@ -47,7 +47,7 @@ def configure_ui(phases: list[str], init_phases: list[str]) -> ui.page_sidebar:
             fill=False
         ),
 
-        # Layout with two cards: one for the phase diagram and one for the database
+        # Layout with two cards: one for the phase diagram and one for the datatable
         ui.layout_columns(
             ui.card(
                 ui.card_header("Phase Diagram"),
@@ -56,7 +56,12 @@ def configure_ui(phases: list[str], init_phases: list[str]) -> ui.page_sidebar:
             ),
             ui.card(
                 ui.card_header("Database"),
-                ui.output_data_frame("database"),
+                ui.output_data_frame("datatable"),
+                ui.layout_column_wrap(
+                    ui.input_action_button("toggle_find_similar_rxns", "Show Similar Rxns"),
+                    ui.input_action_button("clear_selection", "Clear Selection"),
+                    fill=False,
+                ),
                 full_screen=True,
             )
         ),

@@ -15,11 +15,51 @@ def load_data(filename: str="rxns.csv") -> pd.DataFrame:
 
     return pd.read_csv(filepath)
 
-def filter_data(df: pd.DataFrame, reactants: list[str], products: list[str],
-                ignore_rxn_ids: list[int]=[45, 73, 74]):
+def filter_data_by_ids(df: pd.DataFrame, ids: list[int],
+                       ignore_rxn_ids: list[int]=[45, 73, 74]) -> pd.DataFrame:
     """
-    Filter the database for the given reactants, products, and exclusion of specific
-    reaction IDs. Also, filters out rows where 'b' is NaN.
+    Filter the database by rxn ids and filter out rows where 'b' is NaN
+    """
+    # Create a mask for the reactants
+    id_mask: pd.Series = (df["id"].isin(ids))
+
+    # Apply the reactant and product filters to the DataFrame
+    df_filtered: pd.DataFrame = df[id_mask].copy()
+
+    # Exclude specific reaction IDs
+    df_filtered = df_filtered[~df_filtered["id"].isin(ignore_rxn_ids)]
+
+    # Exclude rows where 'b' is NaN
+    df_filtered = df_filtered[df_filtered["b"].notna()]
+
+    # Terms for creating the polynomial
+    terms: list[str] = ["t1", "t2", "t3", "t4", "b"]
+
+    def create_poly(row: pd.Series) -> str:
+        """
+        Creates a polynomial string for the given row
+        """
+        poly_parts: list[str] = []
+        for i, term in enumerate(terms):
+            if term in df_filtered.columns and pd.notna(row[term]):
+                if term != "b":
+                    if i == 0:
+                        poly_parts.append(f"{row[term]}x")
+                    else:
+                        poly_parts.append(f"{row[term]}x^{i+1}")
+                else:
+                    poly_parts.append(f"{row[term]}")
+        return "y = " + " + ".join(poly_parts) if poly_parts else "y = 0"
+
+    # Create the polynomial for each row
+    df_filtered["polynomial"] = df_filtered.apply(create_poly, axis=1)
+
+    return df_filtered
+
+def filter_data_by_rxn(df: pd.DataFrame, reactants: list[str], products: list[str],
+                       ignore_rxn_ids: list[int]=[45, 73, 74]):
+    """
+    Filter the database by reactants and products, and filter out rows where 'b' is NaN
     """
     # Create a mask for the reactants
     reactant_mask: pd.Series = (
