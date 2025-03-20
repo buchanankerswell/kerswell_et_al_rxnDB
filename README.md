@@ -29,7 +29,7 @@ conda activate rxnDB
 pip install rxnDB
 ```
 
-If you want to install the development version locally for testing in "editable" mode:
+If you want to install the development version for local testing in "editable" mode:
 
 ``` bash
 # Clone repo
