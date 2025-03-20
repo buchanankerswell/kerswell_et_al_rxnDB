@@ -6,11 +6,7 @@
 
 ## Prerequisite software
 
-### Python
-
 This project is written in [python](https://www.python.org). For most users, I recommend installing the [miniforge](https://github.com/conda-forge/miniforge) python distribution. This distributions includes a minimal installation of python and the package manager [conda](https://docs.conda.io/en/latest/), which is required to build the necessary python environment for this software. Miniforge can be installed (for macOS users) with homebrew.
-
-### Installation with homebrew
 
 Follow the instructions at [Hombrew's homepage](https://brew.sh) to download and install Homebrew on your machine. Once Homebrew is installed, use any of the following to install python and conda:
 
@@ -49,7 +45,7 @@ If you want to install the development version locally for testing in "editable"
     make create_conda_env
 ```
 
-# Usage Guide
+## Usage Guide
 
 After installing rxnDB, you can launch the Shiny app directly from the command line:
 
