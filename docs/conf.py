@@ -49,9 +49,6 @@ html_css_files = ["css/darkmode.css"]
 html_js_files = ["js/darkmode.js"]
 
 html_theme_options = {
-}
-
-html_theme_options = {
     "color_scheme": "light",
     "collapse_navigation": False,
     "navigation_depth": 4,
