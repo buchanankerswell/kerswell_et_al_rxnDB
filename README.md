@@ -1,7 +1,5 @@
 # rxnDB: a mineral reaction database
 
-![](docs/rxndb-logo.svg)
-
 📚 See the [documentation](https://kerswell-et-al-rxndb.readthedocs.io/en/latest/) for details.
 
 ## Prerequisite software
