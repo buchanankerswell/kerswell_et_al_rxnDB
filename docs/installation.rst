@@ -14,7 +14,7 @@ To install with Conda (recommended):
     # Install rxnDB
     pip install rxnDB
 
-If you want to install the development version locally for testing in "editable" mode:
+If you want to install the development version for local testing in "editable" mode:
 
 .. code-block:: bash
 
