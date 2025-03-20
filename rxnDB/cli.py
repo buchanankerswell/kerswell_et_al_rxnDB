@@ -2,25 +2,7 @@ import argparse
 
 def main() -> None:
     """
-    Command line interface for launching the rxnDB Shiny app.
-
-    This function parses command-line arguments for the rxnDB Shiny app and
-    uses them to launch the app. The arguments include options for setting
-    the port, host, automatic browser launch, and enabling the reload feature.
-
-    Args:
-        None
-
-    Returns:
-        None
-
-    Command-line Arguments:
-        --port (int): The port to run the app on (default: 8000).
-        --host (str): The host to run the app on (default: "127.0.0.1").
-        --launch-browser (bool): Whether to automatically launch the browser when the
-        app starts (default: True).
-        --reload (bool): Whether to enable auto-reload of the app when files
-        change (default: True).
+    Command line interface for launching the rxnDB Shiny app
     """
     parser = argparse.ArgumentParser(description="Launch the rxnDB Shiny app")
     parser.add_argument("--port", type=int, default=8000,

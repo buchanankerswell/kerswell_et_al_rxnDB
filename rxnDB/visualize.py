@@ -7,22 +7,7 @@ import plotly.graph_objects as go
 def plot_reaction_lines(df: pd.DataFrame, rxn_ids: list, dark_mode: bool,
                         font_size: float=20, color_palette: str="Set1") -> go.Figure:
     """
-    Plots the reaction lines on a phase diagram using Plotly.
-
-    This function creates a Plotly figure displaying the reaction lines
-    for a given set of reactions and their corresponding labels on
-    a phase diagram. The figure is customized based on the provided
-    dark mode setting and font size.
-
-    Args:
-        df (pd.DataFrame): DataFrame containing the reaction data for plotting.
-        rxn_ids (list): A list of reaction IDs to be plotted.
-        dark_mode (bool): If True, the plot will be configured for dark mode.
-        font_size (float, optional): The font size for axis labels and titles. Defaults to 20.
-        color_palette (str or list, optional): Name of a Plotly color scale. Defaults to Set1.
-
-    Returns:
-        go.Figure: A Plotly figure containing the reaction lines and midpoint scatter points.
+    Plots the reaction lines on a phase diagram using Plotly
     """
     # Create a figure object
     fig = go.Figure()
@@ -64,31 +49,17 @@ def plot_reaction_lines(df: pd.DataFrame, rxn_ids: list, dark_mode: bool,
 
 def add_reaction_labels(fig: go.Figure, mp: pd.DataFrame) -> None:
     """
-    Adds labels (annotations) to the figure at the midpoint of each reaction curve.
-
-    Args:
-        fig (go.Figure): The Plotly figure to which labels will be added.
-        mp (pd.DataFrame): DataFrame containing the midpoint data for labeling.
+    Adds labels (annotations) to the figure at the midpoint of each reaction curve
     """
-    annotations: list[dict] = [dict(x=row["T (˚C)"], y=row["P (GPa)"], text=row["id"],
-                        showarrow=True, arrowhead=2) for _, row in mp.iterrows()]
+    annotations: list[dict] = [
+        dict(x=row["T (˚C)"], y=row["P (GPa)"], text=row["id"], showarrow=True, arrowhead=2)
+        for _, row in mp.iterrows()
+    ]
     fig.update_layout(annotations=annotations)
 
 def configure_layout(dark_mode: bool, font_size: float=20) -> dict:
     """
-    Returns a dictionary of layout settings for Plotly figures.
-
-    This function configures the layout of a Plotly figure, including
-    axis properties, background colors, font styles, and grid lines.
-    The layout is dynamically adjusted based on the dark mode setting
-    and font size provided.
-
-    Args:
-        dark_mode (bool): If True, the layout will be configured for dark mode.
-        font_size (float, optional): The font size for axis labels and titles. Defaults to 20.
-
-    Returns:
-        dict: A dictionary containing the layout configuration for the Plotly figure.
+    Returns a dictionary of layout settings for Plotly figures
     """
     border_color: str = "#E5E5E5" if dark_mode else "black"
     grid_color: str = "#999999" if dark_mode else "#E5E5E5"
@@ -132,13 +103,7 @@ def configure_layout(dark_mode: bool, font_size: float=20) -> dict:
 
 def get_color_palette(color_palette: str) -> list[str]:
     """
-    Returns a list of colors based on the specified color palette.
-
-    Args:
-        color_palette (str): The name of the color palette to use.
-
-    Returns:
-        list[str]: A list of color hex codes.
+    Returns a list of colors based on the specified color palette
     """
     if color_palette in dir(px.colors.qualitative):
         return getattr(px.colors.qualitative, color_palette)
