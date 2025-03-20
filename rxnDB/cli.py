@@ -1,8 +1,15 @@
+#######################################################
+## .0.              Load Libraries               !!! ##
+#######################################################
 import argparse
 
+#######################################################
+## .1.                   CLI                     !!! ##
+#######################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def main() -> None:
     """
-    Command line interface for launching the rxnDB Shiny app
+    Command line interface for launching the rxndb Shiny app
     """
     parser = argparse.ArgumentParser(description="Launch the rxnDB Shiny app")
     parser.add_argument("--port", type=int, default=8000,
@@ -18,10 +25,8 @@ def main() -> None:
     # Import here to avoid circular imports
     from shiny import run_app
 
-    # Import string pointing to app in rxnDB.app
     app_import_string: str = "rxnDB.app:app"
 
-    # Run the app with the specified options
     options: dict[str, bool | int] = {
         "port": args.port,
         "host": args.host,
@@ -31,5 +36,6 @@ def main() -> None:
 
     run_app(app_import_string, **options)
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 if __name__ == "__main__":
     main()

@@ -1,15 +1,28 @@
+#######################################################
+## .0.              Load Libraries               !!! ##
+#######################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Utilities !!
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 import numpy as np
 import pandas as pd
-import plotly.express as px
 from rxnDB.utils import app_dir
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Plotting !!
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+import plotly.express as px
 import plotly.graph_objects as go
 
+#######################################################
+## .1.                 Plotly                    !!! ##
+#######################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def plot_reaction_lines(df: pd.DataFrame, rxn_ids: list, dark_mode: bool,
                         font_size: float=20, color_palette: str="Set1") -> go.Figure:
     """
-    Plots the reaction lines on a phase diagram using Plotly
+    Plot reaction lines (phase diagram) using plotly
     """
-    # Create a figure object
     fig = go.Figure()
 
     # Tooltip template
@@ -20,8 +33,7 @@ def plot_reaction_lines(df: pd.DataFrame, rxn_ids: list, dark_mode: bool,
         "P: %{y:.2f} GPa<br>"
     )
 
-    # Get color palette
-    palette = get_color_palette(color_palette)
+    palette: list[str] = get_color_palette(color_palette)
 
     # Plot reaction lines
     for id in rxn_ids:
@@ -36,7 +48,7 @@ def plot_reaction_lines(df: pd.DataFrame, rxn_ids: list, dark_mode: bool,
         ))
 
     # Update layout
-    layout_settings = configure_layout(dark_mode, font_size)
+    layout_settings: dict = configure_layout(dark_mode, font_size)
     fig.update_layout(
         xaxis_title="Temperature (˚C)",
         yaxis_title="Pressure (GPa)",
@@ -47,9 +59,13 @@ def plot_reaction_lines(df: pd.DataFrame, rxn_ids: list, dark_mode: bool,
 
     return fig
 
+#######################################################
+## .2.             Helper Functions              !!! ##
+#######################################################
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def add_reaction_labels(fig: go.Figure, mp: pd.DataFrame) -> None:
     """
-    Adds labels (annotations) to the figure at the midpoint of each reaction curve
+    Adds labels at midpoints of each reaction curves
     """
     annotations: list[dict] = [
         dict(x=row["T (˚C)"], y=row["P (GPa)"], text=row["id"], showarrow=True, arrowhead=2)
@@ -57,9 +73,10 @@ def add_reaction_labels(fig: go.Figure, mp: pd.DataFrame) -> None:
     ]
     fig.update_layout(annotations=annotations)
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def configure_layout(dark_mode: bool, font_size: float=20) -> dict:
     """
-    Returns a dictionary of layout settings for Plotly figures
+    Configure plotly style (theme)
     """
     border_color: str = "#E5E5E5" if dark_mode else "black"
     grid_color: str = "#999999" if dark_mode else "#E5E5E5"
@@ -101,9 +118,10 @@ def configure_layout(dark_mode: bool, font_size: float=20) -> dict:
         }
     }
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def get_color_palette(color_palette: str) -> list[str]:
     """
-    Returns a list of colors based on the specified color palette
+    Get color palette
     """
     if color_palette in dir(px.colors.qualitative):
         return getattr(px.colors.qualitative, color_palette)
