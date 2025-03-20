@@ -19,30 +19,29 @@ brew install miniforge
 To install with Conda (recommended):
 
 ``` bash
-    # Create conda environment
-    conda create -n rxnDB python=3.13 pip
+# Create conda environment
+conda create -n rxnDB python=3.13 pip
 
-    # Activate conda environment
-    conda activate rxnDB
+# Activate conda environment
+conda activate rxnDB
 
-    # Install rxnDB
-    pip install rxnDB
-
+# Install rxnDB
+pip install rxnDB
 ```
 
 If you want to install the development version locally for testing in "editable" mode:
 
 ``` bash
-    # Clone repo
-    git clone https://github.com/buchanankerswell/kerswell_et_al_rxnDB.git
-    cd kerswell_et_al_rxnDB
+# Clone repo
+git clone https://github.com/buchanankerswell/kerswell_et_al_rxnDB.git
+cd kerswell_et_al_rxnDB
 
-    # Checkout develop branch
-    git checkout develop
+# Checkout develop branch
+git checkout develop
 
-    # Create conda environment and install rxnDB locally in editable mode
-    # including optional development and documentation dependencies
-    make create_conda_env
+# Create conda environment and install rxnDB locally in editable mode
+# including optional development and documentation dependencies
+make create_conda_env
 ```
 
 ## Usage Guide
@@ -50,26 +49,26 @@ If you want to install the development version locally for testing in "editable"
 After installing rxnDB, you can launch the Shiny app directly from the command line:
 
 ``` bash
-    # Activate conda environment
-    conda activate rxnDB
+# Activate conda environment
+conda activate rxnDB
 
-    # Launch app
-    rxndb
+# Launch app
+rxndb
 ```
 
 For more advanced usage, you can use the following options:
 
 ``` bash
-    # Activate conda environment
-    conda activate rxnDB
+# Activate conda environment
+conda activate rxnDB
 
-    # rxndb --host 0.0.0.0   (Make accessible from other machines)
-    # rxndb --port 8080      (Run on a specific port)
-    # rxndb --launch-browser (Open browser automatically)
-    # rxndb --reload         (Auto-reload when files change)
+# rxndb --host 0.0.0.0   (Make accessible from other machines)
+# rxndb --port 8080      (Run on a specific port)
+# rxndb --launch-browser (Open browser automatically)
+# rxndb --reload         (Auto-reload when files change)
 
-    # Default command
-    rxndb --host 127.0.0.1 --port 8000 --launch-browser --reload
+# Default command
+rxndb --host 127.0.0.1 --port 8000 --launch-browser --reload
 ```
 
 ## Coauthors
