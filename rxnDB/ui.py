@@ -5,20 +5,7 @@ from shinywidgets import output_widget
 
 def configure_ui(phases: list[str], init_phases: list[str]) -> ui.page_sidebar:
     """
-    Creates and configures the user interface for the rxnDB Shiny app.
-
-    This function generates a sidebar layout with interactive components
-    such as checkbox groups for selecting reactants and products, as well
-    as action buttons for selecting all reactants or products. It also
-    includes a phase diagram section, a data table section, and custom
-    styling for the app's layout.
-
-    Args:
-        phases (list[str]): The list of available phases to select from.
-        init_phases (list[str]): The initial phases selected by default.
-
-    Returns:
-        ui.page_sidebar: The configured UI layout for the rxnDB Shiny app.
+    Creates and configures the user interface for the rxnDB Shiny app
     """
     return ui.page_sidebar(
         ui.sidebar(
@@ -44,6 +31,9 @@ def configure_ui(phases: list[str], init_phases: list[str]) -> ui.page_sidebar:
 
         # Main content layout with columns for sliders and action buttons
         ui.layout_column_wrap(
+            # Action button to download current figure
+            ui.input_action_button("download_plotly", "Download Figure"),
+
             # Action button to select all reactants
             ui.input_action_button("show_plot_labels", "Show Rxn ID Labels"),
 
@@ -57,16 +47,21 @@ def configure_ui(phases: list[str], init_phases: list[str]) -> ui.page_sidebar:
             fill=False
         ),
 
-        # Layout with two cards: one for the phase diagram and one for the database
+        # Layout with two cards: one for the phase diagram and one for the datatable
         ui.layout_columns(
             ui.card(
                 ui.card_header("Phase Diagram"),
-                output_widget("visualize_rxns"),
+                output_widget("plotly"),
                 full_screen=True,
             ),
             ui.card(
                 ui.card_header("Database"),
-                ui.output_data_frame("rxns_db"),
+                ui.output_data_frame("datatable"),
+                ui.layout_column_wrap(
+                    ui.input_action_button("toggle_find_similar_rxns", "Show Similar Rxns"),
+                    ui.input_action_button("clear_selection", "Clear Selection"),
+                    fill=False,
+                ),
                 full_screen=True,
             )
         ),
