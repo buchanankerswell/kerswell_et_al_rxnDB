@@ -134,29 +134,21 @@ def get_unique_phases(df: pd.DataFrame) -> list[str]:
 
     return all_phases
 
-def get_reaction_line_and_midpoint_dfs(df: pd.DataFrame, nsteps: int=1000) -> tuple[pd.DataFrame, pd.DataFrame]:
+def calculate_reaction_curves(df: pd.DataFrame, nsteps: int=1000) -> pd.DataFrame:
     """
-    Calculate the reaction curves and midpoints for each row in the DataFrame.
-
-    This function computes reaction curves by calculating pressure as a function of
-    temperature using the polynomial terms for each reaction in the input DataFrame. It
-    also calculates the midpoints for each reaction and returns two DataFrames: one with
-    the reaction curves and another with the midpoints.
+    Calculate the reaction curves for each row in the DataFrame.
 
     Args:
         df (pd.DataFrame): The input DataFrame containing reaction data.
-        nsteps (int, optional): The number of temperature steps to calculate.
-                                Defaults to 1000.
+        nsteps (int, optional): The number of temperature steps to calculate. Defaults to 1000.
 
     Returns:
-        tuple[pd.DataFrame, pd.DataFrame]: A tuple containing two DataFrames: one with the
-        reaction curves and another with the midpoints for each reaction.
+        pd.DataFrame: A DataFrame containing the reaction curves for each reaction.
     """
-    # Initialize lists to store reaction curve data and midpoints
+    # Initialize a list to store reaction curve data
     rxn_curves: list[dict] = []
-    midpoints: list[dict] = []
 
-    # Iterate through each row in the DataFrame to calculate the reaction curves and midpoints
+    # Iterate through each row in the DataFrame to calculate the reaction curves
     for _, row in df.iterrows():
         # Generate a range of temperatures between tmin and tmax
         Ts: np.array = np.linspace(row["tmin"], row["tmax"], int(nsteps))
@@ -178,9 +170,40 @@ def get_reaction_line_and_midpoint_dfs(df: pd.DataFrame, nsteps: int=1000) -> tu
             rxn_curves.append({"T (˚C)": t, "P (GPa)": p, "Rxn": row["rxn"],
                                "id": row["id"]})
 
+    # Convert the list to a DataFrame
+    plot_df: pd.DataFrame = pd.DataFrame(rxn_curves)
+    if not plot_df.empty:
+        plot_df["id"] = pd.Categorical(plot_df["id"])
+
+    return plot_df
+
+def calculate_midpoints(df: pd.DataFrame, nsteps: int=1000) -> pd.DataFrame:
+    """
+    Calculate the midpoints for each reaction in the DataFrame.
+
+    Args:
+        df (pd.DataFrame): The input DataFrame containing reaction data.
+        nsteps (int, optional): The number of temperature steps to calculate. Defaults to 1000.
+
+    Returns:
+        pd.DataFrame: A DataFrame containing the midpoints for each reaction.
+    """
+    # Initialize a list to store midpoint data
+    midpoints: list[dict] = []
+
+    # Iterate through each row in the DataFrame to calculate the midpoints
+    for _, row in df.iterrows():
+        # Generate a range of temperatures between tmin and tmax
+        Ts: np.array = np.linspace(row["tmin"], row["tmax"], int(nsteps))
+
+        # Initialize pressure as the base value from column 'b'
+        midpoint_P: float = row["b"]
+        terms: list[str] = ["t1", "t2", "t3", "t4"]
+
         # Calculate the midpoint for the temperature and pressure
         midpoint_T: float = np.mean(Ts)
-        midpoint_P: float = row["b"]
+
+        # Adjust the pressure for the midpoint using polynomial terms
         for i, term in enumerate(terms, start=1):
             t: float = row[term]
             if pd.notna(t):
@@ -190,17 +213,12 @@ def get_reaction_line_and_midpoint_dfs(df: pd.DataFrame, nsteps: int=1000) -> tu
         midpoints.append({"T (˚C)": midpoint_T, "P (GPa)": midpoint_P, "Rxn": row["rxn"],
                          "id": row["id"]})
 
-    # Convert lists to DataFrames and add rxn id column
-    plot_df: pd.DataFrame = pd.DataFrame(rxn_curves)
-    if not plot_df.empty:
-        plot_df["id"] = pd.Categorical(plot_df["id"])
-
+    # Convert the list to a DataFrame
     mp_df: pd.DataFrame = pd.DataFrame(midpoints)
     if not mp_df.empty:
         mp_df["id"] = pd.Categorical(mp_df["id"])
 
-    return plot_df, mp_df
+    return mp_df
 
 data: pd.DataFrame = load_data()
 phases: list[str] = get_unique_phases(data)
-

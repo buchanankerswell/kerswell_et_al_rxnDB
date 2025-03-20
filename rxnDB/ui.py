@@ -44,6 +44,9 @@ def configure_ui(phases: list[str], init_phases: list[str]) -> ui.page_sidebar:
 
         # Main content layout with columns for sliders and action buttons
         ui.layout_column_wrap(
+            # Action button to download current figure
+            ui.input_action_button("download_plotly", "Download Figure"),
+
             # Action button to select all reactants
             ui.input_action_button("show_plot_labels", "Show Rxn ID Labels"),
 
@@ -61,12 +64,12 @@ def configure_ui(phases: list[str], init_phases: list[str]) -> ui.page_sidebar:
         ui.layout_columns(
             ui.card(
                 ui.card_header("Phase Diagram"),
-                output_widget("visualize_rxns"),
+                output_widget("plotly"),
                 full_screen=True,
             ),
             ui.card(
                 ui.card_header("Database"),
-                ui.output_data_frame("rxns_db"),
+                ui.output_data_frame("database"),
                 full_screen=True,
             )
         ),

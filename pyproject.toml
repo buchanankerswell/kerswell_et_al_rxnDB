@@ -25,6 +25,8 @@ dependencies = [
     "anywidget",
     "pandas",
     "plotly",
+    "kaleido",
+    "Pillow",
     "faicons"
 ]
 

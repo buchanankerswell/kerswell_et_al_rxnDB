@@ -4,9 +4,8 @@ import plotly.express as px
 from rxnDB.utils import app_dir
 import plotly.graph_objects as go
 
-def plot_reaction_lines(df: pd.DataFrame, mp: pd.DataFrame, rxn_ids: list,
-                        dark_mode: bool, font_size: float=20,
-                        color_palette: str="Set1", show_labels: bool=True) -> go.Figure:
+def plot_reaction_lines(df: pd.DataFrame, rxn_ids: list, dark_mode: bool,
+                        font_size: float=20, color_palette: str="Set1") -> go.Figure:
     """
     Plots the reaction lines on a phase diagram using Plotly.
 
@@ -17,12 +16,10 @@ def plot_reaction_lines(df: pd.DataFrame, mp: pd.DataFrame, rxn_ids: list,
 
     Args:
         df (pd.DataFrame): DataFrame containing the reaction data for plotting.
-        mp (pd.DataFrame): DataFrame containing the midpoints for each reaction for labelling.
         rxn_ids (list): A list of reaction IDs to be plotted.
         dark_mode (bool): If True, the plot will be configured for dark mode.
         font_size (float, optional): The font size for axis labels and titles. Defaults to 20.
         color_palette (str or list, optional): Name of a Plotly color scale. Defaults to Set1.
-        show_labels (bool): If True, the reaction lines will show labels for their IDs.
 
     Returns:
         go.Figure: A Plotly figure containing the reaction lines and midpoint scatter points.
@@ -53,12 +50,6 @@ def plot_reaction_lines(df: pd.DataFrame, mp: pd.DataFrame, rxn_ids: list,
             customdata=np.stack((d["id"], d["Rxn"]), axis=-1)
         ))
 
-    # Add text labels to midpoints
-    if show_labels:
-        annotations = [dict(x=row["T (˚C)"], y=row["P (GPa)"], text=row["id"],
-                            showarrow=True, arrowhead=2) for _, row in mp.iterrows()]
-        fig.update_layout(annotations=annotations)
-
     # Update layout
     layout_settings = configure_layout(dark_mode, font_size)
     fig.update_layout(
@@ -70,6 +61,18 @@ def plot_reaction_lines(df: pd.DataFrame, mp: pd.DataFrame, rxn_ids: list,
     )
 
     return fig
+
+def add_reaction_labels(fig: go.Figure, mp: pd.DataFrame) -> None:
+    """
+    Adds labels (annotations) to the figure at the midpoint of each reaction curve.
+
+    Args:
+        fig (go.Figure): The Plotly figure to which labels will be added.
+        mp (pd.DataFrame): DataFrame containing the midpoint data for labeling.
+    """
+    annotations: list[dict] = [dict(x=row["T (˚C)"], y=row["P (GPa)"], text=row["id"],
+                        showarrow=True, arrowhead=2) for _, row in mp.iterrows()]
+    fig.update_layout(annotations=annotations)
 
 def configure_layout(dark_mode: bool, font_size: float=20) -> dict:
     """
