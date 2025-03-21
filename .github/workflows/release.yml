@@ -36,8 +36,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install -e ".[dev,docs]"
 
-      - name: Run tests
-        run: pytest --cov=rxnDB
+      - name: Run tests and generate coverage report
+        run: |
+          pytest --cov=rxnDB --cov-branch --cov-report=xml
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        if: success()
+        run: bash <(curl -s https://codecov.io/bash)
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
   build:
     name: Build and Upload to PyPI
