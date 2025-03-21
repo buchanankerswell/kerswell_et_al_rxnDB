@@ -7,7 +7,7 @@ name = "rxnDB"
 dynamic = ["version"]
 description = "A Python Shiny app for reaction database management"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.10"
 license = {text = "MIT"}
 classifiers = [
     "Natural Language :: English",
