@@ -31,7 +31,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "pip"]
+dev = ["pytest", "pip", "pytest-cov"]
 docs = [
     "sphinx<7.0",
     "sphinx-rtd-theme",
