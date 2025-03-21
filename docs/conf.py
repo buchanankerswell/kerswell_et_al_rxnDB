@@ -21,8 +21,7 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.mathjax",
     "sphinx.ext.viewcode",
-    "sphinxcontrib.httpdomain",
-    "revitron_sphinx_theme"
+    "sphinxcontrib.httpdomain"
 ]
 
 autoapi_dirs = ["../rxnDB"]
@@ -51,7 +50,7 @@ html_js_files = ["js/darkmode.js"]
 html_theme_options = {
     "color_scheme": "light",
     "collapse_navigation": False,
-    "navigation_depth": 4,
+    "navigation_depth": 5,
     "github_url": "https://github.com/buchanankerswell/kerswell_et_al_rxnDB",
 }
 
