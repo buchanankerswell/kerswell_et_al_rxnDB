@@ -9,9 +9,9 @@ dependencies:
   - anywidget
   - pandas
   - plotly
-  - kaleido
   - Pillow
   - faicons
   - pip
   - pip:
       - "rxnDB[dev,docs]"
+      - kaleido
