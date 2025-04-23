@@ -13,5 +13,6 @@ dependencies:
   - faicons
   - pip
   - pip:
-      - -e .[dev,docs]
+      - -e .[dev]
       - kaleido
+      - -r docs/requirements.txt

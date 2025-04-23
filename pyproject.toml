@@ -32,13 +32,6 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest", "pip", "pytest-cov"]
-docs = [
-    "sphinx<7.0",
-    "sphinx-rtd-theme",
-    "sphinx-autoapi",
-    "sphinxcontrib-httpdomain",
-    "revitron-sphinx-theme @ https://github.com/revitron/revitron-sphinx-theme/archive/master.zip"
-]
 
 [project.urls]
 Repository = "https://github.com/buchanankerswell/kerswell_et_al_rxnDB"
