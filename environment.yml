@@ -13,5 +13,5 @@ dependencies:
   - faicons
   - pip
   - pip:
-      - "rxnDB[dev,docs]"
+      - -e .[dev,docs]
       - kaleido

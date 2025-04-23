@@ -36,7 +36,8 @@ docs = [
     "sphinx<7.0",
     "sphinx-rtd-theme",
     "sphinx-autoapi",
-    "sphinxcontrib-httpdomain"
+    "sphinxcontrib-httpdomain",
+    "revitron-sphinx-theme @ https://github.com/revitron/revitron-sphinx-theme/archive/master.zip"
 ]
 
 [project.urls]

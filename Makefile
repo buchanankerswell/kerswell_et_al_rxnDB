@@ -24,6 +24,12 @@ all: create_conda_env test_app run_app
 run_app: $(APP_CLI)
 	@$(CONDA_PYTHON) $(APP_CLI) --host 127.0.0.1 --port 8000 --launch-browser --reload
 
+docs:
+	@conda run -n $(CONDA_ENV_NAME) make -C docs html
+
+docs_clean:
+	@make -C docs clean
+
 test_app: $()
 	@$(CONDA_PYTHON) -m pytest $(APP_TESTS) -v
 
@@ -35,10 +41,6 @@ create_conda_env: $(CONDA_SPECS_FILE)
 		conda env create --file $(CONDA_SPECS_FILE); \
 		echo "  Conda environment $(CONDA_ENV_NAME) created!"; \
 	fi
-	@echo "  Installing rxnDB in editable mode ..."
-	@conda run -n $(CONDA_ENV_NAME) pip install -e ".[dev,docs]"
-	@echo "  Installing documentation dependencies ..."
-	@conda run -n $(CONDA_ENV_NAME) pip install -r $(DOC_DEPS)
 
 $(LOGFILE):
 	@mkdir -p log; [ -e "$(LOGFILE)" ] || touch $(LOGFILE)
@@ -49,4 +51,4 @@ purge:
 clean: purge
 	@rm -rf $(DATACLEAN)
 
-.PHONY: clean purge create_conda_env all
+.PHONY: clean purge create_conda_env test_app docs_clean docs run_app all
