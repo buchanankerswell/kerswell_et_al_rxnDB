@@ -12,7 +12,7 @@ For macOS users, miniforge can be installed with [homebrew](https://brew.sh):
 brew install miniforge
 ```
 
-For Window's users, miniforgge can be installed from a binary .exe. Follow the instructions for miniconda, anaconda, or miniforge (recommended) [here](https://docs.conda.io/projects/conda/en/stable/user-guide/install/windows.html).
+For Window's users, miniforge can be installed from a binary .exe. Follow the instructions for miniconda, anaconda, or miniforge (recommended) [here](https://docs.conda.io/projects/conda/en/stable/user-guide/install/windows.html).
 
 ## Installation Guide
 

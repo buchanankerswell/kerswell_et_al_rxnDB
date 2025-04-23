@@ -1,0 +1,6 @@
+sphinx<7.0
+sphinx-rtd-theme
+sphinx-autoapi
+sphinxcontrib-httpdomain
+https://github.com/revitron/revitron-sphinx-theme/archive/master.zip
+rxnDB
