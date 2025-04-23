@@ -40,6 +40,9 @@ create_conda_env: $(CONDA_SPECS_FILE)
 	@echo "  Installing documentation dependencies ..."
 	@conda run -n $(CONDA_ENV_NAME) pip install -r $(DOC_DEPS)
 
+$(LOGFILE):
+	@mkdir -p log; [ -e "$(LOGFILE)" ] || touch $(LOGFILE)
+
 purge:
 	@rm -rf $(DATAPURGE)
 

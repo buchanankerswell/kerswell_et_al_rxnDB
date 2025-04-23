@@ -1,3 +1,4 @@
+---
 name: rxnDB
 channels:
   - conda-forge
@@ -8,6 +9,8 @@ dependencies:
   - anywidget
   - pandas
   - plotly
+  - kaleido
+  - Pillow
   - faicons
   - pip
   - pip:
