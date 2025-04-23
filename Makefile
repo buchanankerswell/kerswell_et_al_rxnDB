@@ -48,7 +48,7 @@ $(LOGFILE):
 purge:
 	@rm -rf $(DATAPURGE)
 
-clean: purge
+clean: purge docs_clean
 	@rm -rf $(DATACLEAN)
 
 .PHONY: clean purge create_conda_env test_app docs_clean docs run_app all
