@@ -7,6 +7,7 @@ import pandas as pd
 import pytest
 
 import rxnDB.data.loader as db
+import rxnDB.visualize as vis
 from rxnDB.app import app
 from rxnDB.ui import configure_ui
 
@@ -80,8 +81,7 @@ def filtered_data_by_ids(sample_data):
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-@pytest.fixture
-def sample_plotly_data():
+def sample_plotly_data() -> pd.DataFrame:
     """
     Fixture to provide sample data for reaction-based tests
     """
@@ -196,6 +196,14 @@ class TestApp:
         Test core visualization functionality
         """
         mock_fig.return_value = mock_fig
+
+        # Test plotting function
+        _ = vis.plot_reaction_lines(
+            df=sample_plotly_data(),
+            rxn_ids=[1, 2],
+            dark_mode=False,
+            color_palette="Alphabet",
+        )
 
         # Just verify the function runs and calls Figure constructor
         assert mock_fig.called
