@@ -1,0 +1,14 @@
+{
+  "typeCheckingMode": "basic",  // "strict" is often too much for pandas
+  "reportMissingImports": false,
+  "reportMissingTypeStubs": false,
+  "reportUnknownMemberType": false,
+  "reportUnknownVariableType": false,
+  "reportUnknownArgumentType": false,
+  "reportUnknownParameterType": false,
+  "reportOptionalMemberAccess": false,
+  "reportOptionalSubscript": false,
+  "reportPrivateImportUsage": false,
+  "useLibraryCodeForTypes": true,
+  "exclude": ["**/__pycache__", "build", "dist"]
+}

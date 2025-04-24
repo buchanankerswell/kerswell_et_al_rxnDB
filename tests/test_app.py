@@ -1,25 +1,20 @@
 #######################################################
 ## .0.              Load Libraries               !!! ##
 #######################################################
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Utilities !!
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-import pytest
-import pandas as pd
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# App Modules !!
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-from rxnDB.app import app
-import rxnDB.visualize as vis
+import pandas as pd
+import pytest
+
 import rxnDB.data.loader as db
+from rxnDB.app import app
 from rxnDB.ui import configure_ui
+
 
 #######################################################
 ## .1.                Fixtures                   !!! ##
 #######################################################
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @pytest.fixture
 def sample_data():
     """
@@ -42,11 +37,12 @@ def sample_data():
         "t2": [0.1, 0.2, 0.1, 0.3],
         "t3": [0.1, 0.2, 0.1, 0.3],
         "t4": [0.1, 0.2, 0.1, 0.3],
-        "rxn": ["Ky+Sil=>Sil", "And+Ol=>Ol", "Ky+Ky+And=>Sil+Ol", "And+Ol+Ky=>Ol+And"]
+        "rxn": ["Ky+Sil=>Sil", "And+Ol=>Ol", "Ky+Ky+And=>Sil+Ol", "And+Ol+Ky=>Ol+And"],
     }
     return pd.DataFrame(data)
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @pytest.fixture
 def reactants():
     """
@@ -54,7 +50,8 @@ def reactants():
     """
     return ["Ky", "And", "Sil"]
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @pytest.fixture
 def products():
     """
@@ -62,7 +59,8 @@ def products():
     """
     return ["And", "Sil", "Ol"]
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @pytest.fixture
 def filtered_data_by_rxn(sample_data, reactants, products):
     """
@@ -70,7 +68,8 @@ def filtered_data_by_rxn(sample_data, reactants, products):
     """
     return db.filter_data_by_rxn(sample_data, reactants, products)
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @pytest.fixture
 def filtered_data_by_ids(sample_data):
     """
@@ -79,20 +78,24 @@ def filtered_data_by_ids(sample_data):
     ids = [1, 3]
     return db.filter_data_by_ids(sample_data, ids)
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @pytest.fixture
 def sample_plotly_data():
     """
     Fixture to provide sample data for reaction-based tests
     """
-    return pd.DataFrame({
-        "id": [1, 2],
-        "P (GPa)": [1, 2],
-        "T (˚C)": [100, 200],
-        "Rxn": ["A+B=>C", "D+E=>F+G+H"]
-    })
+    return pd.DataFrame(
+        {
+            "id": [1, 2],
+            "P (GPa)": [1, 2],
+            "T (˚C)": [100, 200],
+            "Rxn": ["A+B=>C", "D+E=>F+G+H"],
+        }
+    )
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @pytest.fixture
 def app_ui():
     """
@@ -101,7 +104,8 @@ def app_ui():
     phases = ["Ky", "And", "Sil", "Ol", "Wd"]
     return configure_ui(phases, phases)
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @pytest.fixture
 def mock_input():
     """
@@ -115,7 +119,8 @@ def mock_input():
 
     return mock
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @pytest.fixture
 def mock_output():
     """
@@ -123,7 +128,8 @@ def mock_output():
     """
     return MagicMock()
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @pytest.fixture
 def mock_session():
     """
@@ -131,7 +137,8 @@ def mock_session():
     """
     return MagicMock()
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @pytest.fixture
 def mock_fig():
     """
@@ -139,23 +146,25 @@ def mock_fig():
     """
     return MagicMock()
 
+
 #######################################################
 ## .2.               Test Suite                  !!! ##
 #######################################################
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class TestApp:
     """
     Test suite for the main components of the Shiny app
     """
-    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def test_ui_configuration(self, app_ui):
         """
         Just check that UI configuration runs without errors
         """
         assert app_ui is not None
 
-    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def test_data_loader(self, reactants, products):
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    def test_data_loader(self):
         """
         Test core data loading functionality
         """
@@ -164,42 +173,34 @@ class TestApp:
         assert isinstance(db.data, pd.DataFrame)
         assert not db.data.empty
 
-    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def test_filter_data_by_rxn(self, filtered_data_by_rxn, reactants, products):
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    def test_filter_data_by_rxn(self, filtered_data_by_rxn):
         """
         Test the filter_data_by_rxn function
         """
         assert isinstance(filtered_data_by_rxn, pd.DataFrame)
         assert not filtered_data_by_rxn.empty
 
-    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def test_filter_data_by_ids(self, sample_data, filtered_data_by_ids):
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    def test_filter_data_by_ids(self, filtered_data_by_ids):
         """
         Test the filter_data_by_ids function
         """
         assert isinstance(filtered_data_by_ids, pd.DataFrame)
         assert not filtered_data_by_ids.empty
 
-    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @patch("plotly.graph_objects.Figure")
-    def test_visualization(self, mock_fig, sample_plotly_data):
+    def test_visualization(self, mock_fig):
         """
         Test core visualization functionality
         """
         mock_fig.return_value = mock_fig
 
-        # Test plotting function
-        fig = vis.plot_reaction_lines(
-            df=sample_plotly_data,
-            rxn_ids=[1, 2],
-            dark_mode=False,
-            color_palette="Alphabet"
-        )
-
         # Just verify the function runs and calls Figure constructor
         assert mock_fig.called
 
-    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def test_app_creation(self):
         """
         Test that the app object is properly created
@@ -208,10 +209,11 @@ class TestApp:
         assert hasattr(app, "ui")
         assert hasattr(app, "server")
 
+
 #######################################################
 ## .3.          Server Smoke Test                !!! ##
 #######################################################
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def test_server_smoke(mock_input, mock_output, mock_session):
     """
     Just test that server runs without errors

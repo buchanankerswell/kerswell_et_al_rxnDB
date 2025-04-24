@@ -1,25 +1,23 @@
 #######################################################
 ## .0.              Load Libraries               !!! ##
 #######################################################
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Utilities !!
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 import numpy as np
 import pandas as pd
-from rxnDB.utils import app_dir
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Plotting !!
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 import plotly.express as px
 import plotly.graph_objects as go
+
 
 #######################################################
 ## .1.                 Plotly                    !!! ##
 #######################################################
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-def plot_reaction_lines(df: pd.DataFrame, rxn_ids: list, dark_mode: bool,
-                        font_size: float=20, color_palette: str="Set1") -> go.Figure:
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def plot_reaction_lines(
+    df: pd.DataFrame,
+    rxn_ids: list,
+    dark_mode: bool,
+    font_size: float = 20,
+    color_palette: str = "Set1",
+) -> go.Figure:
     """
     Plot reaction lines (phase diagram) using plotly
     """
@@ -38,14 +36,16 @@ def plot_reaction_lines(df: pd.DataFrame, rxn_ids: list, dark_mode: bool,
     # Plot reaction lines
     for id in rxn_ids:
         d: pd.DataFrame = df.query(f"id == {id}")
-        fig.add_trace(go.Scatter(
-            x=d["T (˚C)"],
-            y=d["P (GPa)"],
-            mode="lines",
-            line=dict(width=2, color=palette[id % len(palette)]),
-            hovertemplate=hovertemplate,
-            customdata=np.stack((d["id"], d["Rxn"]), axis=-1)
-        ))
+        fig.add_trace(
+            go.Scatter(
+                x=d["T (˚C)"],
+                y=d["P (GPa)"],
+                mode="lines",
+                line=dict(width=2, color=palette[id % len(palette)]),
+                hovertemplate=hovertemplate,
+                customdata=np.stack((d["id"], d["Rxn"]), axis=-1),
+            )
+        )
 
     # Update layout
     layout_settings: dict = configure_layout(dark_mode, font_size)
@@ -54,27 +54,35 @@ def plot_reaction_lines(df: pd.DataFrame, rxn_ids: list, dark_mode: bool,
         yaxis_title="Pressure (GPa)",
         showlegend=False,
         autosize=True,
-        **layout_settings
+        **layout_settings,
     )
 
     return fig
 
+
 #######################################################
 ## .2.             Helper Functions              !!! ##
 #######################################################
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def add_reaction_labels(fig: go.Figure, mp: pd.DataFrame) -> None:
     """
     Adds labels at midpoints of each reaction curves
     """
     annotations: list[dict] = [
-        dict(x=row["T (˚C)"], y=row["P (GPa)"], text=row["id"], showarrow=True, arrowhead=2)
+        dict(
+            x=row["T (˚C)"],
+            y=row["P (GPa)"],
+            text=row["id"],
+            showarrow=True,
+            arrowhead=2,
+        )
         for _, row in mp.iterrows()
     ]
     fig.update_layout(annotations=annotations)
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-def configure_layout(dark_mode: bool, font_size: float=20) -> dict:
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def configure_layout(dark_mode: bool, font_size: float = 20) -> dict:
     """
     Configure plotly style (theme)
     """
@@ -100,7 +108,7 @@ def configure_layout(dark_mode: bool, font_size: float=20) -> dict:
             "showline": True,
             "linecolor": border_color,
             "linewidth": 2,
-            "mirror": True
+            "mirror": True,
         },
         "yaxis": {
             "range": (-0.5, 19),
@@ -110,15 +118,16 @@ def configure_layout(dark_mode: bool, font_size: float=20) -> dict:
             "showline": True,
             "linecolor": border_color,
             "linewidth": 2,
-            "mirror": True
+            "mirror": True,
         },
         "legend": {
             "font": {"color": font_color},
             "bgcolor": legend_bgcolor,
-        }
+        },
     }
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def get_color_palette(color_palette: str) -> list[str]:
     """
     Get color palette
