@@ -1,0 +1,85 @@
+---
+id: hp11-389
+type: boundary_curve
+rxn: alm + 2sill => 3herc + 5q
+reactants:
+  - alm
+  - 2sill
+products:
+  - 3herc
+  - 5q
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 3.0
+      - 2.9
+      - 5.2
+      - 5.3
+      - 6.7
+      - 8.7
+      - 8.8
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.2
+      - 0.2
+      - 0.2
+      - 0.0
+  T:
+    mid:
+      - 800.0
+      - 780.0
+      - 872.5
+      - 880.0
+      - 940.0
+      - 1020.0
+      - 1025.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 7.5
+      - 0.0
+      - 0.0
+      - 0.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Bohlen et al., 1986
+    ref1:
+      authors: Bohlen et al.
+      year: '1986'

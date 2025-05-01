@@ -1,0 +1,98 @@
+---
+id: hp11-333
+type: boundary_curve
+rxn: kcm => san + H2O
+reactants:
+  - kcm
+products:
+  - san
+  - H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 24.1
+      - 28.7
+      - 25.35
+      - 27.3
+      - 27.5
+      - 24.25
+      - 25.5
+      - 27.95
+    half_range:
+      - 0.5
+      - 0.5
+      - 0.95
+      - 1.0
+      - 0.7
+      - 0.75
+      - 0.5
+      - 0.45
+  T:
+    mid:
+      - 500.0
+      - 750.0
+      - 550.0
+      - 650.0
+      - 680.0
+      - 450.0
+      - 550.0
+      - 700.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Massonne 1999; Fasshauer et al 1997; Thompson, 1994
+    ref1:
+      authors: Massonne
+      year: '1999'
+    ref2:
+      authors: Fasshauer et al
+      year: '1997'
+    ref3:
+      authors: Thompson,
+      year: '1994'

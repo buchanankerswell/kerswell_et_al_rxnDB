@@ -1,0 +1,117 @@
+---
+id: hp11-128
+type: boundary_curve
+rxn: ky => and
+reactants:
+  - ky
+products:
+  - and
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 2.4
+      - 3.6
+      - 4.8
+      - 7.0
+      - 7.5
+      - 7.9
+      - 8.5
+      - 6.8
+      - 7.9
+      - 8.2
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 393.0
+      - 473.0
+      - 573.5
+      - 352.8
+      - 377.8
+      - 403.25
+      - 403.45
+      - 353.0
+      - 416.1
+      - 800.0
+    half_range:
+      - 16.0
+      - 26.0
+      - 16.5
+      - 347.2
+      - 372.2
+      - 396.75
+      - 396.55
+      - 347.0
+      - 408.9
+      - 0.0
+metadata:
+  ref:
+    short_cite: Holdaway, 1971; Newton, 1966a; Richardson et al., 1969; Bohlen et
+      al 1991
+    ref1:
+      authors: Holdaway,
+      year: '1971'
+    ref2:
+      authors: Newton, 1966a
+      year:
+    ref3:
+      authors: Richardson et al.
+      year: '1969'
+    ref4:
+      authors: Bohlen et al
+      year: '1991'

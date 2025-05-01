@@ -1,0 +1,37 @@
+---
+id: hp11-452
+type: calibration_curve
+rxn: 2py + 3fa => 2alm + 3fo
+reactants:
+  - 2py
+  - 3fa
+products:
+  - 2alm
+  - 3fo
+data:
+  ln_K:
+    mid:
+      - 1.2
+    half_range:
+      - 0.31
+  x_CO2:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 9.1
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 1000.0
+    half_range:
+      - 0.0
+metadata:
+  ref:
+    short_cite: Hackler & Wood, 1989
+    ref1:
+      authors: Hackler & Wood,
+      year: '1989'

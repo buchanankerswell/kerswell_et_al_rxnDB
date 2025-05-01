@@ -1,0 +1,45 @@
+---
+id: hp11-236
+type: calibration_curve
+rxn: en + 2sp + 2cor => spr4
+reactants:
+  - en
+  - 2sp
+  - 2cor
+products:
+  - spr4
+data:
+  ln_K:
+    mid:
+      - -0.32
+      - -0.34
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 15.0
+      - 12.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 725.0
+      - 725.0
+    half_range:
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Podlesskii, 1996
+    ref1:
+      authors: Podlesskii,
+      year: '1996'

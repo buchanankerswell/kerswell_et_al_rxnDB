@@ -1,0 +1,70 @@
+---
+id: hp11-102
+type: calibration_curve
+rxn: ta + 5mag => 4fo + 5CO2 + H2O
+reactants:
+  - ta
+  - 5mag
+products:
+  - 4fo
+  - 5CO2
+  - H2O
+data:
+  ln_K:
+    mid:
+      - -5.09
+      - -5.68
+      - -2.82
+      - -2.88
+      - -4.08
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.4
+      - 0.35
+      - 0.75
+      - 0.73
+      - 0.51
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 2.0
+      - 2.0
+      - 2.0
+      - 2.0
+      - 2.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 540.0
+      - 550.0
+      - 560.0
+      - 586.0
+      - 560.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Greenwood, 1967
+    ref1:
+      authors: Greenwood,
+      year: '1967'

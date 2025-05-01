@@ -1,0 +1,51 @@
+---
+id: hp11-525
+type: calibration_curve
+rxn: fa => faL
+reactants:
+  - fa
+products:
+  - faL
+data:
+  ln_K:
+    mid:
+      - 0.53
+      - 0.865
+      - 1.265
+    half_range:
+      - 0.01
+      - 0.025
+      - 0.055
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 1300.0
+      - 1400.0
+      - 1500.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Bowen & Shairer 1935
+    ref1:
+      authors: Bowen & Shairer
+      year: '1935'

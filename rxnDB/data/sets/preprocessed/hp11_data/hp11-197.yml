@@ -1,0 +1,44 @@
+---
+id: hp11-197
+type: calibration_curve
+rxn: hcrd => crd + H2O
+reactants:
+  - hcrd
+products:
+  - crd
+  - H2O
+data:
+  ln_K:
+    mid:
+      - 0.12
+      - 0.36
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 2.0
+      - 2.2
+    half_range:
+      - 0.2
+      - 0.2
+  T:
+    mid:
+      - 650.0
+      - 700.0
+    half_range:
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Mukhopadhyay & Holdaway 1994
+    ref1:
+      authors: Mukhopadhyay & Holdaway
+      year: '1994'

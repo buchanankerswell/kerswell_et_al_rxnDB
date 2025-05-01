@@ -1,0 +1,37 @@
+---
+id: hp11-456
+type: calibration_curve
+rxn: spr4 + 2fcrd => fspr + 2crd
+reactants:
+  - spr4
+  - 2fcrd
+products:
+  - fspr
+  - 2crd
+data:
+  ln_K:
+    mid:
+      - 3.61
+    half_range:
+      - 0.53
+  x_CO2:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 5.5
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 800.0
+    half_range:
+      - 0.0
+metadata:
+  ref:
+    short_cite: Waters, 1986
+    ref1:
+      authors: Waters,
+      year: '1986'

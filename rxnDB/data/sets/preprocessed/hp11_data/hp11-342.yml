@@ -1,0 +1,61 @@
+---
+id: hp11-342
+type: calibration_curve
+rxn: cel + east => mu + phl
+reactants:
+  - cel
+  - east
+products:
+  - mu
+  - phl
+data:
+  ln_K:
+    mid:
+      - 5.13
+      - 4.32
+      - 5.05
+      - 4.13
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 7.2
+      - 7.2
+      - 8.3
+      - 8.3
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 640.0
+      - 632.0
+      - 646.0
+      - 634.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Bird & Fawcett, 1973
+    ref1:
+      authors: Bird & Fawcett,
+      year: '1973'

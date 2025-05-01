@@ -1,0 +1,59 @@
+---
+id: hp11-018
+type: boundary_curve
+rxn: arag => cc
+reactants:
+  - arag
+products:
+  - cc
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 3.9
+      - 4.1
+      - 4.25
+      - 5.0
+    half_range:
+      - 0.2
+      - 0.0
+      - 0.25
+      - 0.3
+  T:
+    mid:
+      - 70.0
+      - 80.0
+      - 100.0
+      - 142.0
+    half_range:
+      - 0.0
+      - 10.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Crawford & Hoersch, 1972
+    ref1:
+      authors: Crawford & Hoersch,
+      year: '1972'

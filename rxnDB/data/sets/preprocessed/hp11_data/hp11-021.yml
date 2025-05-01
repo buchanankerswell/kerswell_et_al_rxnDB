@@ -1,0 +1,51 @@
+---
+id: hp11-021
+type: boundary_curve
+rxn: arag => cc
+reactants:
+  - arag
+products:
+  - cc
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 19.5
+      - 25.15
+      - 30.0
+    half_range:
+      - 0.5
+      - 0.45
+      - 0.5
+  T:
+    mid:
+      - 800.0
+      - 950.0
+      - 1100.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Irving & Wyllie, 1973
+    ref1:
+      authors: Irving & Wyllie,
+      year: '1973'

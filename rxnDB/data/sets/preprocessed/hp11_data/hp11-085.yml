@@ -1,0 +1,45 @@
+---
+id: hp11-085
+type: boundary_curve
+rxn: atg => 4ta + 18fo + 27H2O
+reactants:
+  - atg
+products:
+  - 4ta
+  - 18fo
+  - 27H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 20.0
+      - 28.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 655.0
+      - 670.0
+    half_range:
+      - 15.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Wunder & Schreyer, 1997
+    ref1:
+      authors: Wunder & Schreyer,
+      year: '1997'

@@ -1,0 +1,70 @@
+---
+id: hp11-110
+type: boundary_curve
+rxn: 2tr => 3en + 4di + 2q + 2H2O
+reactants:
+  - 2tr
+products:
+  - 3en
+  - 4di
+  - 2q
+  - 2H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.1
+      - 0.2
+      - 0.3
+      - 0.8
+      - 1.4
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 665.0
+      - 735.0
+      - 765.0
+      - 810.0
+      - 830.0
+    half_range:
+      - 10.0
+      - 10.0
+      - 10.0
+      - 10.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Yin & Greenwood, 1983
+    ref1:
+      authors: Yin & Greenwood,
+      year: '1983'

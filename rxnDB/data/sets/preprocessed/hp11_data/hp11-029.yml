@@ -1,0 +1,54 @@
+---
+id: hp11-029
+type: boundary_curve
+rxn: mrw => mwd
+reactants:
+  - mrw
+products:
+  - mwd
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 190.0
+      - 210.0
+      - 226.5
+    half_range:
+      - 5.0
+      - 5.0
+      - 1.5
+  T:
+    mid:
+      - 1260.0
+      - 1700.0
+      - 2173.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Katsura & Ito 1989; Fei et al 2004
+    ref1:
+      authors: Katsura & Ito
+      year: '1989'
+    ref2:
+      authors: Fei et al
+      year: '2004'

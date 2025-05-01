@@ -1,0 +1,44 @@
+---
+id: hp11-332
+type: calibration_curve
+rxn: 4amul + 3qL => 5silL
+reactants:
+  - 4amul
+  - 3qL
+products:
+  - 5silL
+data:
+  ln_K:
+    mid:
+      - 8.62
+      - 6.79
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 1920.0
+      - 1880.0
+    half_range:
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Klug et al 1987
+    ref1:
+      authors: Klug et al
+      year: '1987'

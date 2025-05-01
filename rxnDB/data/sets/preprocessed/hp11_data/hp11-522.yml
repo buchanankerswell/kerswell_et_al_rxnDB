@@ -1,0 +1,43 @@
+---
+id: hp11-522
+type: calibration_curve
+rxn: abh => abL
+reactants:
+  - abh
+products:
+  - abL
+data:
+  ln_K:
+    mid:
+      - -0.26
+      - -0.26
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 1050.0
+      - 1080.0
+    half_range:
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Shairer & Bowen 1956
+    ref1:
+      authors: Shairer & Bowen
+      year: '1956'

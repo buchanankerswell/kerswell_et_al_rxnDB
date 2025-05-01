@@ -1,0 +1,60 @@
+---
+id: hp11-104
+type: boundary_curve
+rxn: wo + mont => ak
+reactants:
+  - wo
+  - mont
+products:
+  - ak
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 1.0
+      - 3.0
+      - 5.0
+      - 6.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 687.5
+      - 712.5
+      - 735.0
+      - 735.0
+    half_range:
+      - 12.5
+      - 7.5
+      - 15.0
+      - 15.0
+metadata:
+  ref:
+    short_cite: Yoder, 1968
+    ref1:
+      authors: Yoder,
+      year: '1968'

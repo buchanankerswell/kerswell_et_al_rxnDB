@@ -1,0 +1,66 @@
+---
+id: hp11-122
+type: calibration_curve
+rxn: 5dol + 8q + H2O => tr + 3cc + 7CO2
+reactants:
+  - 5dol
+  - 8q
+  - H2O
+products:
+  - tr
+  - 3cc
+  - 7CO2
+data:
+  ln_K:
+    mid:
+      - 0.64
+      - -2.05
+      - -10.87
+      - -10.87
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.85
+      - 0.66
+      - 0.21
+      - 0.21
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 2.0
+      - 6.0
+      - 6.0
+      - 6.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 484.0
+      - 600.0
+      - 550.0
+      - 540.0
+    half_range:
+      - 10.0
+      - 10.0
+      - 10.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Slaughter et al., 1975; Eggert & Kerrick, 1981
+    ref1:
+      authors: Slaughter et al.
+      year: '1975'
+    ref2:
+      authors: Eggert & Kerrick,
+      year: '1981'

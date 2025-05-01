@@ -1,0 +1,53 @@
+---
+id: hp11-365
+type: calibration_curve
+rxn: gl + 2q => ta + 2abh
+reactants:
+  - gl
+  - 2q
+products:
+  - ta
+  - 2abh
+data:
+  ln_K:
+    mid:
+      - 0.41
+      - 0.41
+      - 0.41
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 11.75
+      - 15.25
+      - 16.75
+    half_range:
+      - 0.75
+      - 0.75
+      - 0.75
+  T:
+    mid:
+      - 600.0
+      - 700.0
+      - 750.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Corona & Jenkins, 2007
+    ref1:
+      authors: Corona & Jenkins,
+      year: '2007'

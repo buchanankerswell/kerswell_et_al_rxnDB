@@ -1,0 +1,61 @@
+---
+id: hp11-445
+type: calibration_curve
+rxn: 3fcrd + 2py => 3crd + 2alm
+reactants:
+  - 3fcrd
+  - 2py
+products:
+  - 3crd
+  - 2alm
+data:
+  ln_K:
+    mid:
+      - 11.525
+      - 9.73
+      - 8.275
+      - 7.03
+    half_range:
+      - 0.625
+      - 0.6
+      - 0.605
+      - 0.6
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 6.0
+      - 6.0
+      - 6.0
+      - 6.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 700.0
+      - 800.0
+      - 900.0
+      - 1000.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Perchuk & Lavrenteva, 1983
+    ref1:
+      authors: Perchuk & Lavrenteva,
+      year: '1983'

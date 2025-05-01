@@ -1,0 +1,56 @@
+---
+id: hp11-460
+type: calibration_curve
+rxn: 5alm + 3clin => 5py + 3daph
+reactants:
+  - 5alm
+  - 3clin
+products:
+  - 5py
+  - 3daph
+data:
+  ln_K:
+    mid:
+      - -34.815
+      - -31.465
+      - -29.98
+    half_range:
+      - 1.845
+      - 1.505
+      - 1.46
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 7.0
+      - 7.0
+      - 7.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 450.0
+      - 500.0
+      - 550.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Dickenson & Hewitt, 1986; Laird, 1989
+    ref1:
+      authors: Dickenson & Hewitt,
+      year: '1986'
+    ref2:
+      authors: Laird,
+      year: '1989'

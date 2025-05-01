@@ -1,0 +1,54 @@
+---
+id: hp11-393
+type: calibration_curve
+rxn: 23fctd + 7q => 2fst + 5alm + 19H2O
+reactants:
+  - 23fctd
+  - 7q
+products:
+  - 2fst
+  - 5alm
+  - 19H2O
+data:
+  ln_K:
+    mid:
+      - 1.18
+      - 1.18
+      - 1.18
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 10.0
+      - 14.0
+      - 6.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 570.0
+      - 580.0
+      - 560.0
+    half_range:
+      - 10.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Rao & Johannes, 1979
+    ref1:
+      authors: Rao & Johannes,
+      year: '1979'

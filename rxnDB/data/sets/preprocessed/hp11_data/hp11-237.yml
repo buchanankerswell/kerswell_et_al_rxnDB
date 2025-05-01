@@ -1,0 +1,44 @@
+---
+id: hp11-237
+type: calibration_curve
+rxn: en + 2cor => 2mgts
+reactants:
+  - en
+  - 2cor
+products:
+  - 2mgts
+data:
+  ln_K:
+    mid:
+      - -3.61
+      - -4.15
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 15.0
+      - 12.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 725.0
+      - 725.0
+    half_range:
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Podlesskii, 1996
+    ref1:
+      authors: Podlesskii,
+      year: '1996'

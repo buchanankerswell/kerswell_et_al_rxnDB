@@ -1,0 +1,78 @@
+---
+id: hp11-274
+type: calibration_curve
+rxn: 2clin + 19ky => 5crd + 11cor + 8H2O
+reactants:
+  - 2clin
+  - 19ky
+products:
+  - 5crd
+  - 11cor
+  - 8H2O
+data:
+  ln_K:
+    mid:
+      - -7.81
+      - -7.4
+      - -8.87
+      - -8.35
+      - -9.87
+      - -9.27
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 5.0
+      - 5.0
+      - 6.0
+      - 6.0
+      - 7.0
+      - 7.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 610.0
+      - 620.0
+      - 640.0
+      - 650.0
+      - 655.0
+      - 670.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Seifert, 1973
+    ref1:
+      authors: Seifert,
+      year: '1973'

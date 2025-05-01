@@ -1,0 +1,45 @@
+---
+id: hp11-399
+type: boundary_curve
+rxn: 5fctd => fcrd + 3herc + 5H2O
+reactants:
+  - 5fctd
+products:
+  - fcrd
+  - 3herc
+  - 5H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 1.0
+      - 2.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 537.5
+      - 562.5
+    half_range:
+      - 12.5
+      - 12.5
+metadata:
+  ref:
+    short_cite: Grieve & Fawcett, 1974
+    ref1:
+      authors: Grieve & Fawcett,
+      year: '1974'

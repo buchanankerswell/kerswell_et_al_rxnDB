@@ -1,0 +1,53 @@
+---
+id: hp11-447
+type: calibration_curve
+rxn: alm + 3cel => py + 3fcel
+reactants:
+  - alm
+  - 3cel
+products:
+  - py
+  - 3fcel
+data:
+  ln_K:
+    mid:
+      - -7.69
+      - -6.84
+      - -7.22
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 7.0
+      - 7.0
+      - 7.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 470.0
+      - 470.0
+      - 470.0
+    half_range:
+      - 50.0
+      - 50.0
+      - 50.0
+metadata:
+  ref:
+    short_cite: Hynes & Forest, 1988
+    ref1:
+      authors: Hynes & Forest,
+      year: '1988'

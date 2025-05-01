@@ -1,0 +1,90 @@
+---
+id: hp11-308
+type: boundary_curve
+rxn: 2jd => ne + abh
+reactants:
+  - 2jd
+products:
+  - ne
+  - abh
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 10.5
+      - 14.5
+      - 16.85
+      - 18.75
+      - 21.0
+      - 20.0
+      - 23.5
+    half_range:
+      - 0.5
+      - 0.5
+      - 1.45
+      - 0.75
+      - 0.0
+      - 0.0
+      - 0.5
+  T:
+    mid:
+      - 600.0
+      - 800.0
+      - 825.0
+      - 950.0
+      - 1050.0
+      - 1100.0
+      - 1200.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Gasparik, 1985; Robertson et al., 1957; Boettcher & Wyllie, 1968
+    ref1:
+      authors: Gasparik,
+      year: '1985'
+    ref2:
+      authors: Robertson et al.
+      year: '1957'
+    ref3:
+      authors: Boettcher & Wyllie,
+      year: '1968'

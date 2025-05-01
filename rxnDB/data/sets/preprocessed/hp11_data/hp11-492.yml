@@ -1,0 +1,43 @@
+---
+id: hp11-492
+type: boundary_curve
+rxn: q => qL
+reactants:
+  - q
+products:
+  - qL
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 30.0
+      - 37.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 2320.0
+      - 2390.0
+    half_range:
+      - 50.0
+      - 50.0
+metadata:
+  ref:
+    short_cite: Kanzaki, 1990
+    ref1:
+      authors: Kanzaki,
+      year: '1990'

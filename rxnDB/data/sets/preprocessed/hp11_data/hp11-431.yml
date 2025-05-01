@@ -1,0 +1,78 @@
+---
+id: hp11-431
+type: calibration_curve
+rxn: ru + cc + q => sph + CO2
+reactants:
+  - ru
+  - cc
+  - q
+products:
+  - sph
+  - CO2
+data:
+  ln_K:
+    mid:
+      - -1.39
+      - -0.73
+      - -0.43
+      - -0.2
+      - -0.69
+      - -0.03
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.25
+      - 0.48
+      - 0.65
+      - 0.82
+      - 0.5
+      - 0.97
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 6.0
+      - 6.0
+      - 6.0
+      - 6.0
+      - 5.0
+      - 5.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 550.0
+      - 575.0
+      - 600.0
+      - 620.0
+      - 580.0
+      - 635.0
+    half_range:
+      - 10.0
+      - 5.0
+      - 10.0
+      - 10.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Jacobs & Kerrick, 1981
+    ref1:
+      authors: Jacobs & Kerrick,
+      year: '1981'

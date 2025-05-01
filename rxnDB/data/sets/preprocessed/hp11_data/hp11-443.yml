@@ -1,0 +1,53 @@
+---
+id: hp11-443
+type: calibration_curve
+rxn: dol + sid => ank + mag
+reactants:
+  - dol
+  - sid
+products:
+  - ank
+  - mag
+data:
+  ln_K:
+    mid:
+      - -0.355
+      - -0.635
+      - -0.63
+    half_range:
+      - 0.145
+      - 0.235
+      - 0.24
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 3.0
+      - 3.0
+      - 3.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 400.0
+      - 450.0
+      - 500.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Rosenberg, 1967
+    ref1:
+      authors: Rosenberg,
+      year: '1967'

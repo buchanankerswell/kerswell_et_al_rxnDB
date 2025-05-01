@@ -1,0 +1,52 @@
+---
+id: hp11-090
+type: boundary_curve
+rxn: phA => 3br + 2fo
+reactants:
+  - phA
+products:
+  - 3br
+  - 2fo
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 26.75
+      - 33.65
+      - 38.5
+    half_range:
+      - 0.75
+      - 1.15
+      - 1.0
+  T:
+    mid:
+      - 500.0
+      - 600.0
+      - 650.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Pawley & Wood, 1995
+    ref1:
+      authors: Pawley & Wood,
+      year: '1995'

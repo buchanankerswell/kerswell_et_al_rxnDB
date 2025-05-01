@@ -1,0 +1,35 @@
+---
+id: hp11-506
+type: boundary_curve
+rxn: abh => abL
+reactants:
+  - abh
+products:
+  - abL
+data:
+  ln_K:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 1118.0
+    half_range:
+      - 8.0
+metadata:
+  ref:
+    short_cite: Shairer & Bowen, 1956
+    ref1:
+      authors: Shairer & Bowen,
+      year: '1956'

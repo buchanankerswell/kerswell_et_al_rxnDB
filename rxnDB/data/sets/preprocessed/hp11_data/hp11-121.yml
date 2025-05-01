@@ -1,0 +1,39 @@
+---
+id: hp11-121
+type: calibration_curve
+rxn: ta + 3cc + 2q => 3di + H2O + 3CO2
+reactants:
+  - ta
+  - 3cc
+  - 2q
+products:
+  - 3di
+  - H2O
+  - 3CO2
+data:
+  ln_K:
+    mid:
+      - -2.45
+    half_range:
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.6
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 2.0
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 497.5
+    half_range:
+      - 17.5
+metadata:
+  ref:
+    short_cite: Skippen, 1971
+    ref1:
+      authors: Skippen,
+      year: '1971'

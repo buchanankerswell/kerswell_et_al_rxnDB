@@ -1,0 +1,67 @@
+---
+id: hp11-251
+type: calibration_curve
+rxn: ames => en + 2sp + 4H2O
+reactants:
+  - ames
+products:
+  - en
+  - 2sp
+  - 4H2O
+data:
+  ln_K:
+    mid:
+      - 3.02
+      - 1.53
+      - 1.91
+      - 1.37
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 3.0
+      - 3.0
+      - 14.0
+      - 14.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 725.0
+      - 755.0
+      - 850.0
+      - 860.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Jenkins, 1981; Jenkins & Chernosky, 1986; Fawcett & Yoder, 1966
+    ref1:
+      authors: Jenkins,
+      year: '1981'
+    ref2:
+      authors: Jenkins & Chernosky,
+      year: '1986'
+    ref3:
+      authors: Fawcett & Yoder,
+      year: '1966'

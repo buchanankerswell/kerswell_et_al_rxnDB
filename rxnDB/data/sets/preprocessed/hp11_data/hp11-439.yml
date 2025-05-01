@@ -1,0 +1,60 @@
+---
+id: hp11-439
+type: calibration_curve
+rxn: 2NiO => 2Ni + O2
+reactants:
+  - 2NiO
+products:
+  - 2Ni
+  - O2
+data:
+  ln_K:
+    mid:
+      - -44.18
+      - -32.08
+      - -27.59
+      - -20.59
+    half_range:
+      - 0.23
+      - 0.23
+      - 0.23
+      - 0.23
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 600.0
+      - 800.0
+      - 900.0
+      - 1100.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: O’Neill, 1987
+    ref1:
+      authors: O’Neill,
+      year: '1987'

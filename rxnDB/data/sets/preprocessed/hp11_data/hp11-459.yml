@@ -1,0 +1,45 @@
+---
+id: hp11-459
+type: calibration_curve
+rxn: jd + ep => acm + cz
+reactants:
+  - jd
+  - ep
+products:
+  - acm
+  - cz
+data:
+  ln_K:
+    mid:
+      - -1.08
+      - -1.54
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 11.0
+      - 9.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 450.0
+      - 450.0
+    half_range:
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Holland & Ray, 1985
+    ref1:
+      authors: Holland & Ray,
+      year: '1985'

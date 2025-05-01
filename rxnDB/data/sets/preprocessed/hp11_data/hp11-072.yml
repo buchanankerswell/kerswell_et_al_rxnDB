@@ -1,0 +1,45 @@
+---
+id: hp11-072
+type: boundary_curve
+rxn: 2ta => 3en + 2q + 2H2O
+reactants:
+  - 2ta
+products:
+  - 3en
+  - 2q
+  - 2H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 25.0
+      - 28.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 810.0
+      - 770.0
+    half_range:
+      - 10.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Jenkins, Holland & Clare, 1991
+    ref1:
+      authors: Jenkins, Holland & Clare,
+      year: '1991'

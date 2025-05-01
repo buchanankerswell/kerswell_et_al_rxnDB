@@ -1,0 +1,34 @@
+---
+id: hp11-455
+type: boundary_curve
+rxn: 7en + 2fanth => 2anth + 7fs
+reactants:
+  - 7en
+  - 2fanth
+products:
+  - 2anth
+  - 7fs
+data:
+  ln_K:
+    mid:
+      - 0.0
+    half_range:
+      - 1.06
+  x_CO2:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 5.0
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 725.0
+    half_range:
+      - 0.0
+metadata:
+  ref:
+    short_cite: Natural Kd

@@ -1,0 +1,39 @@
+---
+id: hp11-127
+type: calibration_curve
+rxn: 3tr + 5cc => 11di + 2fo + 5CO2 + 3H2O
+reactants:
+  - 3tr
+  - 5cc
+products:
+  - 11di
+  - 2fo
+  - 5CO2
+  - 3H2O
+data:
+  ln_K:
+    mid:
+      - -5.79
+    half_range:
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.45
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 1.0
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 538.0
+    half_range:
+      - 10.0
+metadata:
+  ref:
+    short_cite: Chernosky & Berman, 1986
+    ref1:
+      authors: Chernosky & Berman,
+      year: '1986'

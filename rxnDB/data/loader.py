@@ -1,207 +1,104 @@
 #######################################################
 ## .0.              Load Libraries               !!! ##
 #######################################################
+from dataclasses import dataclass
 from pathlib import Path
+from typing import Any
 
-import numpy as np
 import pandas as pd
+from ruamel.yaml import YAML
 
 from rxnDB.utils import app_dir
 
 
 #######################################################
-## .1.                  rxnDB                    !!! ##
+## .1.                   RxnDB                   !!! ##
 #######################################################
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-def load_data(filename: str = "rxns.csv") -> pd.DataFrame:
-    """
-    Loads rxnDB from csv file
-    """
-    filepath: Path = app_dir / "data" / filename
-    if not filepath.exists():
-        raise FileNotFoundError(f"File {filepath} not found!")
+@dataclass
+class RxnDBLoader:
+    in_dir: Path
 
-    return pd.read_csv(filepath)
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    def __post_init__(self):
+        self.yaml = YAML()
+        if not self.in_dir.exists():
+            raise FileNotFoundError(f"Directory {self.in_dir} not found!")
 
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    def load_all(self) -> pd.DataFrame:
+        """Load and concatenate all YAML entries in the directory into a single DataFrame."""
+        dfs = [
+            self.load_entry(filepath) for filepath in sorted(self.in_dir.glob("*.yml"))
+        ]
+        return pd.concat(dfs, ignore_index=True)
 
-#######################################################
-## .2.             Helper Functions              !!! ##
-#######################################################
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-def filter_data_by_ids(
-    df: pd.DataFrame, ids: list[int], ignore_rxn_ids: list[int] = [45, 73, 74]
-) -> pd.DataFrame:
-    """
-    Filter the database by rxn ids
-    """
-    id_mask: pd.Series = df["id"].isin(ids)
-    df_filtered: pd.DataFrame = df[id_mask].copy()
-    df_filtered = df_filtered[~df_filtered["id"].isin(ignore_rxn_ids)]
-    df_filtered = df_filtered[df_filtered["b"].notna()]
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    def load_entry(self, filepath: Path) -> pd.DataFrame:
+        """Load a single YAML file and convert it into a DataFrame."""
+        parsed_yml = self._read_yml(filepath)
 
-    terms: list[str] = ["t1", "t2", "t3", "t4", "b"]
+        data = parsed_yml["data"]
+        metadata = parsed_yml["metadata"]
 
-    def create_poly(row: pd.Series) -> str:
-        """
-        Creates a polynomial string
-        """
-        poly_parts: list[str] = []
-        for i, term in enumerate(terms):
-            if term in df_filtered.columns and pd.notna(row[term]):
-                if term != "b":
-                    if i == 0:
-                        poly_parts.append(f"{row[term]}x")
-                    else:
-                        poly_parts.append(f"{row[term]}x^{i+1}")
-                else:
-                    poly_parts.append(f"{row[term]}")
-        return "y = " + " + ".join(poly_parts) if poly_parts else "y = 0"
-
-    df_filtered["polynomial"] = df_filtered.apply(create_poly, axis=1)
-
-    return df_filtered
-
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-def filter_data_by_rxn(
-    df: pd.DataFrame,
-    reactants: list[str],
-    products: list[str],
-    ignore_rxn_ids: list[int] = [45, 73, 74],
-):
-    """
-    Filter the database by reactants and products
-    """
-    reactant_mask: pd.Series = (
-        df["reactant1"].isin(reactants)
-        | df["reactant2"].isin(reactants)
-        | df["reactant3"].isin(reactants)
-    )
-    product_mask: pd.Series = (
-        df["product1"].isin(products)
-        | df["product2"].isin(products)
-        | df["product3"].isin(products)
-    )
-    equal_range_mask: pd.Series = (df["pmin"] != df["pmax"]) & (
-        df["tmin"] != df["tmax"]
-    )
-    df_filtered: pd.DataFrame = df[
-        reactant_mask & product_mask & equal_range_mask
-    ].copy()
-    df_filtered = df_filtered[~df_filtered["id"].isin(ignore_rxn_ids)]
-    df_filtered = df_filtered[df_filtered["b"].notna()]
-
-    terms: list[str] = ["t1", "t2", "t3", "t4", "b"]
-
-    def create_poly(row: pd.Series) -> str:
-        """
-        Creates a polynomial string
-        """
-        poly_parts: list[str] = []
-        for i, term in enumerate(terms):
-            if term in df_filtered.columns and pd.notna(row[term]):
-                if term != "b":
-                    if i == 0:
-                        poly_parts.append(f"{row[term]}x")
-                    else:
-                        poly_parts.append(f"{row[term]}x^{i+1}")
-                else:
-                    poly_parts.append(f"{row[term]}")
-        return "y = " + " + ".join(poly_parts) if poly_parts else "y = 0"
-
-    df_filtered["polynomial"] = df_filtered.apply(create_poly, axis=1)
-
-    return df_filtered
-
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-def get_unique_phases(df: pd.DataFrame) -> list[str]:
-    """
-    Get a sorted list of unique phases
-    """
-    reactants: list[str] = (
-        pd.concat([df["reactant1"], df["reactant2"], df["reactant3"]]).unique().tolist()
-    )
-
-    products: list[str] = (
-        pd.concat([df["product1"], df["product2"], df["product3"]]).unique().tolist()
-    )
-
-    all_phases: list[str] = list(set(reactants + products))
-    all_phases = [compound for compound in all_phases if pd.notna(compound)]
-    all_phases.sort()
-    all_phases = [c for c in all_phases if c != "Triple Point"]
-
-    return all_phases
-
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-def calculate_reaction_curves(df: pd.DataFrame, nsteps: int = 1000) -> pd.DataFrame:
-    """
-    Calculate reaction curves
-    """
-    rxn_curves: list[dict] = []
-
-    # Iterate through each row in the DataFrame to calculate the reaction curves
-    for _, row in df.iterrows():
-        Ts: np.ndarray = np.linspace(row["tmin"], row["tmax"], int(nsteps))
-        Ps: np.ndarray = np.full_like(Ts, row["b"])
-
-        terms: list[str] = ["t1", "t2", "t3", "t4"]
-        for i, term in enumerate(terms, start=1):
-            t: float = row[term]
-            if pd.notna(t):
-                Ps += t * Ts**i
-
-        for t, p in zip(Ts, Ps):
-            rxn_curves.append(
-                {"T (˚C)": t, "P (GPa)": p, "Rxn": row["rxn"], "id": row["id"]}
-            )
-
-    plot_df: pd.DataFrame = pd.DataFrame(rxn_curves)
-    if not plot_df.empty:
-        plot_df["id"] = pd.Categorical(plot_df["id"])
-
-    return plot_df
-
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-def calculate_midpoints(df: pd.DataFrame, nsteps: int = 1000) -> pd.DataFrame:
-    """
-    Calculate the reaction curve midpoints
-    """
-    midpoints: list[dict] = []
-
-    # Iterate through each row in the DataFrame to calculate the midpoints
-    for _, row in df.iterrows():
-        Ts: np.ndarray = np.linspace(row["tmin"], row["tmax"], int(nsteps))
-        midpoint_P: float = row["b"]
-        terms: list[str] = ["t1", "t2", "t3", "t4"]
-        midpoint_T: float = float(np.mean(Ts))
-
-        for i, term in enumerate(terms, start=1):
-            t: float = row[term]
-            if pd.notna(t):
-                midpoint_P += t * midpoint_T**i
-
-        midpoints.append(
+        n_rows = len(data["ln_K"]["mid"])
+        rows = [
             {
-                "T (˚C)": midpoint_T,
-                "P (GPa)": midpoint_P,
-                "Rxn": row["rxn"],
-                "id": row["id"],
+                "id": parsed_yml["id"],
+                "type": parsed_yml["type"],
+                "rxn": parsed_yml["rxn"],
+                "products": self._convert_to_str_list(parsed_yml["products"]),
+                "reactants": self._convert_to_str_list(parsed_yml["reactants"]),
+                "ln_K_mid": data["ln_K"]["mid"][i],
+                "ln_K_half_range": data["ln_K"]["half_range"][i],
+                "x_CO2_mid": data["x_CO2"]["mid"][i],
+                "x_CO2_half_range": data["x_CO2"]["half_range"][i],
+                "P": data["P"]["mid"][i],
+                "P_half_range": data["P"]["half_range"][i],
+                "T": data["T"]["mid"][i],
+                "T_half_range": data["T"]["half_range"][i],
+                "ref": metadata["ref"]["short_cite"],
             }
-        )
+            for i in range(n_rows)
+        ]
 
-    mp_df: pd.DataFrame = pd.DataFrame(midpoints)
-    if not mp_df.empty:
-        mp_df["id"] = pd.Categorical(mp_df["id"])
+        return pd.DataFrame(rows)
 
-    return mp_df
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    def _read_yml(self, filepath: Path) -> dict[str, Any]:
+        """Read and parse a YAML file."""
+        with open(filepath, "r") as file:
+            return self.yaml.load(file)
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    def _convert_to_str_list(self, data: Any) -> list[str]:
+        """Ensure that the data is converted to a list of strings"""
+        if isinstance(data, list):
+            return [str(item).lower() for item in data]
+        elif isinstance(data, str):
+            return [data.lower()]
+        else:
+            return [str(data).lower()]
 
 
-#######################################################
-## .3.            Module Attributes              !!! ##
-#######################################################
-data: pd.DataFrame = load_data()
-phases: list[str] = get_unique_phases(data)
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def main():
+    hp11_in_data = app_dir / "data" / "sets" / "preprocessed" / "hp11_data"
+    hp11_loader = RxnDBLoader(hp11_in_data)
+
+    jimmy_in_data = app_dir / "data" / "sets" / "preprocessed" / "jimmy_data"
+    jimmy_loader = RxnDBLoader(jimmy_in_data)
+
+    hp11_data = hp11_loader.load_entry(hp11_in_data / "hp11-001.yml")
+    jimmy_data = jimmy_loader.load_entry(jimmy_in_data / "jimmy-001.yml")
+
+    # hp11_data = hp11_loader.load_all()
+    # jimmy_data = jimmy_loader.load_all()
+
+    print(hp11_data)
+    print(hp11_data.info())
+    print(jimmy_data)
+    print(jimmy_data.info())
+
+
+if __name__ == "__main__":
+    main()

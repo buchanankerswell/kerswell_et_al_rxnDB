@@ -1,0 +1,62 @@
+---
+id: hp11-112
+type: calibration_curve
+rxn: 2tr + 2fo => 5en + 4di + 2H2O
+reactants:
+  - 2tr
+  - 2fo
+products:
+  - 5en
+  - 4di
+  - 2H2O
+data:
+  ln_K:
+    mid:
+      - 0.045
+      - 0.045
+      - 0.045
+      - 0.045
+    half_range:
+      - 0.045
+      - 0.045
+      - 0.045
+      - 0.045
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 5.0
+      - 8.0
+      - 10.0
+      - 20.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 830.0
+      - 800.0
+      - 780.0
+      - 650.0
+    half_range:
+      - 10.0
+      - 10.0
+      - 10.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Jenkins, 1983
+    ref1:
+      authors: Jenkins,
+      year: '1983'

@@ -1,0 +1,77 @@
+---
+id: hp11-073
+type: boundary_curve
+rxn: 2ta => 3en + 2q + 2H2O
+reactants:
+  - 2ta
+products:
+  - 3en
+  - 2q
+  - 2H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 2.0
+      - 4.2
+      - 6.0
+      - 7.0
+      - 10.0
+      - 14.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 725.0
+      - 767.5
+      - 782.5
+      - 787.5
+      - 797.5
+      - 807.5
+    half_range:
+      - 5.0
+      - 2.5
+      - 2.5
+      - 2.5
+      - 2.5
+      - 2.5
+metadata:
+  ref:
+    short_cite: Aranovich & Newton, 1999
+    ref1:
+      authors: Aranovich & Newton,
+      year: '1999'

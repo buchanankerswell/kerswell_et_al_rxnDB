@@ -1,0 +1,46 @@
+---
+id: hp11-116
+type: calibration_curve
+rxn: 2dol + ta + 4q => tr + 4CO2
+reactants:
+  - 2dol
+  - ta
+  - 4q
+products:
+  - tr
+  - 4CO2
+data:
+  ln_K:
+    mid:
+      - -6.06
+      - -6.24
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.22
+      - 0.21
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 6.0
+      - 6.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 550.0
+      - 540.0
+    half_range:
+      - 10.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Eggert & Kerrick, 1981
+    ref1:
+      authors: Eggert & Kerrick,
+      year: '1981'

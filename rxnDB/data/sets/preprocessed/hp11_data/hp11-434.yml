@@ -1,0 +1,53 @@
+---
+id: hp11-434
+type: calibration_curve
+rxn: 2usp => 2ilm + 2iron + O2
+reactants:
+  - 2usp
+products:
+  - 2ilm
+  - 2iron
+  - O2
+data:
+  ln_K:
+    mid:
+      - -42.29
+      - -37.725
+      - -33.85
+    half_range:
+      - 0.07
+      - 0.065
+      - 0.09
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 850.0
+      - 950.0
+      - 1050.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: O’Neill et al., 1988
+    ref1:
+      authors: O’Neill et al.
+      year: '1988'

@@ -1,0 +1,46 @@
+---
+id: hp11-267
+type: calibration_curve
+rxn: 2ta + 6ky + q => 3crd + 2H2O
+reactants:
+  - 2ta
+  - 6ky
+  - q
+products:
+  - 3crd
+  - 2H2O
+data:
+  ln_K:
+    mid:
+      - -5.05
+      - -4.72
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 6.7
+      - 6.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 625.0
+      - 625.0
+    half_range:
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Massonne & Schreyer, 1989
+    ref1:
+      authors: Massonne & Schreyer,
+      year: '1989'

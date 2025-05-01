@@ -1,0 +1,46 @@
+---
+id: hp11-180
+type: boundary_curve
+rxn: 2cc + an => wo + geh + 2CO2
+reactants:
+  - 2cc
+  - an
+products:
+  - wo
+  - geh
+  - 2CO2
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 1.0
+      - 1.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.5
+      - 0.7
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 850.0
+      - 880.0
+    half_range:
+      - 10.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Shmulovich, 1974
+    ref1:
+      authors: Shmulovich,
+      year: '1974'

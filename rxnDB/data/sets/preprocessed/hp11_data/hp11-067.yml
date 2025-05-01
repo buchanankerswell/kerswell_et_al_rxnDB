@@ -1,0 +1,68 @@
+---
+id: hp11-067
+type: boundary_curve
+rxn: br => per + H2O
+reactants:
+  - br
+products:
+  - per
+  - H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 2.0
+      - 4.2
+      - 7.0
+      - 10.0
+      - 15.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 662.5
+      - 722.5
+      - 780.0
+      - 837.5
+      - 897.5
+    half_range:
+      - 7.5
+      - 7.5
+      - 10.0
+      - 7.5
+      - 7.5
+metadata:
+  ref:
+    short_cite: Aranovich & Newton, 1996
+    ref1:
+      authors: Aranovich & Newton,
+      year: '1996'

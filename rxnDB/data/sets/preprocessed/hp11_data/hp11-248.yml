@@ -1,0 +1,70 @@
+---
+id: hp11-248
+type: calibration_curve
+rxn: clin + 2cor => py + 2sp + 4H2O
+reactants:
+  - clin
+  - 2cor
+products:
+  - py
+  - 2sp
+  - 4H2O
+data:
+  ln_K:
+    mid:
+      - 0.21
+      - 0.02
+      - 0.22
+      - 0.21
+      - 0.02
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 23.0
+      - 23.0
+      - 25.0
+      - 26.0
+      - 26.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 850.0
+      - 925.0
+      - 875.0
+      - 825.0
+      - 875.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Ackermand & Seifert, 1975
+    ref1:
+      authors: Ackermand & Seifert,
+      year: '1975'

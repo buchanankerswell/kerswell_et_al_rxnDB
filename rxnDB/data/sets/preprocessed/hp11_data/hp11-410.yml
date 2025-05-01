@@ -1,0 +1,36 @@
+---
+id: hp11-410
+type: boundary_curve
+rxn: andr => 3pswo + hem
+reactants:
+  - andr
+products:
+  - 3pswo
+  - hem
+data:
+  ln_K:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 1140.0
+    half_range:
+      - 10.0
+metadata:
+  ref:
+    short_cite: Huckenholz & Yoder, 1971
+    ref1:
+      authors: Huckenholz & Yoder,
+      year: '1971'

@@ -1,0 +1,103 @@
+---
+id: hp11-145
+type: boundary_curve
+rxn: gr + q => an + 2wo
+reactants:
+  - gr
+  - q
+products:
+  - an
+  - 2wo
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 2.0
+      - 3.0
+      - 4.0
+      - 4.7
+      - 5.85
+      - 14.0
+      - 13.85
+      - 16.15
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.45
+      - 0.5
+      - 2.25
+      - 0.85
+  T:
+    mid:
+      - 575.0
+      - 625.0
+      - 675.0
+      - 710.0
+      - 750.0
+      - 1100.0
+      - 1100.0
+      - 1200.0
+    half_range:
+      - 10.0
+      - 10.0
+      - 10.0
+      - 15.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Huckenholz et al., 1975; Newton, 1966; Hays, 1967; Windom & Boettcher,
+      1976
+    ref1:
+      authors: Huckenholz et al.
+      year: '1975'
+    ref2:
+      authors: Newton,
+      year: '1966'
+    ref3:
+      authors: Hays,
+      year: '1967'
+    ref4:
+      authors: Windom & Boettcher,
+      year: '1976'

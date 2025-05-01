@@ -1,0 +1,78 @@
+---
+id: hp11-287
+type: calibration_curve
+rxn: 3mcar + q => ta + 3ky + 5H2O
+reactants:
+  - 3mcar
+  - q
+products:
+  - ta
+  - 3ky
+  - 5H2O
+data:
+  ln_K:
+    mid:
+      - -0.14
+      - -0.16
+      - -0.13
+      - -0.14
+      - -0.11
+      - -0.12
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 19.0
+      - 19.0
+      - 24.0
+      - 24.0
+      - 28.5
+      - 28.5
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 540.0
+      - 560.0
+      - 550.0
+      - 570.0
+      - 560.0
+      - 580.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Chopin & Schreyer, 1983
+    ref1:
+      authors: Chopin & Schreyer,
+      year: '1983'

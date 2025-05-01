@@ -1,0 +1,38 @@
+---
+id: hp11-424
+type: calibration_curve
+rxn: en + san + 2sill + 3q => osm1
+reactants:
+  - en
+  - san
+  - 2sill
+  - 3q
+products:
+  - osm1
+data:
+  ln_K:
+    mid:
+      - 0.13
+    half_range:
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 8.0
+    half_range:
+      - 0.3
+  T:
+    mid:
+      - 900.0
+    half_range:
+      - 0.0
+metadata:
+  ref:
+    short_cite: Carrington & Harley, 1995
+    ref1:
+      authors: Carrington & Harley,
+      year: '1995'

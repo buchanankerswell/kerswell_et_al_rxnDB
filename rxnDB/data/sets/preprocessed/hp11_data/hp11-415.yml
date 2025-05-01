@@ -1,0 +1,38 @@
+---
+id: hp11-415
+type: boundary_curve
+rxn: 2cz + ky + q => 4an + H2O
+reactants:
+  - 2cz
+  - ky
+  - q
+products:
+  - 4an
+  - H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 7.3
+    half_range:
+      - 0.2
+  T:
+    mid:
+      - 550.0
+    half_range:
+      - 0.0
+metadata:
+  ref:
+    short_cite: Jenkins et al., 1983
+    ref1:
+      authors: Jenkins et al.
+      year: '1983'

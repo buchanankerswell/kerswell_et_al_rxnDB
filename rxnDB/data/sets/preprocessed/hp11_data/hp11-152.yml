@@ -1,0 +1,61 @@
+---
+id: hp11-152
+type: boundary_curve
+rxn: 3cats => an + geh + cor
+reactants:
+  - 3cats
+products:
+  - an
+  - geh
+  - cor
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 12.4
+      - 12.4
+      - 13.0
+      - 13.8
+    half_range:
+      - 1.5
+      - 0.6
+      - 1.0
+      - 0.8
+  T:
+    mid:
+      - 1200.0
+      - 1250.0
+      - 1350.0
+      - 1400.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Hays, 1967
+    ref1:
+      authors: Hays,
+      year: '1967'

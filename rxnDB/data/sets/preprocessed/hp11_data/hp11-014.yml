@@ -1,0 +1,43 @@
+---
+id: hp11-014
+type: boundary_curve
+rxn: trd => crst
+reactants:
+  - trd
+products:
+  - crst
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.0
+      - 1.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 1470.0
+      - 1240.0
+    half_range:
+      - 5.0
+      - 20.0
+metadata:
+  ref:
+    short_cite: Ostrovsky, 1966
+    ref1:
+      authors: Ostrovsky,
+      year: '1966'

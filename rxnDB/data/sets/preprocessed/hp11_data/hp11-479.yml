@@ -1,0 +1,37 @@
+---
+id: hp11-479
+type: calibration_curve
+rxn: 5phl + 3mnchl => 5mnbi + 3clin
+reactants:
+  - 5phl
+  - 3mnchl
+products:
+  - 5mnbi
+  - 3clin
+data:
+  ln_K:
+    mid:
+      - -0.65
+    half_range:
+      - 0.84
+  x_CO2:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 4.5
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 550.0
+    half_range:
+      - 0.0
+metadata:
+  ref:
+    short_cite: Mahar et al., 1997
+    ref1:
+      authors: Mahar et al.
+      year: '1997'

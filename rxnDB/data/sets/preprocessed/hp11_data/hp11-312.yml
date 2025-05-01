@@ -1,0 +1,77 @@
+---
+id: hp11-312
+type: boundary_curve
+rxn: pa => abh + cor + H2O
+reactants:
+  - pa
+products:
+  - abh
+  - cor
+  - H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 1.0
+      - 2.0
+      - 3.0
+      - 5.0
+      - 6.0
+      - 7.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 540.0
+      - 565.0
+      - 590.0
+      - 632.5
+      - 635.0
+      - 660.0
+    half_range:
+      - 10.0
+      - 10.0
+      - 10.0
+      - 7.5
+      - 15.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Chatterjee, 1970
+    ref1:
+      authors: Chatterjee,
+      year: '1970'

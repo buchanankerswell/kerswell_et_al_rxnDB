@@ -1,0 +1,62 @@
+---
+id: hp11-238
+type: calibration_curve
+rxn: 16clin + 6crd => 32en + 7spr4 + 64H2O
+reactants:
+  - 16clin
+  - 6crd
+products:
+  - 32en
+  - 7spr4
+  - 64H2O
+data:
+  ln_K:
+    mid:
+      - 3.64
+      - 2.37
+      - 7.04
+      - 5.84
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 4.0
+      - 4.0
+      - 7.0
+      - 7.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 760.0
+      - 770.0
+      - 755.0
+      - 765.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Seifert, 1974
+    ref1:
+      authors: Seifert,
+      year: '1974'

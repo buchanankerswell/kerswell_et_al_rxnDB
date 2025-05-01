@@ -1,0 +1,76 @@
+---
+id: hp11-381
+type: calibration_curve
+rxn: 3iron + 2O2 => mt
+reactants:
+  - 3iron
+  - 2O2
+products:
+  - mt
+data:
+  ln_K:
+    mid:
+      - 138.74
+      - 138.27
+      - 127.8
+      - 127.32
+      - 121.32
+      - 120.84
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 482.0
+      - 472.0
+      - 532.0
+      - 522.0
+      - 565.0
+      - 555.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: O’Neill, 1988
+    ref1:
+      authors: O’Neill,
+      year: '1988'

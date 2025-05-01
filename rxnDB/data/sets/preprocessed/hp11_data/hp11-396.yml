@@ -1,0 +1,61 @@
+---
+id: hp11-396
+type: boundary_curve
+rxn: 3fctd => alm + 2cor + 3H2O
+reactants:
+  - 3fctd
+products:
+  - alm
+  - 2cor
+  - 3H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 8.0
+      - 11.5
+      - 15.0
+      - 20.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 590.0
+      - 612.5
+      - 630.0
+      - 660.0
+    half_range:
+      - 10.0
+      - 7.5
+      - 10.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Ganguly, 1969
+    ref1:
+      authors: Ganguly,
+      year: '1969'

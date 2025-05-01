@@ -1,0 +1,46 @@
+---
+id: hp11-386
+type: boundary_curve
+rxn: 2deer => 9fs + 6mt + 6q + 10H2O
+reactants:
+  - 2deer
+products:
+  - 9fs
+  - 6mt
+  - 6q
+  - 10H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 20.0
+      - 27.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 613.0
+      - 725.0
+    half_range:
+      - 13.0
+      - 15.0
+metadata:
+  ref:
+    short_cite: Lattard & Le Breton, 1994
+    ref1:
+      authors: Lattard & Le Breton,
+      year: '1994'

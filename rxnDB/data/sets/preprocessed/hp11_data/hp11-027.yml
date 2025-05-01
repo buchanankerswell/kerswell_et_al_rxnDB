@@ -1,0 +1,60 @@
+---
+id: hp11-027
+type: boundary_curve
+rxn: mwd + stv => hen
+reactants:
+  - mwd
+  - stv
+products:
+  - hen
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 157.5
+      - 165.0
+      - 170.0
+      - 170.0
+    half_range:
+      - 2.5
+      - 5.0
+      - 10.0
+      - 10.0
+  T:
+    mid:
+      - 1000.0
+      - 1200.0
+      - 1400.0
+      - 1600.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Sawamoto 1987, Kanzaki 1987
+    ref1:
+      authors: Sawamoto 1987, Kanzaki
+      year: '1987'

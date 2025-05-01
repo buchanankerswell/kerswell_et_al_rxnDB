@@ -1,0 +1,78 @@
+---
+id: hp11-320
+type: calibration_curve
+rxn: mu + q => san + smul + H2O
+reactants:
+  - mu
+  - q
+products:
+  - san
+  - smul
+  - H2O
+data:
+  ln_K:
+    mid:
+      - -0.21
+      - -0.11
+      - -0.24
+      - -0.13
+      - -0.27
+      - -0.15
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.2
+      - 0.2
+      - 0.5
+      - 0.5
+      - 1.0
+      - 1.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 600.0
+      - 627.0
+      - 627.0
+      - 645.0
+      - 658.0
+      - 670.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Segnit & Kennedy, 1961
+    ref1:
+      authors: Segnit & Kennedy,
+      year: '1961'

@@ -1,0 +1,67 @@
+---
+id: hp11-483
+type: boundary_curve
+rxn: di => diL
+reactants:
+  - di
+products:
+  - diL
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.0
+      - 10.0
+      - 20.0
+      - 30.0
+      - 50.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 1390.0
+      - 1520.0
+      - 1630.0
+      - 1710.0
+      - 1870.0
+    half_range:
+      - 5.0
+      - 10.0
+      - 10.0
+      - 10.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Clarke, 1966
+    ref1:
+      authors: Clarke,
+      year: '1966'

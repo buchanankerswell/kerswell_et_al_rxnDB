@@ -1,0 +1,78 @@
+---
+id: hp11-169
+type: boundary_curve
+rxn: 4law => 2zo + ky + q + 7H2O
+reactants:
+  - 4law
+products:
+  - 2zo
+  - ky
+  - q
+  - 7H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 13.5
+      - 17.5
+      - 21.5
+      - 25.0
+      - 29.5
+      - 33.5
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 500.0
+      - 545.0
+      - 590.0
+      - 645.0
+      - 690.0
+      - 745.0
+    half_range:
+      - 0.0
+      - 5.0
+      - 0.0
+      - 5.0
+      - 30.0
+      - 15.0
+metadata:
+  ref:
+    short_cite: Newton & Kennedy, 1963
+    ref1:
+      authors: Newton & Kennedy,
+      year: '1963'

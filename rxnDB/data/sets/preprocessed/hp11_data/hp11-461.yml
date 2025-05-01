@@ -1,0 +1,37 @@
+---
+id: hp11-461
+type: calibration_curve
+rxn: pre + ep => fpre + cz
+reactants:
+  - pre
+  - ep
+products:
+  - fpre
+  - cz
+data:
+  ln_K:
+    mid:
+      - -2.17
+    half_range:
+      - 0.22
+  x_CO2:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 1.0
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 200.0
+    half_range:
+      - 0.0
+metadata:
+  ref:
+    short_cite: Cho et al, 1986
+    ref1:
+      authors: Cho et al,
+      year: '1986'

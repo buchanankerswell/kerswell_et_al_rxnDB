@@ -1,0 +1,60 @@
+---
+id: hp11-066
+type: boundary_curve
+rxn: br => per + H2O
+reactants:
+  - br
+products:
+  - per
+  - H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.5
+      - 1.0
+      - 1.5
+      - 2.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 569.0
+      - 605.5
+      - 640.5
+      - 658.5
+    half_range:
+      - 5.0
+      - 1.5
+      - 7.5
+      - 5.5
+metadata:
+  ref:
+    short_cite: Barnes & Ernst, 1963
+    ref1:
+      authors: Barnes & Ernst,
+      year: '1963'

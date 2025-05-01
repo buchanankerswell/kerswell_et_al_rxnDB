@@ -1,0 +1,63 @@
+---
+id: hp11-211
+type: calibration_curve
+rxn: 2crd => spr4 + 8q
+reactants:
+  - 2crd
+products:
+  - spr4
+  - 8q
+data:
+  ln_K:
+    mid:
+      - -1.07
+      - -1.08
+      - -1.1
+      - -1.09
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 7.0
+      - 7.6
+      - 7.0
+      - 7.6
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 1250.0
+      - 1250.0
+      - 1280.0
+      - 1280.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Newton, 1972; Perkins et al 1981
+    ref1:
+      authors: Newton,
+      year: '1972'
+    ref2:
+      authors: Perkins et al
+      year: '1981'

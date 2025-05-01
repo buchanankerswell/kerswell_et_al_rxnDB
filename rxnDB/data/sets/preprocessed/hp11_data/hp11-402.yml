@@ -1,0 +1,37 @@
+---
+id: hp11-402
+type: calibration_curve
+rxn: 2hed => 2wo + fa + q
+reactants:
+  - 2hed
+products:
+  - 2wo
+  - fa
+  - q
+data:
+  ln_K:
+    mid:
+      - -2.1
+    half_range:
+      - 0.21
+  x_CO2:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 1.0
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 945.0
+    half_range:
+      - 0.0
+metadata:
+  ref:
+    short_cite: Lindsley & Munoz, 1969
+    ref1:
+      authors: Lindsley & Munoz,
+      year: '1969'

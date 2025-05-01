@@ -1,0 +1,38 @@
+---
+id: hp11-363
+type: calibration_curve
+rxn: 2phl + 6q => 3en + 2san + 2H2O
+reactants:
+  - 2phl
+  - 6q
+products:
+  - 3en
+  - 2san
+  - 2H2O
+data:
+  ln_K:
+    mid:
+      - -2.62
+    half_range:
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.73
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 2.5
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 755.0
+    half_range:
+      - 10.0
+metadata:
+  ref:
+    short_cite: Peterson & Newton, 1990
+    ref1:
+      authors: Peterson & Newton,
+      year: '1990'

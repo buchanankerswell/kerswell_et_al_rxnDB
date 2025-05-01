@@ -1,0 +1,52 @@
+---
+id: hp11-471
+type: boundary_curve
+rxn: rhc => mang + CO2
+reactants:
+  - rhc
+products:
+  - mang
+  - CO2
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 1.0
+      - 1.0
+      - 1.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 1.0
+      - 1.5
+      - 2.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 706.0
+      - 748.0
+      - 777.5
+    half_range:
+      - 7.0
+      - 9.0
+      - 7.5
+metadata:
+  ref:
+    short_cite: Huebner, 1969
+    ref1:
+      authors: Huebner,
+      year: '1969'

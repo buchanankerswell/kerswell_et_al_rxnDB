@@ -1,0 +1,46 @@
+---
+id: hp11-366
+type: boundary_curve
+rxn: 2naph + 3en => 2abh + 6fo + 2H2O
+reactants:
+  - 2naph
+  - 3en
+products:
+  - 2abh
+  - 6fo
+  - 2H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.8
+      - 1.6
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 836.0
+      - 860.0
+    half_range:
+      - 16.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Carman & Gilbert, 1985
+    ref1:
+      authors: Carman & Gilbert,
+      year: '1985'

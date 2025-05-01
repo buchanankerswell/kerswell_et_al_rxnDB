@@ -1,0 +1,61 @@
+---
+id: hp11-139
+type: boundary_curve
+rxn: prl => cor + 4q + H2O
+reactants:
+  - prl
+products:
+  - cor
+  - 4q
+  - H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 3.0
+      - 5.0
+      - 7.0
+      - 10.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 430.0
+      - 470.0
+      - 490.0
+      - 520.0
+    half_range:
+      - 30.0
+      - 30.0
+      - 30.0
+      - 20.0
+metadata:
+  ref:
+    short_cite: Chatterjee et al., 1984
+    ref1:
+      authors: Chatterjee et al.
+      year: '1984'

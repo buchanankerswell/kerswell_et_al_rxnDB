@@ -1,0 +1,67 @@
+---
+id: hp11-490
+type: boundary_curve
+rxn: q => qL
+reactants:
+  - q
+products:
+  - qL
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 7.0
+      - 10.0
+      - 15.0
+      - 20.0
+      - 25.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 1730.0
+      - 1840.0
+      - 1990.0
+      - 2120.0
+      - 2240.0
+    half_range:
+      - 20.0
+      - 20.0
+      - 20.0
+      - 20.0
+      - 20.0
+metadata:
+  ref:
+    short_cite: Jackson, 1976
+    ref1:
+      authors: Jackson,
+      year: '1976'

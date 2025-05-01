@@ -1,0 +1,37 @@
+---
+id: hp11-426
+type: calibration_curve
+rxn: osm1 + fs => fosm + en
+reactants:
+  - osm1
+  - fs
+products:
+  - fosm
+  - en
+data:
+  ln_K:
+    mid:
+      - -1.58
+    half_range:
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 5.0
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 875.0
+    half_range:
+      - 50.0
+metadata:
+  ref:
+    short_cite: Holland et al., 1996
+    ref1:
+      authors: Holland et al.
+      year: '1996'

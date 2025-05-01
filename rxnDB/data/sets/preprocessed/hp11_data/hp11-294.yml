@@ -1,0 +1,79 @@
+---
+id: hp11-294
+type: calibration_curve
+rxn: 12zo + 14ta => 3tr + 9ts + 14q + 8H2O
+reactants:
+  - 12zo
+  - 14ta
+products:
+  - 3tr
+  - 9ts
+  - 14q
+  - 8H2O
+data:
+  ln_K:
+    mid:
+      - -12.35
+      - -13.29
+      - -18.92
+      - -19.5
+      - -25.26
+      - -25.89
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 10.0
+      - 10.0
+      - 15.0
+      - 15.0
+      - 20.0
+      - 20.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 626.0
+      - 710.0
+      - 675.0
+      - 725.0
+      - 700.0
+      - 750.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Hoschek 1995
+    ref1:
+      authors: Hoschek
+      year: '1995'

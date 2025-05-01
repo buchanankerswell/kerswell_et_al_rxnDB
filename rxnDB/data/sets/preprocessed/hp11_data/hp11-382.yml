@@ -1,0 +1,68 @@
+---
+id: hp11-382
+type: boundary_curve
+rxn: 2gth => hem + H2O
+reactants:
+  - 2gth
+products:
+  - hem
+  - H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 10.0
+      - 20.0
+      - 30.0
+      - 40.0
+      - 50.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 190.0
+      - 265.0
+      - 325.0
+      - 375.0
+      - 410.0
+    half_range:
+      - 10.0
+      - 15.0
+      - 25.0
+      - 25.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Voigt & Will, 1981
+    ref1:
+      authors: Voigt & Will,
+      year: '1981'

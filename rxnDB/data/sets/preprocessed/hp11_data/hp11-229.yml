@@ -1,0 +1,45 @@
+---
+id: hp11-229
+type: calibration_curve
+rxn: 2en + 6cor => spr4 + 2sill
+reactants:
+  - 2en
+  - 6cor
+products:
+  - spr4
+  - 2sill
+data:
+  ln_K:
+    mid:
+      - -0.3
+      - -0.28
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 12.5
+      - 12.5
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 950.0
+      - 1050.0
+    half_range:
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Malinovskiy & Doroshev 1975
+    ref1:
+      authors: Malinovskiy & Doroshev
+      year: '1975'

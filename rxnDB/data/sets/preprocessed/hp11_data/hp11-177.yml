@@ -1,0 +1,53 @@
+---
+id: hp11-177
+type: boundary_curve
+rxn: lmt + 3q + 2H2O => heu
+reactants:
+  - lmt
+  - 3q
+  - 2H2O
+products:
+  - heu
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 1.0
+      - 1.5
+      - 2.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 155.0
+      - 175.0
+      - 175.0
+    half_range:
+      - 15.0
+      - 15.0
+      - 15.0
+metadata:
+  ref:
+    short_cite: Cho et al., 1987
+    ref1:
+      authors: Cho et al.
+      year: '1987'

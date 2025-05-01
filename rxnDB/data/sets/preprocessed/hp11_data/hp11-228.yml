@@ -1,0 +1,61 @@
+---
+id: hp11-228
+type: calibration_curve
+rxn: py + 6cor => spr5 + 2sill
+reactants:
+  - py
+  - 6cor
+products:
+  - spr5
+  - 2sill
+data:
+  ln_K:
+    mid:
+      - -1.5
+      - -1.56
+      - -1.47
+      - -1.51
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 21.0
+      - 19.5
+      - 23.0
+      - 20.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 1400.0
+      - 1400.0
+      - 1500.0
+      - 1500.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Malinovskiy & Doroshev 1975
+    ref1:
+      authors: Malinovskiy & Doroshev
+      year: '1975'

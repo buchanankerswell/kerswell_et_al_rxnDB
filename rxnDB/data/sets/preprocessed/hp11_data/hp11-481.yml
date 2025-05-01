@@ -1,0 +1,67 @@
+---
+id: hp11-481
+type: boundary_curve
+rxn: syv => syvL
+reactants:
+  - syv
+products:
+  - syvL
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.0
+      - 1.0
+      - 5.0
+      - 10.0
+      - 20.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 770.0
+      - 795.0
+      - 875.0
+      - 947.0
+      - 1050.0
+    half_range:
+      - 3.0
+      - 5.0
+      - 5.0
+      - 5.0
+      - 5.0
+metadata:
+  ref:
+    short_cite: Clarke, 1966
+    ref1:
+      authors: Clarke,
+      year: '1966'

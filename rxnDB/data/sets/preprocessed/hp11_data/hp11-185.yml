@@ -1,0 +1,60 @@
+---
+id: hp11-185
+type: calibration_curve
+rxn: 3en + 2cor => 2py
+reactants:
+  - 3en
+  - 2cor
+products:
+  - 2py
+data:
+  ln_K:
+    mid:
+      - 0.33
+      - 0.36
+      - 0.47
+      - 0.5
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 15.2
+      - 17.0
+      - 14.3
+      - 16.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 800.0
+      - 800.0
+      - 900.0
+      - 900.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Fockenberg, 2008
+    ref1:
+      authors: Fockenberg,
+      year: '2008'

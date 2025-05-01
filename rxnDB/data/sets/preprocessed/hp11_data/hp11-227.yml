@@ -1,0 +1,61 @@
+---
+id: hp11-227
+type: calibration_curve
+rxn: 4py + 14cor => 3spr4 + 6sill
+reactants:
+  - 4py
+  - 14cor
+products:
+  - 3spr4
+  - 6sill
+data:
+  ln_K:
+    mid:
+      - -3.23
+      - -3.07
+      - -3.38
+      - -3.22
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 21.0
+      - 19.5
+      - 23.0
+      - 20.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 1400.0
+      - 1400.0
+      - 1500.0
+      - 1500.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Malinovskiy & Doroshev 1975
+    ref1:
+      authors: Malinovskiy & Doroshev
+      year: '1975'

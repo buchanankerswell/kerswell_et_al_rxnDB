@@ -1,0 +1,62 @@
+---
+id: hp11-284
+type: calibration_curve
+rxn: 67clin + 78ta + 16mst => 211py + 378H2O
+reactants:
+  - 67clin
+  - 78ta
+  - 16mst
+products:
+  - 211py
+  - 378H2O
+data:
+  ln_K:
+    mid:
+      - 25.8
+      - 33.45
+      - 30.99
+      - 25.95
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 17.0
+      - 17.0
+      - 13.0
+      - 17.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 715.0
+      - 740.0
+      - 765.0
+      - 772.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Fockenberg, 2008
+    ref1:
+      authors: Fockenberg,
+      year: '2008'

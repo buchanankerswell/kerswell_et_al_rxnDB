@@ -1,0 +1,43 @@
+---
+id: hp11-327
+type: calibration_curve
+rxn: crst => qL
+reactants:
+  - crst
+products:
+  - qL
+data:
+  ln_K:
+    mid:
+      - -0.04
+      - -0.19
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 1550.0
+      - 1580.0
+    half_range:
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Klug et al 1987
+    ref1:
+      authors: Klug et al
+      year: '1987'

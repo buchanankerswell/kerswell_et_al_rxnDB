@@ -1,0 +1,56 @@
+---
+id: hp11-514
+type: calibration_curve
+rxn: trd => qL
+reactants:
+  - trd
+products:
+  - qL
+data:
+  ln_K:
+    mid:
+      - -0.09
+      - -0.09
+      - -0.11
+      - -0.11
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.5
+      - 0.5
+      - 0.8
+      - 0.8
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 1400.0
+      - 1420.0
+      - 1290.0
+      - 1310.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Kennedy et al. 62

@@ -1,0 +1,47 @@
+---
+id: hp11-120
+type: calibration_curve
+rxn: 5dol + 4ta => 6fo + 5di + 4H2O + 10CO2
+reactants:
+  - 5dol
+  - 4ta
+products:
+  - 6fo
+  - 5di
+  - 4H2O
+  - 10CO2
+data:
+  ln_K:
+    mid:
+      - -8.42
+      - -8.42
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.75
+      - 0.75
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 1.0
+      - 2.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 520.0
+      - 560.0
+    half_range:
+      - 20.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Skippen, 1971
+    ref1:
+      authors: Skippen,
+      year: '1971'

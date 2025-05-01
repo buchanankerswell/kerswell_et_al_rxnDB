@@ -1,0 +1,63 @@
+---
+id: hp11-275
+type: calibration_curve
+rxn: clin + 2mag => 3fo + sp + 2CO2 + 4H2O
+reactants:
+  - clin
+  - 2mag
+products:
+  - 3fo
+  - sp
+  - 2CO2
+  - 4H2O
+data:
+  ln_K:
+    mid:
+      - -4.04
+      - -4.04
+      - -4.04
+      - -4.05
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 1.0
+      - 2.0
+      - 3.0
+      - 4.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 560.0
+      - 600.0
+      - 625.0
+      - 655.0
+    half_range:
+      - 5.0
+      - 0.0
+      - 0.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Chernosky & Berman, 1986
+    ref1:
+      authors: Chernosky & Berman,
+      year: '1986'

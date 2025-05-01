@@ -1,0 +1,37 @@
+---
+id: hp11-422
+type: calibration_curve
+rxn: gr + trd => an + 2wo
+reactants:
+  - gr
+  - trd
+products:
+  - an
+  - 2wo
+data:
+  ln_K:
+    mid:
+      - 4.005
+    half_range:
+      - 0.895
+  x_CO2:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 1115.0
+    half_range:
+      - 0.0
+metadata:
+  ref:
+    short_cite: Holdaway, 1972
+    ref1:
+      authors: Holdaway,
+      year: '1972'

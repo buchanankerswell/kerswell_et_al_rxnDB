@@ -1,0 +1,70 @@
+---
+id: hp11-257
+type: calibration_curve
+rxn: 2clin + 4q => ames + 2ta + 2H2O
+reactants:
+  - 2clin
+  - 4q
+products:
+  - ames
+  - 2ta
+  - 2H2O
+data:
+  ln_K:
+    mid:
+      - -1.56
+      - -5.09
+      - -1.77
+      - -5.13
+      - -1.91
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 11.0
+      - 11.0
+      - 15.0
+      - 15.0
+      - 20.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 600.0
+      - 630.0
+      - 560.0
+      - 580.0
+      - 480.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Massonne et al., 1981
+    ref1:
+      authors: Massonne et al.
+      year: '1981'

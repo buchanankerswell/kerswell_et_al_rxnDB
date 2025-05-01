@@ -1,0 +1,36 @@
+---
+id: hp11-310
+type: boundary_curve
+rxn: sdl => 6cgh + 2hltL
+reactants:
+  - sdl
+products:
+  - 6cgh
+  - 2hltL
+data:
+  ln_K:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 1377.5
+    half_range:
+      - 7.5
+metadata:
+  ref:
+    short_cite: Sharp et al 1989
+    ref1:
+      authors: Sharp et al
+      year: '1989'

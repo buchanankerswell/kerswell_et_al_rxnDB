@@ -1,0 +1,62 @@
+---
+id: hp11-279
+type: calibration_curve
+rxn: 2mst => 7ky + 11cor + 4en + 4H2O
+reactants:
+  - 2mst
+products:
+  - 7ky
+  - 11cor
+  - 4en
+  - 4H2O
+data:
+  ln_K:
+    mid:
+      - -0.35
+      - -0.04
+      - -0.37
+      - -0.04
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 12.0
+      - 12.0
+      - 14.0
+      - 14.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 770.0
+      - 807.0
+      - 829.0
+      - 867.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Fockenberg, 1998
+    ref1:
+      authors: Fockenberg,
+      year: '1998'

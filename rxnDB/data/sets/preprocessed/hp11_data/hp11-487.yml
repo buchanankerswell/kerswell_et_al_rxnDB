@@ -1,0 +1,56 @@
+---
+id: hp11-487
+type: boundary_curve
+rxn: cor => corL
+reactants:
+  - cor
+products:
+  - corL
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.0
+      - 10.0
+      - 70.0
+      - 90.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 2050.0
+      - 2155.0
+      - 2755.0
+      - 2860.0
+    half_range:
+      - 30.0
+      - 40.0
+      - 50.0
+      - 100.0
+metadata:
+  ref:
+    short_cite: Shen & Lazor, 1995 omitting UHP

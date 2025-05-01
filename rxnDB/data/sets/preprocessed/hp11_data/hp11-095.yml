@@ -1,0 +1,45 @@
+---
+id: hp11-095
+type: boundary_curve
+rxn: chum => 4fo + per + H2O
+reactants:
+  - chum
+products:
+  - 4fo
+  - per
+  - H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 16.65
+      - 19.5
+    half_range:
+      - 0.95
+      - 0.5
+  T:
+    mid:
+      - 950.0
+      - 1000.0
+    half_range:
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Pawley 2000
+    ref1:
+      authors: Pawley
+      year: '2000'

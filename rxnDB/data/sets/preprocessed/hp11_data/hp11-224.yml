@@ -1,0 +1,60 @@
+---
+id: hp11-224
+type: calibration_curve
+rxn: py => en + mgts
+reactants:
+  - py
+products:
+  - en
+  - mgts
+data:
+  ln_K:
+    mid:
+      - -1.47
+      - -1.41
+      - -1.43
+      - -1.38
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 16.0
+      - 13.8
+      - 17.0
+      - 14.3
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 1000.0
+      - 1000.0
+      - 1050.0
+      - 1050.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Fockenberg, 2008
+    ref1:
+      authors: Fockenberg,
+      year: '2008'

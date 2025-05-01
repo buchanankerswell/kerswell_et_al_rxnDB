@@ -1,0 +1,78 @@
+---
+id: hp11-322
+type: calibration_curve
+rxn: 2smul + 3mu => 4amul + 3san + 3H2O
+reactants:
+  - 2smul
+  - 3mu
+products:
+  - 4amul
+  - 3san
+  - 3H2O
+data:
+  ln_K:
+    mid:
+      - -15.42
+      - -20.76
+      - -14.55
+      - -19.48
+      - -13.85
+      - -18.34
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.2
+      - 0.2
+      - 0.5
+      - 0.5
+      - 1.0
+      - 1.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 600.0
+      - 627.0
+      - 627.0
+      - 645.0
+      - 658.0
+      - 670.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Segnit & Kennedy, 1961
+    ref1:
+      authors: Segnit & Kennedy,
+      year: '1961'

@@ -1,0 +1,53 @@
+---
+id: hp11-467
+type: calibration_curve
+rxn: 5mcar + daph => 5fcar + clin
+reactants:
+  - 5mcar
+  - daph
+products:
+  - 5fcar
+  - clin
+data:
+  ln_K:
+    mid:
+      - -1.02
+      - -1.23
+      - -0.42
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 9.0
+      - 10.0
+      - 17.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 350.0
+      - 400.0
+      - 450.0
+    half_range:
+      - 30.0
+      - 30.0
+      - 30.0
+metadata:
+  ref:
+    short_cite: Natural, Theye et al., 1992
+    ref1:
+      authors: Natural, Theye et al.
+      year: '1992'

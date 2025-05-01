@@ -1,0 +1,45 @@
+---
+id: hp11-244
+type: calibration_curve
+rxn: ames => en + 2sp + 4H2O
+reactants:
+  - ames
+products:
+  - en
+  - 2sp
+  - 4H2O
+data:
+  ln_K:
+    mid:
+      - 1.91
+      - 1.37
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 14.0
+      - 14.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 845.0
+      - 860.0
+    half_range:
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Baker & Holland, 1996
+    ref1:
+      authors: Baker & Holland,
+      year: '1996'

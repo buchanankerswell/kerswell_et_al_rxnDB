@@ -1,0 +1,62 @@
+---
+id: hp11-265
+type: calibration_curve
+rxn: 2ta + 6sill + q + H2O => 3hcrd
+reactants:
+  - 2ta
+  - 6sill
+  - q
+  - H2O
+products:
+  - 3hcrd
+data:
+  ln_K:
+    mid:
+      - 0.09
+      - 0.16
+      - 0.26
+      - 0.37
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 7.85
+      - 8.75
+      - 9.65
+      - 10.65
+    half_range:
+      - 0.65
+      - 0.25
+      - 0.25
+      - 0.35
+  T:
+    mid:
+      - 670.0
+      - 700.0
+      - 750.0
+      - 800.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Newton, 1972
+    ref1:
+      authors: Newton,
+      year: '1972'

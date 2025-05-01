@@ -1,0 +1,72 @@
+---
+id: hp11-136
+type: boundary_curve
+rxn: prl + 6dsp => 4and + 4H2O
+reactants:
+  - prl
+  - 6dsp
+products:
+  - 4and
+  - 4H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 1.0
+      - 2.4
+      - 3.5
+      - 4.8
+      - 7.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 337.0
+      - 370.0
+      - 380.0
+      - 405.0
+      - 445.0
+    half_range:
+      - 12.0
+      - 30.0
+      - 15.0
+      - 10.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Haas & Holdaway, 1973; Hemley et al., 1980
+    ref1:
+      authors: Haas & Holdaway,
+      year: '1973'
+    ref2:
+      authors: Hemley et al.
+      year: '1980'

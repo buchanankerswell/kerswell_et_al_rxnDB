@@ -1,0 +1,76 @@
+---
+id: hp11-190
+type: calibration_curve
+rxn: en + mgts => py
+reactants:
+  - en
+  - mgts
+products:
+  - py
+data:
+  ln_K:
+    mid:
+      - 1.65
+      - 1.68
+      - 1.48
+      - 1.48
+      - 1.37
+      - 1.38
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 16.2
+      - 17.1
+      - 15.8
+      - 16.7
+      - 14.9
+      - 15.8
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 1000.0
+      - 1000.0
+      - 1050.0
+      - 1050.0
+      - 1100.0
+      - 1100.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Hensen, 1972
+    ref1:
+      authors: Hensen,
+      year: '1972'

@@ -1,0 +1,38 @@
+---
+id: hp11-362
+type: calibration_curve
+rxn: 2phl + 6q => 3en + 2san + 2H2O
+reactants:
+  - 2phl
+  - 6q
+products:
+  - 3en
+  - 2san
+  - 2H2O
+data:
+  ln_K:
+    mid:
+      - -2.16
+    half_range:
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.66
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 5.0
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 790.0
+    half_range:
+      - 15.0
+metadata:
+  ref:
+    short_cite: Bohlen et al., 1983
+    ref1:
+      authors: Bohlen et al.
+      year: '1983'

@@ -1,0 +1,62 @@
+---
+id: hp11-388
+type: boundary_curve
+rxn: alm + 3hem => 3mt + ky + 2q
+reactants:
+  - alm
+  - 3hem
+products:
+  - 3mt
+  - ky
+  - 2q
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 21.5
+      - 22.25
+      - 25.75
+      - 28.5
+    half_range:
+      - 1.5
+      - 0.25
+      - 0.25
+      - 0.5
+  T:
+    mid:
+      - 650.0
+      - 700.0
+      - 800.0
+      - 900.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Harlov & Newton, 1992
+    ref1:
+      authors: Harlov & Newton,
+      year: '1992'

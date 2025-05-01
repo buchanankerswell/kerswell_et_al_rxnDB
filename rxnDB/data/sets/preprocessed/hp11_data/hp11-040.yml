@@ -1,0 +1,35 @@
+---
+id: hp11-040
+type: calibration_curve
+rxn: fpv => fak
+reactants:
+  - fpv
+products:
+  - fak
+data:
+  ln_K:
+    mid:
+      - 0.805
+    half_range:
+      - 1.125
+  x_CO2:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 255.0
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 1100.0
+    half_range:
+      - 0.0
+metadata:
+  ref:
+    short_cite: Ito & Yamada 1982
+    ref1:
+      authors: Ito & Yamada
+      year: '1982'

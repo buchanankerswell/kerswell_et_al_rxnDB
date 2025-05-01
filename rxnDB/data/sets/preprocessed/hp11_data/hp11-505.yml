@@ -1,0 +1,67 @@
+---
+id: hp11-505
+type: boundary_curve
+rxn: ne => neL
+reactants:
+  - ne
+products:
+  - neL
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.0
+      - 10.0
+      - 15.0
+      - 20.0
+      - 25.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 1380.0
+      - 1450.0
+      - 1550.0
+      - 1650.0
+      - 1700.0
+    half_range:
+      - 20.0
+      - 0.0
+      - 50.0
+      - 50.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Smith, 2001
+    ref1:
+      authors: Smith,
+      year: '2001'

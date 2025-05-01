@@ -1,0 +1,61 @@
+---
+id: hp11-222
+type: calibration_curve
+rxn: 7py => spr5 + 9en + 2ky
+reactants:
+  - 7py
+products:
+  - spr5
+  - 9en
+  - 2ky
+data:
+  ln_K:
+    mid:
+      - -3.77
+      - -3.93
+      - -4.0
+      - -4.11
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 16.0
+      - 13.8
+      - 17.0
+      - 14.3
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 1000.0
+      - 1000.0
+      - 1050.0
+      - 1050.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Fockenberg, 2008
+    ref1:
+      authors: Fockenberg,
+      year: '2008'

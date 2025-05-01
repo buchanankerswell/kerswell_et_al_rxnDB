@@ -1,0 +1,46 @@
+---
+id: hp11-052
+type: boundary_curve
+rxn: wo => pswo
+reactants:
+  - wo
+products:
+  - pswo
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.0
+      - 21.5
+    half_range:
+      - 0.0
+      - 0.5
+  T:
+    mid:
+      - 1125.0
+      - 1550.0
+    half_range:
+      - 10.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Osborne & Shairer, 1941; Huang & Wyllie, 1975
+    ref1:
+      authors: Osborne & Shairer,
+      year: '1941'
+    ref2:
+      authors: Huang & Wyllie,
+      year: '1975'

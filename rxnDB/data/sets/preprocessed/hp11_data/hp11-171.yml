@@ -1,0 +1,54 @@
+---
+id: hp11-171
+type: boundary_curve
+rxn: 5pre => 2zo + 2gr + 3q + 4H2O
+reactants:
+  - 5pre
+products:
+  - 2zo
+  - 2gr
+  - 3q
+  - 4H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 1.0
+      - 2.0
+      - 4.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 420.0
+      - 417.0
+      - 390.0
+    half_range:
+      - 10.0
+      - 10.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Connolly & Kerrick, 1985
+    ref1:
+      authors: Connolly & Kerrick,
+      year: '1985'

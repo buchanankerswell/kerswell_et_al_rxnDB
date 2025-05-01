@@ -1,0 +1,51 @@
+---
+id: hp11-031
+type: boundary_curve
+rxn: 4mpv => maj
+reactants:
+  - 4mpv
+products:
+  - maj
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 215.0
+      - 217.5
+      - 212.5
+    half_range:
+      - 15.0
+      - 2.5
+      - 7.5
+  T:
+    mid:
+      - 1700.0
+      - 1800.0
+      - 2000.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Katsura & Ito 1989, Ohtani 1991
+    ref1:
+      authors: Katsura & Ito 1989, Ohtani
+      year: '1991'

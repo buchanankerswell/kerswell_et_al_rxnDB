@@ -1,0 +1,37 @@
+---
+id: hp11-114
+type: boundary_curve
+rxn: dol + 2q => di + 2CO2
+reactants:
+  - dol
+  - 2q
+products:
+  - di
+  - 2CO2
+data:
+  ln_K:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  x_CO2:
+    mid:
+      - 1.0
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 28.0
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 997.5
+    half_range:
+      - 27.5
+metadata:
+  ref:
+    short_cite: Eggler et al., 1976
+    ref1:
+      authors: Eggler et al.
+      year: '1976'

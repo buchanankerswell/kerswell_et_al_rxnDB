@@ -1,0 +1,36 @@
+---
+id: hp11-065
+type: boundary_curve
+rxn: ta + 2en => anth
+reactants:
+  - ta
+  - 2en
+products:
+  - anth
+data:
+  ln_K:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 10.0
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 767.5
+    half_range:
+      - 12.5
+metadata:
+  ref:
+    short_cite: Chernosky et al., 1985
+    ref1:
+      authors: Chernosky et al.
+      year: '1985'

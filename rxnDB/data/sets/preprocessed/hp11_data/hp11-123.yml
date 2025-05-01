@@ -1,0 +1,42 @@
+---
+id: hp11-123
+type: calibration_curve
+rxn: 5ta + 6cc + 4q => 3tr + 6CO2 + 2H2O
+reactants:
+  - 5ta
+  - 6cc
+  - 4q
+products:
+  - 3tr
+  - 6CO2
+  - 2H2O
+data:
+  ln_K:
+    mid:
+      - -5.55
+    half_range:
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.5
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 2.0
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 445.0
+    half_range:
+      - 20.0
+metadata:
+  ref:
+    short_cite: Slaughter et al., 1975;
+    ref1:
+      authors: Slaughter et al.
+      year: '1975'
+    ref2:
+      authors: ''
+      year:

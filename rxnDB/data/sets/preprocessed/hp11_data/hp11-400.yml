@@ -1,0 +1,46 @@
+---
+id: hp11-400
+type: boundary_curve
+rxn: 2fgl => 4abh + 3fa + q + 2H2O
+reactants:
+  - 2fgl
+products:
+  - 4abh
+  - 3fa
+  - q
+  - 2H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 3.0
+      - 5.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 355.0
+      - 360.0
+    half_range:
+      - 15.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Hoffmann, 1972
+    ref1:
+      authors: Hoffmann,
+      year: '1972'

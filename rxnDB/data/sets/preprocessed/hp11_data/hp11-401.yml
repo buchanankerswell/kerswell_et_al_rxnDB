@@ -1,0 +1,55 @@
+---
+id: hp11-401
+type: boundary_curve
+rxn: rieb + 3hem => 2acm + 3mt + 4q + H2O
+reactants:
+  - rieb
+  - 3hem
+products:
+  - 2acm
+  - 3mt
+  - 4q
+  - H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.5
+      - 1.0
+      - 2.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 477.5
+      - 494.0
+      - 513.5
+    half_range:
+      - 12.5
+      - 5.0
+      - 2.5
+metadata:
+  ref:
+    short_cite: Ernst, 1962
+    ref1:
+      authors: Ernst,
+      year: '1962'

@@ -1,0 +1,60 @@
+---
+id: hp11-254
+type: calibration_curve
+rxn: 2mcar => sud + q
+reactants:
+  - 2mcar
+products:
+  - sud
+  - q
+data:
+  ln_K:
+    mid:
+      - -0.3
+      - -0.3
+      - -0.3
+      - -0.3
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 7.25
+      - 7.1
+      - 6.3
+      - 7.0
+    half_range:
+      - 0.35
+      - 0.6
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 350.0
+      - 400.0
+      - 500.0
+      - 475.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Vidal et al., 1992
+    ref1:
+      authors: Vidal et al.
+      year: '1992'

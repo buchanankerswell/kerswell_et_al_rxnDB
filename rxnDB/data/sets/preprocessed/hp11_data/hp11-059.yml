@@ -1,0 +1,45 @@
+---
+id: hp11-059
+type: calibration_curve
+rxn: cc + q => wo + CO2
+reactants:
+  - cc
+  - q
+products:
+  - wo
+  - CO2
+data:
+  ln_K:
+    mid:
+      - -0.15
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.86
+      - 1.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 6.0
+      - 6.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 880.0
+      - 902.5
+    half_range:
+      - 10.0
+      - 12.5
+metadata:
+  ref:
+    short_cite: Jacobs & Kerrick, 1981
+    ref1:
+      authors: Jacobs & Kerrick,
+      year: '1981'

@@ -1,0 +1,59 @@
+---
+id: hp11-017
+type: boundary_curve
+rxn: stv => coe
+reactants:
+  - stv
+products:
+  - coe
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 88.8
+      - 91.8
+      - 94.65
+      - 97.95
+    half_range:
+      - 1.8
+      - 1.4
+      - 1.65
+      - 1.85
+  T:
+    mid:
+      - 1100.0
+      - 1200.0
+      - 1300.0
+      - 1400.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Zhang et al., 1996
+    ref1:
+      authors: Zhang et al.
+      year: '1996'

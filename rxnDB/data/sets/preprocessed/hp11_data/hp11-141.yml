@@ -1,0 +1,48 @@
+---
+id: hp11-141
+type: boundary_curve
+rxn: kao + 2q => prl + H2O
+reactants:
+  - kao
+  - 2q
+products:
+  - prl
+  - H2O
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 1.0
+      - 5.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 273.0
+      - 319.5
+    half_range:
+      - 12.0
+      - 13.5
+metadata:
+  ref:
+    short_cite: McPhail unpub; Hemley et al., 1980
+    ref1:
+      authors: McPhail unpub
+      year:
+    ref2:
+      authors: Hemley et al.
+      year: '1980'

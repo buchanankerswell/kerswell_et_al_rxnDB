@@ -1,0 +1,54 @@
+---
+id: hp11-494
+type: boundary_curve
+rxn: an => anL
+reactants:
+  - an
+products:
+  - anL
+data:
+  ln_K:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 0.0
+      - 7.3
+      - 9.1
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 1550.0
+      - 1567.5
+      - 1567.5
+    half_range:
+      - 5.0
+      - 7.5
+      - 7.5
+metadata:
+  ref:
+    short_cite: Clarke, 1966; Goldsmith 1980
+    ref1:
+      authors: Clarke,
+      year: '1966'
+    ref2:
+      authors: Goldsmith
+      year: '1980'

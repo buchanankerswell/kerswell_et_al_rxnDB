@@ -1,0 +1,53 @@
+---
+id: hp11-465
+type: calibration_curve
+rxn: 5fctd + clin => 5mctd + daph
+reactants:
+  - 5fctd
+  - clin
+products:
+  - 5mctd
+  - daph
+data:
+  ln_K:
+    mid:
+      - -10.99
+      - -8.8
+      - -7.16
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 7.0
+      - 7.0
+      - 7.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 350.0
+      - 450.0
+      - 550.0
+    half_range:
+      - 30.0
+      - 30.0
+      - 30.0
+metadata:
+  ref:
+    short_cite: Vidal et al, 1999
+    ref1:
+      authors: Vidal et al,
+      year: '1999'

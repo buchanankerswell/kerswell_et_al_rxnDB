@@ -1,0 +1,58 @@
+---
+id: hp11-203
+type: calibration_curve
+rxn: 3en + 6sill => 2mgts + 2crd
+reactants:
+  - 3en
+  - 6sill
+products:
+  - 2mgts
+  - 2crd
+data:
+  ln_K:
+    mid:
+      - -3.64
+      - -3.42
+      - -2.06
+      - -1.91
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 7.0
+      - 4.0
+      - 7.4
+      - 6.8
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 700.0
+      - 700.0
+      - 950.0
+      - 950.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Newton, pers comm

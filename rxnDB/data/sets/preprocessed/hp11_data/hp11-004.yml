@@ -1,0 +1,32 @@
+---
+id: hp11-004
+type: boundary_curve
+rxn: lot => tro
+reactants:
+  - lot
+products:
+  - tro
+data:
+  ln_K:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  P:
+    mid:
+      - 0.0
+    half_range:
+      - 0.0
+  T:
+    mid:
+      - 144.0
+    half_range:
+      - 5.0
+metadata:
+  ref:
+    short_cite: fix

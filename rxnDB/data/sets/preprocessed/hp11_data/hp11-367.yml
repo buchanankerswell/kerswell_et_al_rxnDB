@@ -1,0 +1,64 @@
+---
+id: hp11-367
+type: calibration_curve
+rxn: 5phl + 6cc + 24q => 3tr + 5san + 6CO2 + 2H2O
+reactants:
+  - 5phl
+  - 6cc
+  - 24q
+products:
+  - 3tr
+  - 5san
+  - 6CO2
+  - 2H2O
+data:
+  ln_K:
+    mid:
+      - -4.52
+      - -4.59
+      - -5.0
+      - -5.18
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.72
+      - 0.68
+      - 0.58
+      - 0.55
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 6.0
+      - 6.0
+      - 6.0
+      - 6.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 610.0
+      - 630.0
+      - 610.0
+      - 625.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Hewitt, 1975
+    ref1:
+      authors: Hewitt,
+      year: '1975'

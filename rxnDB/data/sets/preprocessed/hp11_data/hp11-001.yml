@@ -1,0 +1,44 @@
+---
+id: hp11-001
+type: calibration_curve
+rxn: 2knor => 3en + 2esk
+reactants:
+  - 2knor
+products:
+  - 3en
+  - 2esk
+data:
+  ln_K:
+    mid:
+      - -0.32
+      - -0.32
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 85.0
+      - 75.0
+    half_range:
+      - 5.0
+      - 5.0
+  T:
+    mid:
+      - 1200.0
+      - 1600.0
+    half_range:
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: Turkin et al., 1983
+    ref1:
+      authors: Turkin et al.
+      year: '1983'

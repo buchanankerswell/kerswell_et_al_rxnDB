@@ -1,0 +1,61 @@
+---
+id: hp11-451
+type: calibration_curve
+rxn: 2py + 3fa => 2alm + 3fo
+reactants:
+  - 2py
+  - 3fa
+products:
+  - 2alm
+  - 3fo
+data:
+  ln_K:
+    mid:
+      - 2.04
+      - 1.735
+      - 1.49
+      - 1.255
+    half_range:
+      - 0.3
+      - 0.305
+      - 0.29
+      - 0.295
+  x_CO2:
+    mid:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 27.0
+      - 27.0
+      - 27.0
+      - 27.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 1000.0
+      - 1100.0
+      - 1200.0
+      - 1300.0
+    half_range:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+metadata:
+  ref:
+    short_cite: O’Neill & Wood, 1979
+    ref1:
+      authors: O’Neill & Wood,
+      year: '1979'

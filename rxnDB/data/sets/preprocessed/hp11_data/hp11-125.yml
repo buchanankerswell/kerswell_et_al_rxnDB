@@ -1,0 +1,47 @@
+---
+id: hp11-125
+type: calibration_curve
+rxn: tr + 3cc + 2q => 5di + 3CO2 + H2O
+reactants:
+  - tr
+  - 3cc
+  - 2q
+products:
+  - 5di
+  - 3CO2
+  - H2O
+data:
+  ln_K:
+    mid:
+      - -2.77
+      - -2.62
+    half_range:
+      - 0.0
+      - 0.0
+  x_CO2:
+    mid:
+      - 0.5
+      - 0.9
+    half_range:
+      - 0.0
+      - 0.0
+  P:
+    mid:
+      - 1.0
+      - 1.0
+    half_range:
+      - 0.0
+      - 0.0
+  T:
+    mid:
+      - 494.0
+      - 486.0
+    half_range:
+      - 5.0
+      - 10.0
+metadata:
+  ref:
+    short_cite: Slaughter et al., 1975
+    ref1:
+      authors: Slaughter et al.
+      year: '1975'
