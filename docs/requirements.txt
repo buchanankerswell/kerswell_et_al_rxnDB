@@ -1,3 +1,4 @@
+# For deployment on RTD
 sphinx<7.0
 sphinx-rtd-theme
 sphinx-autoapi
