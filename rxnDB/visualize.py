@@ -34,16 +34,16 @@ def plot_reaction_lines(
     palette: list[str] = get_color_palette(color_palette)
 
     # Plot reaction lines
-    for id in rxn_ids:
-        d: pd.DataFrame = df.query(f"id == {id}")
+    for i, id in enumerate(rxn_ids):
+        d: pd.DataFrame = df.query(f"id == '{id}'")
         fig.add_trace(
             go.Scatter(
-                x=d["T (˚C)"],
-                y=d["P (GPa)"],
+                x=d["T"],
+                y=d["P"],
                 mode="lines",
-                line=dict(width=2, color=palette[id % len(palette)]),
+                line=dict(width=2, color=palette[i % len(palette)]),
                 hovertemplate=hovertemplate,
-                customdata=np.stack((d["id"], d["Rxn"]), axis=-1),
+                customdata=np.stack((d["id"], d["rxn"]), axis=-1),
             )
         )
 
@@ -70,8 +70,8 @@ def add_reaction_labels(fig: go.Figure, mp: pd.DataFrame) -> None:
     """
     annotations: list[dict] = [
         dict(
-            x=row["T (˚C)"],
-            y=row["P (GPa)"],
+            x=row["T"],
+            y=row["P"],
             text=row["id"],
             showarrow=True,
             arrowhead=2,
@@ -79,6 +79,43 @@ def add_reaction_labels(fig: go.Figure, mp: pd.DataFrame) -> None:
         for _, row in mp.iterrows()
     ]
     fig.update_layout(annotations=annotations)
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def calculate_rxn_curve_midpoints(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Extracts the midpoint of each PT curve in the input DataFrame
+    """
+    midpoints = []
+
+    for rxn_id, group in df.groupby("id"):
+        group_sorted = group.sort_values("T").reset_index(drop=True)
+        n = len(group_sorted)
+
+        if n == 0:
+            continue
+        elif n % 2 == 1:
+            # Odd number of points: take the middle
+            midpoint_row = group_sorted.iloc[n // 2]
+            T_mid = midpoint_row["T"]
+            P_mid = midpoint_row["P"]
+        else:
+            # Even number of points: average the two central points
+            row1 = group_sorted.iloc[n // 2 - 1]
+            row2 = group_sorted.iloc[n // 2]
+            T_mid = (row1["T"] + row2["T"]) / 2
+            P_mid = (row1["P"] + row2["P"]) / 2
+
+        midpoints.append(
+            {
+                "T": T_mid,
+                "P": P_mid,
+                "rxn": group_sorted["rxn"].iloc[0],
+                "id": rxn_id,
+            }
+        )
+
+    return pd.DataFrame(midpoints)
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -8,34 +8,42 @@ import plotly.graph_objects as go
 from shiny import App, Inputs, Outputs, Session, reactive, render, ui
 from shinywidgets import render_plotly
 
-import rxnDB.data.loader as db
 import rxnDB.visualize as vis
+from rxnDB.data.loader import RxnDBLoader
+from rxnDB.data.processor import RxnDBProcessor
 from rxnDB.ui import configure_ui
+from rxnDB.utils import app_dir
 
 #######################################################
-## .1.                 Init UI                   !!! ##
+## .1.                Init Data                  !!! ##
 #######################################################
-phases: list[str] = db.phases
-init_phases: list[str] = ["Ky", "And", "Sil", "Ol", "Wd"]
-app_ui: ui.Tag = configure_ui(phases, init_phases)
+hp11_loader = RxnDBLoader(app_dir / "data" / "sets" / "preprocessed" / "hp11_data")
+jimmy_loader = RxnDBLoader(app_dir / "data" / "sets" / "preprocessed" / "jimmy_data")
+
+hp11_data: pd.DataFrame = hp11_loader.load_all()
+jimmy_data: pd.DataFrame = jimmy_loader.load_all()
+
+rxnDB = pd.concat([hp11_data, jimmy_data], ignore_index=True)
+processor = RxnDBProcessor(rxnDB)
+
+#######################################################
+## .2.                 Init UI                   !!! ##
+#######################################################
+all_phases: list[str] = processor.get_unique_phases()
+init_phases: list[str] = ["ky", "and", "sil", "ol", "wd"]
+app_ui: ui.Tag = configure_ui(all_phases, init_phases)
 
 
 #######################################################
-## .2.              Server Logic                 !!! ##
+## .3.              Server Logic                 !!! ##
 #######################################################
 def server(input: Inputs, output: Outputs, session: Session) -> None:
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Load rxnDB and filter by initial phases !!
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    df: pd.DataFrame = db.data
-    df_init: pd.DataFrame = db.filter_data_by_rxn(df, init_phases, init_phases)
-
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # Keep track of reactive values !!
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     rxn_labels: reactive.Value[bool] = reactive.value(True)
     find_similar_rxns: reactive.Value[bool] = reactive.value(False)
-    selected_row_ids: reactive.Value[list[int]] = reactive.value([])
+    selected_row_ids: reactive.Value[list[str]] = reactive.value([])
     select_all_reactants: reactive.Value[bool] = reactive.value(False)
     select_all_products: reactive.Value[bool] = reactive.value(False)
 
@@ -60,7 +68,7 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
         if select_all_reactants():
             ui.update_checkbox_group("reactants", selected=init_phases)
         else:
-            ui.update_checkbox_group("reactants", selected=phases)
+            ui.update_checkbox_group("reactants", selected=all_phases)
 
         select_all_reactants.set(not select_all_reactants())
 
@@ -74,7 +82,7 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
         if select_all_products():
             ui.update_checkbox_group("products", selected=init_phases)
         else:
-            ui.update_checkbox_group("products", selected=phases)
+            ui.update_checkbox_group("products", selected=all_phases)
 
         select_all_products.set(not select_all_products())
 
@@ -91,61 +99,57 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     # Filter rxnDB !!
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.calc
-    def filter_df_for_datatable() -> pd.DataFrame:
-        """
-        Filters the DataTable by products and reactants (checked boxes only)
-        """
-        reactants: list[str] = input.reactants()
-        products: list[str] = input.products()
-
-        return db.filter_data_by_rxn(df, reactants, products)
+    def filter_reactants_and_products() -> RxnDBProcessor:
+        return processor.filter_by_reactants(input.reactants()).filter_by_products(
+            input.products()
+        )
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.calc
-    def filter_df_for_plotly() -> pd.DataFrame:
+    def filter_datatable() -> pd.DataFrame:
+        """
+        Filters the DataTable by products and reactants (checked boxes only)
+        """
+        return filter_reactants_and_products().df.drop_duplicates(subset="id")
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @reactive.calc
+    def filter_plotly() -> pd.DataFrame:
         """
         Filters the DataTable by reconciling checked boxes and DataTable selections
         """
-        reactants: list[str] = input.reactants()
-        products: list[str] = input.products()
+        base_filter: RxnDBProcessor = filter_reactants_and_products()
+        selected_rxns: list[str] = selected_row_ids()
 
-        # Get the current selected IDs from the DataTable
-        selected_rxn_ids: list[int] = selected_row_ids()
-
-        # Find similar reactions button
         if not find_similar_rxns():
-            if selected_rxn_ids and len(selected_rxn_ids) > 0:
-                return db.filter_data_by_ids(df, selected_rxn_ids)
-            else:
-                return db.filter_data_by_rxn(df, reactants, products)
+            if selected_rxns:
+                return base_filter.filter_by_ids(selected_rxns).df
+            return base_filter.df
 
         # Reconcile DataTable selections and checked boxes
-        if selected_rxn_ids and len(selected_rxn_ids) > 0:
+        # if find similar rxns button is toggled on
+        if selected_rxns:
             filtered_reactants: list[str] = (
-                pd.Series(
-                    df[df["id"].isin(selected_rxn_ids)][
-                        ["reactant1", "reactant2", "reactant3"]
-                    ].values.flatten()
-                )
+                base_filter.filter_by_ids(selected_rxns)
+                .df["reactants"]
                 .dropna()
-                .astype(str)
                 .tolist()
             )
 
             filtered_products: list[str] = (
-                pd.Series(
-                    df[df["id"].isin(selected_rxn_ids)][
-                        ["product1", "product2", "product3"]
-                    ].values.flatten()
-                )
+                base_filter.filter_by_ids(selected_rxns)
+                .df["products"]
                 .dropna()
-                .astype(str)
                 .tolist()
             )
 
-            return db.filter_data_by_rxn(df, filtered_reactants, filtered_products)
+            return (
+                processor.filter_by_reactants(filtered_reactants)
+                .filter_by_products(filtered_products)
+                .df
+            )
         else:
-            return db.filter_data_by_rxn(df, reactants, products)
+            return base_filter.df
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # Plotly widget (supergraph) !!
@@ -155,12 +159,12 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
         """
         Render plotly
         """
-        plot_df: pd.DataFrame = db.calculate_reaction_curves(df_init)
+        init_df: pd.DataFrame = processor.reset().df
 
         fig: go.FigureWidget = go.FigureWidget(
             vis.plot_reaction_lines(
-                df=plot_df,
-                rxn_ids=df_init["id"].tolist(),
+                df=init_df,
+                rxn_ids=init_df["id"].tolist(),
                 dark_mode=False,
                 color_palette="Alphabet",
             )
@@ -182,12 +186,12 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
 
         dark_mode: bool = input.mode() == "dark"
         show_labels: bool = rxn_labels()
-        plot_df: pd.DataFrame = db.calculate_reaction_curves(filter_df_for_plotly())
-        mp_df: pd.DataFrame = db.calculate_midpoints(filter_df_for_plotly())
+        plot_df: pd.DataFrame = filter_plotly()
+        mp_df: pd.DataFrame = vis.calculate_rxn_curve_midpoints(filter_plotly())
 
         updated_fig: go.Figure = vis.plot_reaction_lines(
             df=plot_df,
-            rxn_ids=filter_df_for_plotly()["id"].tolist(),
+            rxn_ids=plot_df["id"].tolist(),
             dark_mode=dark_mode,
             color_palette="Alphabet",
         )
@@ -214,11 +218,11 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
         current_y_range: tuple[float, float] = fig.layout.yaxis.range  # type: ignore
 
         dark_mode: bool = input.mode() == "dark"
-        plot_df: pd.DataFrame = db.calculate_reaction_curves(filter_df_for_plotly())
+        plot_df: pd.DataFrame = filter_plotly()
 
         updated_fig: go.Figure = vis.plot_reaction_lines(
             df=plot_df,
-            rxn_ids=filter_df_for_plotly()["id"].tolist(),
+            rxn_ids=plot_df["id"].tolist(),
             dark_mode=dark_mode,
             color_palette="Alphabet",
         )
@@ -253,15 +257,17 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
         """
         Render DataTable
         """
+        init_df: pd.DataFrame = processor.reset().df
+
         # Refresh table on clear selection
         _ = input.clear_selection()
 
-        cols: list[str] = ["id", "formula", "rxn", "polynomial", "ref"]
+        cols: list[str] = ["id", "rxn", "ref"]
 
         if input.reactants() != init_phases or input.products() != init_phases:
-            data: pd.DataFrame = filter_df_for_datatable()[cols]
+            data: pd.DataFrame = filter_datatable()[cols]
         else:
-            data: pd.DataFrame = df_init[cols]
+            data: pd.DataFrame = init_df[cols]
 
         return render.DataTable(data, height="98%", selection_mode="rows")
 
@@ -272,15 +278,16 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
         """
         Update selected_rows when table selections change
         """
+        init_df: pd.DataFrame = processor.reset().df
         indices: list[int] = input.datatable_selected_rows()
 
         if indices:
             if input.reactants() != init_phases or input.products() != init_phases:
-                current_df: pd.DataFrame = filter_df_for_datatable()
+                current_df: pd.DataFrame = filter_datatable()
             else:
-                current_df: pd.DataFrame = df_init
+                current_df: pd.DataFrame = init_df
 
-            ids: list[int] = [current_df.iloc[i]["id"] for i in indices]
+            ids: list[str] = [current_df.iloc[i]["id"] for i in indices]
 
             selected_row_ids.set(ids)
         else:
@@ -297,6 +304,6 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
 
 
 #######################################################
-## .3.                Shiny App                  !!! ##
+## .4.                Shiny App                  !!! ##
 #######################################################
 app: App = App(app_ui, server)
