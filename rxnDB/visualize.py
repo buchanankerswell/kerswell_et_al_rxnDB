@@ -13,7 +13,7 @@ import plotly.graph_objects as go
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def plot_reaction_lines(
     df: pd.DataFrame,
-    rxn_ids: list,
+    ids: list,
     dark_mode: bool,
     font_size: float = 20,
     color_palette: str = "Set1",
@@ -21,6 +21,15 @@ def plot_reaction_lines(
     """
     Plot reaction lines (phase diagram) using plotly
     """
+    required_columns = {"id", "rxn", "T", "P"}
+    if not required_columns.issubset(df.columns):
+        missing = required_columns - set(df.columns)
+        raise ValueError(f"Missing required columns in DataFrame: {missing}")
+
+    missing_ids = [rid for rid in ids if rid not in df["id"].unique()]
+    if missing_ids:
+        print(f"Warning: These ids were not found in the DataFrame: {missing_ids}")
+
     fig = go.Figure()
 
     # Tooltip template
@@ -34,7 +43,7 @@ def plot_reaction_lines(
     palette: list[str] = get_color_palette(color_palette)
 
     # Plot reaction lines
-    for i, id in enumerate(rxn_ids):
+    for i, id in enumerate(ids):
         d: pd.DataFrame = df.query(f"id == '{id}'")
         fig.add_trace(
             go.Scatter(
@@ -90,6 +99,7 @@ def calculate_rxn_curve_midpoints(df: pd.DataFrame) -> pd.DataFrame:
 
     for rxn_id, group in df.groupby("id"):
         group_sorted = group.sort_values("T").reset_index(drop=True)
+        group_sorted = group_sorted.dropna(subset=["T", "P"])
         n = len(group_sorted)
 
         if n == 0:

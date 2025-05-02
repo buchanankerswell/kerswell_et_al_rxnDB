@@ -35,6 +35,7 @@ class RxnDBLoader:
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def load_entry(self, filepath: Path) -> pd.DataFrame:
         """Load a single YAML file and convert it into a DataFrame."""
+        print(f"Loading {filepath.name} ...", end="\r", flush=True)
         parsed_yml = self._read_yml(filepath)
 
         data = parsed_yml["data"]
@@ -64,6 +65,21 @@ class RxnDBLoader:
         return pd.DataFrame(rows)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @staticmethod
+    def save_as_parquet(df: pd.DataFrame, filepath: Path) -> None:
+        """Save a DataFrame as a compressed Parquet file."""
+        print(f"Saving data to {filepath.name} ...")
+        filepath.parent.mkdir(parents=True, exist_ok=True)
+        df.to_parquet(filepath, index=False)
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @staticmethod
+    def load_parquet(filepath: Path) -> pd.DataFrame:
+        """Load a DataFrame from a Parquet file."""
+        print(f"Loading data from {filepath.name} ...")
+        return pd.read_parquet(filepath)
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def _read_yml(self, filepath: Path) -> dict[str, Any]:
         """Read and parse a YAML file."""
         with open(filepath, "r") as file:
@@ -82,22 +98,19 @@ class RxnDBLoader:
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def main():
-    hp11_in_data = app_dir / "data" / "sets" / "preprocessed" / "hp11_data"
-    hp11_loader = RxnDBLoader(hp11_in_data)
+    """"""
+    data_dir = app_dir / "data" / "sets" / "preprocessed"
+    out_file = app_dir / "data" / "cache" / "rxnDB.parquet"
 
-    jimmy_in_data = app_dir / "data" / "sets" / "preprocessed" / "jimmy_data"
-    jimmy_loader = RxnDBLoader(jimmy_in_data)
-
-    hp11_data = hp11_loader.load_entry(hp11_in_data / "hp11-001.yml")
-    jimmy_data = jimmy_loader.load_entry(jimmy_in_data / "jimmy-001.yml")
+    # hp11_loader = RxnDBLoader(data_dir / "hp11_data")
+    jimmy_loader = RxnDBLoader(data_dir / "jimmy_data")
 
     # hp11_data = hp11_loader.load_all()
-    # jimmy_data = jimmy_loader.load_all()
+    jimmy_data = jimmy_loader.load_all()
+    rxnDB = jimmy_data
+    # rxnDB = pd.concat([hp11_data, jimmy_data], ignore_index=True)
 
-    print(hp11_data)
-    print(hp11_data.info())
-    print(jimmy_data)
-    print(jimmy_data.info())
+    RxnDBLoader.save_as_parquet(rxnDB, out_file)
 
 
 if __name__ == "__main__":

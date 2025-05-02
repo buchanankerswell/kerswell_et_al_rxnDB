@@ -2,6 +2,7 @@
 ## .0.              Load Libraries               !!! ##
 #######################################################
 import argparse
+import os
 
 
 #######################################################
@@ -41,6 +42,8 @@ def main() -> None:
 
     app_import_string: str = "rxnDB.app:app"
 
+    os.environ["SHINY_LOG_LEVEL"] = "DEBUG"
+
     run_app(
         app_import_string,
         port=args.port,
@@ -50,7 +53,5 @@ def main() -> None:
     )
 
 
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 if __name__ == "__main__":
     main()
-

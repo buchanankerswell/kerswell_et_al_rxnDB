@@ -28,7 +28,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "pip", "pytest-cov", "pandas-stubs", "shinylive", "ruamel.yaml"]
+dev = ["pytest", "pip", "pytest-cov", "pandas-stubs", "shinylive", "ruamel.yaml", "fastparquet"]
 
 [project.urls]
 Repository = "https://github.com/buchanankerswell/kerswell_et_al_rxnDB"

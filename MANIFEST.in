@@ -1,6 +1,7 @@
 include README.md
 include LICENSE
 include pyproject.toml
-recursive-include rxnDB/data *.csv *.py
+recursive-include rxnDB/data/cache *.parquet
+recursive-include rxnDB/data *.py
 recursive-include rxnDB *.css *.py
 recursive-include tests *.py

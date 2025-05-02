@@ -86,7 +86,7 @@ class CSVPreprocessor:
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @staticmethod
     def _round_data(
-        data: dict[str, dict[str, list[float]]], decimals: int = 6
+        data: dict[str, dict[str, list[float]]], decimals: int = 3
     ) -> dict[str, Any]:
         """"""
         return {
@@ -187,6 +187,7 @@ class HP11DBPreprocessor:
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @staticmethod
     def _split_into_entries(text: str) -> list[str]:
+        """"""
         entries = re.split(r"(?=\n\s*\d+\))", text)
         return [e.strip() for e in entries if e.strip()]
 
@@ -223,7 +224,7 @@ class HP11DBPreprocessor:
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @staticmethod
     def _round_data(
-        data: dict[str, dict[str, list[float]]], decimals: int = 6
+        data: dict[str, dict[str, list[float]]], decimals: int = 3
     ) -> dict[str, Any]:
         """"""
         return {
@@ -234,6 +235,7 @@ class HP11DBPreprocessor:
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @staticmethod
     def _split_reaction_and_citation(header: str) -> tuple[str, str, dict[str, Any]]:
+        """"""
         match = re.match(r"(\d+)\)\s+(.*)", header)
         if not match:
             raise ValueError(f"Invalid header: {header}")
@@ -258,6 +260,7 @@ class HP11DBPreprocessor:
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @staticmethod
     def _split_reaction(reaction: str) -> tuple[list[str], list[str]]:
+        """"""
         if "=>" not in reaction:
             raise ValueError(f"Invalid reaction: {reaction}")
         reactants, products = reaction.split("=>")
@@ -268,6 +271,7 @@ class HP11DBPreprocessor:
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @staticmethod
     def _split_citations(citation_text: str) -> dict[str, Any]:
+        """"""
         parts = re.split(r";\s*", citation_text)
         authors, years = [], []
         for part in parts:
@@ -294,6 +298,8 @@ class HP11DBPreprocessor:
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @staticmethod
     def _parse_data_lines(data_lines: list[str]) -> dict[str, Any]:
+        """"""
+
         def to_float(s: str) -> float | None:
             s = s.strip()
             return float(s) if s and s != "-" else None
@@ -366,14 +372,16 @@ class HP11DBPreprocessor:
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def main():
-    """ """
-    in_data = app_dir / "data" / "sets" / "raw" / "jimmy-rxn-db.csv"
-    out_dir = app_dir / "data" / "sets" / "preprocessed" / "jimmy_data"
+    """"""
+    data_dir = app_dir / "data" / "sets"
+
+    in_data = data_dir / "raw" / "jimmy-rxn-db.csv"
+    out_dir = data_dir / "preprocessed" / "jimmy_data"
     jimmy_db = CSVPreprocessor(in_data, out_dir, "jimmy")
     jimmy_db.preprocess()
 
-    in_data = app_dir / "data" / "sets" / "raw" / "hp11-rxn-db.txt"
-    out_dir = app_dir / "data" / "sets" / "preprocessed" / "hp11_data"
+    in_data = data_dir / "raw" / "hp11-rxn-db.txt"
+    out_dir = data_dir / "preprocessed" / "hp11_data"
     hp11_db = HP11DBPreprocessor(in_data, out_dir)
     hp11_db.preprocess()
 
