@@ -48,6 +48,45 @@ class CSVPreprocessor:
                 self.yaml.dump(rxn_data, file)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @staticmethod
+    def _abbrev_map() -> dict[str, str]:
+        """"""
+        return {
+            "sil": "sil",
+            "sill": "sil",
+            "wd": "wad",
+            "wa": "wad",
+            "wds": "wad",
+        }
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @classmethod
+    def _normalize_abbreviations(cls, phases: list[str]) -> list[str]:
+        """"""
+        abbrev_map = cls._abbrev_map()
+        return [abbrev_map.get(p, p) for p in phases]
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @classmethod
+    def _normalize_rxn_string(cls, rxn: str) -> str:
+        """"""
+        abbrev_map = cls._abbrev_map()
+
+        pattern = re.compile(
+            r"\b(\d*)(?=("
+            + "|".join(re.escape(k) for k in abbrev_map.keys())
+            + r"))\w+\b"
+        )
+
+        def replacer(match):
+            coeff = match.group(1)
+            phase = match.group(0)[len(coeff) :]
+            norm_phase = abbrev_map.get(phase, phase)
+            return f"{coeff}{norm_phase}"
+
+        return pattern.sub(replacer, rxn)
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def _process_entry(self, entry: pd.Series) -> dict[str, Any]:
         """"""
         reactants = [
@@ -62,15 +101,22 @@ class CSVPreprocessor:
             if pd.notna(entry.get(f"product{i}", None))
         ]
 
+        reactants = self._normalize_abbreviations(reactants)
+        products = self._normalize_abbreviations(products)
+
         if not reactants and any("melt" in p for p in products):
             if pd.notna(entry.get("formula", None)):
                 reactants = [entry["formula"].lower()]
 
         reaction = (
-            re.sub(r"\s*\+\s*", " + ", re.sub(r"\s*=>\s*", " => ", entry["rxn"].lower()))
+            re.sub(
+                r"\s*\+\s*", " + ", re.sub(r"\s*=>\s*", " => ", entry["rxn"].lower())
+            )
             if pd.notna(entry["rxn"]) and entry["rxn"].lower() != "melt"
             else f"{' + '.join(reactants)} => {' + '.join(products)}"
         )
+
+        reaction = self._normalize_rxn_string(reaction)
 
         rxn_data = self._process_polynomial(entry)
         rounded_data = cast(dict[str, Any], self._round_data(rxn_data))
@@ -198,6 +244,34 @@ class HP11DBPreprocessor:
         return [e.strip() for e in entries if e.strip()]
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @classmethod
+    def _abbrev_map(cls) -> dict[str, str]:
+        """"""
+        return {
+            "sil": "sil",
+            "sill": "sil",
+            "wd": "wad",
+            "wa": "wad",
+            "wds": "wad",
+        }
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @classmethod
+    def _normalize_rxn_string(cls, rxn: str) -> str:
+        """"""
+        abbrev_map = cls._abbrev_map()
+        pattern = re.compile(
+            r"\b(\d*)(?=(" + "|".join(re.escape(k) for k in abbrev_map) + r"))\w+\b"
+        )
+
+        def replacer(match):
+            coeff = match.group(1)
+            phase = match.group(0)[len(coeff) :]
+            return f"{coeff}{abbrev_map.get(phase, phase)}"
+
+        return pattern.sub(replacer, rxn)
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def _process_entry(self, entry: str) -> dict[str, Any]:
         """"""
         lines = entry.splitlines()
@@ -205,7 +279,10 @@ class HP11DBPreprocessor:
         data_lines = lines[2:]
 
         index, reaction, citation = self._split_reaction_and_citation(header)
+        reaction = self._normalize_rxn_string(reaction.lower())
+
         reactants, products = self._split_reaction(reaction)
+
         rxn_data = self._parse_data_lines(data_lines)
         rounded_data = cast(dict[str, Any], self._round_data(rxn_data))
 
@@ -245,8 +322,10 @@ class HP11DBPreprocessor:
     def _split_reaction_and_citation(header: str) -> tuple[str, str, dict[str, Any]]:
         """"""
         match = re.match(r"(\d+)\)\s+(.*)", header)
+
         if not match:
             raise ValueError(f"Invalid header: {header}")
+
         index, rest = match.groups()
 
         depth = 0
@@ -272,6 +351,7 @@ class HP11DBPreprocessor:
         if "=>" not in reaction:
             raise ValueError(f"Invalid reaction: {reaction}")
         reactants, products = reaction.split("=>")
+
         return [r.strip() for r in reactants.split("+")], [
             p.strip() for p in products.split("+")
         ]

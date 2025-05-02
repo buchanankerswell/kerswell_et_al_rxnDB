@@ -8,11 +8,11 @@ import plotly.graph_objects as go
 from shiny import App, Inputs, Outputs, Session, reactive, render, ui
 from shinywidgets import render_plotly
 
-import rxnDB.visualize as vis
 from rxnDB.data.loader import RxnDBLoader
 from rxnDB.data.processor import RxnDBProcessor
 from rxnDB.ui import configure_ui
 from rxnDB.utils import app_dir
+from rxnDB.visualize import RxnDBPlotter
 
 #######################################################
 ## .1. Init Data                                 !!! ##
@@ -31,7 +31,9 @@ except Exception as e:
 #######################################################
 try:
     all_phases: list[str] = processor.get_unique_phases()
-    init_phases: list[str] = [p for p in ["ky", "and", "sil"] if p in all_phases]
+    init_phases: list[str] = [
+        p for p in ["ky", "and", "sil", "ol", "wad"] if p in all_phases
+    ]
 
     if not init_phases and all_phases:
         init_phases = all_phases[: min(3, len(all_phases))]
@@ -49,7 +51,7 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # Reactive state values
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    rxn_labels = reactive.value(True)
+    rxn_labels = reactive.value(False)
     find_similar_rxns: reactive.Value[Literal["or"] | Literal["and"] | bool] = (
         reactive.value(False)
     )
@@ -210,14 +212,17 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
             initial_plot_df = processor.df.head(3)
             ids_to_plot = initial_plot_df["id"].unique().tolist()
 
-        fig = go.FigureWidget(
-            vis.plot_reaction_lines(
-                df=initial_plot_df,
-                ids=ids_to_plot,
-                dark_mode=False,
-                color_palette="Alphabet",
-            )
+        initial_plot_df = processor.get_colors_for_filtered_df(initial_plot_df)
+
+        plotter = RxnDBPlotter(
+            df=initial_plot_df,
+            ids=ids_to_plot,
+            dark_mode=False,
+            font_size=20,
         )
+
+        fig = go.FigureWidget(plotter.plot())
+
         return fig
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -234,16 +239,18 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
         current_y_range = getattr(getattr(widget.layout, "yaxis", None), "range", None)
 
         plot_df = get_plotly_data()
+        plot_df = processor.get_colors_for_filtered_df(plot_df)
 
         dark_mode = input.mode() == "dark"
         show_labels = rxn_labels()
 
-        updated_fig = vis.plot_reaction_lines(
+        plotter = RxnDBPlotter(
             df=plot_df,
             ids=plot_df["id"].unique().tolist(),
             dark_mode=dark_mode,
-            color_palette="Alphabet",
         )
+
+        updated_fig = go.FigureWidget(plotter.plot())
 
         if current_x_range is not None:
             updated_fig.layout.xaxis.range = current_x_range  # type: ignore
@@ -257,9 +264,9 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
 
             if show_labels and not plot_df.empty:
                 try:
-                    mp_df = vis.calculate_rxn_curve_midpoints(plot_df)
+                    mp_df = plotter.calculate_midpoints()
                     temp_fig = go.Figure()
-                    vis.add_reaction_labels(temp_fig, mp_df)
+                    plotter.add_labels(temp_fig, mp_df)
                     widget.layout.annotations = temp_fig.layout.annotations  # type: ignore
                 except Exception as e:
                     print(f"Error adding reaction labels: {e}")
