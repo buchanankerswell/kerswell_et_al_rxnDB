@@ -21,7 +21,15 @@ def plot_reaction_lines(
     """
     Plot reaction lines (phase diagram) using plotly
     """
-    required_columns = {"id", "rxn", "T", "P"}
+    required_columns = {
+        "id",
+        "rxn",
+        "plot_type",
+        "T",
+        "P",
+        "T_half_range",
+        "P_half_range",
+    }
     if not required_columns.issubset(df.columns):
         missing = required_columns - set(df.columns)
         raise ValueError(f"Missing required columns in DataFrame: {missing}")
@@ -45,16 +53,36 @@ def plot_reaction_lines(
     # Plot reaction lines
     for i, id in enumerate(ids):
         d: pd.DataFrame = df.query(f"id == '{id}'")
-        fig.add_trace(
-            go.Scatter(
-                x=d["T"],
-                y=d["P"],
-                mode="lines",
-                line=dict(width=2, color=palette[i % len(palette)]),
-                hovertemplate=hovertemplate,
-                customdata=np.stack((d["id"], d["rxn"]), axis=-1),
+
+        if d.empty:
+            continue
+
+        plot_type = d["plot_type"].iloc[0]
+
+        if plot_type == "curve":
+            fig.add_trace(
+                go.Scatter(
+                    x=d["T"],
+                    y=d["P"],
+                    mode="lines",
+                    line=dict(width=2, color=palette[i % len(palette)]),
+                    hovertemplate=hovertemplate,
+                    customdata=np.stack((d["id"], d["rxn"]), axis=-1),
+                )
             )
-        )
+        elif plot_type == "point":
+            fig.add_trace(
+                go.Scatter(
+                    x=d["T"],
+                    y=d["P"],
+                    mode="markers",
+                    marker=dict(size=8, color="black"),
+                    error_x=dict(type="data", array=d["T_half_range"], visible=True),
+                    error_y=dict(type="data", array=d["P_half_range"], visible=True),
+                    hovertemplate=hovertemplate,
+                    customdata=np.stack((d["id"], d["rxn"]), axis=-1),
+                )
+            )
 
     # Update layout
     layout_settings: dict = configure_layout(dark_mode, font_size)

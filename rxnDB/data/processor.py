@@ -26,7 +26,15 @@ class RxnDBProcessor:
         if not self.allow_empty and self.df.empty:
             raise ValueError("RxnDB dataframe cannot be empty unless allow_empty=True")
 
-        required_cols = ["id", "reactants", "products", "type", "rxn", "ref"]
+        required_cols = [
+            "id",
+            "reactants",
+            "products",
+            "type",
+            "plot_type",
+            "rxn",
+            "ref",
+        ]
         missing = [col for col in required_cols if col not in self.df.columns]
 
         if missing:
@@ -122,11 +130,11 @@ class RxnDBProcessor:
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def filter_by_reactants_and_products(
-        self, reactants: list[str], products: list[str]
+        self, reactants: list[str], products: list[str], method: str = "or"
     ) -> pd.DataFrame:
         """
         Filter by reactants and/or products.
-        - If both reactants and products are provided, returns reactions matching BOTH criteria (intersection of IDs).
+        - If both reactants and products are provided, returns reactions matching criteria (intersection or union).
         - If only reactants are provided, returns reactions matching ANY of the reactants (union).
         - If only products are provided, returns reactions matching ANY of the products (union).
         - If neither is provided, returns the original dataframe.
@@ -141,17 +149,30 @@ class RxnDBProcessor:
             return self.filter_by_products(products)
 
         if reactants and products:
+            # Regular direction
             reactant_ids = self._get_ids_for_phases(reactants, self._reactant_lookup)
+            product_ids = self._get_ids_for_phases(products, self._product_lookup)
+
+            # Reverse direction (reactants <=> products)
+            rev_reactant_ids = self._get_ids_for_phases(reactants, self._product_lookup)
+            rev_product_ids = self._get_ids_for_phases(products, self._reactant_lookup)
 
             if not reactant_ids:
                 return pd.DataFrame(columns=self._original_df.columns)
 
-            product_ids = self._get_ids_for_phases(products, self._product_lookup)
-
             if not product_ids:
                 return pd.DataFrame(columns=self._original_df.columns)
 
-            matching_ids = reactant_ids.intersection(product_ids)
+            if method == "and":
+                matching_ids = reactant_ids.intersection(product_ids).union(
+                    rev_reactant_ids.intersection(rev_product_ids)
+                )
+            else:  # "or"
+                matching_ids = (
+                    reactant_ids.union(product_ids)
+                    .union(rev_reactant_ids)
+                    .union(rev_product_ids)
+                )
 
             if not matching_ids:
                 return pd.DataFrame(columns=self._original_df.columns)

@@ -1,6 +1,8 @@
 #######################################################
 ## .0.              Load Libraries               !!! ##
 #######################################################
+from typing import Literal
+
 import pandas as pd
 import plotly.graph_objects as go
 from shiny import App, Inputs, Outputs, Session, reactive, render, ui
@@ -48,7 +50,9 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     # Reactive state values
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     rxn_labels = reactive.value(True)
-    find_similar_rxns = reactive.value(False)
+    find_similar_rxns: reactive.Value[Literal["or"] | Literal["and"] | bool] = (
+        reactive.value(False)
+    )
     selected_row_ids = reactive.value([])
     select_all_reactants = reactive.value(False)
     select_all_products = reactive.value(False)
@@ -93,8 +97,14 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     @reactive.effect
     @reactive.event(input.toggle_find_similar_rxns)
     def _() -> None:
-        """Toggles find_similar_rxns"""
-        find_similar_rxns.set(not find_similar_rxns())
+        """Cycles find_similar_rxns through False → 'or' → 'and' → False"""
+        current = find_similar_rxns()
+        if current is False:
+            find_similar_rxns.set("or")
+        elif current == "or":
+            find_similar_rxns.set("and")
+        else:
+            find_similar_rxns.set(False)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.effect
@@ -125,12 +135,12 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
 
         if not filtered_df.empty:
             return (
-                filtered_df[["id", "rxn", "ref"]]
+                filtered_df[["id", "name", "rxn", "type", "ref"]]
                 .drop_duplicates(subset="id")
                 .reset_index(drop=True)
             )
         else:
-            return pd.DataFrame(columns=["id", "rxn", "ref"])
+            return pd.DataFrame(columns=["id", "name", "rxn", "type", "ref"])
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # Effect to update selected_row_ids based on DataTable selection indices
@@ -170,7 +180,9 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
                 )
                 if selected_reactants or selected_products:
                     return processor.filter_by_reactants_and_products(
-                        selected_reactants, selected_products
+                        selected_reactants,
+                        selected_products,
+                        method=str(find_similar),
                     )
                 else:
                     return pd.DataFrame(columns=processor._original_df.columns)
@@ -260,10 +272,12 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     @render.data_frame
     def datatable() -> render.DataTable:
         """Render DataTable with current filtered/formatted data."""
-        data_for_table = get_datatable_data()
+        _ = input.clear_selection()
+
+        data = get_datatable_data()
 
         return render.DataTable(
-            data_for_table,
+            data,
             height="98%",
             selection_mode="rows",
         )
