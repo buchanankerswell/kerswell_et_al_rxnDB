@@ -15,9 +15,13 @@ APP_CLI := $(APP_DIR)/cli.py
 APP_TESTS := tests/test_app.py
 VERSION ?= $(shell git describe --tags --abbrev=0 2>/dev/null || echo "0.1.0")
 
+# Datasets
+DATA_DIR := $(APP_DIR)/data/
+YML_DIRS := $(DATA_DIR)/sets/preprocessed/*
+
 # Cleanup directory
 DATAPURGE := logs/ tmp/
-DATACLEAN := **/**/__pycache__ **/**/*.pyc .pytest_cache build dist *.egg-info
+DATACLEAN := **/**/__pycache__ **/**/*.pyc .pytest_cache build dist *.egg-info $(YML_DIRS)
 
 all: create_conda_env test_app run_app
 
