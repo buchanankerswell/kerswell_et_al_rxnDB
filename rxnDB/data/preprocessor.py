@@ -41,7 +41,7 @@ class CSVPreprocessor:
         df = pd.read_csv(self.filepath)
 
         for i, (_, entry) in enumerate(df.iterrows()):
-            print(f"Processing {self.db_id} CSV row {i + 1} ...")
+            print(f"Processing {self.db_id} CSV row {i + 1} ...", end="\r", flush=True)
             rxn_data = self._process_entry(entry)
             out_file = self.output_dir / f"{self.db_id}-{i + 1:03}.yml"
             with open(out_file, "w") as file:
@@ -62,18 +62,24 @@ class CSVPreprocessor:
             if pd.notna(entry.get(f"product{i}", None))
         ]
 
+        if not reactants and any("melt" in p for p in products):
+            if pd.notna(entry.get("formula", None)):
+                reactants = [entry["formula"].lower()]
+
         reaction = (
-            entry["rxn"].lower()
-            if pd.notna(entry["rxn"])
-            else f"{'+'.join(reactants)}=>{'+'.join(products)}"
+            re.sub(r"\s*\+\s*", " + ", re.sub(r"\s*=>\s*", " => ", entry["rxn"].lower()))
+            if pd.notna(entry["rxn"]) and entry["rxn"].lower() != "melt"
+            else f"{' + '.join(reactants)} => {' + '.join(products)}"
         )
 
         rxn_data = self._process_polynomial(entry)
         rounded_data = cast(dict[str, Any], self._round_data(rxn_data))
 
         yml_out = {
-            "id": f"jimmy-{entry['id']:03}",
-            "type": "boundary_curve",
+            "name": f"jimmy-{entry['id']:03}",
+            "source": "jimmy",
+            "type": "phase_boundary",
+            "plot_type": "curve",
             "rxn": reaction,
             "reactants": reactants,
             "products": products,
@@ -178,7 +184,7 @@ class HP11DBPreprocessor:
         entries = self._split_into_entries(text)
 
         for i, entry in enumerate(entries):
-            print(f"Processing HP11 data entry {i + 1} ...")
+            print(f"Processing HP11 data entry {i + 1} ...", end="\r", flush=True)
             rxn_data = self._process_entry(entry)
             out_file = self.output_dir / f"hp11-{i + 1:03}.yml"
             with open(out_file, "w") as file:
@@ -204,14 +210,16 @@ class HP11DBPreprocessor:
         rounded_data = cast(dict[str, Any], self._round_data(rxn_data))
 
         data_type = (
-            "boundary_curve"
+            "phase_boundary"
             if all(x == 0.0 for x in rounded_data["ln_K"]["mid"])
-            else "calibration_curve"
+            else "rxn_calibration"
         )
 
         yml_out = {
-            "id": f"hp11-{int(index):03}",
+            "name": f"hp11-{int(index):03}",
+            "source": "hp11",
             "type": data_type,
+            "plot_type": "point",
             "rxn": reaction,
             "reactants": reactants,
             "products": products,
@@ -384,6 +392,8 @@ def main():
     out_dir = data_dir / "preprocessed" / "hp11_data"
     hp11_db = HP11DBPreprocessor(in_data, out_dir)
     hp11_db.preprocess()
+
+    print("\nDatasets preprocessed!")
 
 
 if __name__ == "__main__":
