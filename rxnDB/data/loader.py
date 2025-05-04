@@ -1,5 +1,5 @@
 #######################################################
-## .0.              Load Libraries               !!! ##
+## .0. Load Libraries                            !!! ##
 #######################################################
 from dataclasses import dataclass
 from pathlib import Path
@@ -19,10 +19,12 @@ class RxnDBLoader:
     in_dir: Path
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def __post_init__(self):
-        self.yaml = YAML()
+    def __post_init__(self) -> None:
+        """"""
         if not self.in_dir.exists():
             raise FileNotFoundError(f"Directory {self.in_dir} not found!")
+
+        self.yaml = YAML()
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def load_all(self) -> pd.DataFrame:
@@ -100,17 +102,18 @@ class RxnDBLoader:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def main():
     """"""
-    data_dir = app_dir / "data" / "sets" / "preprocessed"
-    out_file = app_dir / "data" / "cache" / "rxnDB.parquet"
+    preprocessed_data_dir = app_dir / "data" / "sets" / "preprocessed"
+    filepath = app_dir / "data" / "cache" / "rxnDB.parquet"
 
-    jimmy_loader = RxnDBLoader(data_dir / "jimmy_data")
+    jimmy_loader = RxnDBLoader(preprocessed_data_dir / "jimmy_data")
     jimmy_data = jimmy_loader.load_all()
 
-    # Drop rows with bad data (mistakes in CSV file?)
+    # Drop rows with bad data
+    # TODO: correct mistakes in original CSV file
     to_drop = ["jimmy-031", "jimmy-045", "jimmy-073", "jimmy-074"]
     jimmy_data = jimmy_data[~jimmy_data["name"].isin(to_drop)]
 
-    hp11_loader = RxnDBLoader(data_dir / "hp11_data")
+    hp11_loader = RxnDBLoader(preprocessed_data_dir / "hp11_data")
     hp11_data = hp11_loader.load_all()
 
     # kbar --> GPa
@@ -128,10 +131,10 @@ def main():
     cols = ["id"] + [col for col in rxnDB.columns if col != "id"]
     rxnDB = rxnDB[cols]
 
-    RxnDBLoader.save_as_parquet(rxnDB, out_file)
+    RxnDBLoader.save_as_parquet(rxnDB, filepath)
 
     print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    print(f"Data saved to {out_file.name}!")
+    print(f"Data saved to {filepath.name}!")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("Summary:")
     print(rxnDB.info())

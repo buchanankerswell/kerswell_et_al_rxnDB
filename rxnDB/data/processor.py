@@ -1,7 +1,6 @@
 #######################################################
-## .0.              Load Libraries               !!! ##
+## .0. Load Libraries                            !!! ##
 #######################################################
-import re
 from dataclasses import dataclass, field
 
 import pandas as pd
@@ -9,23 +8,21 @@ import plotly.express as px
 
 
 #######################################################
-## .1.                   RxnDB                   !!! ##
+## .1. RxnDBProcessor                            !!! ##
 #######################################################
 @dataclass
 class RxnDBProcessor:
     df: pd.DataFrame
     allow_empty: bool = False
-    color_palette: str = "Set1"
+    color_palette: str = "Alphabet"
     _original_df: pd.DataFrame = field(init=False, repr=False)
     _reactant_lookup: dict[str, set[str]] = field(init=False, repr=False)
     _product_lookup: dict[str, set[str]] = field(init=False, repr=False)
-    _reaction_groups: dict[str, int] = field(
-        init=False, repr=False, default_factory=dict
-    )
+    _rxn_groups: dict[str, int] = field(init=False, repr=False, default_factory=dict)
     _color_map: dict[str, str] = field(init=False, repr=False, default_factory=dict)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         """Initialize the processor and validate the DataFrame."""
         if not isinstance(self.df, pd.DataFrame):
             raise TypeError("Input 'df' must be a pandas DataFrame.")
@@ -46,27 +43,16 @@ class RxnDBProcessor:
         if missing:
             raise ValueError(f"Missing required columns: {missing}")
 
-        # Store original data reference (no copy needed)
         self._original_df = self.df
 
-        # Pre-compute phase information for faster filtering
         self._precompute_phase_info()
-
-        # Build color mapping
         self._build_color_map()
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def _precompute_phase_info(self):
+    def _precompute_phase_info(self) -> None:
         """Pre-compute phase information for faster filtering."""
         self._reactant_lookup = {}
         self._product_lookup = {}
-
-        self.df["reactants"] = self.df["reactants"].apply(
-            lambda x: x if isinstance(x, list) else []
-        )
-        self.df["products"] = self.df["products"].apply(
-            lambda x: x if isinstance(x, list) else []
-        )
 
         for _, row in self.df.iterrows():
             rxn_id = row["id"]
@@ -74,28 +60,24 @@ class RxnDBProcessor:
             # Add to reactant lookup
             for reactant in row["reactants"]:
                 if pd.notna(reactant) and isinstance(reactant, str):
-                    clean_reactant = self.strip_coefficients([reactant])[0]
-                    if clean_reactant:
-                        if clean_reactant not in self._reactant_lookup:
-                            self._reactant_lookup[clean_reactant] = set()
-                        self._reactant_lookup[clean_reactant].add(rxn_id)
+                    if reactant not in self._reactant_lookup:
+                        self._reactant_lookup[reactant] = set()
+                    self._reactant_lookup[reactant].add(rxn_id)
 
             # Add to product lookup
             for product in row["products"]:
                 if pd.notna(product) and isinstance(product, str):
-                    clean_product = self.strip_coefficients([product])[0]
-                    if clean_product:
-                        if clean_product not in self._product_lookup:
-                            self._product_lookup[clean_product] = set()
-                        self._product_lookup[clean_product].add(rxn_id)
+                    if product not in self._product_lookup:
+                        self._product_lookup[product] = set()
+                    self._product_lookup[product].add(rxn_id)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def _build_reaction_groups(self, method: str = "and"):
+    def _build_rxn_groups(self, method: str = "or"):
         """
         Group reactions based on shared reactants AND products.
         Assigns each reaction ID to a group number.
         """
-        self._reaction_groups = {}
+        self._rxn_groups = {}
         group_counter = 0
         processed_ids = set()
 
@@ -108,11 +90,7 @@ class RxnDBProcessor:
             products = row.get("products", [])
 
             if not isinstance(reactants, list) or not isinstance(products, list):
-                # Skip if data isn't in expected format
                 continue
-
-            reactants = self.strip_coefficients(reactants)
-            products = self.strip_coefficients(products)
 
             if not reactants or not products:
                 continue
@@ -136,15 +114,15 @@ class RxnDBProcessor:
 
             if matching_ids:
                 for match_id in matching_ids:
-                    self._reaction_groups[match_id] = group_counter
+                    self._rxn_groups[match_id] = group_counter
                     processed_ids.add(match_id)
-                self._reaction_groups[rxn_id] = group_counter
+                self._rxn_groups[rxn_id] = group_counter
                 processed_ids.add(rxn_id)
                 group_counter += 1
 
         for rxn_id in self._original_df["id"].unique():
             if rxn_id not in processed_ids:
-                self._reaction_groups[rxn_id] = group_counter
+                self._rxn_groups[rxn_id] = group_counter
                 group_counter += 1
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -154,11 +132,11 @@ class RxnDBProcessor:
         Assigns a color to each unique group number.
         """
         # Build reaction groups first if they don't exist
-        if not self._reaction_groups:
-            self._build_reaction_groups()
+        if not self._rxn_groups:
+            self._build_rxn_groups()
 
         # Get unique group numbers
-        unique_groups = set(self._reaction_groups.values())
+        unique_groups = set(self._rxn_groups.values())
 
         # Get color palette
         palette = self._get_color_palette()
@@ -168,6 +146,7 @@ class RxnDBProcessor:
             str(group): palette[i % len(palette)]
             for i, group in enumerate(sorted(unique_groups))
         }
+        print(self._color_map)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def _get_color_palette(self) -> list[str]:
@@ -188,10 +167,10 @@ class RxnDBProcessor:
         Get the color for a specific reaction ID.
         Returns black (#000000) as fallback if no color is found.
         """
-        if reaction_id not in self._reaction_groups:
+        if reaction_id not in self._rxn_groups:
             return "#000000"
 
-        group = self._reaction_groups[reaction_id]
+        group = self._rxn_groups[reaction_id]
         return self._color_map.get(str(group), "#000000")
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -203,9 +182,7 @@ class RxnDBProcessor:
         df_copy = filtered_df.copy()
 
         # Add group column for debugging/reference
-        df_copy["rxn_group"] = df_copy["id"].map(
-            lambda x: self._reaction_groups.get(x, -1)
-        )
+        df_copy["rxn_group"] = df_copy["id"].map(lambda x: self._rxn_groups.get(x, -1))
 
         # Add color column
         df_copy["rxn_color_key"] = df_copy["id"].map(
@@ -324,18 +301,6 @@ class RxnDBProcessor:
         return self._original_df[self._original_df["type"].isin(types)]
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    @staticmethod
-    def strip_coefficients(phases: list[str]) -> list[str]:
-        """Remove leading coefficients (e.g., '2H2O' -> 'H2O') from phase names."""
-        cleaned = []
-
-        for phase in phases:
-            if isinstance(phase, str):
-                cleaned.append(re.sub(r"^\d+\s*", "", phase).strip())
-
-        return [p for p in cleaned if p]
-
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def get_unique_phases(self) -> list[str]:
         """Get a sorted list of unique phase names from reactants and products."""
         all_phases = set(self._reactant_lookup.keys()) | set(
@@ -355,27 +320,10 @@ class RxnDBProcessor:
         all_reactants = subset_df["reactants"].explode().dropna().unique().tolist()
         all_products = subset_df["products"].explode().dropna().unique().tolist()
 
-        unique_reactants = sorted(list(set(self.strip_coefficients(all_reactants))))
-        unique_products = sorted(list(set(self.strip_coefficients(all_products))))
+        unique_reactants = sorted(list(set(all_reactants)))
+        unique_products = sorted(list(set(all_products)))
 
         return unique_reactants, unique_products
-
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def debug_print_groups(self):
-        """Print current reaction groups for debugging."""
-        print(f"Total reaction groups: {len(set(self._reaction_groups.values()))}")
-        print(f"Total reactions: {len(self._reaction_groups)}")
-
-        # Print group sizes
-        group_sizes = {}
-        for group in self._reaction_groups.values():
-            if group not in group_sizes:
-                group_sizes[group] = 0
-            group_sizes[group] += 1
-
-        print("\nGroup sizes:")
-        for group, size in sorted(group_sizes.items()):
-            print(f"Group {group}: {size} reactions")
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -384,19 +332,11 @@ def main():
     from rxnDB.data.loader import RxnDBLoader
     from rxnDB.utils import app_dir
 
-    data_path = app_dir / "data" / "cache" / "rxnDB.parquet"
-    rxnDB: pd.DataFrame = RxnDBLoader.load_parquet(data_path)
+    filepath = app_dir / "data" / "cache" / "rxnDB.parquet"
+    rxnDB: pd.DataFrame = RxnDBLoader.load_parquet(filepath)
     processor: RxnDBProcessor = RxnDBProcessor(rxnDB)
-
-    # Debug output to verify groups
-    processor.debug_print_groups()
-
-    print("\nFilter by reactants and products:")
-    filtered_df = processor.filter_by_reactants_and_products(
-        ["ky"], ["and"], method="and"
-    )
-    colored_df = processor.get_colors_for_filtered_df(filtered_df)
-    print(colored_df[["id", "rxn_group", "rxn_color_key"]])
+    all_phases = processor.get_unique_phases()
+    print(all_phases)
 
 
 if __name__ == "__main__":

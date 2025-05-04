@@ -1,16 +1,15 @@
 #######################################################
-## .0.              Load Libraries               !!! ##
+## .0. Load Libraries                            !!! ##
 #######################################################
 from dataclasses import dataclass
 
 import numpy as np
 import pandas as pd
-import plotly.express as px
 import plotly.graph_objects as go
 
 
 #######################################################
-## .1.                 Plotly                    !!! ##
+## .1. Plotly                                    !!! ##
 #######################################################
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @dataclass
@@ -106,19 +105,6 @@ class RxnDBPlotter:
         return fig
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def _get_color_palette(self) -> list[str]:
-        """"""
-        if self.color_palette in dir(px.colors.qualitative):
-            return getattr(px.colors.qualitative, self.color_palette)
-        elif self.color_palette.lower() in px.colors.named_colorscales():
-            return [color[1] for color in px.colors.get_colorscale(self.color_palette)]
-        else:
-            print(
-                f"'{self.color_palette}' is not a valid palette, using default 'Set1'."
-            )
-            return px.colors.qualitative.Set1
-
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def _configure_layout(self) -> dict:
         """"""
         border_color = "#E5E5E5" if self.dark_mode else "black"
@@ -136,7 +122,7 @@ class RxnDBPlotter:
             "plot_bgcolor": plot_bgcolor,
             "paper_bgcolor": paper_bgcolor,
             "xaxis": {
-                "range": (0, 1650),
+                "range": (0, 2250),
                 "gridcolor": grid_color,
                 "title_font": {"color": label_color},
                 "tickfont": {"color": tick_color},
@@ -146,7 +132,7 @@ class RxnDBPlotter:
                 "mirror": True,
             },
             "yaxis": {
-                "range": (-0.5, 19),
+                "range": (-0.5, 26.5),
                 "gridcolor": grid_color,
                 "title_font": {"color": label_color},
                 "tickfont": {"color": tick_color},

@@ -1,5 +1,5 @@
 #######################################################
-## .0.              Load Libraries               !!! ##
+## .0. Load Libraries                            !!! ##
 #######################################################
 import re
 from dataclasses import dataclass
@@ -14,16 +14,17 @@ from rxnDB.utils import app_dir
 
 
 #######################################################
-## .1.              CSVPreprocessor              !!! ##
+## .1. CSVPreprocessor                           !!! ##
 #######################################################
 @dataclass
 class CSVPreprocessor:
     filepath: Path
-    output_dir: Path
-    db_id: str
+    out_dir: Path
+    unique_tag: str
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def __post_init__(self):
+    def __post_init__(self) -> None:
+        """"""
         if not self.filepath.exists():
             raise FileNotFoundError(f"Could not find {self.filepath}!")
 
@@ -33,7 +34,7 @@ class CSVPreprocessor:
         self.yaml.allow_unicode = True
         self.yaml.explicit_start = True
 
-        self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.out_dir.mkdir(parents=True, exist_ok=True)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def preprocess(self) -> None:
@@ -41,50 +42,17 @@ class CSVPreprocessor:
         df = pd.read_csv(self.filepath)
 
         for i, (_, entry) in enumerate(df.iterrows()):
-            print(f"Processing {self.db_id} CSV row {i + 1} ...", end="\r", flush=True)
+            print(
+                f"Processing {self.unique_tag} entry {i + 1} ...",
+                end="\r",
+                flush=True,
+            )
+
             rxn_data = self._process_entry(entry)
-            out_file = self.output_dir / f"{self.db_id}-{i + 1:03}.yml"
-            with open(out_file, "w") as file:
+            filepath = self.out_dir / f"{self.unique_tag}-{i + 1:03}.yml"
+
+            with open(filepath, "w") as file:
                 self.yaml.dump(rxn_data, file)
-
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    @staticmethod
-    def _abbrev_map() -> dict[str, str]:
-        """"""
-        return {
-            "sil": "sil",
-            "sill": "sil",
-            "wd": "wad",
-            "wa": "wad",
-            "wds": "wad",
-        }
-
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    @classmethod
-    def _normalize_abbreviations(cls, phases: list[str]) -> list[str]:
-        """"""
-        abbrev_map = cls._abbrev_map()
-        return [abbrev_map.get(p, p) for p in phases]
-
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    @classmethod
-    def _normalize_rxn_string(cls, rxn: str) -> str:
-        """"""
-        abbrev_map = cls._abbrev_map()
-
-        pattern = re.compile(
-            r"\b(\d*)(?=("
-            + "|".join(re.escape(k) for k in abbrev_map.keys())
-            + r"))\w+\b"
-        )
-
-        def replacer(match):
-            coeff = match.group(1)
-            phase = match.group(0)[len(coeff) :]
-            norm_phase = abbrev_map.get(phase, phase)
-            return f"{coeff}{norm_phase}"
-
-        return pattern.sub(replacer, rxn)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def _process_entry(self, entry: pd.Series) -> dict[str, Any]:
@@ -101,9 +69,6 @@ class CSVPreprocessor:
             if pd.notna(entry.get(f"product{i}", None))
         ]
 
-        reactants = self._normalize_abbreviations(reactants)
-        products = self._normalize_abbreviations(products)
-
         if not reactants and any("melt" in p for p in products):
             if pd.notna(entry.get("formula", None)):
                 reactants = [entry["formula"].lower()]
@@ -116,7 +81,8 @@ class CSVPreprocessor:
             else f"{' + '.join(reactants)} => {' + '.join(products)}"
         )
 
-        reaction = self._normalize_rxn_string(reaction)
+        reactants = self._standardize_abbreviations(reactants)
+        products = self._standardize_abbreviations(products)
 
         rxn_data = self._process_polynomial(entry)
         rounded_data = cast(dict[str, Any], self._round_data(rxn_data))
@@ -136,6 +102,12 @@ class CSVPreprocessor:
         return yml_out
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @classmethod
+    def _standardize_abbreviations(cls, phases: list[str]) -> list[str]:
+        """"""
+        return [ABBREV_MAP.get(p, p) for p in phases]
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @staticmethod
     def _round_data(
         data: dict[str, dict[str, list[float]]], decimals: int = 3
@@ -149,7 +121,7 @@ class CSVPreprocessor:
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @staticmethod
     def _process_polynomial(
-        row: pd.Series, nsteps: int = 100
+        row: pd.Series, nsteps: int = 30
     ) -> dict[str, dict[str, list[float]]]:
         """"""
         Ts = np.linspace(row["tmin"], row["tmax"], nsteps)
@@ -203,15 +175,16 @@ class CSVPreprocessor:
 
 
 #######################################################
-## .2.             HP11DBPreprocessor            !!! ##
+## .2. HP11Preprocessor                        !!! ##
 #######################################################
 @dataclass
-class HP11DBPreprocessor:
+class HP11Preprocessor:
     filepath: Path
-    output_dir: Path
+    out_dir: Path
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def __post_init__(self):
+    def __post_init__(self) -> None:
+        """"""
         if not self.filepath.exists():
             raise FileNotFoundError(f"Could not find {self.filepath}!")
 
@@ -221,19 +194,21 @@ class HP11DBPreprocessor:
         self.yaml.allow_unicode = True
         self.yaml.explicit_start = True
 
-        self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.out_dir.mkdir(parents=True, exist_ok=True)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def preprocess(self) -> None:
         """"""
-        text = self.filepath.read_text()
-        entries = self._split_into_entries(text)
+        raw_text = self.filepath.read_text()
+        data_entries = self._split_into_entries(raw_text)
 
-        for i, entry in enumerate(entries):
-            print(f"Processing HP11 data entry {i + 1} ...", end="\r", flush=True)
+        for i, entry in enumerate(data_entries):
+            print(f"Processing HP11 entry {i + 1} ...", end="\r", flush=True)
+
             rxn_data = self._process_entry(entry)
-            out_file = self.output_dir / f"hp11-{i + 1:03}.yml"
-            with open(out_file, "w") as file:
+            filepath = self.out_dir / f"hp11-{i + 1:03}.yml"
+
+            with open(filepath, "w") as file:
                 self.yaml.dump(rxn_data, file)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -244,34 +219,6 @@ class HP11DBPreprocessor:
         return [e.strip() for e in entries if e.strip()]
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    @classmethod
-    def _abbrev_map(cls) -> dict[str, str]:
-        """"""
-        return {
-            "sil": "sil",
-            "sill": "sil",
-            "wd": "wad",
-            "wa": "wad",
-            "wds": "wad",
-        }
-
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    @classmethod
-    def _normalize_rxn_string(cls, rxn: str) -> str:
-        """"""
-        abbrev_map = cls._abbrev_map()
-        pattern = re.compile(
-            r"\b(\d*)(?=(" + "|".join(re.escape(k) for k in abbrev_map) + r"))\w+\b"
-        )
-
-        def replacer(match):
-            coeff = match.group(1)
-            phase = match.group(0)[len(coeff) :]
-            return f"{coeff}{abbrev_map.get(phase, phase)}"
-
-        return pattern.sub(replacer, rxn)
-
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def _process_entry(self, entry: str) -> dict[str, Any]:
         """"""
         lines = entry.splitlines()
@@ -279,9 +226,11 @@ class HP11DBPreprocessor:
         data_lines = lines[2:]
 
         index, reaction, citation = self._split_reaction_and_citation(header)
-        reaction = self._normalize_rxn_string(reaction.lower())
 
         reactants, products = self._split_reaction(reaction)
+
+        reactants = self._standardize_abbreviations(reactants)
+        products = self._standardize_abbreviations(products)
 
         rxn_data = self._parse_data_lines(data_lines)
         rounded_data = cast(dict[str, Any], self._round_data(rxn_data))
@@ -307,6 +256,12 @@ class HP11DBPreprocessor:
         return yml_out
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @classmethod
+    def _standardize_abbreviations(cls, phases: list[str]) -> list[str]:
+        """"""
+        return [ABBREV_MAP.get(p, p) for p in phases]
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @staticmethod
     def _round_data(
         data: dict[str, dict[str, list[float]]], decimals: int = 3
@@ -318,8 +273,9 @@ class HP11DBPreprocessor:
         }
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    @staticmethod
-    def _split_reaction_and_citation(header: str) -> tuple[str, str, dict[str, Any]]:
+    def _split_reaction_and_citation(
+        self, header: str
+    ) -> tuple[str, str, dict[str, Any]]:
         """"""
         match = re.match(r"(\d+)\)\s+(.*)", header)
 
@@ -328,20 +284,22 @@ class HP11DBPreprocessor:
 
         index, rest = match.groups()
 
-        depth = 0
+        depth: int = 0
         for i in range(len(rest) - 1, -1, -1):
             if rest[i] == ")":
                 depth += 1
             elif rest[i] == "(":
                 depth -= 1
                 if depth == 0:
-                    reaction = rest[:i].strip().replace("=", "=>")
-                    citation = rest[i + 1 : -1].strip()
+                    reaction: str = rest[:i].strip().replace("=", "=>")
+                    citation: str = rest[i + 1 : -1].strip()
+
                     return (
                         index,
                         reaction,
-                        HP11DBPreprocessor._split_citations(citation),
+                        self._split_citations(citation),
                     )
+
         return index, rest.strip().replace("=", "=>"), {}
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -350,17 +308,22 @@ class HP11DBPreprocessor:
         """"""
         if "=>" not in reaction:
             raise ValueError(f"Invalid reaction: {reaction}")
+
         reactants, products = reaction.split("=>")
 
-        return [r.strip() for r in reactants.split("+")], [
-            p.strip() for p in products.split("+")
+        def strip_digits(s: str) -> str:
+            return re.sub(r"^\d+", "", s.strip())
+
+        return [strip_digits(r).lower() for r in reactants.split("+")], [
+            strip_digits(p).lower() for p in products.split("+")
         ]
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @staticmethod
     def _split_citations(citation_text: str) -> dict[str, Any]:
         """"""
-        parts = re.split(r";\s*", citation_text)
+        parts: list[str] = re.split(r";\s*", citation_text)
+
         authors, years = [], []
         for part in parts:
             match = re.match(r"(.+?)(?:,|\s)(\d{4})$", part.strip())
@@ -389,12 +352,14 @@ class HP11DBPreprocessor:
         """"""
 
         def to_float(s: str) -> float | None:
+            """"""
             s = s.strip()
             return float(s) if s and s != "-" else None
 
         def mid_half(
             a: float | None, b: float | None
         ) -> tuple[float | None, float | None]:
+            """"""
             if a is None and b is None:
                 return None, None
             if a is None:
@@ -403,11 +368,13 @@ class HP11DBPreprocessor:
                 return a, None
             return (a + b) / 2, abs(b - a) / 2
 
-        parsed = []
+        parsed: list[list[float | None]] = []
         for line in data_lines:
-            tokens = line.split()
+            tokens: list[str] = line.split()
+
             if not tokens or to_float(tokens[0]) is None:
                 continue
+
             parsed.append([to_float(tok) for tok in tokens[:7]])
 
         if not parsed:
@@ -459,18 +426,290 @@ class HP11DBPreprocessor:
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Constants
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ABBREV_MAP: dict[str, str] = {
+    "al": "aluminum",
+    "smul": "aluminosilicate",
+    "amul": "aluminosilicate",
+    "ky": "aluminosilicate",
+    "and": "aluminosilicate",
+    "sil": "aluminosilicate",
+    "sill": "aluminosilicate",
+    "anth": "amphibole",
+    "cumm": "amphibole",
+    "fanth": "amphibole",
+    "fact": "amphibole",
+    "fgl": "amphibole",
+    "gl": "amphibole",
+    "grun": "amphibole",
+    "parg": "amphibole",
+    "rieb": "amphibole",
+    "tr": "amphibole",
+    "ts": "amphibole",
+    "bdy": "baddeleyite",
+    "ba i": "barium",
+    "ba ii": "barium",
+    "bi i": "bismuth",
+    "bi ii": "bismuth",
+    "bi iii": "bismuth",
+    "bi v": "bismuth",
+    "ann": "biotite",
+    "east": "biotite",
+    "phl": "biotite",
+    "mnbi": "biotite",
+    "naph": "biotite",
+    "br": "brucite",
+    "arag": "carbonate",
+    "arg": "carbonate",
+    "cav": "carbonate",
+    "cc": "carbonate",
+    "mag": "carbonate",
+    "mgst": "carbonate",
+    "rhc": "carbonate",
+    "sid": "carbonate",
+    "spu": "carbonate",
+    "ty": "carbonate",
+    "fcar": "carpholite",
+    "mcar": "carpholite",
+    "fcel": "celadonite",
+    "chl": "chlorite",
+    "clin": "chlorite",
+    "daph": "chlorite",
+    "mnchl": "chlorite",
+    "fsud": "chlorite",
+    "sud": "chlorite",
+    "chum": "clinohumite",
+    "cpx": "clinopyroxene",
+    "acm": "clinopyroxene",
+    "cats": "clinopyroxene",
+    "cen": "clinopyroxene",
+    "di": "clinopyroxene",
+    "hed": "clinopyroxene",
+    "hen": "clinopyroxene",
+    "jd": "clinopyroxene",
+    "kos": "clinopyroxene",
+    "mgts": "clinopyroxene",
+    "crd": "cordierite",
+    "cg": "cordierite",
+    "cgh": "cordierite",
+    "hcrd": "cordierite",
+    "fcrd": "cordierite",
+    "mncrd": "cordierite",
+    "mctd": "chloritoid",
+    "fctd": "chloritoid",
+    "mnctd": "chloritoid",
+    "kao": "clay",
+    "kcm": "clay",
+    "cu": "copper",
+    "cup": "copper",
+    "ten": "copper",
+    "deer": "deerite",
+    "pha": "DHMS",
+    "diam": "diamond",
+    "dsp": "diaspore",
+    "dol": "dolomite",
+    "ank": "dolomite",
+    "caes": "epidote",
+    "cz": "epidote",
+    "ep": "epidote",
+    "fep": "epidote",
+    "jgd": "epidote",
+    "zo": "epidote",
+    "kls": "feldspathoid",
+    "lc": "feldspathoid",
+    "ne": "feldspathoid",
+    "nl": "feldspathoid",
+    "sdl": "feldspathoid",
+    "alm": "garnet",
+    "py": "garnet",
+    "gr": "garnet",
+    "andr": "garnet",
+    "spss": "garnet",
+    "gt": "garnet",
+    "maj": "garnet",
+    "mcor": "garnet",
+    "mgmj": "garnet",
+    "geh": "gehlenite",
+    "ge": "germanium",
+    "gth": "goethite",
+    "au": "gold",
+    "gph": "graphite",
+    "hlt": "salt",
+    "syv": "salt",
+    "cor": "hematite",
+    "esk": "hematite",
+    "hem": "hematite",
+    "h2": "hydrogen",
+    "h2s": "hydrogen sulfide",
+    "fe": "iron",
+    "fe-e": "iron",
+    "tro": "iron-sulfide",
+    "trov": "iron-sulfide",
+    "trot": "iron-sulfide",
+    "lot": "iron-sulfide",
+    "pyr": "iron-sulfide",
+    "ak": "ilmenite",
+    "fak": "ilmenite",
+    "mak": "ilmenite",
+    "ilm": "ilmenite",
+    "geik": "ilmenite",
+    "pnt": "ilmenite",
+    "hol": "k-feldspar",
+    "san": "k-feldspar",
+    "law": "lawsonite",
+    "merw": "merwinite",
+    "hltl": "melt",
+    "abl": "melt",
+    "anl": "melt",
+    "corl": "melt",
+    "dil": "melt",
+    "enl": "melt",
+    "fal": "melt",
+    "fol": "melt",
+    "kspl": "melt",
+    "lcl": "melt",
+    "liml": "melt",
+    "nel": "melt",
+    "perl": "melt",
+    "ql": "melt",
+    "syvl": "melt",
+    "wol": "melt",
+    "wal": "melt",
+    "cel": "mica",
+    "ma": "mica",
+    "pa": "mica",
+    "mu": "muscovite",
+    "musc": "muscovite",
+    "glt": "muscovite",
+    "ni": "nickel",
+    "nio": "nickel",
+    "ol": "olivine",
+    "lar": "olivine",
+    "lrn": "olivine",
+    "fa": "olivine",
+    "fo": "olivine",
+    "mont": "olivine",
+    "teph": "olivine",
+    "opx": "orthopyroxene",
+    "en": "orthopyroxene",
+    "oen": "orthopyroxene",
+    "fs": "orthopyroxene",
+    "pren": "orthopyroxene",
+    "osm1": "osumilite",
+    "osm2": "osumilite",
+    "fosm": "osumilite",
+    "o2": "oxygen",
+    "pb": "lead",
+    "apbo2": "lead",
+    "mt": "magnetite",
+    "bn": "periclase",
+    "per": "periclase",
+    "pc": "periclase",
+    "fper": "periclase",
+    "mang": "periclase",
+    "ab": "plagioclase",
+    "abh": "plagioclase",
+    "an": "plagioclase",
+    "plg": "plagioclase",
+    "pre": "prehnite",
+    "fpre": "prehnite",
+    "pv": "perovskite",
+    "fpv": "perovskite",
+    "mpv": "perovskite",
+    "apv": "perovskite",
+    "capv": "perovskite",
+    "cpv": "perovskite",
+    "mgpv": "perovskite",
+    "ppv": "perovskite",
+    "pt": "platinum",
+    "pump": "pumpellyite",
+    "pmt": "pumpellyite",
+    "fpm": "pumpellyite",
+    "mpm": "pumpellyite",
+    "prl": "pyrophyllite",
+    "pxmn": "pyroxene",
+    "rhod": "pyroxene",
+    "pyx": "pyroxenoid",
+    "rnk": "rankinite",
+    "rw": "ringwoodite",
+    "mrw": "ringwoodite",
+    "frw": "ringwoodite",
+    "rt": "rutile",
+    "ru": "rutile",
+    "me": "scapolite",
+    "ag": "silver",
+    "st": "staurolite",
+    "fst": "staurolite",
+    "mst": "staurolite",
+    "mnst": "staurolite",
+    "ames": "serpentine",
+    "atg": "serpentine",
+    "chr": "serpentine",
+    "liz": "serpentine",
+    "serp": "serpentine",
+    "knor": "spinel",
+    "sp": "spinel",
+    "spr4": "spinel",
+    "spr5": "spinel",
+    "fspr": "spinel",
+    "herc": "spinel",
+    "mft": "spinel",
+    "picr": "spinel",
+    "usp": "spinel",
+    "fstp": "stilpnomelane",
+    "mstp": "stilpnomelane",
+    "s2": "sulfide",
+    "fta": "talc",
+    "ta": "talc",
+    "tats": "talc",
+    "minn": "talc",
+    "minm": "talc",
+    "tap": "talc",
+    "sph": "titanite",
+    "tit": "titanite",
+    "tpz": "topaz",
+    "wad": "wadsleyite",
+    "wd": "wadsleyite",
+    "wa": "wadsleyite",
+    "wds": "wadsleyite",
+    "fwd": "wadsleyite",
+    "mwd": "wadsleyite",
+    "h2o": "water",
+    "h2ol": "water",
+    "pswo": "wollastonite",
+    "wo": "wollastonite",
+    "coe": "silica",
+    "crst": "silica",
+    "qtz": "silica",
+    "q": "silica",
+    "stv": "silica",
+    "cstn": "silica",
+    "trd": "silica",
+    "vsv": "vesuvianite",
+    "heu": "zeolite",
+    "lmt": "zeolite",
+    "stlb": "zeolite",
+    "wrk": "zeolite",
+    "zn": "zinc",
+    "zrc": "zircon",
+}
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def main():
     """"""
-    data_dir = app_dir / "data" / "sets"
+    raw_data_dir = app_dir / "data" / "sets" / "raw"
+    preprocessed_data_dir = app_dir / "data" / "sets" / "preprocessed"
 
-    in_data = data_dir / "raw" / "jimmy-rxn-db.csv"
-    out_dir = data_dir / "preprocessed" / "jimmy_data"
+    in_data = raw_data_dir / "jimmy-rxn-db.csv"
+    out_dir = preprocessed_data_dir / "jimmy_data"
     jimmy_db = CSVPreprocessor(in_data, out_dir, "jimmy")
     jimmy_db.preprocess()
 
-    in_data = data_dir / "raw" / "hp11-rxn-db.txt"
-    out_dir = data_dir / "preprocessed" / "hp11_data"
-    hp11_db = HP11DBPreprocessor(in_data, out_dir)
+    in_data = raw_data_dir / "hp11-rxn-db.txt"
+    out_dir = preprocessed_data_dir / "hp11_data"
+    hp11_db = HP11Preprocessor(in_data, out_dir)
     hp11_db.preprocess()
 
     print("\nDatasets preprocessed!")
