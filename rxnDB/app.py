@@ -1,5 +1,5 @@
 #######################################################
-## .0.              Load Libraries               !!! ##
+## .0. Load Libraries                            !!! ##
 #######################################################
 from typing import Literal
 
@@ -22,7 +22,7 @@ try:
     rxnDB_df: pd.DataFrame = RxnDBLoader.load_parquet(filepath)
     processor: RxnDBProcessor = RxnDBProcessor(rxnDB_df)
 except FileNotFoundError:
-    raise FileNotFoundError(f"Error: Data file not found at {filepath}!")
+    raise FileNotFoundError(f"Error: Data file not found at {filepath.name}!")
 except Exception as e:
     raise RuntimeError(f"Error loading or processing data: {e}!")
 
@@ -32,7 +32,9 @@ except Exception as e:
 try:
     all_phases: list[str] = processor.get_unique_phases()
     init_phases: list[str] = [
-        p for p in ["ky", "and", "sil", "ol", "wad"] if p in all_phases
+        p
+        for p in ["aluminosilicate", "olivine", "spinel", "wadsleyite", "ringwoodite"]
+        if p in all_phases
     ]
 
     if not init_phases and all_phases:
@@ -291,6 +293,6 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
 
 
 #######################################################
-## .4.                Shiny App                  !!! ##
+## .4. Shiny App                                 !!! ##
 #######################################################
 app: App = App(app_ui, server)

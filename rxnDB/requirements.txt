@@ -1,3 +1,2 @@
-# For shinylive extra packages not included
-# with pyodide
+# For shinylive extra packages not included with pyodide
 rxnDB
