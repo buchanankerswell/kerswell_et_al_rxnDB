@@ -146,7 +146,6 @@ class RxnDBProcessor:
             str(group): palette[i % len(palette)]
             for i, group in enumerate(sorted(unique_groups))
         }
-        print(self._color_map)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def _get_color_palette(self) -> list[str]:

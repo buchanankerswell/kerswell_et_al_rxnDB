@@ -21,8 +21,7 @@ class RxnDBPlotter:
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def __post_init__(self):
-        """Initialize the plotter with the dataframe that should already contain color information."""
-        # Verify necessary color information is present
+        """"""
         if "rxn_color_key" not in self.df.columns:
             raise ValueError(
                 "DataFrame must contain 'rxn_color_key' column. Did you use the processor's get_colors_for_filtered_df method?"

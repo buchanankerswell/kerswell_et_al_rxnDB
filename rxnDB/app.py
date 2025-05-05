@@ -53,14 +53,17 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # Reactive state values
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    rxn_labels = reactive.value(False)
-    find_similar_rxns: reactive.Value[Literal["or"] | Literal["and"] | bool] = (
+    rxn_labels: reactive.Value[bool] = reactive.value(False)
+    show_similar_rxns: reactive.Value[Literal["or"] | Literal["and"] | bool] = (
         reactive.value(False)
     )
-    selected_row_ids = reactive.value([])
-    select_all_reactants = reactive.value(False)
-    select_all_products = reactive.value(False)
-    _selected_row_indices = reactive.value(None)
+    show_data_type: reactive.Value[
+        Literal["all"] | Literal["points"] | Literal["curves"]
+    ] = reactive.value("all")
+    selected_row_ids: reactive.Value[list[str]] = reactive.value([])
+    select_all_reactants: reactive.Value[bool] = reactive.value(False)
+    select_all_products: reactive.Value[bool] = reactive.value(False)
+    _selected_row_indices: reactive.Value[int | None] = reactive.value(None)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # Event listeners for UI buttons / toggles
@@ -99,16 +102,29 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.effect
-    @reactive.event(input.toggle_find_similar_rxns)
+    @reactive.event(input.toggle_similar_rxns)
     def _() -> None:
-        """Cycles find_similar_rxns through False → 'or' → 'and' → False"""
-        current = find_similar_rxns()
+        """Cycles show_similar_rxns"""
+        current = show_similar_rxns()
         if current is False:
-            find_similar_rxns.set("or")
+            show_similar_rxns.set("or")
         elif current == "or":
-            find_similar_rxns.set("and")
+            show_similar_rxns.set("and")
         else:
-            find_similar_rxns.set(False)
+            show_similar_rxns.set(False)
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @reactive.effect
+    @reactive.event(input.toggle_data_type)
+    def _() -> None:
+        """Cycles show_data_type"""
+        current = show_data_type()
+        if current == "all":
+            show_data_type.set("curves")
+        elif current == "curves":
+            show_data_type.set("points")
+        else:
+            show_data_type.set("all")
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.effect
@@ -119,18 +135,7 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
         _selected_row_indices.set(None)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Calculate base filtered data once
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    @reactive.calc
-    def base_filtered_data() -> pd.DataFrame:
-        """Initial filtering based only on selected reactants/products."""
-        reactants = input.reactants()
-        products = input.products()
-
-        return processor.filter_by_reactants_and_products(reactants, products)
-
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Reactive calculation for DataTable data
+    # Data filtering
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.calc
     def get_datatable_data() -> pd.DataFrame:
@@ -147,35 +152,13 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
             return pd.DataFrame(columns=["id", "name", "rxn", "type", "ref"])
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Effect to update selected_row_ids based on DataTable selection indices
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    @reactive.effect
-    @reactive.event(input.datatable_selected_rows)
-    def _update_selected_ids_from_indices() -> None:
-        """Updates the selected_row_ids list based on the indices selected in the DataTable."""
-        indices = input.datatable_selected_rows()
-        _selected_row_indices.set(indices)
-
-        if indices:
-            current_table_df = get_datatable_data()
-            if not current_table_df.empty and max(indices) < len(current_table_df):
-                ids = current_table_df.iloc[list(indices)]["id"].tolist()
-                selected_row_ids.set(ids)
-            else:
-                selected_row_ids.set([])
-        else:
-            selected_row_ids.set([])
-
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Reactive calculation for Plotly data
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.calc
     def get_plotly_data() -> pd.DataFrame:
         """Get filtered data for Plotly."""
         filtered_df = base_filtered_data()
 
         selected_ids = selected_row_ids()
-        find_similar = find_similar_rxns()
+        find_similar = show_similar_rxns()
 
         if selected_ids:
             if find_similar:
@@ -197,8 +180,61 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
             return filtered_df
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Plotly widget (supergraph)
+    @reactive.calc
+    def base_filtered_data() -> pd.DataFrame:
+        """Initial filtering based only on selected reactants/products."""
+        reactants = input.reactants()
+        products = input.products()
+
+        df = processor.filter_by_reactants_and_products(reactants, products)
+
+        data_type = show_data_type()
+
+        if data_type == "all":
+            return df
+        elif data_type == "points":
+            df = df[df["plot_type"] == "point"]
+        elif data_type == "curves":
+            df = df[df["plot_type"] == "curve"]
+
+        return df
+
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @reactive.effect
+    @reactive.event(input.datatable_selected_rows)
+    def _update_selected_ids_from_indices() -> None:
+        """Updates the selected_row_ids list based on the indices selected in the DataTable."""
+        indices = input.datatable_selected_rows()
+        _selected_row_indices.set(indices)
+
+        if indices:
+            current_table_df = get_datatable_data()
+            if not current_table_df.empty and max(indices) < len(current_table_df):
+                ids = current_table_df.iloc[list(indices)]["id"].tolist()
+                selected_row_ids.set(ids)
+            else:
+                selected_row_ids.set([])
+        else:
+            selected_row_ids.set([])
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    # Render and update widgets
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @render.data_frame
+    def datatable() -> render.DataTable:
+        """Render DataTable with current filtered/formatted data."""
+        _ = input.clear_selection()
+
+        data = get_datatable_data()
+
+        return render.DataTable(
+            data,
+            height="98%",
+            selection_mode="rows",
+        )
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @output
     @render_plotly
     def plotly() -> go.FigureWidget:
         """Render plotly"""
@@ -227,8 +263,6 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
 
         return fig
 
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Plotly update effect
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.effect
     def update_plotly() -> None:
@@ -274,22 +308,6 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
                     print(f"Error adding reaction labels: {e}")
             else:
                 widget.layout.annotations = ()  # type: ignore
-
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # DataTable widget (rxnDB)
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    @render.data_frame
-    def datatable() -> render.DataTable:
-        """Render DataTable with current filtered/formatted data."""
-        _ = input.clear_selection()
-
-        data = get_datatable_data()
-
-        return render.DataTable(
-            data,
-            height="98%",
-            selection_mode="rows",
-        )
 
 
 #######################################################

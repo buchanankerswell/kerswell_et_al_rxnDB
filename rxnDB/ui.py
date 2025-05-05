@@ -1,9 +1,6 @@
 #######################################################
 ## .0. Load Libraries                            !!! ##
 #######################################################
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Shiny app !!
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 from shiny import ui
 from shinywidgets import output_widget
 
@@ -46,6 +43,11 @@ def configure_ui(phases: list[str], init_phases: list[str]) -> ui.Tag:
         ui.layout_columns(
             ui.card(
                 ui.card_header("Phase Diagram"),
+                ui.layout_column_wrap(
+                    ui.input_action_button("toggle_data_type", "Toggle Data Type"),
+                    ui.input_action_button("dummy_button", "Dummy Button"),
+                    fill=False,
+                ),
                 output_widget("plotly"),
                 full_screen=True,
             ),
@@ -53,7 +55,7 @@ def configure_ui(phases: list[str], init_phases: list[str]) -> ui.Tag:
                 ui.card_header("Database"),
                 ui.layout_column_wrap(
                     ui.input_action_button(
-                        "toggle_find_similar_rxns", "Show Similar Rxns"
+                        "toggle_similar_rxns", "Toggle Similar Rxns"
                     ),
                     ui.input_action_button("clear_selection", "Clear Selection"),
                     fill=False,
