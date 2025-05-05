@@ -25,10 +25,12 @@ dependencies = [
     "anywidget",
     "pandas",
     "plotly",
+    "ruamel.yaml",
+    "fastparquet",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "pip", "pytest-cov", "pandas-stubs", "shinylive", "ruamel.yaml", "fastparquet"]
+dev = ["pytest", "pip", "pytest-cov", "pandas-stubs", "shinylive"]
 
 [project.urls]
 Repository = "https://github.com/buchanankerswell/kerswell_et_al_rxnDB"
