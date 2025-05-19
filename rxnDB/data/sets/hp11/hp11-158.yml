@@ -1,0 +1,74 @@
+---
+reactants:
+  zo:
+products:
+  an:
+  gr:
+  cor:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 642.5
+        - 577.5
+        - 685.0
+        - 715.0
+        - 780.0
+        - 800.0
+        - 830.0
+        - 575.0
+        - 685.0
+        - 880.0
+      uncertainty:
+        - 22.5
+        - 7.5
+        - 15.0
+        - 15.0
+        - 15.0
+        - 15.0
+        - 15.0
+        - 15.0
+        - 5.0
+        - 10.0
+    P:
+      value:
+        - 3.0
+        - 2.0
+        - 4.1
+        - 4.6
+        - 5.6
+        - 6.1
+        - 6.8
+        - 2.0
+        - 4.0
+        - 8.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-158
+  reference:
+    short_cite: Boettcher 1970; Newton 1965; Chatterjee et al., 1984
+    authors:
+      - Boettcher
+      - Newton
+      - Chatterjee et al.
+    year:
+      - 1970
+      - 1965
+      - 1984
+  method:
+  comments:

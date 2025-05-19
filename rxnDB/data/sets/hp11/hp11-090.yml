@@ -1,0 +1,40 @@
+---
+reactants:
+  phA:
+products:
+  br:
+  fo:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 500.0
+        - 600.0
+        - 650.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 26.75
+        - 33.65
+        - 38.5
+      uncertainty:
+        - 0.75
+        - 1.15
+        - 1.0
+metadata:
+  unique_id: hp11-090
+  reference:
+    short_cite: Pawley & Wood, 1995
+    authors:
+      - Pawley
+      - Wood
+    year: 1995
+  method:
+  comments:

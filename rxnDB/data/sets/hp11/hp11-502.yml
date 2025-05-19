@@ -1,0 +1,30 @@
+---
+reactants:
+  fo:
+products:
+  foL:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 800.0
+      uncertainty:
+        - 10.0
+    P:
+      value:
+        - 0.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-502
+  reference:
+    short_cite: Low T exp’s
+    authors:
+      - Low T exp’s
+    year:
+  method:
+  comments:

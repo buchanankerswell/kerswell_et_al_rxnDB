@@ -1,0 +1,32 @@
+---
+reactants:
+  cor:
+  q:
+products:
+  and:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 700.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 7.75
+      uncertainty:
+        - 0.25
+metadata:
+  unique_id: hp11-132
+  reference:
+    short_cite: Harlov & Newton, 1993
+    authors:
+      - Harlov
+      - Newton
+    year: 1993
+  method:
+  comments:

@@ -1,0 +1,42 @@
+---
+reactants:
+  fst:
+  q:
+products:
+  alm:
+  ky:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 690.0
+        - 650.0
+        - 600.0
+      uncertainty:
+        - 10.0
+        - 10.0
+        - 10.0
+    P:
+      value:
+        - 6.0
+        - 10.0
+        - 15.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-392
+  reference:
+    short_cite: Rao & Johannes, 1979
+    authors:
+      - Rao
+      - Johannes
+    year: 1979
+  method:
+  comments:

@@ -1,0 +1,42 @@
+---
+reactants:
+  rieb:
+  hem:
+products:
+  acm:
+  mt:
+  q:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 477.5
+        - 494.0
+        - 513.5
+      uncertainty:
+        - 12.5
+        - 5.0
+        - 2.5
+    P:
+      value:
+        - 0.5
+        - 1.0
+        - 2.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-401
+  reference:
+    short_cite: Ernst, 1962
+    authors:
+      - Ernst
+    year: 1962
+  method:
+  comments:

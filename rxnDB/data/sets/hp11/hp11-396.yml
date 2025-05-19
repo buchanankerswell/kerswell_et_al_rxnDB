@@ -1,0 +1,44 @@
+---
+reactants:
+  fctd:
+products:
+  alm:
+  cor:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 590.0
+        - 612.5
+        - 630.0
+        - 660.0
+      uncertainty:
+        - 10.0
+        - 7.5
+        - 10.0
+        - 10.0
+    P:
+      value:
+        - 8.0
+        - 11.5
+        - 15.0
+        - 20.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-396
+  reference:
+    short_cite: Ganguly, 1969
+    authors:
+      - Ganguly
+    year: 1969
+  method:
+  comments:

@@ -1,0 +1,43 @@
+---
+reactants:
+  fo:
+  br:
+products:
+  chum:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 650.0
+        - 552.5
+        - 745.0
+        - 934.0
+      uncertainty:
+        - 50.0
+        - 152.5
+        - 49.0
+        - 0.0
+    P:
+      value:
+        - 35.0
+        - 30.0
+        - 23.0
+        - 18.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-097
+  reference:
+    short_cite: Wunder 1998
+    authors:
+      - Wunder
+    year: 1998
+  method:
+  comments:

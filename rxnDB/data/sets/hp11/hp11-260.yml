@@ -1,0 +1,48 @@
+---
+reactants:
+  hcrd:
+products:
+  crd:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 733.0
+        - 740.0
+        - 730.0
+        - 750.0
+        - 744.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 3.5
+        - 3.0
+        - 4.0
+        - 4.7
+        - 5.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-260
+  reference:
+    short_cite: Jenkins & Chernosky, 1986
+    authors:
+      - Jenkins
+      - Chernosky
+    year: 1986
+  method:
+  comments:

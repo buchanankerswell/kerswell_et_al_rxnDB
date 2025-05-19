@@ -1,0 +1,45 @@
+---
+reactants:
+  cumm:
+products:
+  en:
+  q:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 718.0
+        - 748.0
+        - 728.0
+        - 758.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 2.9
+        - 2.9
+        - 4.9
+        - 4.9
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-093
+  reference:
+    short_cite: Fonarev & Korolkov, 1980
+    authors:
+      - Fonarev
+      - Korolkov
+    year: 1980
+  method:
+  comments:

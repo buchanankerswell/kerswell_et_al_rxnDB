@@ -1,0 +1,31 @@
+---
+reactants:
+  anth:
+products:
+  cumm:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 800.0
+      uncertainty:
+        - 20.0
+    P:
+      value:
+        - 5.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-092
+  reference:
+    short_cite: Ghiorso & Evans 2002
+    authors:
+      - Ghiorso
+      - Evans
+    year: 2002
+  method:
+  comments:

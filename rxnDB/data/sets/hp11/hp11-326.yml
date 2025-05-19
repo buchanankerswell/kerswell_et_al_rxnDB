@@ -1,0 +1,60 @@
+---
+reactants:
+  amul:
+  crd:
+products:
+  smul:
+  spr4:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1275.0
+        - 1260.0
+        - 1305.0
+        - 1200.0
+        - 1305.0
+        - 1205.0
+        - 1210.0
+        - 1160.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 0.0
+        - 0.0
+        - 1.0
+        - 1.0
+        - 3.0
+        - 3.0
+        - 5.0
+        - 5.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-326
+  reference:
+    short_cite: Seifert 1974
+    authors:
+      - Seifert
+    year: 1974
+  method:
+  comments:

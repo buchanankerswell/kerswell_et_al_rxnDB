@@ -1,0 +1,44 @@
+---
+reactants:
+  pa:
+products:
+  jd:
+  ky:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 550.0
+        - 600.0
+        - 650.0
+        - 700.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 25.0
+        - 24.75
+        - 24.5
+        - 23.75
+      uncertainty:
+        - 1.0
+        - 0.75
+        - 0.5
+        - 0.75
+metadata:
+  unique_id: hp11-311
+  reference:
+    short_cite: Holland, 1979
+    authors:
+      - Holland
+    year: 1979
+  method:
+  comments:

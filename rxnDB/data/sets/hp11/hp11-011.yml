@@ -1,0 +1,38 @@
+---
+reactants:
+  en:
+products:
+  pren:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 985.0
+        - 1365.0
+      uncertainty:
+        - 10.0
+        - 52.0
+    P:
+      value:
+        - 0.0
+        - 8.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-011
+  reference:
+    short_cite: Atlas 1952; Chen & Presnall 1975
+    authors:
+      - Atlas
+      - Chen
+      - Presnall
+    year:
+      - 1952
+      - 1975
+  method:
+  comments:

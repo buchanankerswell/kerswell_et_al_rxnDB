@@ -1,0 +1,41 @@
+---
+reactants:
+  alm:
+  cel:
+products:
+  py:
+  fcel:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 470.0
+        - 470.0
+        - 470.0
+      uncertainty:
+        - 50.0
+        - 50.0
+        - 50.0
+    P:
+      value:
+        - 7.0
+        - 7.0
+        - 7.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-447
+  reference:
+    short_cite: Hynes & Forest, 1988
+    authors:
+      - Hynes
+      - Forest
+    year: 1988
+  method:
+  comments:

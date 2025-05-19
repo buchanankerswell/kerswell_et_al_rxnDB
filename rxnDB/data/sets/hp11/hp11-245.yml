@@ -1,0 +1,57 @@
+---
+reactants:
+  clin:
+products:
+  fo:
+  mgts:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 780.0
+        - 800.0
+        - 840.0
+        - 800.0
+        - 800.0
+        - 800.0
+        - 800.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 14.0
+        - 14.0
+        - 14.0
+        - 10.0
+        - 12.0
+        - 16.0
+        - 18.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-245
+  reference:
+    short_cite: Baker & Holland, 1996
+    authors:
+      - Baker
+      - Holland
+    year: 1996
+  method:
+  comments:

@@ -1,0 +1,46 @@
+---
+reactants:
+  br:
+products:
+  per:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 707.5
+        - 732.5
+        - 752.5
+        - 795.5
+      uncertainty:
+        - 17.5
+        - 12.5
+        - 12.5
+        - 10.5
+    P:
+      value:
+        - 4.0
+        - 5.1
+        - 6.1
+        - 8.1
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-068
+  reference:
+    short_cite: Schramke et al., 1981; Irving et al., 1977
+    authors:
+      - Schramke et al.
+      - Irving et al.
+    year:
+      - 1981
+      - 1977
+  method:
+  comments:

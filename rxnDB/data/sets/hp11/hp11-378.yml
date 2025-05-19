@@ -1,0 +1,60 @@
+---
+reactants:
+  fa:
+  O2:
+products:
+  q:
+  mt:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 657.0
+        - 647.0
+        - 709.0
+        - 699.0
+        - 757.0
+        - 747.0
+        - 857.0
+        - 847.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+        - 2.0
+        - 2.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-378
+  reference:
+    short_cite: Hewitt, 1978
+    authors:
+      - Hewitt
+    year: 1978
+  method:
+  comments:

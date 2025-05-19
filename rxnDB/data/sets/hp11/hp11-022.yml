@@ -1,0 +1,43 @@
+---
+reactants:
+  arag:
+  mag:
+products:
+  dol:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 620.0
+        - 760.0
+        - 925.0
+        - 1075.0
+      uncertainty:
+        - 0.0
+        - 40.0
+        - 25.0
+        - 25.0
+    P:
+      value:
+        - 46.5
+        - 54.0
+        - 63.0
+        - 72.0
+      uncertainty:
+        - 1.5
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-022
+  reference:
+    short_cite: Morlidge et al 2006
+    authors:
+      - Morlidge et al
+    year: 2006
+  method:
+  comments:

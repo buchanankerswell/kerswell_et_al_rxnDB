@@ -1,0 +1,35 @@
+---
+reactants:
+  cor:
+  q:
+products:
+  sill:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 700.0
+        - 800.0
+      uncertainty:
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 17.75
+        - 18.75
+      uncertainty:
+        - 0.75
+        - 0.75
+metadata:
+  unique_id: hp11-131
+  reference:
+    short_cite: Harlov et al, 2008
+    authors:
+      - Harlov et al
+    year: 2008
+  method:
+  comments:

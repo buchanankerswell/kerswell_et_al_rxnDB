@@ -1,0 +1,38 @@
+---
+reactants:
+  dol:
+  ta:
+  q:
+products:
+  tr:
+  CO2:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 550.0
+        - 540.0
+      uncertainty:
+        - 10.0
+        - 10.0
+    P:
+      value:
+        - 6.0
+        - 6.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-116
+  reference:
+    short_cite: Eggert & Kerrick, 1981
+    authors:
+      - Eggert
+      - Kerrick
+    year: 1981
+  method:
+  comments:

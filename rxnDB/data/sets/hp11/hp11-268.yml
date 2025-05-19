@@ -1,0 +1,36 @@
+---
+reactants:
+  hcrd:
+products:
+  crd:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 625.0
+        - 625.0
+      uncertainty:
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 6.7
+        - 6.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-268
+  reference:
+    short_cite: Massonne & Schreyer, 1989
+    authors:
+      - Massonne
+      - Schreyer
+    year: 1989
+  method:
+  comments:

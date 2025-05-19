@@ -1,0 +1,37 @@
+---
+reactants:
+  jd:
+  ep:
+products:
+  acm:
+  cz:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 450.0
+        - 450.0
+      uncertainty:
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 11.0
+        - 9.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-459
+  reference:
+    short_cite: Holland & Ray, 1985
+    authors:
+      - Holland
+      - Ray
+    year: 1985
+  method:
+  comments:

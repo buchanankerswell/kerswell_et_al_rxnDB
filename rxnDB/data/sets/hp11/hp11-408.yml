@@ -1,0 +1,35 @@
+---
+reactants:
+  fstp:
+products:
+  ann:
+  grun:
+  alm:
+  q:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 500.0
+      uncertainty:
+        - 20.0
+    P:
+      value:
+        - 5.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-408
+  reference:
+    short_cite: Miyano & Klein 1989
+    authors:
+      - Miyano
+      - Klein
+    year: 1989
+  method:
+  comments:

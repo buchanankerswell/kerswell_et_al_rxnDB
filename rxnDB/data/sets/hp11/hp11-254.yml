@@ -1,0 +1,43 @@
+---
+reactants:
+  mcar:
+products:
+  sud:
+  q:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 350.0
+        - 400.0
+        - 500.0
+        - 475.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 7.25
+        - 7.1
+        - 6.3
+        - 7.0
+      uncertainty:
+        - 0.35
+        - 0.6
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-254
+  reference:
+    short_cite: Vidal et al., 1992
+    authors:
+      - Vidal et al.
+    year: 1992
+  method:
+  comments:

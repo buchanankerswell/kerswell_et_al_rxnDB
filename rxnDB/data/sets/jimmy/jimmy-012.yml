@@ -1,0 +1,39 @@
+---
+reactants:
+  al:
+products:
+  jd:
+  q:
+data:
+  type: phase_boundary
+  units:
+    T: K
+    P: GPa
+  boundary_curve:
+    limits:
+      P_min: 0.3
+      P_max: 2.4
+      T_min: 50
+      T_max: 1100
+    polynomial:
+      intercept: 0.42
+      x1: 0.0019
+metadata:
+  unique_id: jimmy-012
+  reference:
+    authors:
+      - Hlabse
+      - Kleppa
+    year: 1968
+    title: >-
+      The Thermochemistry of Jadeite.
+    journal: American Mineralogist
+    volume: "53"
+    pages: 1281-1292
+    doi: http://www.minsocam.org/ammin/AM53/AM53_1281.pdf
+    short_cite: Hlabse & Kleppa (1968)
+  method:
+    name: Calorimetrics
+  comments: |-
+    Formula: NaAlSi3O8
+    Data Constraint Confidence: Fair

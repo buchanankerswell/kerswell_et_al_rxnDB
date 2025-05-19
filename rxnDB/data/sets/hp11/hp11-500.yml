@@ -1,0 +1,59 @@
+---
+reactants:
+  fo:
+products:
+  foL:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1890.0
+        - 1917.5
+        - 1962.5
+        - 1980.0
+        - 2030.0
+        - 2030.0
+        - 2092.5
+        - 2117.5
+      uncertainty:
+        - 5.0
+        - 12.5
+        - 12.5
+        - 25.0
+        - 25.0
+        - 25.0
+        - 12.5
+        - 12.5
+    P:
+      value:
+        - 0.0
+        - 5.5
+        - 12.5
+        - 18.0
+        - 25.0
+        - 30.5
+        - 39.5
+        - 46.5
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-500
+  reference:
+    short_cite: Davis & England, 1964
+    authors:
+      - Davis
+      - England
+    year: 1964
+  method:
+  comments:

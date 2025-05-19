@@ -1,0 +1,49 @@
+---
+reactants:
+  mak:
+products:
+  mpv:
+data:
+  type: phase_boundary
+  units:
+    T: K
+    P: GPa
+  boundary_curve:
+    limits:
+      P_min: 19.7
+      P_max: 22.4
+      T_min: 1000
+      T_max: 1800
+    polynomial:
+      intercept: 25.0
+      x1: -0.003
+metadata:
+  unique_id: jimmy-048
+  reference:
+    authors:
+      - Kuroda
+      - Irifune
+      - Inoue
+      - Nishiyama
+      - Miyashita
+      - Funakoshi
+      - Utsumi
+    year: 2000
+    title: >-
+      Determination of the phase boundary between ilmenite and
+      perovskite in MgSiO3 by in situ x-ray diffraction and quench
+      experiments
+    journal: Physics and Chemistry of Minerals
+    volume: "27"
+    pages: 523-532
+    doi: 10.1007/s002690000096
+    short_cite: Kuroda et al. (2000)
+  method:
+    name: In situ X-ray
+    calibration:
+      P: Au (Anderson et al 1989)
+      T: W75-Re25/W93-Re7
+  comments: |-
+    Formula: MgSiO3
+    Calibration Confidence: Good
+    Data Constraint Confidence: Good

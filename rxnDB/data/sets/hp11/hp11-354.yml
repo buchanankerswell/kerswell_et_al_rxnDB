@@ -1,0 +1,78 @@
+---
+reactants:
+  fcel:
+  ky:
+products:
+  alm:
+  mu:
+  q:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 602.0
+        - 602.0
+        - 698.0
+        - 698.0
+        - 652.0
+        - 652.0
+        - 751.0
+        - 751.0
+        - 700.0
+        - 700.0
+        - 803.0
+        - 803.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 16.6
+        - 12.6
+        - 17.2
+        - 13.2
+        - 22.9
+        - 18.9
+        - 22.1
+        - 18.1
+        - 26.9
+        - 22.9
+        - 27.1
+        - 23.1
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-354
+  reference:
+    short_cite: Massonne & Szpurka, 1997
+    authors:
+      - Massonne
+      - Szpurka
+    year: 1997
+  method:
+  comments:

@@ -1,0 +1,41 @@
+---
+reactants:
+  gl:
+  q:
+products:
+  ta:
+  abh:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 600.0
+        - 700.0
+        - 750.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 11.75
+        - 15.25
+        - 16.75
+      uncertainty:
+        - 0.75
+        - 0.75
+        - 0.75
+metadata:
+  unique_id: hp11-365
+  reference:
+    short_cite: Corona & Jenkins, 2007
+    authors:
+      - Corona
+      - Jenkins
+    year: 2007
+  method:
+  comments:

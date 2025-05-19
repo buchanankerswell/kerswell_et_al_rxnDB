@@ -1,0 +1,37 @@
+---
+reactants:
+  fctd:
+products:
+  fcrd:
+  herc:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 537.5
+        - 562.5
+      uncertainty:
+        - 12.5
+        - 12.5
+    P:
+      value:
+        - 1.0
+        - 2.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-399
+  reference:
+    short_cite: Grieve & Fawcett, 1974
+    authors:
+      - Grieve
+      - Fawcett
+    year: 1974
+  method:
+  comments:

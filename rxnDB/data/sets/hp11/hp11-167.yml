@@ -1,0 +1,50 @@
+---
+reactants:
+  law:
+  dsp:
+products:
+  zo:
+  ky:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 525.0
+        - 565.0
+        - 645.0
+        - 717.5
+        - 740.0
+      uncertainty:
+        - 15.0
+        - 15.0
+        - 15.0
+        - 7.5
+        - 0.0
+    P:
+      value:
+        - 16.0
+        - 22.0
+        - 28.5
+        - 33.0
+        - 36.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-167
+  reference:
+    short_cite: Schmidt & Poli, 1994
+    authors:
+      - Schmidt
+      - Poli
+    year: 1994
+  method:
+  comments:

@@ -1,0 +1,33 @@
+---
+reactants:
+  fa:
+  mft:
+products:
+  mt:
+  fo:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1300.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 0.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-454
+  reference:
+    short_cite: Jamieson & Roeder, 1984
+    authors:
+      - Jamieson
+      - Roeder
+    year: 1984
+  method:
+  comments:

@@ -1,0 +1,40 @@
+---
+reactants:
+  ilm:
+products:
+  iron:
+  ru:
+  O2:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 800.0
+        - 900.0
+        - 950.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 0.0
+        - 0.0
+        - 0.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-432
+  reference:
+    short_cite: O’Neill et al., 1988
+    authors:
+      - O’Neill et al.
+    year: 1988
+  method:
+  comments:

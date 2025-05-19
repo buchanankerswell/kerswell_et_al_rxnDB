@@ -1,0 +1,30 @@
+---
+reactants:
+  hen:
+products:
+  cen:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 27.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 67.5
+      uncertainty:
+        - 12.5
+metadata:
+  unique_id: hp11-026
+  reference:
+    short_cite: Angel et al 1992
+    authors:
+      - Angel et al
+    year: 1992
+  method:
+  comments:

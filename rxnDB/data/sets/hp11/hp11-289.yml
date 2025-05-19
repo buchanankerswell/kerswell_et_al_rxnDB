@@ -1,0 +1,50 @@
+---
+reactants:
+  mcar:
+products:
+  clin:
+  ky:
+  q:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 510.0
+        - 515.0
+        - 550.0
+        - 539.0
+        - 564.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 14.5
+        - 16.5
+        - 16.5
+        - 19.0
+        - 18.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-289
+  reference:
+    short_cite: Chopin & Schreyer, 1983
+    authors:
+      - Chopin
+      - Schreyer
+    year: 1983
+  method:
+  comments:

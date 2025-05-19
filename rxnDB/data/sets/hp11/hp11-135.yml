@@ -1,0 +1,35 @@
+---
+reactants:
+  dsp:
+products:
+  cor:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 605.0
+        - 632.5
+      uncertainty:
+        - 10.0
+        - 17.5
+    P:
+      value:
+        - 25.0
+        - 28.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-135
+  reference:
+    short_cite: Vidal et al., 1994
+    authors:
+      - Vidal et al.
+    year: 1994
+  method:
+  comments:

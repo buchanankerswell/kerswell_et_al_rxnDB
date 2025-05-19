@@ -1,0 +1,44 @@
+---
+reactants:
+  cel:
+  east:
+products:
+  mu:
+  phl:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 570.0
+        - 540.0
+        - 590.0
+        - 570.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 4.0
+        - 4.0
+        - 6.0
+        - 6.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-344
+  reference:
+    short_cite: Massonne, unpub
+    authors:
+      - Massonne, unpub
+    year:
+  method:
+  comments:

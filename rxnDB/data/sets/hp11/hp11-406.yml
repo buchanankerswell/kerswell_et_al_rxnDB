@@ -1,0 +1,32 @@
+---
+reactants:
+  glt:
+  minn:
+products:
+  grun:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 310.0
+      uncertainty:
+        - 10.0
+    P:
+      value:
+        - 1.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-406
+  reference:
+    short_cite: Rasmussen et al 1998
+    authors:
+      - Rasmussen et al
+    year: 1998
+  method:
+  comments:

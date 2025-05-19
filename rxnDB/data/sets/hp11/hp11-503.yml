@@ -1,0 +1,50 @@
+---
+reactants:
+  fa:
+products:
+  faL:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1211.0
+        - 1275.0
+        - 1333.0
+        - 1390.0
+        - 1495.0
+        - 1520.0
+      uncertainty:
+        - 11.0
+        - 10.0
+        - 10.0
+        - 10.0
+        - 15.0
+        - 10.0
+    P:
+      value:
+        - 0.0
+        - 10.0
+        - 20.0
+        - 30.0
+        - 60.0
+        - 70.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-503
+  reference:
+    short_cite: Clarke, 1966
+    authors:
+      - Clarke
+    year: 1966
+  method:
+  comments:

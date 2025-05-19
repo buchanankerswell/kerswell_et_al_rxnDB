@@ -1,0 +1,37 @@
+---
+reactants:
+  fgl:
+products:
+  abh:
+  fa:
+  q:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 355.0
+        - 360.0
+      uncertainty:
+        - 15.0
+        - 10.0
+    P:
+      value:
+        - 3.0
+        - 5.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-400
+  reference:
+    short_cite: Hoffmann, 1972
+    authors:
+      - Hoffmann
+    year: 1972
+  method:
+  comments:

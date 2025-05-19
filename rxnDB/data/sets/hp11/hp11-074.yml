@@ -1,0 +1,41 @@
+---
+reactants:
+  ta:
+products:
+  en:
+  coe:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 810.0
+        - 780.0
+        - 730.0
+      uncertainty:
+        - 10.0
+        - 10.0
+        - 0.0
+    P:
+      value:
+        - 29.0
+        - 38.0
+        - 49.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-074
+  reference:
+    short_cite: Pawley & Wood, 1995
+    authors:
+      - Pawley
+      - Wood
+    year: 1995
+  method:
+  comments:

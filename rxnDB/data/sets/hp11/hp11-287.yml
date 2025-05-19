@@ -1,0 +1,54 @@
+---
+reactants:
+  mcar:
+  q:
+products:
+  ta:
+  ky:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 540.0
+        - 560.0
+        - 550.0
+        - 570.0
+        - 560.0
+        - 580.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 19.0
+        - 19.0
+        - 24.0
+        - 24.0
+        - 28.5
+        - 28.5
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-287
+  reference:
+    short_cite: Chopin & Schreyer, 1983
+    authors:
+      - Chopin
+      - Schreyer
+    year: 1983
+  method:
+  comments:

@@ -1,0 +1,37 @@
+---
+reactants:
+  cc:
+  q:
+products:
+  wo:
+  CO2:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 880.0
+        - 902.5
+      uncertainty:
+        - 10.0
+        - 12.5
+    P:
+      value:
+        - 6.0
+        - 6.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-059
+  reference:
+    short_cite: Jacobs & Kerrick, 1981
+    authors:
+      - Jacobs
+      - Kerrick
+    year: 1981
+  method:
+  comments:

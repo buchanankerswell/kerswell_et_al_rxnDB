@@ -1,0 +1,53 @@
+---
+reactants:
+  mctd:
+  ta:
+products:
+  clin:
+  ky:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 540.0
+        - 540.0
+        - 600.0
+        - 600.0
+        - 710.0
+        - 710.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 27.0
+        - 23.0
+        - 27.0
+        - 25.0
+        - 30.5
+        - 29.5
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-277
+  reference:
+    short_cite: Koch-Muller & Wirth 2001
+    authors:
+      - Koch-Muller
+      - Wirth
+    year: 2001
+  method:
+  comments:

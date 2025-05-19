@@ -1,0 +1,85 @@
+---
+reactants:
+  fa:
+  O2:
+products:
+  q:
+  mt:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 666.0
+        - 656.0
+        - 716.0
+        - 706.0
+        - 721.0
+        - 711.0
+        - 750.0
+        - 740.0
+        - 770.0
+        - 760.0
+        - 1123.0
+        - 1113.0
+        - 1138.0
+        - 1128.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-377
+  reference:
+    short_cite: Myers & Eugster, 1983
+    authors:
+      - Myers
+      - Eugster
+    year: 1983
+  method:
+  comments:

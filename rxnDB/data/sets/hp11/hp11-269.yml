@@ -1,0 +1,62 @@
+---
+reactants:
+  clin:
+  ky:
+  q:
+products:
+  crd:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 550.0
+        - 600.0
+        - 550.0
+        - 600.0
+        - 620.0
+        - 640.0
+        - 650.0
+        - 660.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 4.0
+        - 4.0
+        - 5.0
+        - 5.0
+        - 6.0
+        - 6.0
+        - 7.0
+        - 7.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-269
+  reference:
+    short_cite: Seifert & Schreyer, 1970
+    authors:
+      - Seifert
+      - Schreyer
+    year: 1970
+  method:
+  comments:

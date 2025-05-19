@@ -1,0 +1,44 @@
+---
+reactants:
+  dol:
+products:
+  arag:
+  mag:
+data:
+  type: phase_boundary
+  units:
+    T: K
+    P: GPa
+  boundary_curve:
+    limits:
+      P_min: 5.0
+      P_max: 8.5
+      T_min: 600
+      T_max: 1200
+    polynomial:
+      intercept: 1.75
+      x1: 0.0016
+metadata:
+  unique_id: jimmy-035
+  reference:
+    authors:
+      - Sato
+      - Katsura
+    year: 2001
+    title: >-
+      Experimental investigation on dolomite dissociation into
+      aragonite+magnesite up to 8.5GPa
+    journal: Earth and Planetary Science Letters
+    volume: "184"
+    pages: 529-534
+    doi: 10.1016/S0012-821X(00)00346-0
+    short_cite: Sato & Katsura (2001)
+  method:
+    name: Experimental
+    calibration:
+      P: HT
+      T: W97-Re3/W75-Re25
+  comments: |-
+    Formula: CaMg(CO3)2
+    Calibration Confidence: Good
+    Data Constraint Confidence: Good

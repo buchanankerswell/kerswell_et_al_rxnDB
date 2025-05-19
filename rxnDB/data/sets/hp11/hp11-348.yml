@@ -1,0 +1,56 @@
+---
+reactants:
+  cel:
+  east:
+products:
+  mu:
+  phl:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 650.0
+        - 650.0
+        - 670.0
+        - 670.0
+        - 685.0
+        - 685.0
+        - 700.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 6.0
+        - 7.0
+        - 5.5
+        - 6.0
+        - 5.0
+        - 6.0
+        - 5.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-348
+  reference:
+    short_cite: Seifert, 1970
+    authors:
+      - Seifert
+    year: 1970
+  method:
+  comments:

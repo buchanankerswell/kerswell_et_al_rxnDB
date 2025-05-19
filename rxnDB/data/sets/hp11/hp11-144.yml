@@ -1,0 +1,84 @@
+---
+reactants:
+  gr:
+  ky:
+  q:
+products:
+  an:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1150.0
+        - 1050.0
+        - 1100.0
+        - 1000.0
+        - 900.0
+        - 950.0
+        - 1100.0
+        - 1150.0
+        - 1200.0
+        - 1250.0
+        - 1200.0
+        - 1250.0
+        - 1300.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 25.1
+        - 23.0
+        - 23.75
+        - 21.8
+        - 19.55
+        - 20.7
+        - 23.0
+        - 25.0
+        - 26.25
+        - 27.65
+        - 26.0
+        - 27.0
+        - 28.0
+      uncertainty:
+        - 0.2
+        - 0.2
+        - 0.55
+        - 0.5
+        - 0.75
+        - 0.4
+        - 1.0
+        - 1.0
+        - 0.45
+        - 0.55
+        - 1.0
+        - 1.0
+        - 1.0
+metadata:
+  unique_id: hp11-144
+  reference:
+    short_cite: Koziol & Newton, 1987; Goldsmith, 1980
+    authors:
+      - Koziol
+      - Newton
+      - Goldsmith
+    year:
+      - 1987
+      - 1980
+  method:
+  comments:

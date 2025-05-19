@@ -1,0 +1,64 @@
+---
+reactants:
+  parg:
+products:
+  di:
+  sp:
+  an:
+  fo:
+  ne:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 852.5
+        - 915.0
+        - 932.5
+        - 952.5
+        - 870.0
+        - 900.0
+        - 950.0
+      uncertainty:
+        - 12.5
+        - 10.0
+        - 12.5
+        - 12.5
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 0.2
+        - 0.4
+        - 0.5
+        - 0.5
+        - 0.25
+        - 0.35
+        - 0.5
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.05
+        - 0.05
+        - 0.1
+metadata:
+  unique_id: hp11-369
+  reference:
+    short_cite: Westrich & Holloway, 1981; Lykins & Jenkins, 1992
+    authors:
+      - Westrich
+      - Holloway
+      - Lykins
+      - Jenkins
+    year:
+      - 1981
+      - 1992
+  method:
+  comments:

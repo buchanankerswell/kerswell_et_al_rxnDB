@@ -1,0 +1,31 @@
+---
+reactants:
+  mpv:
+products:
+  mak:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1100.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 255.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-041
+  reference:
+    short_cite: Ito & Yamada 1982
+    authors:
+      - Ito
+      - Yamada
+    year: 1982
+  method:
+  comments:

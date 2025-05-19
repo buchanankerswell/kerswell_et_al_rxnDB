@@ -1,0 +1,37 @@
+---
+reactants:
+  dol:
+  sid:
+products:
+  ank:
+  mag:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 375.0
+        - 425.0
+      uncertainty:
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 4.0
+        - 4.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-442
+  reference:
+    short_cite: Anovitz & Essene, 1987
+    authors:
+      - Anovitz
+      - Essene
+    year: 1987
+  method:
+  comments:

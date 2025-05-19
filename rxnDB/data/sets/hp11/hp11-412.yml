@@ -1,0 +1,41 @@
+---
+reactants:
+  andr:
+  Ni:
+products:
+  mt:
+  wo:
+  NiO:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 792.5
+        - 805.0
+        - 832.5
+      uncertainty:
+        - 7.5
+        - 10.0
+        - 7.5
+    P:
+      value:
+        - 0.5
+        - 1.0
+        - 2.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-412
+  reference:
+    short_cite: Gustavson, 1974
+    authors:
+      - Gustavson
+    year: 1974
+  method:
+  comments:

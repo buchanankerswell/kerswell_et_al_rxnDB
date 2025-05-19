@@ -1,0 +1,32 @@
+---
+reactants:
+  fosm:
+  crd:
+products:
+  osm1:
+  fcrd:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 875.0
+      uncertainty:
+        - 50.0
+    P:
+      value:
+        - 5.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-427
+  reference:
+    short_cite: Holland et al., 1996
+    authors:
+      - Holland et al.
+    year: 1996
+  method:
+  comments:

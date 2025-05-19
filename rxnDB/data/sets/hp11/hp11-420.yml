@@ -1,0 +1,81 @@
+---
+reactants:
+  cz:
+  hem:
+  q:
+products:
+  andr:
+  an:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 580.0
+        - 605.0
+        - 635.0
+        - 660.0
+        - 680.0
+        - 705.0
+        - 625.0
+        - 645.0
+        - 670.0
+        - 694.0
+        - 750.0
+        - 762.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 1.0
+        - 1.0
+        - 2.0
+        - 2.0
+        - 3.0
+        - 3.0
+        - 2.0
+        - 2.0
+        - 3.0
+        - 3.0
+        - 5.0
+        - 5.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-420
+  reference:
+    short_cite: Holdaway, 1972; Liou, 1973
+    authors:
+      - Holdaway
+      - Liou
+    year:
+      - 1972
+      - 1973
+  method:
+  comments:

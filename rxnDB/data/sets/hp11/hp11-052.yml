@@ -1,0 +1,39 @@
+---
+reactants:
+  wo:
+products:
+  pswo:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1125.0
+        - 1550.0
+      uncertainty:
+        - 10.0
+        - 0.0
+    P:
+      value:
+        - 0.0
+        - 21.5
+      uncertainty:
+        - 0.0
+        - 0.5
+metadata:
+  unique_id: hp11-052
+  reference:
+    short_cite: Osborne & Shairer, 1941; Huang & Wyllie, 1975
+    authors:
+      - Osborne
+      - Shairer
+      - Huang
+      - Wyllie
+    year:
+      - 1941
+      - 1975
+  method:
+  comments:

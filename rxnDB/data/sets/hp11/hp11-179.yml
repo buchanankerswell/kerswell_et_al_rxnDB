@@ -1,0 +1,37 @@
+---
+reactants:
+  cc:
+  an:
+  cor:
+products:
+  geh:
+  CO2:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 810.0
+        - 845.0
+      uncertainty:
+        - 20.0
+        - 10.0
+    P:
+      value:
+        - 0.5
+        - 0.7
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-179
+  reference:
+    short_cite: Shmulovich, 1974
+    authors:
+      - Shmulovich
+    year: 1974
+  method:
+  comments:

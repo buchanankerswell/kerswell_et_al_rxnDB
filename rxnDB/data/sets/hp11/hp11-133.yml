@@ -1,0 +1,43 @@
+---
+reactants:
+  cor:
+  stv:
+products:
+  ky:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1000.0
+        - 1300.0
+        - 1580.0
+        - 2000.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 30.0
+        - 0.0
+    P:
+      value:
+        - 133.0
+        - 140.5
+        - 147.0
+        - 166.5
+      uncertainty:
+        - 5.0
+        - 2.5
+        - 0.0
+        - 9.5
+metadata:
+  unique_id: hp11-133
+  reference:
+    short_cite: Schmidt et al 1997
+    authors:
+      - Schmidt et al
+    year: 1997
+  method:
+  comments:

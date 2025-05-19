@@ -1,0 +1,41 @@
+---
+reactants:
+  ta:
+  ky:
+  H2O:
+products:
+  tats:
+  q:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 668.0
+        - 700.0
+        - 725.0
+      uncertainty:
+        - 42.0
+        - 25.0
+        - 25.0
+    P:
+      value:
+        - 10.0
+        - 15.0
+        - 20.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-290
+  reference:
+    short_cite: Hoschek, 1995
+    authors:
+      - Hoschek
+    year: 1995
+  method:
+  comments:

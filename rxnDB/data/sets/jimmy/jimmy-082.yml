@@ -1,0 +1,44 @@
+---
+reactants:
+  Pb:
+products:
+  melt:
+data:
+  type: melting_curve
+  units:
+    T: K
+    P: GPa
+  boundary_curve:
+    limits:
+      P_max: 100.0
+      T_min: 1200
+      T_max: 2800
+    polynomial:
+      intercept: -4.0905
+      x1: 0.0108
+      x2: 5e-06
+metadata:
+  unique_id: jimmy-082
+  reference:
+    authors:
+      - Dewaele
+      - Mezouar
+      - Guignot
+      - Loubeyre
+    year: 2007
+    title: >-
+      Melting of lead under high pressure studied using second-scale
+      time-resolved x-ray diffraction
+    journal: Physical Review B
+    volume: "76"
+    pages: "144106"
+    doi: 10.1103/PhysRevB.76.144106
+    short_cite: Dewaele et al. (2007)
+  method:
+    name: X-Ray DAC
+    calibration:
+      P: NaCl/Ar Ross1986/Ono2006
+  comments: |-
+    Formula: Pb
+    Calibration Confidence: Good
+    Data Constraint Confidence: Good

@@ -1,0 +1,43 @@
+---
+reactants:
+  wo:
+  mont:
+products:
+  ak:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 687.5
+        - 712.5
+        - 735.0
+        - 735.0
+      uncertainty:
+        - 12.5
+        - 7.5
+        - 15.0
+        - 15.0
+    P:
+      value:
+        - 1.0
+        - 3.0
+        - 5.0
+        - 6.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-104
+  reference:
+    short_cite: Yoder, 1968
+    authors:
+      - Yoder
+    year: 1968
+  method:
+  comments:

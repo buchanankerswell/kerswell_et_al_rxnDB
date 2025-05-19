@@ -1,0 +1,47 @@
+---
+reactants:
+  fctd:
+  ta:
+products:
+  mctd:
+  fta:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 585.0
+        - 510.0
+        - 590.0
+      uncertainty:
+        - 35.0
+        - 40.0
+        - 30.0
+    P:
+      value:
+        - 20.0
+        - 18.0
+        - 20.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-464
+  reference:
+    short_cite: Chinner & Dixon, 1974; Chopin & Monie, 1984; Miller, 1986
+    authors:
+      - Chinner
+      - Dixon
+      - Chopin
+      - Monie
+      - Miller
+    year:
+      - 1974
+      - 1984
+      - 1986
+  method:
+  comments:

@@ -1,0 +1,33 @@
+---
+reactants:
+  cz:
+  ky:
+  q:
+products:
+  an:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 550.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 7.3
+      uncertainty:
+        - 0.2
+metadata:
+  unique_id: hp11-415
+  reference:
+    short_cite: Jenkins et al., 1983
+    authors:
+      - Jenkins et al.
+    year: 1983
+  method:
+  comments:

@@ -1,0 +1,40 @@
+---
+reactants:
+  Pb:
+products:
+  melt:
+data:
+  type: melting_curve
+  units:
+    T: K
+    P: GPa
+  boundary_curve:
+    limits:
+      P_max: 65.0
+      T_max: 715
+    polynomial:
+      intercept: -3.0158
+      x1: 0.00642
+      x2: 9e-06
+metadata:
+  unique_id: jimmy-075
+  reference:
+    authors:
+      - Mirwald
+      - Kennedy
+    year: 1975
+    title: >-
+      Melting temperature of lead and sodium at high pressures
+    journal: Physics and Chemistry of Minerals
+    volume: "37"
+    pages: 795-797
+    doi: 10.1016/0022-3697(76)90049-4
+    short_cite: Mirwald & Kennedy (1975)
+  method:
+    name: Experimental
+    calibration:
+      T: K-type
+  comments: |-
+    Formula: Pb
+    Calibration Confidence: Good
+    Data Constraint Confidence: Good

@@ -1,0 +1,39 @@
+---
+reactants:
+  fo:
+products:
+  foL:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 2292.5
+        - 2380.0
+        - 2520.0
+      uncertainty:
+        - 47.5
+        - 20.0
+        - 160.0
+    P:
+      value:
+        - 100.0
+        - 127.0
+        - 153.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-501
+  reference:
+    short_cite: subset of Ohtani & Kumazawa, 1981
+    authors:
+      - subset of Ohtani
+      - Kumazawa
+    year: 1981
+  method:
+  comments:

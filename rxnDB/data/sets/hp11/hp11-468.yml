@@ -1,0 +1,32 @@
+---
+reactants:
+  sud:
+  daph:
+products:
+  fsud:
+  clin:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 400.0
+      uncertainty:
+        - 25.0
+    P:
+      value:
+        - 10.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-468
+  reference:
+    short_cite: Theye et al., 1992
+    authors:
+      - Theye et al.
+    year: 1992
+  method:
+  comments:

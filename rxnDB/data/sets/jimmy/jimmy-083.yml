@@ -1,0 +1,41 @@
+---
+reactants:
+  Zn:
+products:
+  melt:
+data:
+  type: melting_curve
+  units:
+    T: K
+    P: GPa
+  boundary_curve:
+    limits:
+      P_max: 12.0
+      T_min: 450
+      T_max: 1000
+    polynomial:
+      intercept: -11.057
+      x1: 0.0261
+      x2: 3e-07
+metadata:
+  unique_id: jimmy-083
+  reference:
+    authors:
+      - Errandonea
+    year: 2010
+    title: >-
+      The melting curve of ten mentals up to 12GPa and 1600K
+    journal: Journal of Applied Physics
+    volume: "108"
+    pages: "033517"
+    doi: 10.1103/PhysRevB.76.144106
+    short_cite: Errandonea (2010)
+  method:
+    name: Experimental
+    calibration:
+      P: After Errandonea et al 2006
+      T: K-type
+  comments: |-
+    Formula: Zn
+    Calibration Confidence: Good
+    Data Constraint Confidence: Good

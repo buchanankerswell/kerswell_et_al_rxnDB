@@ -1,0 +1,33 @@
+---
+reactants:
+  hed:
+  fo:
+products:
+  fa:
+  di:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1000.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 10.5
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-449
+  reference:
+    short_cite: Perkins & Vielzeuf, 1992
+    authors:
+      - Perkins
+      - Vielzeuf
+    year: 1992
+  method:
+  comments:

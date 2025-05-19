@@ -1,0 +1,48 @@
+---
+reactants:
+  mcar:
+  fctd:
+products:
+  fcar:
+  mctd:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 380.0
+        - 350.0
+        - 400.0
+        - 450.0
+      uncertainty:
+        - 50.0
+        - 30.0
+        - 30.0
+        - 30.0
+    P:
+      value:
+        - 7.0
+        - 9.0
+        - 10.0
+        - 17.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-466
+  reference:
+    short_cite: Natural, Seidel & Okrusch, 1977; Theye et al., 1992
+    authors:
+      - Natural, Seidel
+      - Okrusch
+      - Theye et al.
+    year:
+      - 1977
+      - 1992
+  method:
+  comments:

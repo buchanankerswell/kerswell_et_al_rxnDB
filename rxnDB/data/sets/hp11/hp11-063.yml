@@ -1,0 +1,37 @@
+---
+reactants:
+  spu:
+  wo:
+products:
+  rnk:
+  CO2:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 860.0
+        - 930.0
+      uncertainty:
+        - 10.0
+        - 10.0
+    P:
+      value:
+        - 0.1
+        - 0.2
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-063
+  reference:
+    short_cite: Zharikov & Shmulovich, 1968
+    authors:
+      - Zharikov
+      - Shmulovich
+    year: 1968
+  method:
+  comments:

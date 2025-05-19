@@ -1,0 +1,44 @@
+---
+reactants:
+  br:
+products:
+  per:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 569.0
+        - 605.5
+        - 640.5
+        - 658.5
+      uncertainty:
+        - 5.0
+        - 1.5
+        - 7.5
+        - 5.5
+    P:
+      value:
+        - 0.5
+        - 1.0
+        - 1.5
+        - 2.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-066
+  reference:
+    short_cite: Barnes & Ernst, 1963
+    authors:
+      - Barnes
+      - Ernst
+    year: 1963
+  method:
+  comments:

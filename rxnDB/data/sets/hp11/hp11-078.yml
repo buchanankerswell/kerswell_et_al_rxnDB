@@ -1,0 +1,49 @@
+---
+reactants:
+  ta:
+products:
+  anth:
+  q:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 662.0
+        - 675.5
+        - 697.0
+        - 712.5
+        - 734.5
+      uncertainty:
+        - 15.0
+        - 11.5
+        - 4.0
+        - 6.5
+        - 7.5
+    P:
+      value:
+        - 0.5
+        - 1.0
+        - 1.5
+        - 2.0
+        - 3.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-078
+  reference:
+    short_cite: Chernosky & Autio, 1979
+    authors:
+      - Chernosky
+      - Autio
+    year: 1979
+  method:
+  comments:

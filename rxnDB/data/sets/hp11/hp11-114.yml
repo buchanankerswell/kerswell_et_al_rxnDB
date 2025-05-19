@@ -1,0 +1,32 @@
+---
+reactants:
+  dol:
+  q:
+products:
+  di:
+  CO2:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 997.5
+      uncertainty:
+        - 27.5
+    P:
+      value:
+        - 28.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-114
+  reference:
+    short_cite: Eggler et al., 1976
+    authors:
+      - Eggler et al.
+    year: 1976
+  method:
+  comments:

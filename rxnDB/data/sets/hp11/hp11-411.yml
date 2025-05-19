@@ -1,0 +1,41 @@
+---
+reactants:
+  andr:
+  fa:
+products:
+  mt:
+  wo:
+  q:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 750.0
+        - 766.5
+        - 791.0
+      uncertainty:
+        - 10.0
+        - 6.5
+        - 6.0
+    P:
+      value:
+        - 0.5
+        - 1.0
+        - 2.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-411
+  reference:
+    short_cite: Gustavson, 1974
+    authors:
+      - Gustavson
+    year: 1974
+  method:
+  comments:

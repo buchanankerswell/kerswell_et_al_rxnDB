@@ -1,0 +1,41 @@
+---
+reactants:
+  prl:
+products:
+  and:
+  q:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 402.5
+        - 420.0
+        - 460.0
+      uncertainty:
+        - 12.5
+        - 10.0
+        - 10.0
+    P:
+      value:
+        - 3.5
+        - 4.8
+        - 7.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-140
+  reference:
+    short_cite: Haas & Holdaway, 1973
+    authors:
+      - Haas
+      - Holdaway
+    year: 1973
+  method:
+  comments:

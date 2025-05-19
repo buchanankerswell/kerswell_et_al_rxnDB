@@ -1,0 +1,47 @@
+---
+reactants:
+  clin:
+  mag:
+products:
+  fo:
+  sp:
+  CO2:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 560.0
+        - 600.0
+        - 625.0
+        - 655.0
+      uncertainty:
+        - 5.0
+        - 0.0
+        - 0.0
+        - 10.0
+    P:
+      value:
+        - 1.0
+        - 2.0
+        - 3.0
+        - 4.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-275
+  reference:
+    short_cite: Chernosky & Berman, 1986
+    authors:
+      - Chernosky
+      - Berman
+    year: 1986
+  method:
+  comments:

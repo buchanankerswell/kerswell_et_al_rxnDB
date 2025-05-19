@@ -1,0 +1,52 @@
+---
+reactants:
+  an:
+  cc:
+products:
+  me:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 853.5
+        - 848.0
+        - 865.0
+        - 853.0
+        - 873.0
+        - 872.5
+      uncertainty:
+        - 6.5
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 7.5
+    P:
+      value:
+        - 1.5
+        - 3.6
+        - 3.2
+        - 6.7
+        - 7.2
+        - 15.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-154
+  reference:
+    short_cite: Baker & Newton, 1994
+    authors:
+      - Baker
+      - Newton
+    year: 1994
+  method:
+  comments:

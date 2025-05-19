@@ -1,0 +1,55 @@
+---
+reactants:
+  cc:
+products:
+  lime:
+  CO2:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 902.0
+        - 959.0
+        - 1012.0
+        - 1071.0
+        - 1164.0
+        - 1185.0
+        - 1211.0
+      uncertainty:
+        - 10.0
+        - 10.0
+        - 10.0
+        - 10.0
+        - 10.0
+        - 10.0
+        - 10.0
+    P:
+      value:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-057
+  reference:
+    short_cite: Baker, 1962
+    authors:
+      - Baker
+    year: 1962
+  method:
+  comments:

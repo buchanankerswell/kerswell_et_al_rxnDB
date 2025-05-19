@@ -1,0 +1,34 @@
+---
+reactants:
+  trd:
+products:
+  crst:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1470.0
+        - 1240.0
+      uncertainty:
+        - 5.0
+        - 20.0
+    P:
+      value:
+        - 0.0
+        - 1.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-014
+  reference:
+    short_cite: Ostrovsky, 1966
+    authors:
+      - Ostrovsky
+    year: 1966
+  method:
+  comments:

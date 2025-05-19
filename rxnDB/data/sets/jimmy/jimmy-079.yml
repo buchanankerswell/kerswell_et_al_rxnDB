@@ -1,0 +1,41 @@
+---
+reactants:
+  Pt:
+products:
+  melt:
+data:
+  type: melting_curve
+  units:
+    T: K
+    P: GPa
+  boundary_curve:
+    limits:
+      P_max: 80.0
+      T_min: 1800
+      T_max: 2800
+    polynomial:
+      intercept: -26.661
+      x1: -0.0057
+      x2: 1e-05
+metadata:
+  unique_id: jimmy-079
+  reference:
+    authors:
+      - Kavner
+      - Jeanloz
+    year: 1998
+    title: >-
+      High-pressure melting curve of platinum
+    journal: Journal of Applied Physics
+    volume: "83"
+    pages: 7553-7559
+    doi: 10.1063/1.367520
+    short_cite: Kavner & Jeanloz (1998)
+  method:
+    name: X-Ray DAC
+    calibration:
+      P: Ruby
+  comments: |-
+    Formula: Pt
+    Calibration Confidence: Good
+    Data Constraint Confidence: Good

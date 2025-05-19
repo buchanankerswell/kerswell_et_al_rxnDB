@@ -1,0 +1,36 @@
+---
+reactants:
+  rhc:
+  q:
+products:
+  pxmn:
+  CO2:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 506.0
+        - 496.5
+      uncertainty:
+        - 3.0
+        - 6.5
+    P:
+      value:
+        - 2.0
+        - 2.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-470
+  reference:
+    short_cite: Peters, 1971
+    authors:
+      - Peters
+    year: 1971
+  method:
+  comments:

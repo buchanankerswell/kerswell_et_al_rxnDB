@@ -1,0 +1,46 @@
+---
+reactants:
+  san:
+products:
+  kspL:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1185.0
+        - 1450.0
+        - 1525.0
+        - 1550.0
+        - 1590.0
+      uncertainty:
+        - 25.0
+        - 10.0
+        - 10.0
+        - 10.0
+        - 10.0
+    P:
+      value:
+        - 0.0
+        - 20.0
+        - 30.0
+        - 40.0
+        - 65.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-484
+  reference:
+    short_cite: Lindsley, 1966
+    authors:
+      - Lindsley
+    year: 1966
+  method:
+  comments:

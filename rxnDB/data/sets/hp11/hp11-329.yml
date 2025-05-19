@@ -1,0 +1,35 @@
+---
+reactants:
+  amul:
+  qL:
+products:
+  silL:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1550.0
+        - 1580.0
+      uncertainty:
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 0.0
+        - 0.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-329
+  reference:
+    short_cite: Klug et al 1987
+    authors:
+      - Klug et al
+    year: 1987
+  method:
+  comments:

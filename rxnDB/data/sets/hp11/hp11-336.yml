@@ -1,0 +1,56 @@
+---
+reactants:
+  kls:
+  san:
+products:
+  lc:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 614.0
+        - 687.5
+        - 737.5
+        - 1200.0
+        - 915.0
+        - 1058.0
+      uncertainty:
+        - 14.0
+        - 12.5
+        - 12.5
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 4.0
+        - 6.0
+        - 8.0
+        - 23.5
+        - 14.05
+        - 18.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 1.5
+        - 0.95
+        - 2.0
+metadata:
+  unique_id: hp11-336
+  reference:
+    short_cite: Scarfe et al., 1965; Lindsley 1966; Fasshauer et al 1998
+    authors:
+      - Scarfe et al.
+      - Lindsley
+      - Fasshauer et al
+    year:
+      - 1965
+      - 1966
+      - 1998
+  method:
+  comments:

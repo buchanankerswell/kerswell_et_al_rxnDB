@@ -1,0 +1,46 @@
+---
+reactants:
+  syv:
+products:
+  syvL:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 770.0
+        - 795.0
+        - 875.0
+        - 947.0
+        - 1050.0
+      uncertainty:
+        - 3.0
+        - 5.0
+        - 5.0
+        - 5.0
+        - 5.0
+    P:
+      value:
+        - 0.0
+        - 1.0
+        - 5.0
+        - 10.0
+        - 20.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-481
+  reference:
+    short_cite: Clarke, 1966
+    authors:
+      - Clarke
+    year: 1966
+  method:
+  comments:

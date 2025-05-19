@@ -1,0 +1,35 @@
+---
+reactants:
+  nacopv:
+products:
+  nacoppv:
+data:
+  type: phase_boundary
+  units:
+    T: K
+    P: GPa
+metadata:
+  unique_id: jimmy-103
+  reference:
+    authors:
+      - Yusa
+      - Shirako
+      - Akaogi
+      - Kojitani
+      - Hirao
+      - Ohishi
+      - Kikegawa
+    year: 2012
+    title: >-
+      Perovskite-to-Postperovskite Transitions in NaNiF3 and NaCoF3
+      and disproportionation of NaCoF3 post-perovskite under high
+      pressure and high temperature
+    journal: Inorganic Chemistry
+    volume: "21"
+    pages: 6559-6566
+    doi: 10.1021/ic300118d
+    short_cite: Yusa et al. (2012)
+  method:
+    name: Experimental
+  comments: |-
+    Formula: NaCoF3

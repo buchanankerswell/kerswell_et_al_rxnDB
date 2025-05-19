@@ -1,0 +1,34 @@
+---
+reactants:
+  maj:
+products:
+  mak:
+data:
+  type: phase_boundary
+  units:
+    T: K
+    P: GPa
+  boundary_curve:
+    limits:
+      P_min: 17.5
+      P_max: 21.6
+      T_min: 1600
+      T_max: 2000
+    polynomial:
+      intercept: 1.1852
+      x1: 0.0102
+metadata:
+  unique_id: jimmy-046
+  reference:
+    authors:
+      - Gasparik
+    year: 2003
+    title: >-
+      Phase Diagrams for Geoscientists: An Atlas of the Earth's
+      Interior
+    journal: Springer
+    short_cite: Gasparik (2003)
+  method:
+    name: Thermodynamic Calcs
+  comments: |-
+    Formula: MgSiO3

@@ -1,0 +1,48 @@
+---
+reactants:
+  maj:
+  cpv:
+products:
+  melt:
+data:
+  type: melting_curve
+  units:
+    T: K
+    P: GPa
+  boundary_curve:
+    limits:
+      P_min: 17.6
+      P_max: 24.2
+      T_min: 1970
+      T_max: 2150
+    polynomial:
+      intercept: -58.902
+      x1: 0.0388
+metadata:
+  unique_id: jimmy-016
+  reference:
+    authors:
+      - Oguri
+      - Funamori
+      - Sakai
+      - Kondo
+      - Uchida
+      - Yagi
+    year: 1997
+    title: >-
+      High-pressure and high-temperature phase relations in diopside
+      CaMgSi2O6
+    journal: Physics of the Earth and Planetary Interiors
+    volume: "104"
+    pages: 363-370
+    doi: 10.1016/S0031-9201(97)00029-0
+    short_cite: Oguri et al. (1997)
+  method:
+    name: Experimental
+    calibration:
+      P: After Funamori et al 1996
+      T: W95-Re5/ W74-Re26
+  comments: |-
+    Formula: CaMgSi2O6
+    Calibration Confidence: Good
+    Data Constraint Confidence: Poor

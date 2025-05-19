@@ -1,0 +1,46 @@
+---
+reactants:
+  tr:
+  dol:
+products:
+  fo:
+  cc:
+  CO2:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 535.0
+        - 620.0
+        - 670.0
+        - 690.0
+      uncertainty:
+        - 10.0
+        - 10.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 1.0
+        - 3.0
+        - 5.0
+        - 5.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-126
+  reference:
+    short_cite: Metz, 1976
+    authors:
+      - Metz
+    year: 1976
+  method:
+  comments:

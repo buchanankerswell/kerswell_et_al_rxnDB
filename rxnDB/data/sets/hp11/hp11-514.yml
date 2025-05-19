@@ -1,0 +1,42 @@
+---
+reactants:
+  trd:
+products:
+  qL:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1400.0
+        - 1420.0
+        - 1290.0
+        - 1310.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 0.5
+        - 0.5
+        - 0.8
+        - 0.8
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-514
+  reference:
+    short_cite: Kennedy et al. 62
+    authors:
+      - Kennedy et al. 62
+    year:
+  method:
+  comments:

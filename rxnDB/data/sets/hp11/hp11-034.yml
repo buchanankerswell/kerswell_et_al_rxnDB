@@ -1,0 +1,45 @@
+---
+reactants:
+  frw:
+products:
+  fa:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 500.0
+        - 800.0
+        - 1000.0
+        - 1200.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 38.0
+        - 47.0
+        - 53.0
+        - 58.0
+      uncertainty:
+        - 2.0
+        - 2.0
+        - 2.0
+        - 2.0
+metadata:
+  unique_id: hp11-034
+  reference:
+    short_cite: Yagi et al 1987; Akimoto et al 1965, 1967
+    authors:
+      - Yagi et al
+      - Akimoto et al 1965
+    year:
+      - 1987
+      - 1967
+  method:
+  comments:

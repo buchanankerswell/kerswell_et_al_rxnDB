@@ -1,0 +1,36 @@
+---
+reactants:
+  spu:
+  mont:
+products:
+  merw:
+  cc:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 818.0
+        - 810.0
+      uncertainty:
+        - 6.0
+        - 10.0
+    P:
+      value:
+        - 0.3
+        - 1.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-109
+  reference:
+    short_cite: Walter, 1965
+    authors:
+      - Walter
+    year: 1965
+  method:
+  comments:

@@ -1,0 +1,35 @@
+---
+reactants:
+  tpz:
+products:
+  ky:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 700.0
+        - 1000.0
+      uncertainty:
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 52.5
+        - 87.5
+      uncertainty:
+        - 2.5
+        - 2.5
+metadata:
+  unique_id: hp11-143
+  reference:
+    short_cite: Wunder et al. 1993
+    authors:
+      - Wunder et al.
+    year: 1993
+  method:
+  comments:

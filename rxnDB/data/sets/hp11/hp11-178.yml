@@ -1,0 +1,44 @@
+---
+reactants:
+  stlb:
+products:
+  lmt:
+  q:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 178.0
+        - 184.0
+        - 190.0
+        - 184.0
+      uncertainty:
+        - 0.0
+        - 14.0
+        - 15.0
+        - 11.0
+    P:
+      value:
+        - 2.0
+        - 3.0
+        - 4.0
+        - 5.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-178
+  reference:
+    short_cite: Liou, 1971
+    authors:
+      - Liou
+    year: 1971
+  method:
+  comments:

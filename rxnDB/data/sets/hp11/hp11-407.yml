@@ -1,0 +1,32 @@
+---
+reactants:
+  sid:
+  minm:
+products:
+  minn:
+  mag:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 300.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 1.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-407
+  reference:
+    short_cite: Klein 1974
+    authors:
+      - Klein
+    year: 1974
+  method:
+  comments:

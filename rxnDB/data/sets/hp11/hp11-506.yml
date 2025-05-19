@@ -1,0 +1,31 @@
+---
+reactants:
+  abh:
+products:
+  abL:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1118.0
+      uncertainty:
+        - 8.0
+    P:
+      value:
+        - 0.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-506
+  reference:
+    short_cite: Shairer & Bowen, 1956
+    authors:
+      - Shairer
+      - Bowen
+    year: 1956
+  method:
+  comments:

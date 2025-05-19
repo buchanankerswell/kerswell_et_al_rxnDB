@@ -1,0 +1,32 @@
+---
+reactants:
+  phl:
+  mnst:
+products:
+  mnbi:
+  mst:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 550.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 4.5
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-477
+  reference:
+    short_cite: Mahar et al., 1997
+    authors:
+      - Mahar et al.
+    year: 1997
+  method:
+  comments:

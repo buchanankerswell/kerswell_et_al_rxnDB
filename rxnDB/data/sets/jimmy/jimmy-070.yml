@@ -1,0 +1,44 @@
+---
+reactants:
+  ru:
+products:
+  PbO2:
+data:
+  type: phase_boundary
+  units:
+    T: K
+    P: GPa
+  boundary_curve:
+    limits:
+      P_min: 6.0
+      P_max: 12.0
+      T_min: 200
+      T_max: 1200
+    polynomial:
+      intercept: 12.55
+      x1: 0.01146
+      x2: 1.5594e-05
+      x3: -3.225e-08
+metadata:
+  unique_id: jimmy-070
+  reference:
+    authors:
+      - Olsen
+      - ''
+      - Jiang
+    year: 1999
+    title: >-
+      On the rutile/a-PbO2-type phase boundary of TiO2
+    journal: Journal of Physics and Chemistry of Solids
+    volume: "60"
+    pages: 229-233
+    doi: 10.1016/S0022-3697(98)00274-1
+    short_cite: Olsen et al. (1999)
+  method:
+    name: In situ X-ray
+    calibration:
+      P: NaCl (Decker 1971)
+  comments: |-
+    Formula: TiO2
+    Calibration Confidence: Poor
+    Data Constraint Confidence: Fair

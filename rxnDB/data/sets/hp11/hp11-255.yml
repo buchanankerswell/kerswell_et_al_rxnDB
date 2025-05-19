@@ -1,0 +1,62 @@
+---
+reactants:
+  clin:
+products:
+  py:
+  fo:
+  sp:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 890.0
+        - 900.0
+        - 890.0
+        - 900.0
+        - 875.0
+        - 880.0
+        - 870.0
+        - 880.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 20.4
+        - 20.4
+        - 23.3
+        - 23.3
+        - 28.0
+        - 28.0
+        - 32.6
+        - 32.6
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-255
+  reference:
+    short_cite: Staudigel & Schreyer, 1977
+    authors:
+      - Staudigel
+      - Schreyer
+    year: 1977
+  method:
+  comments:

@@ -1,0 +1,43 @@
+---
+reactants:
+  law:
+  q:
+products:
+  wrk:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 312.0
+        - 319.0
+        - 360.0
+        - 371.0
+      uncertainty:
+        - 0.0
+        - 14.0
+        - 15.0
+        - 0.0
+    P:
+      value:
+        - 3.2
+        - 3.5
+        - 4.0
+        - 4.3
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-176
+  reference:
+    short_cite: Liou, 1971
+    authors:
+      - Liou
+    year: 1971
+  method:
+  comments:

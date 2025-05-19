@@ -1,0 +1,53 @@
+---
+reactants:
+  ta:
+products:
+  en:
+  q:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 725.0
+        - 767.5
+        - 782.5
+        - 787.5
+        - 797.5
+        - 807.5
+      uncertainty:
+        - 5.0
+        - 2.5
+        - 2.5
+        - 2.5
+        - 2.5
+        - 2.5
+    P:
+      value:
+        - 2.0
+        - 4.2
+        - 6.0
+        - 7.0
+        - 10.0
+        - 14.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-073
+  reference:
+    short_cite: Aranovich & Newton, 1999
+    authors:
+      - Aranovich
+      - Newton
+    year: 1999
+  method:
+  comments:

@@ -1,0 +1,43 @@
+---
+reactants:
+  Ag:
+products:
+  melt:
+data:
+  type: melting_curve
+  units:
+    T: K
+    P: GPa
+  boundary_curve:
+    limits:
+      P_max: 30.0
+      T_min: 960
+      T_max: 2086
+    polynomial:
+      intercept: -12.693
+      x1: 0.0146
+      x2: -5e-06
+      x3: 4e-09
+metadata:
+  unique_id: jimmy-076
+  reference:
+    authors:
+      - Mirwald
+      - Kennedy
+    year: 1979
+    title: >-
+      The melting curve of gold, silver, and copper to 60-kbar
+      pressure : A reinvestigation
+    journal: Journal of Geophysical Research
+    volume: "84"
+    pages: 6750-6756
+    doi: 10.1029/JB084iB12p06750
+    short_cite: Mirwald & Kennedy (1979)
+  method:
+    name: Experimental
+    calibration:
+      T: Pt/Pt-Rh90
+  comments: |-
+    Formula: Ag
+    Calibration Confidence: Good
+    Data Constraint Confidence: Good

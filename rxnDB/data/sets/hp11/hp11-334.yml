@@ -1,0 +1,68 @@
+---
+reactants:
+  wa:
+  ky:
+  coe:
+products:
+  san:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 700.0
+        - 750.0
+        - 800.0
+        - 1000.0
+        - 1125.0
+        - 1200.0
+        - 1300.0
+        - 1380.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 61.5
+        - 54.0
+        - 61.0
+        - 62.0
+        - 68.5
+        - 65.5
+        - 74.0
+        - 62.0
+      uncertainty:
+        - 5.5
+        - 3.0
+        - 2.0
+        - 5.0
+        - 0.5
+        - 2.5
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-334
+  reference:
+    short_cite: Fasshauer et al 1998; Yagi et al 1994; Urakawa et al 1994; Yong et
+      al 2007
+    authors:
+      - Fasshauer et al
+      - Yagi et al
+      - Urakawa et al
+      - Yong et al
+    year:
+      - 1998
+      - 1994
+      - 1994
+      - 2007
+  method:
+  comments:

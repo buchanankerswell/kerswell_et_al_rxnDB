@@ -1,0 +1,61 @@
+---
+reactants:
+  jd:
+products:
+  ne:
+  abh:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 600.0
+        - 800.0
+        - 825.0
+        - 950.0
+        - 1050.0
+        - 1100.0
+        - 1200.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 10.5
+        - 14.5
+        - 16.85
+        - 18.75
+        - 21.0
+        - 20.0
+        - 23.5
+      uncertainty:
+        - 0.5
+        - 0.5
+        - 1.45
+        - 0.75
+        - 0.0
+        - 0.0
+        - 0.5
+metadata:
+  unique_id: hp11-308
+  reference:
+    short_cite: Gasparik, 1985; Robertson et al., 1957; Boettcher & Wyllie, 1968
+    authors:
+      - Gasparik
+      - Robertson et al.
+      - Boettcher
+      - Wyllie
+    year:
+      - 1985
+      - 1957
+      - 1968
+  method:
+  comments:

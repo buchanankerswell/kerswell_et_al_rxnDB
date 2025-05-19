@@ -1,0 +1,70 @@
+---
+reactants:
+  dsp:
+products:
+  cor:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 397.5
+        - 403.5
+        - 420.0
+        - 427.5
+        - 460.0
+        - 502.0
+        - 590.5
+        - 638.5
+        - 705.0
+        - 707.5
+      uncertainty:
+        - 12.5
+        - 11.5
+        - 10.0
+        - 12.5
+        - 10.0
+        - 18.0
+        - 9.5
+        - 11.5
+        - 30.0
+        - 12.5
+    P:
+      value:
+        - 1.8
+        - 2.4
+        - 3.5
+        - 4.8
+        - 7.0
+        - 13.8
+        - 23.0
+        - 27.5
+        - 36.8
+        - 46.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-134
+  reference:
+    short_cite: Haas, 1972; Fockenberg et al., 1996
+    authors:
+      - Haas
+      - Fockenberg et al.
+    year:
+      - 1972
+      - 1996
+  method:
+  comments:

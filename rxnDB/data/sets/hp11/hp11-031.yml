@@ -1,0 +1,39 @@
+---
+reactants:
+  mpv:
+products:
+  maj:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1700.0
+        - 1800.0
+        - 2000.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 215.0
+        - 217.5
+        - 212.5
+      uncertainty:
+        - 15.0
+        - 2.5
+        - 7.5
+metadata:
+  unique_id: hp11-031
+  reference:
+    short_cite: Katsura & Ito 1989, Ohtani 1991
+    authors:
+      - Katsura
+      - Ito 1989, Ohtani
+    year: 1991
+  method:
+  comments:

@@ -1,0 +1,32 @@
+---
+reactants:
+  minn:
+products:
+  fa:
+  q:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 455.0
+      uncertainty:
+        - 10.0
+    P:
+      value:
+        - 2.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-404
+  reference:
+    short_cite: Engi 1986
+    authors:
+      - Engi
+    year: 1986
+  method:
+  comments:

@@ -1,0 +1,51 @@
+---
+reactants:
+  mu:
+  cc:
+  q:
+products:
+  san:
+  an:
+  CO2:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 475.0
+        - 532.5
+        - 555.0
+        - 580.0
+        - 610.0
+      uncertainty:
+        - 25.0
+        - 7.5
+        - 5.0
+        - 5.0
+        - 5.0
+    P:
+      value:
+        - 2.0
+        - 4.0
+        - 5.0
+        - 6.0
+        - 7.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-368
+  reference:
+    short_cite: Hewitt, 1973
+    authors:
+      - Hewitt
+    year: 1973
+  method:
+  comments:

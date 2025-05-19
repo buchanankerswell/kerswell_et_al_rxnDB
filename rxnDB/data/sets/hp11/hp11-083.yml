@@ -1,0 +1,30 @@
+---
+reactants:
+  liz:
+products:
+  chr:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 422.0
+      uncertainty:
+        - 9.0
+    P:
+      value:
+        - 2.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-083
+  reference:
+    short_cite: Chernosky, 1975
+    authors:
+      - Chernosky
+    year: 1975
+  method:
+  comments:

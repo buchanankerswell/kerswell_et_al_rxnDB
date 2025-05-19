@@ -1,0 +1,47 @@
+---
+reactants:
+  fctd:
+products:
+  alm:
+  cor:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 582.5
+        - 626.0
+        - 631.0
+        - 632.5
+      uncertainty:
+        - 12.5
+        - 14.0
+        - 4.0
+        - 17.5
+    P:
+      value:
+        - 12.0
+        - 19.0
+        - 25.0
+        - 30.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-395
+  reference:
+    short_cite: Ganguly, 1969; Vidal et al., 1994
+    authors:
+      - Ganguly
+      - Vidal et al.
+    year:
+      - 1969
+      - 1994
+  method:
+  comments:

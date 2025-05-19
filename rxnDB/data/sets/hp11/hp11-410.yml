@@ -1,0 +1,32 @@
+---
+reactants:
+  andr:
+products:
+  pswo:
+  hem:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1140.0
+      uncertainty:
+        - 10.0
+    P:
+      value:
+        - 0.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-410
+  reference:
+    short_cite: Huckenholz & Yoder, 1971
+    authors:
+      - Huckenholz
+      - Yoder
+    year: 1971
+  method:
+  comments:

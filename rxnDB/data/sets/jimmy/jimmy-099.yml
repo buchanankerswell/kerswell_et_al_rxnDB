@@ -1,0 +1,47 @@
+---
+reactants:
+  cool:
+  q:
+products:
+  coopx:
+data:
+  type: phase_boundary
+  units:
+    T: K
+    P: GPa
+  boundary_curve:
+    limits:
+      P_min: 2.0
+      P_max: 2.5
+      T_min: 600
+      T_max: 1300
+    polynomial:
+      intercept: 15.0
+      x1: 0.0007
+metadata:
+  unique_id: jimmy-099
+  reference:
+    authors:
+      - Akimoto
+      - Katsura
+      - Syono
+      - Fujisawa
+      - Komada
+    year: 1965
+    title: >-
+      Polymorphic Transition of Pyroxenes FeSiO3 and CoSiO3 at
+      High Pressures and Temperatures
+    journal: Journal of Geophysical Research
+    volume: "70"
+    pages: 5269-5278
+    doi: 10.1029/JZ070i020p05269
+    short_cite: Akimoto et al. (1965)
+  method:
+    name: Experimental
+    calibration:
+      P: RT
+      T: Pt/Pt-Rh14
+  comments: |-
+    Formula: CoSiO3
+    Calibration Confidence: Fair
+    Data Constraint Confidence: Good

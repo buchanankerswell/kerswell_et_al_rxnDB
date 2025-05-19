@@ -1,0 +1,42 @@
+---
+reactants:
+  Ag:
+products:
+  melt:
+data:
+  type: melting_curve
+  units:
+    T: K
+    P: GPa
+  boundary_curve:
+    limits:
+      P_max: 6.5
+      T_min: 959
+    polynomial:
+      intercept: -19.891
+      x1: 0.03278
+      x2: 2e-05
+      x3: 8000000000.0
+metadata:
+  unique_id: jimmy-073
+  reference:
+    authors:
+      - Akella
+      - Kennedy
+    year: 1971
+    title: >-
+      Melting of gold, silver, and copper - Proposal for a new
+      high-pressure calibration scale
+    journal: Journal of Geophysical Research
+    volume: "76"
+    pages: 4969-4977
+    doi: 10.1029/JB076i020p04969
+    short_cite: Akella & Kennedy (1971)
+  method:
+    name: Experimental
+    calibration:
+      T: Pt/Pt-Rh90
+  comments: |-
+    Formula: Ag
+    Calibration Confidence: Good
+    Data Constraint Confidence: Good

@@ -1,0 +1,41 @@
+---
+reactants:
+  mctd:
+  ky:
+  dsp:
+products:
+  mst:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 635.0
+        - 662.0
+        - 669.5
+      uncertainty:
+        - 25.0
+        - 23.0
+        - 21.5
+    P:
+      value:
+        - 30.0
+        - 40.0
+        - 50.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-281
+  reference:
+    short_cite: Fockenberg, 1998
+    authors:
+      - Fockenberg
+    year: 1998
+  method:
+  comments:

@@ -1,0 +1,42 @@
+---
+reactants:
+  stv:
+products:
+  coe:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1100.0
+        - 1200.0
+        - 1300.0
+        - 1400.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 88.8
+        - 91.8
+        - 94.65
+        - 97.95
+      uncertainty:
+        - 1.8
+        - 1.4
+        - 1.65
+        - 1.85
+metadata:
+  unique_id: hp11-017
+  reference:
+    short_cite: Zhang et al., 1996
+    authors:
+      - Zhang et al.
+    year: 1996
+  method:
+  comments:

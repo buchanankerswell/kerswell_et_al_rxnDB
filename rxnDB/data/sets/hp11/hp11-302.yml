@@ -1,0 +1,38 @@
+---
+reactants:
+  vsv:
+  q:
+products:
+  gr:
+  di:
+  wo:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 382.5
+        - 407.5
+      uncertainty:
+        - 7.5
+        - 7.5
+    P:
+      value:
+        - 1.0
+        - 2.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-302
+  reference:
+    short_cite: Hochella et al., 1980
+    authors:
+      - Hochella et al.
+    year: 1980
+  method:
+  comments:

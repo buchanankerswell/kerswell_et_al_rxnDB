@@ -1,0 +1,45 @@
+---
+reactants:
+  py:
+  fs:
+products:
+  alm:
+  en:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 980.0
+        - 1055.0
+        - 1105.0
+        - 1205.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 20.0
+        - 25.0
+        - 25.0
+        - 25.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-453
+  reference:
+    short_cite: Lee & Ganguly, 1988
+    authors:
+      - Lee
+      - Ganguly
+    year: 1988
+  method:
+  comments:

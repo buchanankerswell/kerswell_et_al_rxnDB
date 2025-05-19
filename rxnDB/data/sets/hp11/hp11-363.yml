@@ -1,0 +1,34 @@
+---
+reactants:
+  phl:
+  q:
+products:
+  en:
+  san:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 755.0
+      uncertainty:
+        - 10.0
+    P:
+      value:
+        - 2.5
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-363
+  reference:
+    short_cite: Peterson & Newton, 1990
+    authors:
+      - Peterson
+      - Newton
+    year: 1990
+  method:
+  comments:

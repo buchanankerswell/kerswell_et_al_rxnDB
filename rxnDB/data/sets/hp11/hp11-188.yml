@@ -1,0 +1,87 @@
+---
+reactants:
+  en:
+  mgts:
+products:
+  py:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1000.0
+        - 1000.0
+        - 1150.0
+        - 1150.0
+        - 1300.0
+        - 1300.0
+        - 1000.0
+        - 1000.0
+        - 1100.0
+        - 1100.0
+        - 1200.0
+        - 1200.0
+        - 1400.0
+        - 1400.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 14.2
+        - 16.6
+        - 16.0
+        - 19.1
+        - 17.4
+        - 20.2
+        - 14.4
+        - 15.3
+        - 14.4
+        - 16.2
+        - 16.2
+        - 17.1
+        - 18.9
+        - 19.8
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-188
+  reference:
+    short_cite: Perkins, 1983; Hensen & Essene, 1971
+    authors:
+      - Perkins
+      - Hensen
+      - Essene
+    year:
+      - 1983
+      - 1971
+  method:
+  comments:

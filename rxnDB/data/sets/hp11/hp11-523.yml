@@ -1,0 +1,35 @@
+---
+reactants:
+  trd:
+products:
+  qL:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1050.0
+        - 1080.0
+      uncertainty:
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 0.0
+        - 0.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-523
+  reference:
+    short_cite: Shairer & Bowen 1956
+    authors:
+      - Shairer
+      - Bowen
+    year: 1956
+  method:
+  comments:

@@ -1,0 +1,79 @@
+---
+reactants:
+  cel:
+  ky:
+  H2O:
+products:
+  ta:
+  mu:
+  coe:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 750.0
+        - 750.0
+        - 670.0
+        - 670.0
+        - 770.0
+        - 770.0
+        - 666.0
+        - 666.0
+        - 754.0
+        - 754.0
+        - 685.0
+        - 685.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 41.0
+        - 39.0
+        - 41.0
+        - 39.0
+        - 36.0
+        - 34.0
+        - 36.0
+        - 34.0
+        - 31.0
+        - 29.0
+        - 31.0
+        - 29.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-349
+  reference:
+    short_cite: Massonne & Schreyer, 1989
+    authors:
+      - Massonne
+      - Schreyer
+    year: 1989
+  method:
+  comments:

@@ -1,0 +1,45 @@
+---
+reactants:
+  cc:
+  q:
+products:
+  wo:
+  CO2:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 700.0
+        - 750.0
+        - 800.0
+        - 850.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 2.1
+        - 2.9
+        - 3.95
+        - 5.05
+      uncertainty:
+        - 0.2
+        - 0.2
+        - 0.15
+        - 0.15
+metadata:
+  unique_id: hp11-058
+  reference:
+    short_cite: Zhu, Newton & Kleppa, 1993
+    authors:
+      - Zhu, Newton
+      - Kleppa
+    year: 1993
+  method:
+  comments:

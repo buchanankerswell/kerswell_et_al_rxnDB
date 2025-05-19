@@ -1,0 +1,40 @@
+---
+reactants:
+  law:
+products:
+  an:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 425.0
+        - 400.0
+        - 375.0
+      uncertainty:
+        - 25.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 6.9
+        - 5.25
+        - 5.5
+      uncertainty:
+        - 0.0
+        - 0.75
+        - 0.0
+metadata:
+  unique_id: hp11-164
+  reference:
+    short_cite: Crawford & Fyfe, 1965
+    authors:
+      - Crawford
+      - Fyfe
+    year: 1965
+  method:
+  comments:

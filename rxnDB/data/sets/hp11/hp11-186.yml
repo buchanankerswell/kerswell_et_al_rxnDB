@@ -1,0 +1,43 @@
+---
+reactants:
+  en:
+  mgts:
+products:
+  py:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 800.0
+        - 800.0
+        - 900.0
+        - 900.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 15.2
+        - 17.0
+        - 14.3
+        - 16.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-186
+  reference:
+    short_cite: Fockenberg, 2008
+    authors:
+      - Fockenberg
+    year: 2008
+  method:
+  comments:

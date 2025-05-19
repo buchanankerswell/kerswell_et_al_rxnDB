@@ -1,0 +1,38 @@
+---
+reactants:
+  fst:
+  q:
+products:
+  alm:
+  sill:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 637.0
+        - 683.0
+      uncertainty:
+        - 10.0
+        - 10.0
+    P:
+      value:
+        - 3.2
+        - 5.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-398
+  reference:
+    short_cite: Dutrow & Holdaway, 1989
+    authors:
+      - Dutrow
+      - Holdaway
+    year: 1989
+  method:
+  comments:

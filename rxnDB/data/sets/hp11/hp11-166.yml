@@ -1,0 +1,41 @@
+---
+reactants:
+  law:
+products:
+  zo:
+  ma:
+  q:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 340.0
+        - 385.0
+        - 430.0
+      uncertainty:
+        - 15.0
+        - 15.0
+        - 15.0
+    P:
+      value:
+        - 4.0
+        - 7.0
+        - 10.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-166
+  reference:
+    short_cite: Nitsch, 1974
+    authors:
+      - Nitsch
+    year: 1974
+  method:
+  comments:

@@ -1,0 +1,37 @@
+---
+reactants:
+  andr:
+products:
+  mt:
+  wo:
+  O2:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 840.0
+        - 860.0
+      uncertainty:
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 2.0
+        - 2.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-413
+  reference:
+    short_cite: Moecher & Chou, 1990
+    authors:
+      - Moecher
+      - Chou
+    year: 1990
+  method:
+  comments:

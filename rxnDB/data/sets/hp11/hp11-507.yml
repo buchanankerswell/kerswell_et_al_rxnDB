@@ -1,0 +1,47 @@
+---
+reactants:
+  abh:
+products:
+  abL:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1150.0
+        - 1237.5
+        - 1312.5
+        - 1362.5
+        - 1412.5
+      uncertainty:
+        - 10.0
+        - 12.5
+        - 12.5
+        - 12.5
+        - 12.5
+    P:
+      value:
+        - 3.0
+        - 11.0
+        - 18.0
+        - 25.0
+        - 32.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-507
+  reference:
+    short_cite: Boyd & England, 1963
+    authors:
+      - Boyd
+      - England
+    year: 1963
+  method:
+  comments:

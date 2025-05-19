@@ -1,0 +1,47 @@
+---
+reactants:
+  clin:
+  phl:
+  q:
+products:
+  mu:
+  ta:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 562.0
+        - 544.0
+        - 639.0
+        - 619.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 9.6
+        - 14.0
+        - 10.6
+        - 13.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-359
+  reference:
+    short_cite: Massonne & Schreyer, 1989
+    authors:
+      - Massonne
+      - Schreyer
+    year: 1989
+  method:
+  comments:

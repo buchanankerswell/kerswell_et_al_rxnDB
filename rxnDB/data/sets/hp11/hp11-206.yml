@@ -1,0 +1,37 @@
+---
+reactants:
+  hcrd:
+  cor:
+products:
+  en:
+  sill:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 825.0
+        - 825.0
+      uncertainty:
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 9.5
+        - 10.9
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-206
+  reference:
+    short_cite: Newton, 1972
+    authors:
+      - Newton
+    year: 1972
+  method:
+  comments:

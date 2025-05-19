@@ -1,0 +1,36 @@
+---
+reactants:
+  chum:
+products:
+  fo:
+  per:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 950.0
+        - 1000.0
+      uncertainty:
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 16.65
+        - 19.5
+      uncertainty:
+        - 0.95
+        - 0.5
+metadata:
+  unique_id: hp11-095
+  reference:
+    short_cite: Pawley 2000
+    authors:
+      - Pawley
+    year: 2000
+  method:
+  comments:

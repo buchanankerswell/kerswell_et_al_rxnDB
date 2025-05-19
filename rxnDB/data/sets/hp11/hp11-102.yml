@@ -1,0 +1,49 @@
+---
+reactants:
+  ta:
+  mag:
+products:
+  fo:
+  CO2:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 540.0
+        - 550.0
+        - 560.0
+        - 586.0
+        - 560.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 2.0
+        - 2.0
+        - 2.0
+        - 2.0
+        - 2.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-102
+  reference:
+    short_cite: Greenwood, 1967
+    authors:
+      - Greenwood
+    year: 1967
+  method:
+  comments:

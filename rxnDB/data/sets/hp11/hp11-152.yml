@@ -1,0 +1,44 @@
+---
+reactants:
+  cats:
+products:
+  an:
+  geh:
+  cor:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1200.0
+        - 1250.0
+        - 1350.0
+        - 1400.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 12.4
+        - 12.4
+        - 13.0
+        - 13.8
+      uncertainty:
+        - 1.5
+        - 0.6
+        - 1.0
+        - 0.8
+metadata:
+  unique_id: hp11-152
+  reference:
+    short_cite: Hays, 1967
+    authors:
+      - Hays
+    year: 1967
+  method:
+  comments:

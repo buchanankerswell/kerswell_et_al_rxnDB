@@ -1,0 +1,43 @@
+---
+reactants:
+  cen:
+products:
+  en:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 650.0
+        - 670.0
+        - 705.0
+        - 735.0
+      uncertainty:
+        - 30.0
+        - 30.0
+        - 15.0
+        - 15.0
+    P:
+      value:
+        - 5.0
+        - 20.0
+        - 30.0
+        - 40.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-024
+  reference:
+    short_cite: Boyd & England 1965
+    authors:
+      - Boyd
+      - England
+    year: 1965
+  method:
+  comments:

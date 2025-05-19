@@ -1,0 +1,41 @@
+---
+reactants:
+  zrc:
+  mag:
+products:
+  bdy:
+  fo:
+  CO2:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 800.0
+        - 850.0
+        - 900.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 7.4
+        - 8.9
+        - 10.8
+      uncertainty:
+        - 0.3
+        - 0.3
+        - 0.1
+metadata:
+  unique_id: hp11-438
+  reference:
+    short_cite: Ferry et al, 2002
+    authors:
+      - Ferry et al
+    year: 2002
+  method:
+  comments:

@@ -1,0 +1,33 @@
+---
+reactants:
+  pxmn:
+  rhc:
+products:
+  teph:
+  CO2:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 562.5
+      uncertainty:
+        - 7.5
+    P:
+      value:
+        - 2.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-472
+  reference:
+    short_cite: Huebner & Eugster, 1968
+    authors:
+      - Huebner
+      - Eugster
+    year: 1968
+  method:
+  comments:

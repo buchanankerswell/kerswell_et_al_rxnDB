@@ -1,0 +1,42 @@
+---
+reactants:
+  nisp:
+products:
+  NiO:
+  stv:
+data:
+  type: phase_boundary
+  units:
+    T: K
+    P: GPa
+  boundary_curve:
+    limits:
+      P_min: 12.0
+      P_max: 20.0
+      T_min: 1400
+      T_max: 1800
+    polynomial:
+      intercept: 12.1
+      x1: 0.0046
+metadata:
+  unique_id: jimmy-050
+  reference:
+    authors:
+      - Liu
+    year: 1975
+    title: >-
+      Disproportionation of Ni2SiO4 to stishovite plus bunsenite
+      at high pressures and temperatures
+    journal: Earth and Planetary Science Letters
+    volume: "24"
+    pages: 357-362
+    doi: 10.1029/GL001i006p00277
+    short_cite: Liu (1975)
+  method:
+    name: X-Ray DAC
+    calibration:
+      P: NaCl (Weaver et al 1971)
+  comments: |-
+    Formula: Ni2SiO4
+    Calibration Confidence: Fair
+    Data Constraint Confidence: Good

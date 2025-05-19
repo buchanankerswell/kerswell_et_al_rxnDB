@@ -1,0 +1,42 @@
+---
+reactants:
+  di:
+  dol:
+products:
+  fo:
+  cc:
+  CO2:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 638.0
+        - 710.0
+        - 860.0
+      uncertainty:
+        - 15.0
+        - 10.0
+        - 10.0
+    P:
+      value:
+        - 3.0
+        - 5.0
+        - 10.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-115
+  reference:
+    short_cite: Kase & Metz, 1980
+    authors:
+      - Kase
+      - Metz
+    year: 1980
+  method:
+  comments:

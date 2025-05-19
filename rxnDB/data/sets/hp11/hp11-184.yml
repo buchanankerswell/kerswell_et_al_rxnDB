@@ -1,0 +1,36 @@
+---
+reactants:
+  en:
+  mgts:
+products:
+  py:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 850.0
+        - 850.0
+      uncertainty:
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 15.6
+        - 16.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-184
+  reference:
+    short_cite: Gasparik & Newton, 1984
+    authors:
+      - Gasparik
+      - Newton
+    year: 1984
+  method:
+  comments:

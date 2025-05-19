@@ -1,0 +1,38 @@
+---
+reactants:
+  dol:
+  ta:
+products:
+  fo:
+  di:
+  H2O:
+  CO2:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 520.0
+        - 560.0
+      uncertainty:
+        - 20.0
+        - 10.0
+    P:
+      value:
+        - 1.0
+        - 2.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-120
+  reference:
+    short_cite: Skippen, 1971
+    authors:
+      - Skippen
+    year: 1971
+  method:
+  comments:

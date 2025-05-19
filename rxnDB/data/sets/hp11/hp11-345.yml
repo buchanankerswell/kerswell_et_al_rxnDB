@@ -1,0 +1,70 @@
+---
+reactants:
+  mu:
+  phl:
+  q:
+products:
+  crd:
+  san:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 520.0
+        - 530.0
+        - 580.0
+        - 600.0
+        - 630.0
+        - 640.0
+        - 660.0
+        - 670.0
+        - 685.0
+        - 700.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 1.0
+        - 1.0
+        - 2.0
+        - 2.0
+        - 3.0
+        - 3.0
+        - 4.0
+        - 4.0
+        - 5.0
+        - 5.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-345
+  reference:
+    short_cite: Seifert, 1976
+    authors:
+      - Seifert
+    year: 1976
+  method:
+  comments:

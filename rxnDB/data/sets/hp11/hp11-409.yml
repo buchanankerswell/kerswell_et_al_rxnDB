@@ -1,0 +1,33 @@
+---
+reactants:
+  mstp:
+  daph:
+products:
+  fstp:
+  clin:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 500.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 5.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-409
+  reference:
+    short_cite: Miyano & Klein 1989
+    authors:
+      - Miyano
+      - Klein
+    year: 1989
+  method:
+  comments:

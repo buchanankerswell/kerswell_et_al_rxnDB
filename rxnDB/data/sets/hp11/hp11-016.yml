@@ -1,0 +1,59 @@
+---
+reactants:
+  coe:
+products:
+  q:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 500.0
+        - 600.0
+        - 700.0
+        - 800.0
+        - 900.0
+        - 1000.0
+        - 1100.0
+        - 1200.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 27.25
+        - 28.0
+        - 28.65
+        - 29.4
+        - 29.95
+        - 30.5
+        - 31.3
+        - 32.2
+      uncertainty:
+        - 0.35
+        - 0.4
+        - 0.35
+        - 0.4
+        - 0.35
+        - 0.6
+        - 0.4
+        - 0.4
+metadata:
+  unique_id: hp11-016
+  reference:
+    short_cite: Bose & Ganguly, 1995
+    authors:
+      - Bose
+      - Ganguly
+    year: 1995
+  method:
+  comments:

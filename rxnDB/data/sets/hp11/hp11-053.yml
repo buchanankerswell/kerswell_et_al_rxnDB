@@ -1,0 +1,41 @@
+---
+reactants:
+  wal:
+products:
+  wo:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1000.0
+        - 1150.0
+        - 1400.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 28.0
+        - 27.75
+        - 26.2
+      uncertainty:
+        - 0.5
+        - 0.75
+        - 0.5
+metadata:
+  unique_id: hp11-053
+  reference:
+    short_cite: Chatterjee et al., 1984; Essene, 1974
+    authors:
+      - Chatterjee et al.
+      - Essene
+    year:
+      - 1984
+      - 1974
+  method:
+  comments:

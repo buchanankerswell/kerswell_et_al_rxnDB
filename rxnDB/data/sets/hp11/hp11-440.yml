@@ -1,0 +1,33 @@
+---
+reactants:
+  mag:
+  fa:
+products:
+  fo:
+  sid:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1000.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 20.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-440
+  reference:
+    short_cite: Dalton & Wood, 1993
+    authors:
+      - Dalton
+      - Wood
+    year: 1993
+  method:
+  comments:

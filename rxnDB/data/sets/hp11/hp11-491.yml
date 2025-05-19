@@ -1,0 +1,38 @@
+---
+reactants:
+  q:
+products:
+  qL:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1895.0
+        - 2023.0
+        - 2142.5
+      uncertainty:
+        - 5.0
+        - 10.0
+        - 17.5
+    P:
+      value:
+        - 10.0
+        - 15.0
+        - 20.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-491
+  reference:
+    short_cite: Hudon et al, 2002
+    authors:
+      - Hudon et al
+    year: 2002
+  method:
+  comments:

@@ -1,0 +1,50 @@
+---
+reactants:
+  tr:
+products:
+  en:
+  di:
+  q:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 665.0
+        - 735.0
+        - 765.0
+        - 810.0
+        - 830.0
+      uncertainty:
+        - 10.0
+        - 10.0
+        - 10.0
+        - 10.0
+        - 10.0
+    P:
+      value:
+        - 0.1
+        - 0.2
+        - 0.3
+        - 0.8
+        - 1.4
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-110
+  reference:
+    short_cite: Yin & Greenwood, 1983
+    authors:
+      - Yin
+      - Greenwood
+    year: 1983
+  method:
+  comments:

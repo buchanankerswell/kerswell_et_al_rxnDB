@@ -1,0 +1,33 @@
+---
+reactants:
+  fo:
+  di:
+  cc:
+products:
+  mont:
+  CO2:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 895.0
+      uncertainty:
+        - 10.0
+    P:
+      value:
+        - 0.5
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-119
+  reference:
+    short_cite: Walter, 1963
+    authors:
+      - Walter
+    year: 1963
+  method:
+  comments:

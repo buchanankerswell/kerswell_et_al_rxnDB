@@ -1,0 +1,38 @@
+---
+reactants:
+  tr:
+  cc:
+  q:
+products:
+  di:
+  CO2:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 494.0
+        - 486.0
+      uncertainty:
+        - 5.0
+        - 10.0
+    P:
+      value:
+        - 1.0
+        - 1.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-125
+  reference:
+    short_cite: Slaughter et al., 1975
+    authors:
+      - Slaughter et al.
+    year: 1975
+  method:
+  comments:

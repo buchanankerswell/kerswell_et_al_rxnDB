@@ -1,0 +1,46 @@
+---
+reactants:
+  crd:
+products:
+  spr4:
+  q:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1250.0
+        - 1250.0
+        - 1280.0
+        - 1280.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 7.0
+        - 7.6
+        - 7.0
+        - 7.6
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-211
+  reference:
+    short_cite: Newton, 1972; Perkins et al 1981
+    authors:
+      - Newton
+      - Perkins et al
+    year:
+      - 1972
+      - 1981
+  method:
+  comments:

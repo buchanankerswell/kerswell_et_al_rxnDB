@@ -1,0 +1,56 @@
+---
+reactants:
+  mag:
+products:
+  per:
+  CO2:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 740.0
+        - 812.5
+        - 837.5
+        - 887.5
+        - 952.0
+        - 992.5
+      uncertainty:
+        - 10.0
+        - 12.5
+        - 37.5
+        - 12.5
+        - 0.0
+        - 15.5
+    P:
+      value:
+        - 0.7
+        - 1.4
+        - 2.1
+        - 2.8
+        - 3.0
+        - 5.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-098
+  reference:
+    short_cite: Harker & Tuttle, 1955; Goldsmith & Heard, 1962
+    authors:
+      - Harker
+      - Tuttle
+      - Goldsmith
+      - Heard
+    year:
+      - 1955
+      - 1962
+  method:
+  comments:

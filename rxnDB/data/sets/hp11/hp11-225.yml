@@ -1,0 +1,96 @@
+---
+reactants:
+  py:
+  sp:
+  cor:
+products:
+  spr4:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 950.0
+        - 950.0
+        - 1000.0
+        - 1000.0
+        - 1050.0
+        - 1050.0
+        - 1150.0
+        - 1150.0
+        - 1200.0
+        - 1200.0
+        - 1250.0
+        - 1250.0
+        - 1350.0
+        - 1350.0
+        - 1400.0
+        - 1400.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 22.2
+        - 19.2
+        - 24.7
+        - 19.8
+        - 24.7
+        - 20.7
+        - 27.1
+        - 22.1
+        - 26.3
+        - 23.1
+        - 30.5
+        - 25.6
+        - 31.0
+        - 26.1
+        - 32.0
+        - 29.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-225
+  reference:
+    short_cite: Akermand et al., 1975; Doroshev & Malinovskiy, 1974
+    authors:
+      - Akermand et al.
+      - Doroshev
+      - Malinovskiy
+    year:
+      - 1975
+      - 1974
+  method:
+  comments:

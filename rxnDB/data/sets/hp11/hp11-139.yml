@@ -1,0 +1,44 @@
+---
+reactants:
+  prl:
+products:
+  cor:
+  q:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 430.0
+        - 470.0
+        - 490.0
+        - 520.0
+      uncertainty:
+        - 30.0
+        - 30.0
+        - 30.0
+        - 20.0
+    P:
+      value:
+        - 3.0
+        - 5.0
+        - 7.0
+        - 10.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-139
+  reference:
+    short_cite: Chatterjee et al., 1984
+    authors:
+      - Chatterjee et al.
+    year: 1984
+  method:
+  comments:

@@ -1,0 +1,43 @@
+---
+reactants:
+  Ge:
+products:
+  melt:
+data:
+  type: melting_curve
+  units:
+    T: K
+    P: GPa
+  boundary_curve:
+    limits:
+      P_max: 6.5
+      T_min: 680
+      T_max: 936
+    polynomial:
+      intercept: -31.245
+      x1: 0.15703
+      x2: -0.0002
+      x3: 7e-08
+metadata:
+  unique_id: jimmy-071
+  reference:
+    authors:
+      - Vaidya
+      - Akella
+      - Kennedy
+    year: 1968
+    title: >-
+      Melting of Germanium to 65 kbar
+    journal: Journal of Physics and Chemistry of Solids
+    volume: "30"
+    pages: 1411-1416
+    doi: 10.1016/0022-3697(69)90203-0,
+    short_cite: Vaidya et al. (1968)
+  method:
+    name: Experimental
+    calibration:
+      T: Pt/Pt-Rh90
+  comments: |-
+    Formula: Ge
+    Calibration Confidence: Good
+    Data Constraint Confidence: Good

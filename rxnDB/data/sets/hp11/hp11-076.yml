@@ -1,0 +1,40 @@
+---
+reactants:
+  fo:
+  ta:
+products:
+  en:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 660.0
+        - 630.0
+        - 590.0
+      uncertainty:
+        - 20.0
+        - 10.0
+        - 10.0
+    P:
+      value:
+        - 10.0
+        - 15.0
+        - 20.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-076
+  reference:
+    short_cite: Pawley, 1998
+    authors:
+      - Pawley
+    year: 1998
+  method:
+  comments:

@@ -1,0 +1,72 @@
+---
+reactants:
+  en:
+  sp:
+products:
+  fo:
+  crd:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 785.0
+        - 785.0
+        - 1100.0
+        - 1100.0
+        - 880.0
+        - 880.0
+        - 1000.0
+        - 1000.0
+        - 1100.0
+        - 1100.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 3.5
+        - 2.9
+        - 3.2
+        - 2.6
+        - 3.6
+        - 2.6
+        - 3.2
+        - 2.6
+        - 3.0
+        - 2.4
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-198
+  reference:
+    short_cite: Seifert 1974; Fawcett & Yoder 1966
+    authors:
+      - Seifert
+      - Fawcett
+      - Yoder
+    year:
+      - 1974
+      - 1966
+  method:
+  comments:

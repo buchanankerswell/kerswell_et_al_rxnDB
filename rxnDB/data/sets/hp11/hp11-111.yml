@@ -1,0 +1,50 @@
+---
+reactants:
+  tr:
+products:
+  en:
+  di:
+  q:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 850.0
+        - 880.0
+        - 888.0
+        - 922.0
+        - 922.5
+      uncertainty:
+        - 10.0
+        - 0.0
+        - 0.0
+        - 8.0
+        - 6.5
+    P:
+      value:
+        - 1.5
+        - 3.0
+        - 2.9
+        - 5.0
+        - 7.1
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-111
+  reference:
+    short_cite: Jenkins, Holland & Clare, 1991
+    authors:
+      - Jenkins, Holland
+      - Clare
+    year: 1991
+  method:
+  comments:

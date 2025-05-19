@@ -1,0 +1,43 @@
+---
+reactants:
+  arag:
+products:
+  cc:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 70.0
+        - 80.0
+        - 100.0
+        - 142.0
+      uncertainty:
+        - 0.0
+        - 10.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 3.9
+        - 4.1
+        - 4.25
+        - 5.0
+      uncertainty:
+        - 0.2
+        - 0.0
+        - 0.25
+        - 0.3
+metadata:
+  unique_id: hp11-018
+  reference:
+    short_cite: Crawford & Hoersch, 1972
+    authors:
+      - Crawford
+      - Hoersch
+    year: 1972
+  method:
+  comments:

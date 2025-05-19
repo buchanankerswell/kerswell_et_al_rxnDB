@@ -1,0 +1,40 @@
+---
+reactants:
+  mcar:
+  daph:
+products:
+  fcar:
+  clin:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 350.0
+        - 400.0
+        - 450.0
+      uncertainty:
+        - 30.0
+        - 30.0
+        - 30.0
+    P:
+      value:
+        - 9.0
+        - 10.0
+        - 17.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-467
+  reference:
+    short_cite: Natural, Theye et al., 1992
+    authors:
+      - Natural, Theye et al.
+    year: 1992
+  method:
+  comments:

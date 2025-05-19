@@ -1,0 +1,43 @@
+---
+reactants:
+  hcrd:
+products:
+  crd:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 670.0
+        - 700.0
+        - 750.0
+        - 800.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 7.85
+        - 8.75
+        - 9.65
+        - 10.65
+      uncertainty:
+        - 0.65
+        - 0.25
+        - 0.25
+        - 0.35
+metadata:
+  unique_id: hp11-264
+  reference:
+    short_cite: Newton, 1972
+    authors:
+      - Newton
+    year: 1972
+  method:
+  comments:

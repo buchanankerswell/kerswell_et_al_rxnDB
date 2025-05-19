@@ -1,0 +1,34 @@
+---
+reactants:
+  q:
+products:
+  qL:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 2320.0
+        - 2390.0
+      uncertainty:
+        - 50.0
+        - 50.0
+    P:
+      value:
+        - 30.0
+        - 37.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-492
+  reference:
+    short_cite: Kanzaki, 1990
+    authors:
+      - Kanzaki
+    year: 1990
+  method:
+  comments:

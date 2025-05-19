@@ -1,0 +1,40 @@
+---
+reactants:
+  law:
+  q:
+  H2O:
+products:
+  lmt:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 200.0
+        - 250.0
+        - 300.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 2.9
+        - 3.25
+        - 3.35
+      uncertainty:
+        - 0.3
+        - 0.25
+        - 0.35
+metadata:
+  unique_id: hp11-175
+  reference:
+    short_cite: Liou, 1971
+    authors:
+      - Liou
+    year: 1971
+  method:
+  comments:

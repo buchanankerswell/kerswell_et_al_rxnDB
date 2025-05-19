@@ -1,0 +1,43 @@
+---
+reactants:
+  deer:
+  Ni:
+products:
+  fs:
+  mt:
+  NiO:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 570.0
+        - 600.0
+        - 655.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 15.0
+    P:
+      value:
+        - 21.5
+        - 20.0
+        - 27.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-387
+  reference:
+    short_cite: Lattard & Le Breton, 1994
+    authors:
+      - Lattard
+      - Le Breton
+    year: 1994
+  method:
+  comments:

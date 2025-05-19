@@ -1,0 +1,48 @@
+---
+reactants:
+  di:
+  mag:
+products:
+  en:
+  dol:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 850.0
+        - 970.0
+        - 1100.0
+        - 1200.0
+        - 1300.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 22.65
+        - 28.5
+        - 36.4
+        - 42.75
+        - 49.75
+      uncertainty:
+        - 1.65
+        - 1.5
+        - 1.1
+        - 1.05
+        - 1.25
+metadata:
+  unique_id: hp11-108
+  reference:
+    short_cite: Brey et al., 1983
+    authors:
+      - Brey et al.
+    year: 1983
+  method:
+  comments:

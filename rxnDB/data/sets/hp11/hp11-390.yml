@@ -1,0 +1,45 @@
+---
+reactants:
+  alm:
+  cor:
+products:
+  herc:
+  sill:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 850.0
+        - 900.0
+        - 1000.0
+        - 1100.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 7.2
+        - 8.1
+        - 10.25
+        - 12.1
+      uncertainty:
+        - 0.0
+        - 0.2
+        - 0.35
+        - 0.2
+metadata:
+  unique_id: hp11-390
+  reference:
+    short_cite: Shulters & Bohlen, 1989
+    authors:
+      - Shulters
+      - Bohlen
+    year: 1989
+  method:
+  comments:

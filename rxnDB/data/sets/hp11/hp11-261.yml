@@ -1,0 +1,80 @@
+---
+reactants:
+  clin:
+products:
+  fo:
+  sp:
+  crd:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 605.0
+        - 640.0
+        - 644.0
+        - 670.0
+        - 690.0
+        - 704.0
+        - 636.0
+        - 662.0
+        - 710.0
+        - 719.0
+        - 726.0
+        - 750.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 0.5
+        - 0.5
+        - 1.0
+        - 1.0
+        - 2.0
+        - 2.0
+        - 1.0
+        - 1.0
+        - 2.0
+        - 2.0
+        - 3.0
+        - 3.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-261
+  reference:
+    short_cite: Chernosky, 1974; McPhail et al., 1990
+    authors:
+      - Chernosky
+      - McPhail et al.
+    year:
+      - 1974
+      - 1990
+  method:
+  comments:

@@ -1,0 +1,40 @@
+---
+reactants:
+  ts:
+  fo:
+products:
+  tr:
+  sp:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 789.0
+        - 800.0
+        - 827.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 5.9
+        - 6.1
+        - 8.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-298
+  reference:
+    short_cite: Jenkins, 1994
+    authors:
+      - Jenkins
+    year: 1994
+  method:
+  comments:

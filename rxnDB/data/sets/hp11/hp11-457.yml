@@ -1,0 +1,32 @@
+---
+reactants:
+  spr4:
+  fs:
+products:
+  fspr:
+  en:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 850.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 8.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-457
+  reference:
+    short_cite: Natural Collected
+    authors:
+      - Natural Collected
+    year:
+  method:
+  comments:

@@ -1,0 +1,35 @@
+---
+reactants:
+  lrn:
+  cstn:
+products:
+  wal:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1150.0
+        - 1600.0
+      uncertainty:
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 95.0
+        - 100.0
+      uncertainty:
+        - 5.0
+        - 5.0
+metadata:
+  unique_id: hp11-054
+  reference:
+    short_cite: Gasparik et al., 1994
+    authors:
+      - Gasparik et al.
+    year: 1994
+  method:
+  comments:

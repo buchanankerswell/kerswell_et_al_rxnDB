@@ -1,0 +1,46 @@
+---
+reactants:
+  mu:
+  clin:
+products:
+  phl:
+  ky:
+  q:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 540.0
+        - 570.0
+        - 570.0
+        - 590.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 4.0
+        - 4.0
+        - 6.0
+        - 6.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-343
+  reference:
+    short_cite: Massonne, unpub
+    authors:
+      - Massonne, unpub
+    year:
+  method:
+  comments:

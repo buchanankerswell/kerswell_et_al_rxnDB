@@ -1,0 +1,60 @@
+---
+reactants:
+  mag:
+products:
+  per:
+  CO2:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 695.0
+        - 750.0
+        - 822.5
+        - 705.0
+        - 715.0
+        - 765.0
+      uncertainty:
+        - 15.0
+        - 10.0
+        - 12.5
+        - 5.0
+        - 0.0
+        - 5.0
+    P:
+      value:
+        - 0.5
+        - 1.0
+        - 2.0
+        - 0.5
+        - 0.6
+        - 1.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-099
+  reference:
+    short_cite: Johannes & Metz, 1968; Philipp & Girsperger, 1990; Koziol & Newton,
+      1995
+    authors:
+      - Johannes
+      - Metz
+      - Philipp
+      - Girsperger
+      - Koziol
+      - Newton
+    year:
+      - 1968
+      - 1990
+      - 1995
+  method:
+  comments:

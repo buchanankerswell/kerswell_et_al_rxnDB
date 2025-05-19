@@ -1,0 +1,33 @@
+---
+reactants:
+  hed:
+products:
+  wo:
+  fa:
+  q:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 945.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 1.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-402
+  reference:
+    short_cite: Lindsley & Munoz, 1969
+    authors:
+      - Lindsley
+      - Munoz
+    year: 1969
+  method:
+  comments:

@@ -1,0 +1,42 @@
+---
+reactants:
+  fctd:
+  q:
+products:
+  fst:
+  alm:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 570.0
+        - 580.0
+        - 560.0
+      uncertainty:
+        - 10.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 10.0
+        - 14.0
+        - 6.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-393
+  reference:
+    short_cite: Rao & Johannes, 1979
+    authors:
+      - Rao
+      - Johannes
+    year: 1979
+  method:
+  comments:

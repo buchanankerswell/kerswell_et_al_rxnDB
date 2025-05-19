@@ -1,0 +1,42 @@
+---
+reactants:
+  pre:
+products:
+  zo:
+  gr:
+  q:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 420.0
+        - 417.0
+        - 390.0
+      uncertainty:
+        - 10.0
+        - 10.0
+        - 10.0
+    P:
+      value:
+        - 1.0
+        - 2.0
+        - 4.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-171
+  reference:
+    short_cite: Connolly & Kerrick, 1985
+    authors:
+      - Connolly
+      - Kerrick
+    year: 1985
+  method:
+  comments:

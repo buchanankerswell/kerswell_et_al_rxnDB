@@ -1,0 +1,40 @@
+---
+reactants:
+  alm:
+  sill:
+  q:
+products:
+  fcrd:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 650.0
+        - 700.0
+        - 750.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 2.1
+        - 2.3
+        - 2.5
+      uncertainty:
+        - 0.2
+        - 0.2
+        - 0.2
+metadata:
+  unique_id: hp11-391
+  reference:
+    short_cite: Mukhopadhyay et al., 1991
+    authors:
+      - Mukhopadhyay et al.
+    year: 1991
+  method:
+  comments:

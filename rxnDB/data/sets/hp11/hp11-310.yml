@@ -1,0 +1,31 @@
+---
+reactants:
+  sdl:
+products:
+  cgh:
+  hltL:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1377.5
+      uncertainty:
+        - 7.5
+    P:
+      value:
+        - 0.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-310
+  reference:
+    short_cite: Sharp et al 1989
+    authors:
+      - Sharp et al
+    year: 1989
+  method:
+  comments:

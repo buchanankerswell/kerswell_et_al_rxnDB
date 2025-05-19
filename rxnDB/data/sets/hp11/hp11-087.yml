@@ -1,0 +1,37 @@
+---
+reactants:
+  atg:
+products:
+  fo:
+  en:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 625.0
+        - 652.5
+      uncertainty:
+        - 10.0
+        - 7.5
+    P:
+      value:
+        - 54.0
+        - 47.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-087
+  reference:
+    short_cite: Bose & Navrotsky, 1998
+    authors:
+      - Bose
+      - Navrotsky
+    year: 1998
+  method:
+  comments:

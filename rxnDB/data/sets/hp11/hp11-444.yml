@@ -1,0 +1,53 @@
+---
+reactants:
+  py:
+  ann:
+products:
+  alm:
+  phl:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 550.0
+        - 600.0
+        - 650.0
+        - 700.0
+        - 745.0
+        - 800.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 2.0
+        - 2.0
+        - 2.0
+        - 2.0
+        - 2.0
+        - 2.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-444
+  reference:
+    short_cite: Ferry & Spear, 1978
+    authors:
+      - Ferry
+      - Spear
+    year: 1978
+  method:
+  comments:

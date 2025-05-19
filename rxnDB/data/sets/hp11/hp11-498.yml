@@ -1,0 +1,31 @@
+---
+reactants:
+  per:
+products:
+  perL:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 2825.0
+      uncertainty:
+        - 10.0
+    P:
+      value:
+        - 0.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-498
+  reference:
+    short_cite: Bowen & Andersen, 1914
+    authors:
+      - Bowen
+      - Andersen
+    year: 1914
+  method:
+  comments:

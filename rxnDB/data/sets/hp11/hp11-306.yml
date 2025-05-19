@@ -1,0 +1,63 @@
+---
+reactants:
+  jd:
+  q:
+products:
+  ab:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 500.0
+        - 550.0
+        - 600.0
+        - 800.0
+        - 900.0
+        - 1000.0
+        - 1100.0
+        - 1200.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 14.35
+        - 15.3
+        - 16.55
+        - 21.5
+        - 24.25
+        - 26.75
+        - 29.5
+        - 32.0
+      uncertainty:
+        - 0.85
+        - 0.4
+        - 0.35
+        - 0.5
+        - 0.75
+        - 0.75
+        - 0.5
+        - 1.0
+metadata:
+  unique_id: hp11-306
+  reference:
+    short_cite: Newton & Smith, 1967; Holland, 1980
+    authors:
+      - Newton
+      - Smith
+      - Holland
+    year:
+      - 1967
+      - 1980
+  method:
+  comments:

@@ -1,0 +1,57 @@
+---
+reactants:
+  law:
+products:
+  zo:
+  ky:
+  q:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 580.0
+        - 630.0
+        - 687.5
+        - 735.0
+        - 787.5
+        - 837.5
+        - 872.5
+      uncertainty:
+        - 15.0
+        - 15.0
+        - 17.5
+        - 15.0
+        - 17.5
+        - 17.5
+        - 17.5
+    P:
+      value:
+        - 19.0
+        - 24.0
+        - 28.5
+        - 33.0
+        - 38.0
+        - 43.0
+        - 47.5
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-170
+  reference:
+    short_cite: Skrok et al., 1994
+    authors:
+      - Skrok et al.
+    year: 1994
+  method:
+  comments:

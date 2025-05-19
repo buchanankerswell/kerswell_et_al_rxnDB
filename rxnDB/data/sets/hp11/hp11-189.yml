@@ -1,0 +1,52 @@
+---
+reactants:
+  py:
+  q:
+products:
+  en:
+  ky:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1000.0
+        - 1000.0
+        - 1050.0
+        - 1050.0
+        - 1100.0
+        - 1100.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 17.1
+        - 16.2
+        - 16.7
+        - 15.8
+        - 15.8
+        - 14.9
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-189
+  reference:
+    short_cite: Hensen, 1972
+    authors:
+      - Hensen
+    year: 1972
+  method:
+  comments:

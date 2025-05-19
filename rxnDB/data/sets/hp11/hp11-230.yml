@@ -1,0 +1,37 @@
+---
+reactants:
+  en:
+  cor:
+products:
+  spr5:
+  sill:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 950.0
+        - 1050.0
+      uncertainty:
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 12.5
+        - 12.5
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-230
+  reference:
+    short_cite: Malinovskiy & Doroshev 1975
+    authors:
+      - Malinovskiy
+      - Doroshev
+    year: 1975
+  method:
+  comments:

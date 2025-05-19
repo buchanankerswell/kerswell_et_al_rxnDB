@@ -1,0 +1,50 @@
+---
+reactants:
+  py:
+  sp:
+  H2O:
+products:
+  ames:
+  cor:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 925.0
+        - 850.0
+        - 875.0
+        - 875.0
+        - 825.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 23.0
+        - 23.0
+        - 25.0
+        - 26.0
+        - 26.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-249
+  reference:
+    short_cite: Ackermand & Seifert, 1975
+    authors:
+      - Ackermand
+      - Seifert
+    year: 1975
+  method:
+  comments:

@@ -1,0 +1,70 @@
+---
+reactants:
+  mcor:
+products:
+  mpv:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1200.0
+        - 1200.0
+        - 1500.0
+        - 1500.0
+        - 1600.0
+        - 1600.0
+        - 1750.0
+        - 1750.0
+        - 1800.0
+        - 1800.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 250.0
+        - 265.0
+        - 250.0
+        - 265.0
+        - 250.0
+        - 265.0
+        - 250.0
+        - 265.0
+        - 250.0
+        - 265.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-050
+  reference:
+    short_cite: Hirose et al 2001; Kubo & Akaogi 2000
+    authors:
+      - Hirose et al
+      - Kubo
+      - Akaogi
+    year:
+      - 2001
+      - 2000
+  method:
+  comments:

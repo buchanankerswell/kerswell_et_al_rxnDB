@@ -1,0 +1,46 @@
+---
+reactants:
+  ne:
+products:
+  neL:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1380.0
+        - 1450.0
+        - 1550.0
+        - 1650.0
+        - 1700.0
+      uncertainty:
+        - 20.0
+        - 0.0
+        - 50.0
+        - 50.0
+        - 0.0
+    P:
+      value:
+        - 0.0
+        - 10.0
+        - 15.0
+        - 20.0
+        - 25.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-505
+  reference:
+    short_cite: Smith, 2001
+    authors:
+      - Smith
+    year: 2001
+  method:
+  comments:

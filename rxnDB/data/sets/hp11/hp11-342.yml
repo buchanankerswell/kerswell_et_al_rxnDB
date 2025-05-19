@@ -1,0 +1,45 @@
+---
+reactants:
+  cel:
+  east:
+products:
+  mu:
+  phl:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 640.0
+        - 632.0
+        - 646.0
+        - 634.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 7.2
+        - 7.2
+        - 8.3
+        - 8.3
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-342
+  reference:
+    short_cite: Bird & Fawcett, 1973
+    authors:
+      - Bird
+      - Fawcett
+    year: 1973
+  method:
+  comments:

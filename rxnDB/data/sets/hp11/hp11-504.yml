@@ -1,0 +1,30 @@
+---
+reactants:
+  cgh:
+products:
+  neL:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1525.0
+      uncertainty:
+        - 10.0
+    P:
+      value:
+        - 0.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-504
+  reference:
+    short_cite: Bowen, 1912
+    authors:
+      - Bowen
+    year: 1912
+  method:
+  comments:

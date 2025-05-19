@@ -1,0 +1,33 @@
+---
+reactants:
+  py:
+  osm2:
+products:
+  osm1:
+  en:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 900.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 8.0
+      uncertainty:
+        - 0.3
+metadata:
+  unique_id: hp11-425
+  reference:
+    short_cite: Carrington & Harley, 1995
+    authors:
+      - Carrington
+      - Harley
+    year: 1995
+  method:
+  comments:

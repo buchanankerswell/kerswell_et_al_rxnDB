@@ -1,0 +1,30 @@
+---
+reactants:
+  crst:
+products:
+  qL:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1723.0
+      uncertainty:
+        - 13.0
+    P:
+      value:
+        - 0.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-488
+  reference:
+    short_cite: Jackson, 1976
+    authors:
+      - Jackson
+    year: 1976
+  method:
+  comments:

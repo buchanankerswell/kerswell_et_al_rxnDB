@@ -1,0 +1,69 @@
+---
+reactants:
+  gr:
+  q:
+products:
+  an:
+  wo:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 575.0
+        - 625.0
+        - 675.0
+        - 710.0
+        - 750.0
+        - 1100.0
+        - 1100.0
+        - 1200.0
+      uncertainty:
+        - 10.0
+        - 10.0
+        - 10.0
+        - 15.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 2.0
+        - 3.0
+        - 4.0
+        - 4.7
+        - 5.85
+        - 14.0
+        - 13.85
+        - 16.15
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.45
+        - 0.5
+        - 2.25
+        - 0.85
+metadata:
+  unique_id: hp11-145
+  reference:
+    short_cite: Huckenholz et al., 1975; Newton, 1966; Hays, 1967; Windom & Boettcher,
+      1976
+    authors:
+      - Huckenholz et al.
+      - Newton
+      - Hays
+      - Windom
+      - Boettcher
+    year:
+      - 1975
+      - 1966
+      - 1967
+      - 1976
+  method:
+  comments:

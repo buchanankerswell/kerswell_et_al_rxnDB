@@ -1,0 +1,39 @@
+---
+reactants:
+  rhc:
+products:
+  mang:
+  CO2:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 706.0
+        - 748.0
+        - 777.5
+      uncertainty:
+        - 7.0
+        - 9.0
+        - 7.5
+    P:
+      value:
+        - 1.0
+        - 1.5
+        - 2.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-471
+  reference:
+    short_cite: Huebner, 1969
+    authors:
+      - Huebner
+    year: 1969
+  method:
+  comments:

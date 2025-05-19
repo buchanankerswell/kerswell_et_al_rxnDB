@@ -1,0 +1,54 @@
+---
+reactants:
+  mu:
+  q:
+products:
+  san:
+  and:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 540.0
+        - 560.0
+        - 597.5
+        - 630.0
+        - 665.0
+        - 697.5
+      uncertainty:
+        - 20.0
+        - 10.0
+        - 7.5
+        - 10.0
+        - 5.0
+        - 7.5
+    P:
+      value:
+        - 0.5
+        - 1.0
+        - 2.0
+        - 3.0
+        - 4.0
+        - 5.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-318
+  reference:
+    short_cite: Chatterjee & Johannes, 1974
+    authors:
+      - Chatterjee
+      - Johannes
+    year: 1974
+  method:
+  comments:

@@ -1,0 +1,48 @@
+---
+reactants:
+  gth:
+products:
+  hem:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 190.0
+        - 265.0
+        - 325.0
+        - 375.0
+        - 410.0
+      uncertainty:
+        - 10.0
+        - 15.0
+        - 25.0
+        - 25.0
+        - 10.0
+    P:
+      value:
+        - 10.0
+        - 20.0
+        - 30.0
+        - 40.0
+        - 50.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-382
+  reference:
+    short_cite: Voigt & Will, 1981
+    authors:
+      - Voigt
+      - Will
+    year: 1981
+  method:
+  comments:

@@ -1,0 +1,32 @@
+---
+reactants:
+  jd:
+  ta:
+products:
+  gl:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 800.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 36.0
+      uncertainty:
+        - 1.0
+metadata:
+  unique_id: hp11-364
+  reference:
+    short_cite: Carman & Gilbert, 1985
+    authors:
+      - Carman
+      - Gilbert
+    year: 1985
+  method:
+  comments:

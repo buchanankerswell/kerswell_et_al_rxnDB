@@ -1,0 +1,30 @@
+---
+reactants:
+  cz:
+products:
+  zo:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 362.5
+      uncertainty:
+        - 37.5
+    P:
+      value:
+        - 6.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-414
+  reference:
+    short_cite: Natural pairs, unpub
+    authors:
+      - Natural pairs, unpub
+    year:
+  method:
+  comments:

@@ -1,0 +1,74 @@
+---
+reactants:
+  ky:
+products:
+  and:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 393.0
+        - 473.0
+        - 573.5
+        - 700.0
+        - 750.0
+        - 800.0
+        - 800.0
+        - 700.0
+        - 825.0
+        - 800.0
+      uncertainty:
+        - 16.0
+        - 26.0
+        - 16.5
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 2.4
+        - 3.6
+        - 4.8
+        - 6.3
+        - 6.55
+        - 7.2
+        - 7.7
+        - 6.4
+        - 7.55
+        - 8.2
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.7
+        - 0.95
+        - 0.7
+        - 0.8
+        - 0.4
+        - 0.35
+        - 0.0
+metadata:
+  unique_id: hp11-128
+  reference:
+    short_cite: Holdaway, 1971; Newton, 1966a; Richardson et al., 1969; Bohlen et
+      al 1991
+    authors:
+      - Holdaway
+      - Newton, 1966a
+      - Richardson et al.
+      - Bohlen et al
+    year:
+      - 1971
+      - 
+      - 1969
+      - 1991
+  method:
+  comments:

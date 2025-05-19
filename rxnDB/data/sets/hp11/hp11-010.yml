@@ -1,0 +1,80 @@
+---
+reactants:
+  iron:
+  H2S:
+products:
+  tro:
+  H2:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 500.0
+        - 700.0
+        - 900.0
+        - 800.0
+        - 700.0
+        - 600.0
+        - 800.0
+        - 988.0
+        - 795.0
+        - 695.0
+        - 984.0
+        - 900.0
+        - 988.0
+      uncertainty:
+        - 12.0
+        - 12.0
+        - 12.0
+        - 12.0
+        - 12.0
+        - 12.0
+        - 12.0
+        - 12.0
+        - 12.0
+        - 12.0
+        - 12.0
+        - 12.0
+        - 12.0
+    P:
+      value:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-010
+  reference:
+    short_cite: Rosenqvist 1954
+    authors:
+      - Rosenqvist
+    year: 1954
+  method:
+  comments:

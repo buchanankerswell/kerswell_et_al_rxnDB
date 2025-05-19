@@ -1,0 +1,43 @@
+---
+reactants:
+  NiO:
+products:
+  Ni:
+  O2:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 600.0
+        - 800.0
+        - 900.0
+        - 1100.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-439
+  reference:
+    short_cite: O’Neill, 1987
+    authors:
+      - O’Neill
+    year: 1987
+  method:
+  comments:

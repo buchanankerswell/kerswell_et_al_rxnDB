@@ -1,0 +1,36 @@
+---
+reactants:
+  jd:
+  ky:
+products:
+  abh:
+  cor:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 800.0
+        - 1200.0
+      uncertainty:
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 19.0
+        - 28.8
+      uncertainty:
+        - 0.5
+        - 0.5
+metadata:
+  unique_id: hp11-307
+  reference:
+    short_cite: Essene et al., 1972
+    authors:
+      - Essene et al.
+    year: 1972
+  method:
+  comments:

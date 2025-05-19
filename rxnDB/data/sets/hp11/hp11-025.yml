@@ -1,0 +1,55 @@
+---
+reactants:
+  hen:
+products:
+  en:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 950.0
+        - 1100.0
+        - 1300.0
+        - 1500.0
+        - 1700.0
+        - 2200.0
+        - 2400.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 79.5
+        - 84.5
+        - 85.5
+        - 96.0
+        - 100.0
+        - 102.5
+        - 87.5
+      uncertainty:
+        - 2.5
+        - 2.5
+        - 8.5
+        - 3.0
+        - 5.0
+        - 7.5
+        - 7.5
+metadata:
+  unique_id: hp11-025
+  reference:
+    short_cite: Pacalo & Gasparik 1990
+    authors:
+      - Pacalo
+      - Gasparik
+    year: 1990
+  method:
+  comments:

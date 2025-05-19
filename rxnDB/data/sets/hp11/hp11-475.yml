@@ -1,0 +1,44 @@
+---
+reactants:
+  spss:
+  ilm:
+products:
+  alm:
+  pnt:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 600.0
+        - 700.0
+        - 800.0
+        - 900.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 5.0
+        - 5.0
+        - 5.0
+        - 5.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-475
+  reference:
+    short_cite: Pownceby et al., 1987
+    authors:
+      - Pownceby et al.
+    year: 1987
+  method:
+  comments:

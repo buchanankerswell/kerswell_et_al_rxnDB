@@ -1,0 +1,47 @@
+---
+reactants:
+  pxmn:
+products:
+  rhod:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 437.5
+        - 500.0
+        - 900.0
+        - 850.0
+        - 950.0
+      uncertainty:
+        - 12.5
+        - 25.0
+        - 0.0
+        - 50.0
+        - 50.0
+    P:
+      value:
+        - 3.0
+        - 6.0
+        - 20.0
+        - 25.0
+        - 30.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-469
+  reference:
+    short_cite: Maresch & Mottana, 1976
+    authors:
+      - Maresch
+      - Mottana
+    year: 1976
+  method:
+  comments:

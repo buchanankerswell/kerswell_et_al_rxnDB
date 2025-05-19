@@ -1,0 +1,53 @@
+---
+reactants:
+  clin:
+  q:
+products:
+  ta:
+  crd:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 547.0
+        - 557.0
+        - 580.0
+        - 600.0
+        - 616.0
+        - 626.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 2.0
+        - 2.0
+        - 4.0
+        - 4.0
+        - 6.0
+        - 6.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-262
+  reference:
+    short_cite: Massonne, 1989
+    authors:
+      - Massonne
+    year: 1989
+  method:
+  comments:

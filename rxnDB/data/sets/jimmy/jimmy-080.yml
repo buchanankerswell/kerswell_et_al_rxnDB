@@ -1,0 +1,42 @@
+---
+reactants:
+  Ni:
+products:
+  melt:
+data:
+  type: melting_curve
+  units:
+    T: K
+    P: GPa
+  boundary_curve:
+    limits:
+      P_max: 120.0
+      T_min: 1500
+      T_max: 2600
+    polynomial:
+      intercept: -578.64
+      x1: 0.972
+      x2: -0.0005573
+      x3: 1.11e-07
+metadata:
+  unique_id: jimmy-080
+  reference:
+    authors:
+      - Wang
+      - Lazor
+      - Saxena
+    year: 2001
+    title: >-
+      A simple model for assessing the high pressure melting of
+      metals: nickel, aluminium and platinum
+    journal: Physica B
+    volume: "293"
+    pages: 408-416
+    doi: 10.1016/S0921-4526(00)00542-1
+    short_cite: Wang et al. (2001)
+  method:
+    name: X-Ray DAC
+  comments: |-
+    Formula: Ni
+    Calibration Confidence: Fair
+    Data Constraint Confidence: Good

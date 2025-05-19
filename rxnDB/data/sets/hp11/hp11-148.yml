@@ -1,0 +1,51 @@
+---
+reactants:
+  gr:
+  cor:
+products:
+  cats:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1170.0
+        - 1230.0
+        - 1270.0
+        - 1300.0
+        - 1400.0
+        - 1500.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 12.05
+        - 14.95
+        - 16.45
+        - 17.5
+        - 23.1
+        - 28.75
+      uncertainty:
+        - 0.75
+        - 0.55
+        - 0.55
+        - 0.6
+        - 0.6
+        - 0.55
+metadata:
+  unique_id: hp11-148
+  reference:
+    short_cite: Gasparik, 1984
+    authors:
+      - Gasparik
+    year: 1984
+  method:
+  comments:

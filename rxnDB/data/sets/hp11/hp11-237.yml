@@ -1,0 +1,35 @@
+---
+reactants:
+  en:
+  cor:
+products:
+  mgts:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 725.0
+        - 725.0
+      uncertainty:
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 15.0
+        - 12.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-237
+  reference:
+    short_cite: Podlesskii, 1996
+    authors:
+      - Podlesskii
+    year: 1996
+  method:
+  comments:

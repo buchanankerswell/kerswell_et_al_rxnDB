@@ -1,0 +1,46 @@
+---
+reactants:
+  alm:
+  hem:
+products:
+  mt:
+  ky:
+  q:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 650.0
+        - 700.0
+        - 800.0
+        - 900.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 21.5
+        - 22.25
+        - 25.75
+        - 28.5
+      uncertainty:
+        - 1.5
+        - 0.25
+        - 0.25
+        - 0.5
+metadata:
+  unique_id: hp11-388
+  reference:
+    short_cite: Harlov & Newton, 1992
+    authors:
+      - Harlov
+      - Newton
+    year: 1992
+  method:
+  comments:

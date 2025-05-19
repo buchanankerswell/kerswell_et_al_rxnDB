@@ -1,0 +1,42 @@
+---
+reactants:
+  lc:
+products:
+  lcL:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1686.0
+        - 1565.0
+        - 1490.0
+        - 743.0
+      uncertainty:
+        - 5.0
+        - 15.0
+        - 40.0
+        - 717.0
+    P:
+      value:
+        - 0.0
+        - 15.0
+        - 25.0
+        - 25.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-497
+  reference:
+    short_cite: Lindsley 1965 (approx)
+    authors:
+      - Lindsley 1965 (approx)
+    year:
+  method:
+  comments:

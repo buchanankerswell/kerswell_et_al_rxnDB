@@ -1,0 +1,45 @@
+---
+reactants:
+  tr:
+  fo:
+products:
+  en:
+  di:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 830.0
+        - 800.0
+        - 780.0
+        - 650.0
+      uncertainty:
+        - 10.0
+        - 10.0
+        - 10.0
+        - 10.0
+    P:
+      value:
+        - 5.0
+        - 8.0
+        - 10.0
+        - 20.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-112
+  reference:
+    short_cite: Jenkins, 1983
+    authors:
+      - Jenkins
+    year: 1983
+  method:
+  comments:

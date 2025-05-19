@@ -1,0 +1,40 @@
+---
+reactants:
+  fctd:
+  clin:
+products:
+  mctd:
+  daph:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 350.0
+        - 450.0
+        - 550.0
+      uncertainty:
+        - 30.0
+        - 30.0
+        - 30.0
+    P:
+      value:
+        - 7.0
+        - 7.0
+        - 7.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-465
+  reference:
+    short_cite: Vidal et al, 1999
+    authors:
+      - Vidal et al
+    year: 1999
+  method:
+  comments:

@@ -1,0 +1,32 @@
+---
+reactants:
+  zrc:
+products:
+  bdy:
+  crst:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1675.0
+      uncertainty:
+        - 15.0
+    P:
+      value:
+        - 0.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-437
+  reference:
+    short_cite: Butterman & Foster, 1967
+    authors:
+      - Butterman
+      - Foster
+    year: 1967
+  method:
+  comments:

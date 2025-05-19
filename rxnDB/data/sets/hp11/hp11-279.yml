@@ -1,0 +1,45 @@
+---
+reactants:
+  mst:
+products:
+  ky:
+  cor:
+  en:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 770.0
+        - 807.0
+        - 829.0
+        - 867.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 12.0
+        - 12.0
+        - 14.0
+        - 14.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-279
+  reference:
+    short_cite: Fockenberg, 1998
+    authors:
+      - Fockenberg
+    year: 1998
+  method:
+  comments:

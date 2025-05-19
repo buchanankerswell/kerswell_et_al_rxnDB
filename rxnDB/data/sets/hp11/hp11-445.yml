@@ -1,0 +1,45 @@
+---
+reactants:
+  fcrd:
+  py:
+products:
+  crd:
+  alm:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 700.0
+        - 800.0
+        - 900.0
+        - 1000.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 6.0
+        - 6.0
+        - 6.0
+        - 6.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-445
+  reference:
+    short_cite: Perchuk & Lavrenteva, 1983
+    authors:
+      - Perchuk
+      - Lavrenteva
+    year: 1983
+  method:
+  comments:

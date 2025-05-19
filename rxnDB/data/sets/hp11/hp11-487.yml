@@ -1,0 +1,42 @@
+---
+reactants:
+  cor:
+products:
+  corL:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 2050.0
+        - 2155.0
+        - 2755.0
+        - 2860.0
+      uncertainty:
+        - 30.0
+        - 40.0
+        - 50.0
+        - 100.0
+    P:
+      value:
+        - 0.0
+        - 10.0
+        - 70.0
+        - 90.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-487
+  reference:
+    short_cite: Shen & Lazor, 1995 omitting UHP
+    authors:
+      - Shen & Lazor, 1995 omitting UHP
+    year:
+  method:
+  comments:

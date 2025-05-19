@@ -1,0 +1,63 @@
+---
+reactants:
+  hol:
+products:
+  wa:
+  ky:
+  coe:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 700.0
+        - 800.0
+        - 850.0
+        - 1000.0
+        - 1200.0
+        - 1100.0
+        - 1300.0
+        - 1390.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 89.0
+        - 97.0
+        - 82.0
+        - 92.0
+        - 95.0
+        - 85.0
+        - 95.0
+        - 91.0
+      uncertainty:
+        - 7.0
+        - 0.0
+        - 0.0
+        - 5.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-335
+  reference:
+    short_cite: Yagi et al 1994; Urakawa et al 1994
+    authors:
+      - Yagi et al
+      - Urakawa et al
+    year:
+      - 1994
+      - 1994
+  method:
+  comments:

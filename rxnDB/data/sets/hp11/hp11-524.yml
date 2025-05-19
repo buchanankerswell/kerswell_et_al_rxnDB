@@ -1,0 +1,39 @@
+---
+reactants:
+  fo:
+products:
+  foL:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1300.0
+        - 1400.0
+        - 1500.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 0.0
+        - 0.0
+        - 0.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-524
+  reference:
+    short_cite: Bowen & Shairer 1935
+    authors:
+      - Bowen
+      - Shairer
+    year: 1935
+  method:
+  comments:

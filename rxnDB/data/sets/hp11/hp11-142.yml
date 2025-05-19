@@ -1,0 +1,32 @@
+---
+reactants:
+  kao:
+products:
+  dsp:
+  prl:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 300.0
+      uncertainty:
+        - 12.0
+    P:
+      value:
+        - 1.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-142
+  reference:
+    short_cite: Hemley et al., 1980
+    authors:
+      - Hemley et al.
+    year: 1980
+  method:
+  comments:

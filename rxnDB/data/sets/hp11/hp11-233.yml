@@ -1,0 +1,43 @@
+---
+reactants:
+  hcrd:
+products:
+  crd:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 775.0
+        - 900.0
+        - 955.0
+        - 1105.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 3.75
+        - 3.6
+        - 3.6
+        - 3.3
+      uncertainty:
+        - 0.45
+        - 0.6
+        - 0.3
+        - 0.3
+metadata:
+  unique_id: hp11-233
+  reference:
+    short_cite: Seifert, 1974
+    authors:
+      - Seifert
+    year: 1974
+  method:
+  comments:

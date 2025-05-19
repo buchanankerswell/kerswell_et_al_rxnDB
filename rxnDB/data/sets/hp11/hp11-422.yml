@@ -1,0 +1,32 @@
+---
+reactants:
+  gr:
+  trd:
+products:
+  an:
+  wo:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1115.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 0.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-422
+  reference:
+    short_cite: Holdaway, 1972
+    authors:
+      - Holdaway
+    year: 1972
+  method:
+  comments:

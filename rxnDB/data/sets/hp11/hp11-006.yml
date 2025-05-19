@@ -1,0 +1,48 @@
+---
+reactants:
+  trov:
+  H2:
+products:
+  trot:
+  H2S:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 800.0
+        - 800.0
+        - 800.0
+        - 800.0
+        - 800.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-006
+  reference:
+    short_cite: Lin 1976
+    authors:
+      - Lin
+    year: 1976
+  method:
+  comments:

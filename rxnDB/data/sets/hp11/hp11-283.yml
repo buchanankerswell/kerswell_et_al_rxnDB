@@ -1,0 +1,46 @@
+---
+reactants:
+  ta:
+  mst:
+products:
+  ky:
+  py:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 765.0
+        - 795.0
+        - 700.0
+        - 730.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 17.0
+        - 17.0
+        - 30.0
+        - 30.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-283
+  reference:
+    short_cite: Chopin & Sobolev, 1995
+    authors:
+      - Chopin
+      - Sobolev
+    year: 1995
+  method:
+  comments:

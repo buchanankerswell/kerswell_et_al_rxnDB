@@ -1,0 +1,32 @@
+---
+reactants:
+  spss:
+  fo:
+products:
+  py:
+  teph:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1300.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 27.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-474
+  reference:
+    short_cite: Wood et al., 1994
+    authors:
+      - Wood et al.
+    year: 1994
+  method:
+  comments:

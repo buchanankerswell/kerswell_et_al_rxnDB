@@ -1,0 +1,36 @@
+---
+reactants:
+  hcrd:
+products:
+  crd:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 650.0
+        - 700.0
+      uncertainty:
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 2.0
+        - 2.2
+      uncertainty:
+        - 0.2
+        - 0.2
+metadata:
+  unique_id: hp11-197
+  reference:
+    short_cite: Mukhopadhyay & Holdaway 1994
+    authors:
+      - Mukhopadhyay
+      - Holdaway
+    year: 1994
+  method:
+  comments:

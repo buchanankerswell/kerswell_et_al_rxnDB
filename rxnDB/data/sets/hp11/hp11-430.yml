@@ -1,0 +1,45 @@
+---
+reactants:
+  sph:
+  ky:
+products:
+  an:
+  ru:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 900.0
+        - 1000.0
+        - 1050.0
+        - 1100.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 15.7
+        - 17.8
+        - 18.9
+        - 20.1
+      uncertainty:
+        - 0.2
+        - 0.2
+        - 0.2
+        - 0.2
+metadata:
+  unique_id: hp11-430
+  reference:
+    short_cite: Manning & Bohlen, 1991
+    authors:
+      - Manning
+      - Bohlen
+    year: 1991
+  method:
+  comments:

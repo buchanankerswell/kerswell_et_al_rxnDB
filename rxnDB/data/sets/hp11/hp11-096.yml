@@ -1,0 +1,55 @@
+---
+reactants:
+  chum:
+products:
+  fo:
+  br:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 615.0
+        - 650.0
+        - 700.0
+        - 750.0
+        - 800.0
+        - 850.0
+        - 900.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 26.65
+        - 26.45
+        - 16.75
+        - 23.8
+        - 16.65
+        - 14.7
+        - 13.95
+      uncertainty:
+        - 6.65
+        - 1.95
+        - 6.75
+        - 6.2
+        - 0.95
+        - 1.0
+        - 1.25
+metadata:
+  unique_id: hp11-096
+  reference:
+    short_cite: Pawley 2000
+    authors:
+      - Pawley
+    year: 2000
+  method:
+  comments:

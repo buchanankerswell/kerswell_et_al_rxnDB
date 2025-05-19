@@ -1,0 +1,44 @@
+---
+reactants:
+  parg:
+  en:
+products:
+  di:
+  fo:
+  an:
+  abh:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 775.0
+        - 844.0
+        - 890.0
+      uncertainty:
+        - 15.0
+        - 16.0
+        - 10.0
+    P:
+      value:
+        - 0.5
+        - 1.0
+        - 1.5
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-372
+  reference:
+    short_cite: Lykins & Jenkins, 1992
+    authors:
+      - Lykins
+      - Jenkins
+    year: 1992
+  method:
+  comments:

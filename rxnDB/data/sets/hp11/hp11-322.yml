@@ -1,0 +1,54 @@
+---
+reactants:
+  smul:
+  mu:
+products:
+  amul:
+  san:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 600.0
+        - 627.0
+        - 627.0
+        - 645.0
+        - 658.0
+        - 670.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 0.2
+        - 0.2
+        - 0.5
+        - 0.5
+        - 1.0
+        - 1.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-322
+  reference:
+    short_cite: Segnit & Kennedy, 1961
+    authors:
+      - Segnit
+      - Kennedy
+    year: 1961
+  method:
+  comments:

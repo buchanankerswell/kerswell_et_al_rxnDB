@@ -1,0 +1,30 @@
+---
+reactants:
+  lot:
+products:
+  tro:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 144.0
+      uncertainty:
+        - 5.0
+    P:
+      value:
+        - 0.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-004
+  reference:
+    short_cite: fix
+    authors:
+      - fix
+    year:
+  method:
+  comments:

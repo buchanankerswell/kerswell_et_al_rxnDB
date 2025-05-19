@@ -1,0 +1,34 @@
+---
+reactants:
+  pswo:
+products:
+  woL:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1550.0
+        - 1610.0
+      uncertainty:
+        - 10.0
+        - 10.0
+    P:
+      value:
+        - 0.0
+        - 23.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-486
+  reference:
+    short_cite: Yoder, 1966
+    authors:
+      - Yoder
+    year: 1966
+  method:
+  comments:

@@ -1,0 +1,51 @@
+---
+reactants:
+  anl:
+  q:
+products:
+  abh:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 190.0
+        - 170.0
+        - 197.5
+        - 185.0
+        - 182.5
+      uncertainty:
+        - 10.0
+        - 10.0
+        - 7.5
+        - 10.0
+        - 7.5
+    P:
+      value:
+        - 2.0
+        - 4.0
+        - 3.0
+        - 4.0
+        - 5.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-316
+  reference:
+    short_cite: Thompson, 1971; Liou, 1971
+    authors:
+      - Thompson
+      - Liou
+    year:
+      - 1971
+      - 1971
+  method:
+  comments:

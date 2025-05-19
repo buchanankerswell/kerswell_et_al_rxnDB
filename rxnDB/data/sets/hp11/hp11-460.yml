@@ -1,0 +1,44 @@
+---
+reactants:
+  alm:
+  clin:
+products:
+  py:
+  daph:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 450.0
+        - 500.0
+        - 550.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 7.0
+        - 7.0
+        - 7.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-460
+  reference:
+    short_cite: Dickenson & Hewitt, 1986; Laird, 1989
+    authors:
+      - Dickenson
+      - Hewitt
+      - Laird
+    year:
+      - 1986
+      - 1989
+  method:
+  comments:

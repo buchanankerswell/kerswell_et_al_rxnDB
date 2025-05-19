@@ -1,0 +1,49 @@
+---
+reactants:
+  zo:
+  sill:
+  q:
+products:
+  an:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 550.0
+        - 650.0
+        - 620.0
+        - 700.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 30.0
+    P:
+      value:
+        - 7.25
+        - 8.9
+        - 8.5
+        - 10.0
+      uncertainty:
+        - 0.25
+        - 0.3
+        - 0.8
+        - 0.0
+metadata:
+  unique_id: hp11-160
+  reference:
+    short_cite: Newton, 1966; Newton & Kennedy, 1963
+    authors:
+      - Newton
+      - Newton
+      - Kennedy
+    year:
+      - 1966
+      - 1963
+  method:
+  comments:

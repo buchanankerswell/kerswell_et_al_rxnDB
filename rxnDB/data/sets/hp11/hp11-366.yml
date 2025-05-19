@@ -1,0 +1,38 @@
+---
+reactants:
+  naph:
+  en:
+products:
+  abh:
+  fo:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 836.0
+        - 860.0
+      uncertainty:
+        - 16.0
+        - 10.0
+    P:
+      value:
+        - 0.8
+        - 1.6
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-366
+  reference:
+    short_cite: Carman & Gilbert, 1985
+    authors:
+      - Carman
+      - Gilbert
+    year: 1985
+  method:
+  comments:

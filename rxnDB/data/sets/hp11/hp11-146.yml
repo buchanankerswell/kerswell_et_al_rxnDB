@@ -1,0 +1,43 @@
+---
+reactants:
+  gr:
+  cor:
+products:
+  geh:
+  an:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 770.0
+        - 940.0
+        - 985.0
+      uncertainty:
+        - 10.0
+        - 10.0
+        - 10.0
+    P:
+      value:
+        - 1.0
+        - 5.0
+        - 6.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-146
+  reference:
+    short_cite: Boettcher, 1970; Huckenholz et al., 1975
+    authors:
+      - Boettcher
+      - Huckenholz et al.
+    year:
+      - 1970
+      - 1975
+  method:
+  comments:

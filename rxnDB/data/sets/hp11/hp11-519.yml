@@ -1,0 +1,50 @@
+---
+reactants:
+  h2oL:
+products:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1100.0
+        - 1100.0
+        - 1100.0
+        - 1100.0
+        - 1100.0
+        - 1100.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 1.2
+        - 0.8
+        - 2.2
+        - 1.8
+        - 5.2
+        - 4.8
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-519
+  reference:
+    short_cite: Behrens 1995
+    authors:
+      - Behrens
+    year: 1995
+  method:
+  comments:

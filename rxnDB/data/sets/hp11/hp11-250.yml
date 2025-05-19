@@ -1,0 +1,52 @@
+---
+reactants:
+  clin:
+products:
+  en:
+  fo:
+  sp:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 725.0
+        - 755.0
+        - 850.0
+        - 860.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 3.0
+        - 3.0
+        - 14.0
+        - 14.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-250
+  reference:
+    short_cite: Jenkins, 1981; Jenkins & Chernosky, 1986; Fawcett & Yoder, 1966
+    authors:
+      - Jenkins
+      - Jenkins
+      - Chernosky
+      - Fawcett
+      - Yoder
+    year:
+      - 1981
+      - 1986
+      - 1966
+  method:
+  comments:

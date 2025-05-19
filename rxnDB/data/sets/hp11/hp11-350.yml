@@ -1,0 +1,54 @@
+---
+reactants:
+  ta:
+  ky:
+  H2O:
+products:
+  tats:
+  coe:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 750.0
+        - 670.0
+        - 770.0
+        - 666.0
+        - 754.0
+        - 685.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 40.0
+        - 40.0
+        - 35.0
+        - 35.0
+        - 30.0
+        - 30.0
+      uncertainty:
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+metadata:
+  unique_id: hp11-350
+  reference:
+    short_cite: Massonne & Schreyer, 1989
+    authors:
+      - Massonne
+      - Schreyer
+    year: 1989
+  method:
+  comments:

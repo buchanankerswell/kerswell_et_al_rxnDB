@@ -1,0 +1,45 @@
+---
+reactants:
+  Ni:
+products:
+  melt:
+data:
+  type: melting_curve
+  units:
+    T: K
+    P: GPa
+  boundary_curve:
+    limits:
+      P_max: 120.0
+      T_min: 1450
+      T_max: 2250
+    polynomial:
+      intercept: 335.458
+      x1: -0.5509
+      x2: 0.000271
+      x3: -3.53e-08
+metadata:
+  unique_id: jimmy-081
+  reference:
+    authors:
+      - Japel
+      - Schwager
+      - Boehler
+      - Ross
+    year: 2005
+    title: >-
+      Melting of copper and nickel at high pressure: The role
+      of d electrons
+    journal: Physical Review Letters
+    volume: "95"
+    pages: "167801"
+    doi: 10.1103/PhysRevLett.95.167801
+    short_cite: Japel et al. (2005)
+  method:
+    name: X-Ray DAC
+    calibration:
+      P: Ruby
+  comments: |-
+    Formula: Ni
+    Calibration Confidence: Good
+    Data Constraint Confidence: Good

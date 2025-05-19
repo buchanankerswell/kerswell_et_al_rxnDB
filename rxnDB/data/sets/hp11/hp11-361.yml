@@ -1,0 +1,37 @@
+---
+reactants:
+  phl:
+  q:
+products:
+  en:
+  san:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 763.0
+        - 764.0
+      uncertainty:
+        - 11.0
+        - 5.0
+    P:
+      value:
+        - 0.5
+        - 1.7
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-361
+  reference:
+    short_cite: Berman et al., 1995
+    authors:
+      - Berman et al.
+    year: 1995
+  method:
+  comments:

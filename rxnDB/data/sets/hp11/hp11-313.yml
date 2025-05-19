@@ -1,0 +1,49 @@
+---
+reactants:
+  pa:
+  q:
+products:
+  abh:
+  and:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 480.0
+        - 520.0
+        - 550.0
+        - 570.0
+        - 595.0
+      uncertainty:
+        - 10.0
+        - 10.0
+        - 10.0
+        - 10.0
+        - 5.0
+    P:
+      value:
+        - 1.0
+        - 2.0
+        - 3.0
+        - 4.0
+        - 5.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-313
+  reference:
+    short_cite: Chatterjee, 1972
+    authors:
+      - Chatterjee
+    year: 1972
+  method:
+  comments:

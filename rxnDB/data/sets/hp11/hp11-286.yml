@@ -1,0 +1,45 @@
+---
+reactants:
+  ames:
+  ta:
+  mst:
+products:
+  py:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 715.0
+        - 740.0
+        - 765.0
+        - 772.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 17.0
+        - 17.0
+        - 13.0
+        - 17.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-286
+  reference:
+    short_cite: Fockenberg, 2008
+    authors:
+      - Fockenberg
+    year: 2008
+  method:
+  comments:

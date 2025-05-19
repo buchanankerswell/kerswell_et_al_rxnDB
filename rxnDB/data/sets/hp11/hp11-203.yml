@@ -1,0 +1,44 @@
+---
+reactants:
+  en:
+  sill:
+products:
+  mgts:
+  crd:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 700.0
+        - 700.0
+        - 950.0
+        - 950.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 7.0
+        - 4.0
+        - 7.4
+        - 6.8
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-203
+  reference:
+    short_cite: Newton, pers comm
+    authors:
+      - Newton, pers comm
+    year:
+  method:
+  comments:

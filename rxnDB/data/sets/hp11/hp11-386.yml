@@ -1,0 +1,38 @@
+---
+reactants:
+  deer:
+products:
+  fs:
+  mt:
+  q:
+  H2O:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 613.0
+        - 725.0
+      uncertainty:
+        - 13.0
+        - 15.0
+    P:
+      value:
+        - 20.0
+        - 27.0
+      uncertainty:
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-386
+  reference:
+    short_cite: Lattard & Le Breton, 1994
+    authors:
+      - Lattard
+      - Le Breton
+    year: 1994
+  method:
+  comments:

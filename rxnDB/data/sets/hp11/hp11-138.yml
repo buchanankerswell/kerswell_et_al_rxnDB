@@ -1,0 +1,31 @@
+---
+reactants:
+  dsp:
+  coe:
+products:
+  prl:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 550.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 27.15
+      uncertainty:
+        - 1.15
+metadata:
+  unique_id: hp11-138
+  reference:
+    short_cite: Theye et al., 1997
+    authors:
+      - Theye et al.
+    year: 1997
+  method:
+  comments:

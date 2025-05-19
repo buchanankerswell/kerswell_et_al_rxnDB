@@ -1,0 +1,43 @@
+---
+reactants:
+  mwd:
+  stv:
+products:
+  hen:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1000.0
+        - 1200.0
+        - 1400.0
+        - 1600.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 157.5
+        - 165.0
+        - 170.0
+        - 170.0
+      uncertainty:
+        - 2.5
+        - 5.0
+        - 10.0
+        - 10.0
+metadata:
+  unique_id: hp11-027
+  reference:
+    short_cite: Sawamoto 1987, Kanzaki 1987
+    authors:
+      - Sawamoto 1987, Kanzaki
+    year: 1987
+  method:
+  comments:

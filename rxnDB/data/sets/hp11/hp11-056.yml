@@ -1,0 +1,56 @@
+---
+reactants:
+  cc:
+products:
+  lime:
+  CO2:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 904.0
+        - 937.0
+        - 1050.0
+        - 1082.0
+        - 1157.0
+        - 1226.0
+        - 1240.0
+      uncertainty:
+        - 10.0
+        - 10.0
+        - 10.0
+        - 10.0
+        - 10.0
+        - 10.0
+        - 10.0
+    P:
+      value:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-056
+  reference:
+    short_cite: Smyth & Adams, 1923
+    authors:
+      - Smyth
+      - Adams
+    year: 1923
+  method:
+  comments:
