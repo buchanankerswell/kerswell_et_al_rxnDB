@@ -29,6 +29,15 @@ data:
         - 0.0
         - 0.0
         - 0.0
+    lnK:
+      value:
+        - -0.355
+        - -0.635
+        - -0.63
+      uncertainty:
+        - 0.145
+        - 0.235
+        - 0.24
 metadata:
   unique_id: hp11-443
   reference:

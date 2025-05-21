@@ -1,58 +1,92 @@
-# Logging
-LOGFILE := log/log-$(shell date +"%d-%m-%Y")
-LOG := 2>&1 | tee -a $(LOGFILE)
+# Top-level dirs
+PROJECT_ROOT := $(CURDIR)
+APP := $(PROJECT_ROOT)/rxnDB
+TESTS := $(PROJECT_ROOT)/tests
+DOCS := $(PROJECT_ROOT)/docs
 
 # Conda config
-CONDA_ENV_NAME := rxnDB
-CONDA_SPECS_FILE := environment.yml
-CONDA_PYTHON = $$(conda run -n $(CONDA_ENV_NAME) which python)
-CONDA_SHINY = $$(conda run -n $(CONDA_ENV_NAME) which shiny)
-DOC_DEPS = docs/requirements.txt
+CONDA_ENV_ID := rxnDB
+CONDA_ENV_YML := environment.yml
+CONDA_PYTHON = $$(conda run -n $(CONDA_ENV_ID) which python)
 
 # Shiny app
-APP_DIR := rxnDB
-APP_CLI := $(APP_DIR)/cli.py
-APP_TESTS := tests/test_app.py
-VERSION ?= $(shell git describe --tags --abbrev=0 2>/dev/null || echo "0.1.0")
-
-# Datasets
-DATA_DIR := $(APP_DIR)/data/
-YML_DIRS := $(DATA_DIR)/sets/preprocessed/*
+APP_CLI := $(APP)/cli.py
 
 # Cleanup directory
-DATAPURGE := logs/ tmp/
-DATACLEAN := **/**/__pycache__ **/**/*.pyc .pytest_cache build dist *.egg-info $(YML_DIRS)
+CLEAN := $(APP)/**/__pycache__ $(APP)/**/*.pyc $(CURDIR)/.pytest_cache $(CURDIR)/build $(CURDIR)/dist $(CURDIR)/*.egg-info
+DEEP_CLEAN :=
 
-all: create_conda_env test_app run_app
+# Targets
+.PHONY: run docs test environment clean deep-clean
 
-run_app: $(APP_CLI)
+all: environment test run
+
+run: $(APP_CLI)
 	@$(CONDA_PYTHON) $(APP_CLI) --host 127.0.0.1 --port 8000 --launch-browser --reload
 
 docs:
-	@conda run -n $(CONDA_ENV_NAME) make -C docs html
+	@$(MAKE) -C docs html
 
-docs_clean:
-	@make -C docs clean
+test:
+	@$(CONDA_PYTHON) -m pytest $(TESTS) -v
 
-test_app: $()
-	@$(CONDA_PYTHON) -m pytest $(APP_TESTS) -v
-
-create_conda_env: $(CONDA_SPECS_FILE)
-	@if conda env list | grep -q "$(CONDA_ENV_NAME)$$"; then \
-		echo "  Conda environment '$(CONDA_ENV_NAME)' found!"; \
+environment: $(CONDA_ENV_YML)
+	@if conda info --envs | awk '{print $$1}' | grep -qx "$(CONDA_ENV_ID)"; then \
+		echo "Environment '$$name' already exists. Skipping..."; \
 	else \
-		echo "  Creating conda environment $(CONDA_ENV_NAME) ..."; \
-		conda env create --file $(CONDA_SPECS_FILE); \
-		echo "  Conda environment $(CONDA_ENV_NAME) created!"; \
+		echo "Creating environment: $(CONDA_ENV_ID) from $(CONDA_ENV_YML)"; \
+		conda env create -n "$(CONDA_ENV_ID)" -f "$(CONDA_ENV_YML)"; \
 	fi
 
-$(LOGFILE):
-	@mkdir -p log; [ -e "$(LOGFILE)" ] || touch $(LOGFILE)
+clean:
+	@echo "==> Cleaning ..."
+	@for item in $(CLEAN); do \
+		safe_rm() { \
+			if [ -e "$$1" ]; then \
+				ABS_PATH=$$(realpath "$$1"); \
+				case "$$ABS_PATH" in \
+					$(PROJECT_ROOT)*) \
+						echo "-> Safely removing\n   $$ABS_PATH"; \
+						rm -rf "$$ABS_PATH";; \
+					*) \
+						echo "!! Skipping (outside project root)\n   $$ABS_PATH";; \
+				esac; \
+			else \
+				echo "-- Skipping (not found)\n   $$1"; \
+			fi; \
+		}; \
+		safe_rm "$$item"; \
+	done
+	@$(MAKE) -C docs clean || true
+	@find . -name ".DS_Store" -type f -delete
 
-purge:
-	@rm -rf $(DATAPURGE)
+deep-clean:
+	@echo "==> Deep cleaning ..."
+	@for item in $(DEEP_CLEAN); do \
+		safe_rm() { \
+			if [ -e "$$1" ]; then \
+				ABS_PATH=$$(realpath "$$1"); \
+				case "$$ABS_PATH" in \
+					$(PROJECT_ROOT)*) \
+						echo "-> Safely removing\n   $$ABS_PATH"; \
+						rm -rf "$$ABS_PATH";; \
+					*) \
+						echo "!! Skipping (outside project root)\n   $$ABS_PATH";; \
+				esac; \
+			else \
+				echo "-- Skipping (not found)\n   $$1"; \
+			fi; \
+		}; \
+		safe_rm "$$item"; \
+	done
 
-clean: purge docs_clean
-	@rm -rf $(DATACLEAN)
 
-.PHONY: clean purge create_conda_env test_app docs_clean docs run_app all
+help:
+	@echo "Available targets:"
+	@echo "  run          Run rxnDB app locally"
+	@echo "  docs         Build documentation"
+	@echo "  test         Run unit tests"
+	@echo "  environment  Create Conda environment"
+	@echo "  clean        Cleanup unnecessary files and directories (safe)"
+	@echo "  deep-clean   Deep clean figures and results (use with caution!)"
+	@echo "  help         Show this help message"

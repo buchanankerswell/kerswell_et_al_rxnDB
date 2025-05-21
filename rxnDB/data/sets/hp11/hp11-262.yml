@@ -42,6 +42,21 @@ data:
         - 0.0
         - 0.0
         - 0.0
+    lnK:
+      value:
+        - -4.0
+        - -4.01
+        - -5.44
+        - -5.5
+        - -6.79
+        - -6.96
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
 metadata:
   unique_id: hp11-262
   reference:

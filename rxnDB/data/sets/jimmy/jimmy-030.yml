@@ -1,19 +1,28 @@
 ---
 reactants:
-  triple:
+  ky:
+  and:
+  sill:
 products:
-  triple:
+  ky:
+  and:
+  sill:
 data:
-  type: phase_boundary
+  type: triple_point
   units:
-    T: K
+    T: C
     P: GPa
-  boundary_curve:
-    limits:
-      P_min: 0.42
-      P_max: 0.42
-      T_min: 530
-      T_max: 530
+  points:
+    T:
+      value:
+        - 530.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 0.42
+      uncertainty:
+        - 0.0
 metadata:
   unique_id: jimmy-030
   reference:

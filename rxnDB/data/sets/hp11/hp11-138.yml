@@ -20,6 +20,11 @@ data:
         - 27.15
       uncertainty:
         - 1.15
+    lnK:
+      value:
+        - 0.0
+      uncertainty:
+        - 0.0
 metadata:
   unique_id: hp11-138
   reference:

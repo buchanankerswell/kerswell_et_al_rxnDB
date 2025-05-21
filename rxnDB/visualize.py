@@ -32,19 +32,31 @@ class RxnDBPlotter:
         """
         Plot reaction lines (phase diagram) using plotly.
         """
-        required_columns = {
-            "id",
-            "rxn",
-            "plot_type",
+        required_cols = {
+            "unique_id",
+            "reaction",
+            "reaction_names",
+            "reactants",
+            "reactant_names",
+            "reactant_groups",
+            "reactant_formulas",
+            "products",
+            "product_names",
+            "product_groups",
+            "product_formulas",
+            "type",
+            "units_P",
+            "units_T",
             "T",
+            "T_uncertainty",
             "P",
-            "T_half_range",
-            "P_half_range",
-            "rxn_color_key",
+            "P_uncertainty",
+            "plot_type",
+            "reference",
         }
 
-        if not required_columns.issubset(self.df.columns):
-            missing = required_columns - set(self.df.columns)
+        if not required_cols.issubset(self.df.columns):
+            missing = required_cols - set(self.df.columns)
             raise ValueError(f"Missing required columns in DataFrame: {missing}")
 
         fig = go.Figure()
@@ -57,7 +69,7 @@ class RxnDBPlotter:
         )
 
         for rid in self.ids:
-            d = self.df.query("id == @rid")
+            d = self.df.query("unique_id == @rid")
             if d.empty:
                 continue
 
@@ -72,7 +84,7 @@ class RxnDBPlotter:
                         mode="lines",
                         line=dict(width=2, color=color),
                         hovertemplate=hovertemplate,
-                        customdata=np.stack((d["id"], d["rxn"]), axis=-1),
+                        customdata=np.stack((d["unique_id"], d["reaction"]), axis=-1),
                     )
                 )
             elif plot_type == "point":
@@ -83,13 +95,13 @@ class RxnDBPlotter:
                         mode="markers",
                         marker=dict(size=8, color=color),
                         error_x=dict(
-                            type="data", array=d["T_half_range"], visible=True
+                            type="data", array=d["T_uncertainty"], visible=True
                         ),
                         error_y=dict(
-                            type="data", array=d["P_half_range"], visible=True
+                            type="data", array=d["P_uncertainty"], visible=True
                         ),
                         hovertemplate=hovertemplate,
-                        customdata=np.stack((d["id"], d["rxn"]), axis=-1),
+                        customdata=np.stack((d["unique_id"], d["reaction"]), axis=-1),
                     )
                 )
 
@@ -145,55 +157,3 @@ class RxnDBPlotter:
                 "bgcolor": legend_bgcolor,
             },
         }
-
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def calculate_midpoints(self) -> pd.DataFrame:
-        """
-        Extracts the midpoint of each PT curve in the input DataFrame
-        """
-        midpoints = []
-
-        for rxn_id, group in self.df.groupby("id"):
-            group_sorted = group.sort_values("T").reset_index(drop=True)
-            group_sorted = group_sorted.dropna(subset=["T", "P"])
-            n = len(group_sorted)
-
-            if n == 0:
-                continue
-            elif n % 2 == 1:
-                midpoint_row = group_sorted.iloc[n // 2]
-                T_mid = midpoint_row["T"]
-                P_mid = midpoint_row["P"]
-            else:
-                row1 = group_sorted.iloc[n // 2 - 1]
-                row2 = group_sorted.iloc[n // 2]
-                T_mid = (row1["T"] + row2["T"]) / 2
-                P_mid = (row1["P"] + row2["P"]) / 2
-
-            midpoints.append(
-                {
-                    "T": T_mid,
-                    "P": P_mid,
-                    "rxn": group_sorted["rxn"].iloc[0],
-                    "id": rxn_id,
-                }
-            )
-
-        return pd.DataFrame(midpoints)
-
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def add_labels(self, fig: go.Figure, midpoints_df: pd.DataFrame) -> None:
-        """
-        Adds labels at midpoints of each reaction curve
-        """
-        annotations = [
-            dict(
-                x=row["T"],
-                y=row["P"],
-                text=row["id"],
-                showarrow=True,
-                arrowhead=2,
-            )
-            for _, row in midpoints_df.iterrows()
-        ]
-        fig.update_layout(annotations=annotations)

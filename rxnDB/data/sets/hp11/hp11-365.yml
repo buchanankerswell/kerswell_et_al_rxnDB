@@ -29,6 +29,15 @@ data:
         - 0.75
         - 0.75
         - 0.75
+    lnK:
+      value:
+        - 0.41
+        - 0.41
+        - 0.41
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
 metadata:
   unique_id: hp11-365
   reference:

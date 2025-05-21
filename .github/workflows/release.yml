@@ -38,10 +38,35 @@ jobs:
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-  build:
-    name: Build and Upload to PyPI
+  check-version:
+    name: Check if major or minor version
     needs: test
     if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    outputs:
+      is_major_minor: ${{ steps.check_tag.outputs.is_major_minor }}
+    steps:
+      - name: Check tag format
+        id: check_tag
+        run: |
+          TAG=${GITHUB_REF#refs/tags/}
+          VERSION=${TAG#v}
+          VERSION_CORE=$(echo $VERSION | cut -d'-' -f1 | cut -d'+' -f1)
+          IFS='.' read -ra VERSION_PARTS <<< "$VERSION_CORE"
+          if [[ ${#VERSION_PARTS[@]} -eq 3 && ${VERSION_PARTS[2]} != "0" ]]; then
+            echo "Tag $TAG is a patch version"
+            echo "is_major_minor=false" >> $GITHUB_OUTPUT
+          elif [[ "$VERSION" == *"-"* ]]; then
+            echo "Tag $TAG is a prerelease version"
+            echo "is_major_minor=false" >> $GITHUB_OUTPUT
+          else
+            echo "Tag $TAG is a major or minor version"
+            echo "is_major_minor=true" >> $GITHUB_OUTPUT
+          fi
+  build:
+    name: Build and Upload to PyPI
+    needs: check-version
+    if: needs.check-version.outputs.is_major_minor == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

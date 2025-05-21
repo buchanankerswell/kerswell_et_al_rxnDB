@@ -2,11 +2,11 @@
 reactants:
   ru:
 products:
-  aPbO2:
+  PbO2:
 data:
   type: phase_boundary
   units:
-    T: K
+    T: C
     P: GPa
   boundary_curve:
     limits:
@@ -34,7 +34,8 @@ metadata:
       High-pressure high-temperature stability of aPbO2-type TiO2
       and MgSiO3 majorite: Calorimetric and in situ X-ray diffraction
       studies
-    journal: "High Pressure Research: Application to Earth and Planetary Sciences.
+    journal: >-
+      High Pressure Research: Application to Earth and Planetary Sciences.
       (Eds.) Syono, Y., & Manghnani, M.H. Terrapub"
     pages: 447-455
     short_cite: Akagoi et al. (1992)

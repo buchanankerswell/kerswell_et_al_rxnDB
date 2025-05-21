@@ -7,7 +7,7 @@ products:
 data:
   type: melting_curve
   units:
-    T: K
+    T: C
     P: GPa
   boundary_curve:
     limits:

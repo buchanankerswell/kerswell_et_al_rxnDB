@@ -32,6 +32,17 @@ data:
         - 0.0
         - 0.0
         - 0.0
+    lnK:
+      value:
+        - 3.88
+        - 3.67
+        - 2.62
+        - 2.5
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
 metadata:
   unique_id: hp11-202
   reference:

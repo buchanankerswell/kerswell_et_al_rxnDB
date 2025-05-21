@@ -6,11 +6,13 @@ products:
 data:
   type: melting_curve
   units:
-    T: K
+    T: C
     P: GPa
   boundary_curve:
     limits:
+      P_min: 0.0
       P_max: 65.0
+      T_min: 326
       T_max: 715
     polynomial:
       intercept: -3.0158

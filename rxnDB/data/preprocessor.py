@@ -95,6 +95,9 @@ class HP11Preprocessor:
                     "P": to_point_block(
                         rounded_data["P"]["mid"], rounded_data["P"]["half_range"]
                     ),
+                    "lnK": to_point_block(
+                        rounded_data["ln_K"]["mid"], rounded_data["ln_K"]["half_range"]
+                    ),
                 },
             },
             "metadata": {

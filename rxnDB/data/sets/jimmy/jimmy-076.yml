@@ -6,10 +6,11 @@ products:
 data:
   type: melting_curve
   units:
-    T: K
+    T: C
     P: GPa
   boundary_curve:
     limits:
+      P_min: 0.0
       P_max: 30.0
       T_min: 960
       T_max: 2086
