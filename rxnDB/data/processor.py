@@ -431,14 +431,20 @@ class RxnDBProcessor:
         }
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_checkbox_group_items(
+    def get_all_group_names(self) -> list[str]:
+        """Get all groups names."""
+        return list(self._group_rank.keys())
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    def get_all_grouped_phases(
         self, display_mode: str, show_formula: bool
     ) -> dict[str, list[str]]:
-        """Get checkbox items based on the display mode."""
-        if show_formula:
-            grouped = self._grouped_phases_with_formulas.get(display_mode)
-        else:
-            grouped = self._grouped_phases.get(display_mode)
+        """Get all checkbox group phases based on the display mode."""
+        grouped = (
+            self._grouped_phases_with_formulas.get(display_mode)
+            if show_formula
+            else self._grouped_phases.get(display_mode)
+        )
 
         if not grouped:
             raise ValueError(f"Invalid display_mode: {display_mode!r}")
@@ -449,6 +455,22 @@ class RxnDBProcessor:
                 grouped, key=lambda g: self._group_rank.get(g, float("inf"))
             )
         }
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    def get_grouped_phases(
+        self, group: str, display_mode: str, show_formula: bool
+    ) -> list[str]:
+        """Get individual checkbox group phases based on the display mode."""
+        grouped = (
+            self._grouped_phases_with_formulas.get(display_mode)
+            if show_formula
+            else self._grouped_phases.get(display_mode)
+        )
+
+        if not grouped:
+            raise ValueError(f"Invalid display_mode: {display_mode!r}")
+
+        return sorted(grouped.get(group, []))
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def _build_reaction_groups(self, method: str = "or"):
@@ -566,13 +588,11 @@ class RxnDBProcessor:
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @staticmethod
-    def get_group_id(group_name: str, display_mode: str) -> str:
-        """Generates a unique ID for a checkbox group based on its name and display mode."""
-        mode_suffix = display_mode.lower().replace(" ", "_").replace("-", "_")
-        base_id = (
+    def get_group_id(group_name: str) -> str:
+        """Reformats group id for in compatible format for shiny UI IDs."""
+        return (
             group_name.lower().replace(" ", "_").replace("&", "and").replace("-", "_")
         )
-        return f"chk_group_{base_id}_{mode_suffix}"
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @property

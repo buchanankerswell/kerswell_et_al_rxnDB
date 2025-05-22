@@ -21,15 +21,6 @@ def configure_ui() -> ui.Tag:
         # Sidebar !!
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         ui.sidebar(
-            ui.input_radio_buttons(
-                "name_display_mode",
-                "Select phases by:",
-                ["abbreviation", "common name"],
-            ),
-            ui.input_action_button(
-                "toggle_formulas",
-                "Show formulas",
-            ),
             ui.output_ui("phase_selector"),
             title="Phases",
             width=250,
