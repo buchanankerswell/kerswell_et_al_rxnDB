@@ -1,14 +1,14 @@
 :root {
-/*  --bslib-sidebar-main-bg: #f8f8f8; */
+/*  --bslib-sidebar-main-bg: #F8F8F8; */
 }
-h5 {
-    text-decoration: underline;
-    padding-bottom: 0.5rem;
+.accordion-body {
+}
+.accordion-title {
 }
 .dark-mode-switch {
     position: absolute;
     right: 3rem;
-    color: #6c757d;
+    color: #6C757D;
     cursor: pointer;
 }
 
@@ -16,16 +16,20 @@ h5 {
     font-size: 1.1rem;
     position: absolute;
     right: 1rem;
-    color: #6c757d;
+    color: #6C757D;
     cursor: pointer;
 }
 
-.sidebar-popover-gear-icon {
+.sidebar-panel-container {
+}
+
+.sidebar-popover-container {
+    z-index: 10;
+}
+
+.sidebar-popover-icon {
     font-size: 1.1rem;
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    color: #6c757d;
+    color: #6C757D;
     cursor: pointer;
 }
 

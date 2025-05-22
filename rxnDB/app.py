@@ -44,6 +44,7 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     # Reactive state values
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     _rv_toggle_data_type = reactive.value("all")
+    _rv_toggle_formulas = reactive.value(False)
     _rv_toggle_similar_reactions = reactive.value(False)
 
     _rv_selected_table_rows = reactive.value([])
@@ -61,7 +62,9 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     def phase_selector() -> ui.Tag:
         """Generate phase selector UI based on current display mode."""
         display_mode = input.name_display_mode()
-        checkbox_groups = processor.get_checkbox_group_items(display_mode)
+        checkbox_groups = processor.get_checkbox_group_items(
+            display_mode, _rv_toggle_formulas()
+        )
 
         if not checkbox_groups:
             return ui.div("No phase groups available for current display mode.")
@@ -73,31 +76,49 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
             group_id = processor.get_group_id(group, display_mode)
             selections = _convert_abbrevs_to_display(phases, display_mode, boxes)
 
+            popover_icon = ui.span(
+                icon_svg("gear"),
+                class_="sidebar-popover-icon",
+            )
+
+            popover_elements = ui.input_action_button(
+                f"btn_{group_id}_dummy",
+                "Dummy Action",
+                class_="popover-btn",
+            )
+
+            popover = ui.popover(
+                popover_icon,
+                popover_elements,
+                title=f"{group} Settings",
+                placement="top",
+            )
+
+            panel_content = ui.input_checkbox_group(
+                group_id,
+                None,
+                choices=sorted(boxes),
+                selected=selections,
+            )
+
+            popover_container = ui.div(popover, class_="sidebar-popover-container")
+
+            panel_container = ui.div(
+                panel_content, popover_container, class_="sidebar-panel-container"
+            )
+
             ui_elements.append(
-                ui.panel_well(
-                    ui.tags.h5(group),
-                    ui.popover(
-                        ui.span(
-                            icon_svg("gear"),
-                            class_="sidebar-popover-gear-icon",
-                        ),
-                        ui.input_action_button(
-                            f"btn_{group_id}",
-                            "Dummy",
-                            class_="popover-btn",
-                        ),
-                        title=f"{group} settings",
-                    ),
-                    ui.input_checkbox_group(
-                        group_id,
-                        None,
-                        choices=sorted(boxes),
-                        selected=selections,
-                    ),
+                ui.accordion_panel(
+                    group,
+                    panel_container,
+                    value=group_id,
                 )
             )
 
-        return ui.div(*ui_elements)
+        if not ui_elements:
+            return ui.div("No UI elements to display.")
+
+        return ui.accordion(*ui_elements, id="acc")
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # Helper functions for phase selection management
@@ -116,15 +137,18 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
             for abbrev in phases:
                 names = processor._abbrev_to_phase_name_lookup.get(abbrev, set())
                 selections.update(names.intersection(boxes))
-        elif display_mode == "formula":
-            for abbrev in phases:
-                formulas = processor._abbrev_to_phase_formula_lookup.get(abbrev, set())
-                selections.update(formulas.intersection(boxes))
 
         return sorted(list(selections))
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     #  UI event listeners
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @reactive.effect
+    @reactive.event(input.toggle_formulas)
+    def _() -> None:
+        """Toggles show similar reactions mode."""
+        _rv_toggle_formulas.set(not _rv_toggle_formulas())
+
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.effect
     @reactive.event(input.toggle_similar_reactions)
@@ -173,7 +197,9 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
             return
 
         display_mode = input.name_display_mode()
-        checkbox_groups = processor.get_checkbox_group_items(display_mode)
+        checkbox_groups = processor.get_checkbox_group_items(
+            display_mode, _rv_toggle_formulas()
+        )
 
         if not checkbox_groups:
             if _rv_selected_phase_abbrevs.get() != set():

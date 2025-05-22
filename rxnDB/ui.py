@@ -24,7 +24,11 @@ def configure_ui() -> ui.Tag:
             ui.input_radio_buttons(
                 "name_display_mode",
                 "Select phases by:",
-                ["abbreviation", "common name", "formula"],
+                ["abbreviation", "common name"],
+            ),
+            ui.input_action_button(
+                "toggle_formulas",
+                "Show formulas",
             ),
             ui.output_ui("phase_selector"),
             title="Phases",

@@ -85,10 +85,14 @@ class RxnDBProcessor:
         self._abbrev_to_phase_group_lookup = {}
         self._abbrev_to_phase_formula_lookup = {}
 
-        self._grouped_phases_by_mode = {
+        self._grouped_phases = {
             "abbreviation": {},
             "common name": {},
-            "formula": {},
+        }
+
+        self._grouped_phases_with_formulas = {
+            "abbreviation": {},
+            "common name": {},
         }
 
         group_order = [
@@ -150,11 +154,16 @@ class RxnDBProcessor:
             for mode, label in {
                 "abbreviation": abbrev,
                 "common name": name,
-                "formula": formula,
             }.items():
-                if group not in self._grouped_phases_by_mode[mode]:
-                    self._grouped_phases_by_mode[mode][group] = set()
-                self._grouped_phases_by_mode[mode][group].add(label)
+                if group not in self._grouped_phases[mode]:
+                    self._grouped_phases[mode][group] = set()
+                self._grouped_phases[mode][group].add(label)
+
+                if group not in self._grouped_phases_with_formulas[mode]:
+                    self._grouped_phases_with_formulas[mode][group] = set()
+                self._grouped_phases_with_formulas[mode][group].add(
+                    f"{label} ({formula})"
+                )
 
         self._uid_to_reactant_abbrevs_lookup = {}
         self._uid_to_product_abbrevs_lookup = {}
@@ -422,9 +431,14 @@ class RxnDBProcessor:
         }
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_checkbox_group_items(self, display_mode: str) -> dict[str, list[str]]:
+    def get_checkbox_group_items(
+        self, display_mode: str, show_formula: bool
+    ) -> dict[str, list[str]]:
         """Get checkbox items based on the display mode."""
-        grouped = self._grouped_phases_by_mode.get(display_mode)
+        if show_formula:
+            grouped = self._grouped_phases_with_formulas.get(display_mode)
+        else:
+            grouped = self._grouped_phases.get(display_mode)
 
         if not grouped:
             raise ValueError(f"Invalid display_mode: {display_mode!r}")
