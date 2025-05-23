@@ -11,7 +11,6 @@
     color: #6C757D;
     cursor: pointer;
 }
-
 .popover-gear-icon {
     font-size: 1.1rem;
     position: absolute;
@@ -19,21 +18,16 @@
     color: #6C757D;
     cursor: pointer;
 }
-
 .sidebar-panel-container {
 }
-
 .sidebar-popover-container {
     z-index: 10;
 }
-
 .sidebar-popover-icon {
     font-size: 1.1rem;
     color: #6C757D;
     cursor: pointer;
 }
-
-.popover-btn {
-    width: 100%;
-    margin: 0.2rem 0rem 0.2rem 0rem;
+.sidebar-popover-radio-btns .control-label {
+    margin-bottom: 1rem;
 }

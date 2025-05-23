@@ -23,9 +23,9 @@ class RxnDBProcessor:
     _phase_name_to_abbrev_lookup: dict[str, set[str]] = field(init=False, repr=False)
     _phase_group_to_abbrev_lookup: dict[str, set[str]] = field(init=False, repr=False)
     _phase_formula_to_abbrev_lookup: dict[str, set[str]] = field(init=False, repr=False)
-    _abbrev_to_phase_name_lookup: dict[str, set[str]] = field(init=False, repr=False)
-    _abbrev_to_phase_group_lookup: dict[str, set[str]] = field(init=False, repr=False)
-    _abbrev_to_phase_formula_lookup: dict[str, set[str]] = field(init=False, repr=False)
+    _phase_abbrev_to_name_lookup: dict[str, set[str]] = field(init=False, repr=False)
+    _phase_abbrev_to_group_lookup: dict[str, set[str]] = field(init=False, repr=False)
+    _phase_abbrev_to_formula_lookup: dict[str, set[str]] = field(init=False, repr=False)
     _grouped_phases_by_mode: dict[str, dict[str, set[str]]] = field(
         init=False, repr=False
     )
@@ -81,19 +81,11 @@ class RxnDBProcessor:
         self._phase_group_to_abbrev_lookup = {}
         self._phase_formula_to_abbrev_lookup = {}
 
-        self._abbrev_to_phase_name_lookup = {}
-        self._abbrev_to_phase_group_lookup = {}
-        self._abbrev_to_phase_formula_lookup = {}
+        self._phase_abbrev_to_name_lookup = {}
+        self._phase_abbrev_to_group_lookup = {}
+        self._phase_abbrev_to_formula_lookup = {}
 
-        self._grouped_phases = {
-            "abbreviation": {},
-            "common name": {},
-        }
-
-        self._grouped_phases_with_formulas = {
-            "abbreviation": {},
-            "common name": {},
-        }
+        self._grouped_phases = {"abbreviation": {}, "name": {}, "formula": {}}
 
         group_order = [
             "Aluminosilicates",
@@ -123,9 +115,9 @@ class RxnDBProcessor:
         self._group_rank = group_rank
 
         for abbrev, info in MAP.items():
-            name = info["name"]
+            name = f"{abbrev} ({info["name"]})"
             group = info["group"]
-            formula = info["formula"]
+            formula = f"{abbrev} ({info["formula"]})"
 
             if name not in self._phase_name_to_abbrev_lookup:
                 self._phase_name_to_abbrev_lookup[name] = set()
@@ -139,31 +131,26 @@ class RxnDBProcessor:
                 self._phase_formula_to_abbrev_lookup[formula] = set()
             self._phase_formula_to_abbrev_lookup[formula].add(abbrev)
 
-            if abbrev not in self._abbrev_to_phase_name_lookup:
-                self._abbrev_to_phase_name_lookup[abbrev] = set()
-            self._abbrev_to_phase_name_lookup[abbrev].add(name)
+            if abbrev not in self._phase_abbrev_to_name_lookup:
+                self._phase_abbrev_to_name_lookup[abbrev] = set()
+            self._phase_abbrev_to_name_lookup[abbrev].add(name)
 
-            if abbrev not in self._abbrev_to_phase_group_lookup:
-                self._abbrev_to_phase_group_lookup[abbrev] = set()
-            self._abbrev_to_phase_group_lookup[abbrev].add(group)
+            if abbrev not in self._phase_abbrev_to_group_lookup:
+                self._phase_abbrev_to_group_lookup[abbrev] = set()
+            self._phase_abbrev_to_group_lookup[abbrev].add(group)
 
-            if abbrev not in self._abbrev_to_phase_formula_lookup:
-                self._abbrev_to_phase_formula_lookup[abbrev] = set()
-            self._abbrev_to_phase_formula_lookup[abbrev].add(formula)
+            if abbrev not in self._phase_abbrev_to_formula_lookup:
+                self._phase_abbrev_to_formula_lookup[abbrev] = set()
+            self._phase_abbrev_to_formula_lookup[abbrev].add(formula)
 
             for mode, label in {
                 "abbreviation": abbrev,
-                "common name": name,
+                "name": name,
+                "formula": formula,
             }.items():
                 if group not in self._grouped_phases[mode]:
                     self._grouped_phases[mode][group] = set()
                 self._grouped_phases[mode][group].add(label)
-
-                if group not in self._grouped_phases_with_formulas[mode]:
-                    self._grouped_phases_with_formulas[mode][group] = set()
-                self._grouped_phases_with_formulas[mode][group].add(
-                    f"{label} ({formula})"
-                )
 
         self._uid_to_reactant_abbrevs_lookup = {}
         self._uid_to_product_abbrevs_lookup = {}
@@ -306,10 +293,10 @@ class RxnDBProcessor:
         return matching_ids
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_reactant_abbrevs_from_ids(self, unique_ids: list[str]) -> list[str]:
+    def get_reactant_abbrevs_from_ids(self, unique_ids: list[str]) -> set[str]:
         """Get unique reactants associated with a list of reaction IDs."""
         if not unique_ids:
-            return []
+            return set()
 
         reactant_abbrevs = {
             reactant
@@ -317,13 +304,13 @@ class RxnDBProcessor:
             if uids.intersection(unique_ids)
         }
 
-        return sorted(reactant_abbrevs)
+        return reactant_abbrevs
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_product_abbrevs_from_ids(self, unique_ids: list[str]) -> list[str]:
+    def get_product_abbrevs_from_ids(self, unique_ids: list[str]) -> set[str]:
         """Get unique products associated with a list of reaction IDs."""
         if not unique_ids:
-            return []
+            return set()
 
         product_abbrevs = {
             product
@@ -331,63 +318,65 @@ class RxnDBProcessor:
             if uids.intersection(unique_ids)
         }
 
-        return sorted(product_abbrevs)
+        return product_abbrevs
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_phase_abbrev_from_name(self, name: str) -> list[str]:
+    def get_phase_abbrev_from_name(self, name: str) -> set[str]:
         """"""
-        return sorted(list(self._phase_name_to_abbrev_lookup.get(name, set())))
+        return self._phase_name_to_abbrev_lookup.get(name, set())
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_phase_abbrev_from_group(self, group: str) -> list[str]:
+    def get_phase_abbrev_from_group(self, group: str) -> set[str]:
         """"""
-        return sorted(list(self._phase_group_to_abbrev_lookup.get(group, set())))
+        return self._phase_group_to_abbrev_lookup.get(group, set())
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_phase_abbrev_from_formula(self, formula: str) -> list[str]:
+    def get_phase_abbrev_from_formula(self, formula: str) -> set[str]:
         """"""
-        return sorted(list(self._phase_formula_to_abbrev_lookup.get(formula, set())))
+        return self._phase_formula_to_abbrev_lookup.get(formula, set())
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_phase_name_from_abbrev(self, abbrev: str) -> str:
+    def get_phase_name_from_abbrev(self, abbrev: str) -> set[str]:
         """Get the common name of a phase from its abbreviation."""
-        return str(self._abbrev_to_phase_name_lookup.get(abbrev, ""))
+        return self._phase_abbrev_to_name_lookup.get(abbrev, set())
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_phase_formula_from_abbrev(self, abbrev: str) -> str:
+    def get_phase_formula_from_abbrev(self, abbrev: str) -> set[str]:
         """Get the chemical formula of a phase from its abbreviation."""
-        return str(self._abbrev_to_phase_formula_lookup.get(abbrev, ""))
+        return self._phase_abbrev_to_formula_lookup.get(abbrev, set())
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_phase_group_from_abbrev(self, abbrev: str) -> str:
+    def get_phase_group_from_abbrev(self, abbrev: str) -> set[str]:
         """Get the mineral group of a phase from its abbreviation."""
-        return str(self._abbrev_to_phase_group_lookup.get(abbrev, ""))
+        return self._phase_abbrev_to_group_lookup.get(abbrev, set())
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_phase_info_from_abbrev(self, abbrev: str) -> dict:
+    def get_phase_info_from_abbrev(self, abbrev: str) -> dict[str, str | set]:
         """Get all information about a phase from its abbreviation."""
-        if abbrev not in self._abbrev_to_phase_name_lookup:
+        if abbrev not in self._phase_abbrev_to_name_lookup:
             return {}
 
         return {
             "abbreviation": abbrev,
-            "name": self._abbrev_to_phase_name_lookup.get(abbrev, ""),
-            "formula": self._abbrev_to_phase_formula_lookup.get(abbrev, ""),
-            "group": self._abbrev_to_phase_group_lookup.get(abbrev, ""),
+            "name": self._phase_abbrev_to_name_lookup.get(abbrev, set()),
+            "formula": self._phase_abbrev_to_formula_lookup.get(abbrev, set()),
+            "group": self._phase_abbrev_to_group_lookup.get(abbrev, set()),
         }
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_all_phase_info(self) -> dict:
+    def get_all_phase_info(self) -> dict[str, str | set]:
         """Get a dictionary of all phases with their complete information."""
         all_phases = {}
 
-        for abbrev in self._abbrev_to_phase_name_lookup:
+        for abbrev in self._phase_abbrev_to_name_lookup:
             all_phases[abbrev] = self.get_phase_info_from_abbrev(abbrev)
 
         return all_phases
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_reactant_info_from_unique_id(self, unique_id: str) -> list[dict]:
+    def get_reactant_info_from_unique_id(
+        self, unique_id: str
+    ) -> list[dict[str, str | set]]:
         """Get information about all reactants for a specific reaction ID."""
         if unique_id not in self._original_df["unique_id"].values:
             return []
@@ -401,11 +390,13 @@ class RxnDBProcessor:
         return [
             self.get_phase_info_from_abbrev(abbrev)
             for abbrev in reactants
-            if abbrev in self._abbrev_to_phase_name_lookup
+            if abbrev in self._phase_abbrev_to_name_lookup
         ]
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_product_info_from_unique_id(self, unique_id: str) -> list[dict]:
+    def get_product_info_from_unique_id(
+        self, unique_id: str
+    ) -> list[dict[str, str | set]]:
         """Get information about all products for a specific reaction ID."""
         if unique_id not in self._original_df["unique_id"].values:
             return []
@@ -419,11 +410,13 @@ class RxnDBProcessor:
         return [
             self.get_phase_info_from_abbrev(abbrev)
             for abbrev in products
-            if abbrev in self._abbrev_to_phase_name_lookup
+            if abbrev in self._phase_abbrev_to_name_lookup.keys()
         ]
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_reaction_info_from_unique_id(self, unique_id: str) -> dict:
+    def get_reaction_info_from_unique_id(
+        self, unique_id: str
+    ) -> dict[str, list[dict[str, str | set]]]:
         """Get comprehensive information about all phases in a reaction."""
         return {
             "reactants": self.get_reactant_info_from_unique_id(unique_id),
@@ -436,15 +429,9 @@ class RxnDBProcessor:
         return list(self._group_rank.keys())
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_all_grouped_phases(
-        self, display_mode: str, show_formula: bool
-    ) -> dict[str, list[str]]:
+    def get_all_grouped_phases(self, display_mode: str) -> dict[str, list[str]]:
         """Get all checkbox group phases based on the display mode."""
-        grouped = (
-            self._grouped_phases_with_formulas.get(display_mode)
-            if show_formula
-            else self._grouped_phases.get(display_mode)
-        )
+        grouped = self._grouped_phases.get(display_mode)
 
         if not grouped:
             raise ValueError(f"Invalid display_mode: {display_mode!r}")
@@ -457,20 +444,14 @@ class RxnDBProcessor:
         }
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_grouped_phases(
-        self, group: str, display_mode: str, show_formula: bool
-    ) -> list[str]:
+    def get_grouped_phases(self, group: str, display_mode: str) -> list[str]:
         """Get individual checkbox group phases based on the display mode."""
-        grouped = (
-            self._grouped_phases_with_formulas.get(display_mode)
-            if show_formula
-            else self._grouped_phases.get(display_mode)
-        )
+        grouped = self._grouped_phases.get(display_mode)
 
         if not grouped:
             raise ValueError(f"Invalid display_mode: {display_mode!r}")
 
-        return sorted(grouped.get(group, []))
+        return grouped.get(group, [])
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def _build_reaction_groups(self, method: str = "or"):
@@ -548,7 +529,7 @@ class RxnDBProcessor:
 
         self._color_map = {
             str(group): palette[i % len(palette)]
-            for i, group in enumerate(sorted(unique_groups))
+            for i, group in enumerate(unique_groups)
         }
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -597,12 +578,12 @@ class RxnDBProcessor:
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @property
     def phases(self) -> list[str]:
-        """Get a sorted list of unique phase names from reactants and products."""
+        """Get a list of unique phase names from reactants and products."""
         all_phases = set(self._uid_to_reactant_abbrevs_lookup.keys()) | set(
             self._uid_to_product_abbrevs_lookup.keys()
         )
 
-        return sorted(list(all_phases))
+        return list(all_phases)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @property

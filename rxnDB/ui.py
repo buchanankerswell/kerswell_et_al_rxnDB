@@ -21,9 +21,9 @@ def configure_ui() -> ui.Tag:
         # Sidebar !!
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         ui.sidebar(
-            ui.output_ui("phase_selector"),
+            ui.output_ui("phase_selector_ui"),
             title="Phases",
-            width=250,
+            width=450,
             padding=[20, 10, 0, 20],
             open={"desktop": "open", "mobile": "closed"},
         ),
