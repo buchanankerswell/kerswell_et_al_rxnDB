@@ -44,7 +44,7 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     # Reactive state values
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     _rv_toggle_data_type = reactive.value("all")
-    _rv_toggle_similar_reactions = reactive.value(False)
+    _rv_toggle_similar_reactions = reactive.value("off")
 
     _rv_selected_table_rows = reactive.value([])
     _rv_selected_row_indices = reactive.value(None)
@@ -206,7 +206,9 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
                 )
             )
 
-        return ui.accordion(*ui_elements, id="accordion", open=False)
+        return ui.accordion(
+            *ui_elements, id="accordion", open={"desktop": "open", "mobile": "closed"}
+        )
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # UI event handlers
@@ -298,12 +300,12 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     @reactive.event(input.toggle_similar_reactions)
     def _() -> None:
         """Toggles show similar reactions mode."""
-        if _rv_toggle_similar_reactions() is False:
+        if _rv_toggle_similar_reactions() == "off":
             _rv_toggle_similar_reactions.set("or")
         elif _rv_toggle_similar_reactions() == "or":
             _rv_toggle_similar_reactions.set("and")
         else:
-            _rv_toggle_similar_reactions.set(False)
+            _rv_toggle_similar_reactions.set("off")
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.effect
@@ -370,53 +372,51 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     def rc_get_plotly_data() -> pd.DataFrame:
         """Get data for Plotly widget."""
         df = rc_get_filtered_data()
-        selected_ids = _rv_selected_table_rows()
+        selected_table_rows = _rv_selected_table_rows()
         find_similar_mode = _rv_toggle_similar_reactions()
+        data_plot_type = _rv_toggle_data_type()
 
-        if selected_ids:
-            if find_similar_mode:
-                reactants = processor.get_reactant_abbrevs_from_ids(selected_ids)
-                products = processor.get_product_abbrevs_from_ids(selected_ids)
+        if selected_table_rows:
+            if find_similar_mode != "off":
+                reactants = processor.get_reactant_abbrevs_from_ids(selected_table_rows)
+                products = processor.get_product_abbrevs_from_ids(selected_table_rows)
 
                 if reactants or products:
-                    return processor.filter_by_reactants_and_product_abbrevs(
+                    df = processor.filter_by_reactants_and_product_abbrevs(
                         list(reactants),
                         list(products),
                         method=str(find_similar_mode),
                     )
                 else:
-                    return pd.DataFrame(columns=df.columns)
+                    df = pd.DataFrame(columns=df.columns)
             else:
-                return df[df["unique_id"].isin(selected_ids)]
-        else:
+                df = df[df["unique_id"].isin(selected_table_rows)]
+
+        if data_plot_type == "all":
             return df
+        elif data_plot_type == "points":
+            return (
+                df[df["plot_type"] == "point"]
+                if "plot_type" in df.columns
+                else pd.DataFrame(columns=df.columns)
+            )
+        elif data_plot_type == "curves":
+            return (
+                df[df["plot_type"] == "curve"]
+                if "plot_type" in df.columns
+                else pd.DataFrame(columns=df.columns)
+            )
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.calc
     def rc_get_filtered_data() -> pd.DataFrame:
         """Initial filtering based on selected phases and plot type."""
         phases = _rv_selected_phase_abbrevs()
-        data_type = _rv_toggle_data_type()
 
         if phases:
             df = processor.filter_by_reactants_and_product_abbrevs(phases, phases)
         else:
             df = pd.DataFrame(columns=processor.data.columns)
-
-        if data_type == "all":
-            return df
-        elif data_type == "points":
-            return (
-                df[df["plot_type"] == "point"]
-                if "plot_type" in df.columns
-                else pd.DataFrame(columns=df.columns)
-            )
-        elif data_type == "curves":
-            return (
-                df[df["plot_type"] == "curve"]
-                if "plot_type" in df.columns
-                else pd.DataFrame(columns=df.columns)
-            )
 
         return df
 
@@ -478,6 +478,18 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
             widget.data = ()
             widget.add_traces(updated_fig.data)
             widget.layout.update(updated_fig.layout)  # type: ignore
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @render.text
+    def plot_settings():
+        """Show plot settings info"""
+        data_type = f"Data type: {_rv_toggle_data_type()}\n"
+        similar_reactions = f"Similar rxns: {_rv_toggle_similar_reactions()}\n"
+        table_selections = f"Table selections:\n{"\n".join(_rv_selected_table_rows())
+            if _rv_selected_table_rows()
+            else "None"}"
+        info = data_type + similar_reactions + table_selections
+        return info
 
 
 #######################################################

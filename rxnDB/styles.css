@@ -6,8 +6,7 @@
 .accordion-title {
 }
 .dark-mode-switch {
-    position: absolute;
-    right: 3rem;
+    margin: 0.5rem 1rem;
     color: #6C757D;
     cursor: pointer;
 }

@@ -268,7 +268,11 @@ class RxnDBProcessor:
         if not unique_ids:
             return self._original_df
 
-        return self._original_df[self._original_df["unique_id"].isin(unique_ids)]
+        return (
+            self._original_df[self._original_df["unique_id"].isin(unique_ids)]
+            if "unique_id" in self._original_df.columns
+            else pd.DataFrame(columns=self._original_df.columns)
+        )
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def filter_by_type(self, types: list[str]) -> pd.DataFrame:
@@ -276,7 +280,23 @@ class RxnDBProcessor:
         if not types:
             return self._original_df
 
-        return self._original_df[self._original_df["type"].isin(types)]
+        return (
+            self._original_df[self._original_df["type"].isin(types)]
+            if "type" in self._original_df.columns
+            else pd.DataFrame(columns=self._original_df.columns)
+        )
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    def filter_by_plot_type(self, plot_type: str) -> pd.DataFrame:
+        """Filter by specific plot type."""
+        if not plot_type:
+            return self._original_df
+
+        return (
+            self._original_df[self._original_df["plot_type"] == plot_type]
+            if "plot_type" in self._original_df.columns
+            else pd.DataFrame(columns=self._original_df.columns)
+        )
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def get_unique_ids_from_phase_abbrevs(
