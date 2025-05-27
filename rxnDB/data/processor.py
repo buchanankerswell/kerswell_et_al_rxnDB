@@ -1,6 +1,7 @@
 #######################################################
 ## .0. Load Libraries                            !!! ##
 #######################################################
+import re
 from dataclasses import dataclass, field
 
 import pandas as pd
@@ -464,14 +465,55 @@ class RxnDBProcessor:
         }
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def get_grouped_phases(self, group: str, display_mode: str) -> list[str]:
+    def get_grouped_phases(
+        self, group: str, components: list[str], display_mode: str
+    ) -> list[str]:
         """Get individual checkbox group phases based on the display mode."""
-        grouped = self._grouped_phases.get(display_mode)
-
-        if not grouped:
+        if display_mode not in ["abbreviation", "name", "formula"]:
             raise ValueError(f"Invalid display_mode: {display_mode!r}")
 
-        return grouped.get(group, [])
+        grouped_formulas = self._grouped_phases.get("formula", {})
+        group_formulas = grouped_formulas.get(group, set())
+
+        grouped_display_mode = self._grouped_phases.get(display_mode, {})
+        group_display_phases = grouped_display_mode.get(group, set())
+
+        matching_phase_keys = set()
+        for phase in group_formulas:
+            match = re.search(r"\(([^)]+)\)", phase)
+            if match:
+                formula = match.group(1)
+                elements = self._extract_elements(formula)
+                if elements.issubset(set(components)):
+                    # if all(component in elements for component in components):
+                    phase_key = phase.split("(", 1)[0].strip()
+                    matching_phase_keys.add(phase_key)
+
+        result = [
+            box
+            for box in group_display_phases
+            if box.split("(", 1)[0].strip() in matching_phase_keys
+        ]
+
+        return result
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    def _extract_elements(self, formula: str) -> set[str]:
+        return set(re.findall(r"[A-Z][a-z]?", formula))
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    def get_all_chemical_components(self) -> set[str]:
+        grouped_formulas = self._grouped_phases.get("formula", {})
+
+        elements = set()
+        for formula_strings in grouped_formulas.values():
+            for string in formula_strings:
+                match = re.search(r"\(([^)]+)\)", string)
+                if match:
+                    formula = match.group(1)
+                    elements.update(self._extract_elements(formula))
+
+        return elements
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def _build_reaction_groups(self, method: str = "or"):
@@ -594,6 +636,40 @@ class RxnDBProcessor:
         return (
             group_name.lower().replace(" ", "_").replace("&", "and").replace("-", "_")
         )
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @staticmethod
+    def convert_P_to_kbar(row):
+        if row["units_P"] == "GPa":
+            row["P"] *= 10
+            row["P_uncertainty"] *= 10
+
+        return row
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @staticmethod
+    def convert_P_to_gigapascal(row):
+        if row["units_P"] == "kbar":
+            row["P"] *= 0.1
+            row["P_uncertainty"] *= 0.1
+
+        return row
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @staticmethod
+    def convert_T_to_kelvin(row):
+        if row["units_T"] == "C":
+            row["T"] += 273
+
+        return row
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @staticmethod
+    def convert_T_to_celcius(row):
+        if row["units_T"] == "K":
+            row["T"] -= 273
+
+        return row
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @property

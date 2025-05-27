@@ -2,6 +2,7 @@
 ## .0. Load Libraries                            !!! ##
 #######################################################
 from dataclasses import dataclass
+from typing import Any
 
 import numpy as np
 import pandas as pd
@@ -28,7 +29,7 @@ class RxnDBPlotter:
             )
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def plot(self) -> go.Figure:
+    def plot(self, temperature_units: str, pressure_units: str) -> go.Figure:
         """
         Plot reaction lines (phase diagram) using plotly.
         """
@@ -59,13 +60,26 @@ class RxnDBPlotter:
             missing = required_cols - set(self.df.columns)
             raise ValueError(f"Missing required columns in DataFrame: {missing}")
 
+        if temperature_units == "celcius":
+            temperature_units_label = "˚C"
+        elif temperature_units == "kelvin":
+            temperature_units_label = "K"
+        else:
+            raise ValueError(f"Unknown temperature unit: {temperature_units}")
+
+        if pressure_units == "gigapascal":
+            pressure_units_label = "GPa"
+        elif pressure_units == "kilobar":
+            pressure_units_label = "kbar"
+        else:
+            raise ValueError(f"Unknown pressure unit: {pressure_units}")
+
         fig = go.Figure()
 
         hovertemplate = (
-            "ID: %{customdata[0]}<br>"
-            "Rxn: %{customdata[1]}<extra></extra><br>"
-            "T: %{x:.1f} ˚C<br>"
-            "P: %{y:.2f} GPa<br>"
+            "%{customdata[0]}<br>"
+            "%{customdata[1]}<br>"
+            f"(%{{x:.1f}} {temperature_units_label}, %{{y:.2f}} {pressure_units_label})<extra></extra>"
         )
 
         for rid in self.ids:
@@ -84,7 +98,7 @@ class RxnDBPlotter:
                         mode="lines",
                         line=dict(width=2, color=color),
                         hovertemplate=hovertemplate,
-                        customdata=np.stack((d["unique_id"], d["reaction"]), axis=-1),
+                        customdata=np.stack((d["reaction"], d["unique_id"]), axis=-1),
                     )
                 )
             elif plot_type == "point":
@@ -101,22 +115,24 @@ class RxnDBPlotter:
                             type="data", array=d["P_uncertainty"], visible=True
                         ),
                         hovertemplate=hovertemplate,
-                        customdata=np.stack((d["unique_id"], d["reaction"]), axis=-1),
+                        customdata=np.stack((d["reaction"], d["unique_id"]), axis=-1),
                     )
                 )
 
         layout_settings = self._configure_layout()
+
         fig.update_layout(
-            xaxis_title="Temperature (˚C)",
-            yaxis_title="Pressure (GPa)",
+            xaxis_title=f"Temperature ({temperature_units_label})",
+            yaxis_title=f"Pressure ({pressure_units_label})",
             showlegend=False,
             autosize=True,
             **layout_settings,
         )
+
         return fig
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def _configure_layout(self) -> dict:
+    def _configure_layout(self) -> dict[str, Any]:
         """"""
         border_color = "#E5E5E5" if self.dark_mode else "black"
         grid_color = "#999999" if self.dark_mode else "#E5E5E5"
@@ -133,7 +149,6 @@ class RxnDBPlotter:
             "plot_bgcolor": plot_bgcolor,
             "paper_bgcolor": paper_bgcolor,
             "xaxis": {
-                "range": (0, 2250),
                 "gridcolor": grid_color,
                 "title_font": {"color": label_color},
                 "tickfont": {"color": tick_color},
@@ -141,9 +156,9 @@ class RxnDBPlotter:
                 "linecolor": border_color,
                 "linewidth": 2,
                 "mirror": True,
+                "constrain": "range",
             },
             "yaxis": {
-                "range": (-0.5, 26.5),
                 "gridcolor": grid_color,
                 "title_font": {"color": label_color},
                 "tickfont": {"color": tick_color},
@@ -151,6 +166,7 @@ class RxnDBPlotter:
                 "linecolor": border_color,
                 "linewidth": 2,
                 "mirror": True,
+                "constrain": "range",
             },
             "legend": {
                 "font": {"color": font_color},

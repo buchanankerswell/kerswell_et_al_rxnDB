@@ -252,10 +252,6 @@ def main():
     hp11_loader = RxnDBLoader(app_dir / "data" / "sets" / "hp11")
     hp11_data = hp11_loader.load_all()
 
-    # kbar --> GPa
-    hp11_data["P"] *= 0.1
-    hp11_data["P_uncertainty"] *= 0.1
-
     with warnings.catch_warnings():
         warnings.simplefilter("ignore", category=FutureWarning)
         rxnDB = pd.concat([hp11_data, jimmy_data], ignore_index=True)

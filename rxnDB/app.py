@@ -46,13 +46,44 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     _rv_toggle_data_type = reactive.value("all")
     _rv_toggle_similar_reactions = reactive.value("off")
 
-    _rv_selected_table_rows = reactive.value([])
-    _rv_selected_row_indices = reactive.value(None)
+    _rv_selected_chemical_system = reactive.value(["Al", "O", "Si"])
     _rv_selected_phase_abbrevs = reactive.value(set())
+    _rv_selected_table_columns = reactive.value(
+        ["unique_id", "reaction", "type", "reference"]
+    )
+    _rv_selected_table_rows = reactive.value([])
+
+    _rv_selected_temperature_units = reactive.value("celcius")
+    _rv_selected_pressure_units = reactive.value("gigapascal")
 
     _rv_group_display_modes = reactive.value({})
 
     _rv_ui_initialized = reactive.value(False)
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    # Initialization
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @reactive.effect
+    def _re_initialize_once() -> None:
+        """Initialize app state once at startup."""
+        if not _rv_ui_initialized():
+            _re_initialize_defaults()
+            _rv_ui_initialized.set(True)
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    def _re_initialize_defaults() -> None:
+        """Initialize default values for groups if not already set."""
+        checkbox_groups = processor.get_all_group_names()
+        current_display_modes = _rv_group_display_modes().copy()
+
+        changed = False
+        for group in checkbox_groups:
+            if group not in current_display_modes:
+                current_display_modes[group] = "name"
+                changed = True
+
+        if changed:
+            _rv_group_display_modes.set(current_display_modes)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # Helper functions for phase selection management
@@ -102,52 +133,43 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
         return abbrevs
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Initialization
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    @reactive.effect
-    def _re_initialize_once() -> None:
-        """Initialize app state once at startup."""
-        if not _rv_ui_initialized():
-            _re_initialize_group_defaults()
-            _rv_ui_initialized.set(True)
-
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    def _re_initialize_group_defaults() -> None:
-        """Initialize default values for groups if not already set."""
-        checkbox_groups = processor.get_all_group_names()
-        current_display_modes = _rv_group_display_modes().copy()
-
-        changed = False
-        for group in checkbox_groups:
-            if group not in current_display_modes:
-                current_display_modes[group] = "name"
-                changed = True
-
-        if changed:
-            _rv_group_display_modes.set(current_display_modes)
-
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # Reactive UI components
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    @output(id="phase_selector_ui")
     @render.ui
-    def phase_selector() -> ui.Tag:
-        """Generate phase selector UI (only re-renders on initialization)."""
+    def sidebar_chemical_system_ui() -> ui.Tag:
+        """Render sidebar chemical sytem UI."""
         if not _rv_ui_initialized():
             return ui.div("Loading ...")
 
-        # Get phase groups
+        components = processor.get_all_chemical_components()
+
+        with reactive.isolate():
+            selected_chemical_system = _rv_selected_chemical_system()
+
+        return ui.input_selectize(
+            "selected_chemical_system",
+            "Filter by chemical system",
+            choices={element: element for element in sorted(components)},
+            selected=list(selected_chemical_system),
+            multiple=True,
+        )
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @render.ui
+    def sidebar_checkbox_ui() -> ui.Tag:
+        """Render sidebar checkbox UI."""
+        if not _rv_ui_initialized():
+            return ui.div("Loading ...")
+
         checkbox_groups = processor.get_all_group_names()
         if not checkbox_groups:
             return ui.div("No phase groups available ...")
 
-        # Isolate reactive state values to avoid re-rendering the entire UI
-        # Let UI event handlers update individual components when state changes
         with reactive.isolate():
             current_display_modes = _rv_group_display_modes()
             current_phases = _rv_selected_phase_abbrevs()
+            current_chemical_system = _rv_selected_chemical_system()
 
-        # Initialize UI components for each phase group
         ui_elements = []
         for group in checkbox_groups:
             # Stable UI IDs
@@ -155,14 +177,14 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
             id_radio = f"mode_{group_id}"
             id_boxes = f"boxes_{group_id}"
 
-            # Get selections
-            display_mode = current_display_modes.get(group)
-            boxes = processor.get_grouped_phases(group, display_mode)
+            display_mode = current_display_modes.get(group, "name")
+            boxes = processor.get_grouped_phases(
+                group, current_chemical_system, display_mode
+            )
             selections = _convert_phase_abbrevs_to_selected_boxes(
                 current_phases, display_mode, boxes
             )
 
-            # Build UI components
             display_mode_ui = ui.input_radio_buttons(
                 id_radio,
                 "Display Mode",
@@ -189,7 +211,7 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
             checkbox_group_ui = ui.input_checkbox_group(
                 id_boxes,
                 None,
-                choices=sorted(list(boxes)),
+                choices=sorted(boxes),
                 selected=list(selections),
             )
 
@@ -206,30 +228,50 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
                 )
             )
 
-        return ui.accordion(
-            *ui_elements, id="accordion", open={"desktop": "open", "mobile": "closed"}
+        return ui.accordion(*ui_elements, id="accordion")
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @render.ui
+    def table_column_selector_ui():
+        """Generate table column selector UI (only re-renders on initialization)."""
+        if not _rv_ui_initialized():
+            return
+
+        columns = processor.data.columns
+
+        return (
+            ui.input_selectize(
+                "select_table_columns",
+                "Select table columns",
+                {col: col for col in columns},
+                multiple=True,
+            ),
         )
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # UI event handlers
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.effect
-    def _handle_display_mode_changes():
-        """Handle display mode changes and updates UI components."""
+    def _handle_sidebar_ui_changes():
+        """Handle sidebar UI changes."""
         if not _rv_ui_initialized():
             return
 
-        # Get phase groups
         checkbox_groups = processor.get_all_group_names()
-
-        # Get reactive state values
         current_display_modes = _rv_group_display_modes().copy()
+        current_chemical_system = _rv_selected_chemical_system().copy()
 
-        # Isolate reactive state values to avoid re-rendering
         with reactive.isolate():
             current_selected_phase_abbrevs = _rv_selected_phase_abbrevs()
 
-        # Check for state change and update individual UI components
+        new_chemical_system = list(input["selected_chemical_system"]())
+
+        chemical_system_state_change = False
+        if new_chemical_system is not None:
+            if current_chemical_system != new_chemical_system:
+                current_chemical_system = new_chemical_system
+                chemical_system_state_change = True
+
         display_mode_state_change = False
         for group in checkbox_groups:
             group_id = processor.get_group_id(group)
@@ -242,19 +284,23 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
                     current_display_modes[group] = new_display_mode
                     display_mode_state_change = True
 
-                    new_boxes = processor.get_grouped_phases(group, new_display_mode)
-                    new_selections = _convert_phase_abbrevs_to_selected_boxes(
-                        current_selected_phase_abbrevs, new_display_mode, new_boxes
-                    )
+            new_boxes = processor.get_grouped_phases(
+                group, new_chemical_system, new_display_mode
+            )
+            new_selections = _convert_phase_abbrevs_to_selected_boxes(
+                current_selected_phase_abbrevs, new_display_mode, new_boxes
+            )
 
-                    ui.update_checkbox_group(
-                        id=f"boxes_{group_id}",
-                        choices=sorted(list(new_boxes)),
-                        selected=list(new_selections),
-                    )
+            ui.update_checkbox_group(
+                id=f"boxes_{group_id}",
+                choices=sorted(new_boxes),
+                selected=list(new_selections),
+            )
 
         if display_mode_state_change:
             _rv_group_display_modes.set(current_display_modes)
+        if chemical_system_state_change:
+            _rv_selected_chemical_system.set(current_chemical_system)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.effect
@@ -298,8 +344,11 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.effect
     @reactive.event(input.toggle_similar_reactions)
-    def _() -> None:
-        """Toggles show similar reactions mode."""
+    def _re_toggle_similar_reactions() -> None:
+        """Toggles similar reactions mode."""
+        if not _rv_ui_initialized():
+            return
+
         if _rv_toggle_similar_reactions() == "off":
             _rv_toggle_similar_reactions.set("or")
         elif _rv_toggle_similar_reactions() == "or":
@@ -310,8 +359,11 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.effect
     @reactive.event(input.toggle_data_type)
-    def _() -> None:
+    def _re_toggle_data_type() -> None:
         """Toggles data type mode."""
+        if not _rv_ui_initialized():
+            return
+
         if _rv_toggle_data_type() == "all":
             _rv_toggle_data_type.set("curves")
         elif _rv_toggle_data_type() == "curves":
@@ -321,21 +373,85 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.effect
-    @reactive.event(input.clear_selection)
-    def _() -> None:
+    @reactive.event(input.clear_table_row_selection)
+    def _re_clear_table_row_selections() -> None:
         """Clears table selections."""
+        if not _rv_ui_initialized():
+            return
+
         _rv_selected_table_rows.set([])
-        _rv_selected_row_indices.set(None)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Table selection event listeners (unchanged)
+    @reactive.effect
+    def _re_update_pressure_units():
+        """Updates selected pressure units and stores the previous value."""
+        if not _rv_ui_initialized():
+            return
+
+        selected_pressure_units = input.select_pressure_units()
+        if (
+            selected_pressure_units
+            and selected_pressure_units != _rv_selected_pressure_units()
+        ):
+            _rv_selected_pressure_units.set(selected_pressure_units)
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @reactive.effect
+    def _re_update_temperature_units():
+        """Updates selected temperature units and stores the previous value."""
+        if not _rv_ui_initialized():
+            return
+
+        selected_temperature_units = input.select_temperature_units()
+
+        if (
+            selected_temperature_units
+            and selected_temperature_units != _rv_selected_temperature_units()
+        ):
+            _rv_selected_temperature_units.set(selected_temperature_units)
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @reactive.effect
+    def _update_chemical_system():
+        """Handle chemical system changes."""
+        if not _rv_ui_initialized():
+            return
+
+        selected_chemical_system = list(input.selected_chemical_system())
+
+        if selected_chemical_system:
+            _rv_selected_chemical_system.set(selected_chemical_system)
+        else:
+            _rv_selected_chemical_system.set([])
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    # Table selection event listeners
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    @reactive.effect
+    def _re_update_table_column_selections() -> None:
+        """Updates selected table columns."""
+        if not _rv_ui_initialized():
+            return
+
+        selected_columns = input.select_table_columns()
+
+        if selected_columns:
+            _rv_selected_table_columns.set(list(selected_columns))
+        else:
+            _rv_selected_table_columns.set(
+                ["unique_id", "reaction", "type", "reference"]
+            )
+
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.effect
     @reactive.event(input.table_selected_rows)
-    def _() -> None:
-        """Updates the _rv_selected_table_rows list based on the indices selected in the table."""
+    def _re_update_table_row_selections() -> None:
+        """Updates selected table rows."""
+        if not _rv_ui_initialized():
+            return
+
         indices = input.table_selected_rows()
-        _rv_selected_row_indices.set(indices)
+
         if indices:
             current_table_df = rc_get_table_data()
             if not current_table_df.empty:
@@ -351,21 +467,34 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
             _rv_selected_table_rows.set([])
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Reactive calculations for data filtering (unchanged)
+    # Reactive calculations for data filtering
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.calc
     def rc_get_table_data() -> pd.DataFrame:
         """Get data for table widget."""
         df = rc_get_filtered_data()
+        selected_columns = _rv_selected_table_columns()
+
+        array_columns = [
+            "T",
+            "P",
+            "T_uncertainty",
+            "P_uncertainty",
+            "lnK",
+            "lnk_uncertainty",
+        ]
 
         if not df.empty:
-            return (
-                df[["unique_id", "reaction", "type"]]
-                .drop_duplicates(subset="unique_id")
-                .reset_index(drop=True)
-            )
+            if any(col in selected_columns for col in array_columns):
+                return df[selected_columns].round(2).reset_index(drop=True)
+            else:
+                return (
+                    df[selected_columns]
+                    .drop_duplicates(subset="unique_id")
+                    .reset_index(drop=True)
+                )
         else:
-            return pd.DataFrame(columns=["unique_id", "reaction", "type"])
+            return pd.DataFrame(columns=selected_columns)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.calc
@@ -387,6 +516,7 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
                         list(products),
                         method=str(find_similar_mode),
                     )
+                    df = convert_units(df)
                 else:
                     df = pd.DataFrame(columns=df.columns)
             else:
@@ -406,6 +536,27 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
                 if "plot_type" in df.columns
                 else pd.DataFrame(columns=df.columns)
             )
+        else:
+            return pd.DataFrame(columns=df.columns)
+
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    def convert_units(df: pd.DataFrame) -> pd.DataFrame:
+        """"""
+        with reactive.isolate():
+            current_temperature_units = _rv_selected_temperature_units()
+            current_pressure_units = _rv_selected_pressure_units()
+
+        if current_temperature_units == "celcius":
+            df = pd.DataFrame(df.apply(processor.convert_T_to_celcius, axis=1))
+        elif current_temperature_units == "kelvin":
+            df = pd.DataFrame(df.apply(processor.convert_T_to_kelvin, axis=1))
+
+        if current_pressure_units == "gigapascal":
+            df = pd.DataFrame(df.apply(processor.convert_P_to_gigapascal, axis=1))
+        elif current_pressure_units == "kilobar":
+            df = pd.DataFrame(df.apply(processor.convert_P_to_kbar, axis=1))
+
+        return df
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.calc
@@ -414,19 +565,22 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
         phases = _rv_selected_phase_abbrevs()
 
         if phases:
-            df = processor.filter_by_reactants_and_product_abbrevs(phases, phases)
+            df = processor.filter_by_reactants_and_product_abbrevs(
+                list(phases), list(phases)
+            )
         else:
             df = pd.DataFrame(columns=processor.data.columns)
+            _ = input.clear_table_row_selection()
 
-        return df
+        return convert_units(df)
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # Render and update widgets
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @render.data_frame
     def table() -> render.DataTable:
-        """Render table with current filtered/formatted data."""
-        _ = input.clear_selection()
+        """Render table."""
+        _ = input.clear_table_row_selection()
         df = rc_get_table_data()
 
         return render.DataTable(df, height="98%", selection_mode="rows")
@@ -435,60 +589,73 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     @output
     @render_plotly
     def plotly() -> go.FigureWidget:
-        """Render plotly"""
-        dark_mode = False
+        """Render plotly."""
+        if not _rv_ui_initialized():
+            return go.FigureWidget()
 
-        df = pd.DataFrame(columns=processor.data.columns)
-        uids = df["unique_id"].unique().tolist()
+        print("Rendering plot ...")
+        with reactive.isolate():
+            df = rc_get_plotly_data()
+            current_temperature_units = _rv_selected_temperature_units()
+            current_pressure_units = _rv_selected_pressure_units()
+            current_dark_mode = input.dark_mode() == "dark"
+
         df = processor.add_color_keys(df)
+        uids = []
+        if not df.empty and "unique_id" in df.columns:
+            uids = df["unique_id"].unique().tolist()
 
-        plotter = RxnDBPlotter(df, uids, dark_mode)
-        fig = go.FigureWidget(plotter.plot())
+        plotter = RxnDBPlotter(df, uids, current_dark_mode)
+        fig = plotter.plot(current_temperature_units, current_pressure_units)
 
-        return fig
+        # Create and return the widget
+        widget = go.FigureWidget(fig)
+
+        return widget
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @reactive.effect
-    def update_plotly() -> None:
-        """Updates plotly figure widget efficiently based on filtered data and settings."""
-        widget = plotly.widget
+    def _update_plotly_data() -> None:
+        """Update plotly widget data without re-rendering."""
+        if not _rv_ui_initialized():
+            return
 
+        widget = plotly.widget
         if widget is None:
             return
 
-        current_x_range = getattr(getattr(widget.layout, "xaxis", None), "range", None)
-        current_y_range = getattr(getattr(widget.layout, "yaxis", None), "range", None)
-
-        dark_mode = input.dark_mode() == "dark"
-
+        print("Updating plot ...")
         df = rc_get_plotly_data()
-        df = processor.add_color_keys(df)
-        uids = df["unique_id"].unique().tolist()
+        current_temperature_units = _rv_selected_temperature_units()
+        current_pressure_units = _rv_selected_pressure_units()
+        current_dark_mode = input.dark_mode() == "dark"
 
-        plotter = RxnDBPlotter(df, uids, dark_mode)
+        df = processor.add_color_keys(df.copy())
+        uids = []
+        if not df.empty and "unique_id" in df.columns:
+            uids = df["unique_id"].unique().tolist()
 
-        updated_fig = go.FigureWidget(plotter.plot())
+        plotter = RxnDBPlotter(df, uids, current_dark_mode)
+        fig = plotter.plot(current_temperature_units, current_pressure_units)
 
-        if current_x_range is not None:
-            updated_fig.layout.xaxis.range = current_x_range  # type: ignore
-        if current_y_range is not None:
-            updated_fig.layout.yaxis.range = current_y_range  # type: ignore
-
+        # Update widget in place using batch_update to prevent flickering
         with widget.batch_update():
             widget.data = ()
-            widget.add_traces(updated_fig.data)
-            widget.layout.update(updated_fig.layout)  # type: ignore
+            widget.add_traces(fig.data)
+            widget.layout.update(fig.layout)  # type: ignore
 
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     @render.text
-    def plot_settings():
+    def plot_settings() -> str:
         """Show plot settings info"""
         data_type = f"Data type: {_rv_toggle_data_type()}\n"
         similar_reactions = f"Similar rxns: {_rv_toggle_similar_reactions()}\n"
         table_selections = f"Table selections:\n{"\n".join(_rv_selected_table_rows())
             if _rv_selected_table_rows()
             else "None"}"
+
         info = data_type + similar_reactions + table_selections
+
         return info
 
 

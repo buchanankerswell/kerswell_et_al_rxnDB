@@ -20,7 +20,8 @@ def configure_ui() -> ui.Tag:
         # Sidebar !!
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         ui.sidebar(
-            ui.output_ui("phase_selector_ui"),
+            ui.output_ui("sidebar_chemical_system_ui"),
+            ui.output_ui("sidebar_checkbox_ui"),
             title="Phases",
             width=300,
             open={"desktop": "open", "mobile": "closed"},
@@ -53,6 +54,16 @@ def configure_ui() -> ui.Tag:
                             ),
                             "Find similar rxn sets by intersection or union (for table selections)",
                         ),
+                        ui.input_selectize(
+                            "select_temperature_units",
+                            "Select temperature units",
+                            {"celcius": "celcius", "kelvin": "kelvin"},
+                        ),
+                        ui.input_selectize(
+                            "select_pressure_units",
+                            "Select pressure units",
+                            {"gigapascal": "gigapascal", "kilobar": "kilobar"},
+                        ),
                         ui.output_text_verbatim("plot_settings", placeholder=False),
                         title="Plot Controls",
                         open={"desktop": "open", "mobile": "closed"},
@@ -66,10 +77,11 @@ def configure_ui() -> ui.Tag:
                 ui.page_sidebar(
                     ui.sidebar(
                         ui.input_action_button(
-                            "clear_selection",
-                            "Clear Selection",
+                            "clear_table_row_selection",
+                            "Clear Table Selections",
                             class_="popover-btn",
                         ),
+                        ui.output_ui("table_column_selector_ui"),
                         title="Table Controls",
                         open={"desktop": "open", "mobile": "closed"},
                     ),
