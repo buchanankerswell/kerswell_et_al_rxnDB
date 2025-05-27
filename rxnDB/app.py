@@ -650,7 +650,14 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
         """Show plot settings info"""
         data_type = f"Data type: {_rv_toggle_data_type()}\n"
         similar_reactions = f"Similar rxns: {_rv_toggle_similar_reactions()}\n"
-        table_selections = f"Table selections:\n{'\n'.join(_rv_selected_table_rows()) if _rv_selected_table_rows() else 'None'}"
+
+        selected_rows = _rv_selected_table_rows()
+        if selected_rows:
+            selections_str = "\n".join(selected_rows)
+        else:
+            selections_str = "None"
+
+        table_selections = f"Table selections:\n{selections_str}"
 
         info = data_type + similar_reactions + table_selections
 
