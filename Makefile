@@ -13,7 +13,7 @@ CONDA_PYTHON = $$(conda run -n $(CONDA_ENV_ID) which python)
 APP_CLI := $(APP)/cli.py
 
 # Cleanup directory
-CLEAN := $(APP)/**/__pycache__ $(APP)/**/*.pyc $(CURDIR)/.pytest_cache $(CURDIR)/build $(CURDIR)/dist $(CURDIR)/*.egg-info
+CLEAN := $(APP)/**/__pycache__ $(APP)/**/*.pyc $(TESTS)/**/__pycache__ $(CURDIR)/.pytest_cache $(CURDIR)/build $(CURDIR)/dist $(CURDIR)/*.egg-info $(CURDIR)/.coverage $(CURDIR)/coverage.xml
 DEEP_CLEAN :=
 
 # Targets
@@ -28,7 +28,7 @@ docs:
 	@$(MAKE) -C docs html
 
 test:
-	@$(CONDA_PYTHON) -m pytest $(TESTS) -v
+	@$(CONDA_PYTHON) -m pytest --cov=rxnDB --cov-branch --cov-report=xml
 
 environment: $(CONDA_ENV_YML)
 	@if conda info --envs | awk '{print $$1}' | grep -qx "$(CONDA_ENV_ID)"; then \

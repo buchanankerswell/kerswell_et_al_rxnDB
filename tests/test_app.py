@@ -18,8 +18,7 @@ def app_ui():
     """
     Fixture to provide a configured UI object for testing
     """
-    phases = ["aluminosilicate", "olivine", "spinel", "wadsleyite", "ringwoodite"]
-    return configure_ui(phases, phases)
+    return configure_ui()
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -41,12 +41,12 @@ git checkout develop
 
 # Create conda environment and install rxnDB locally in editable mode
 # including optional development and documentation dependencies
-make create_conda_env
+make environment
 ```
 
 ## Usage Guide
 
-After installing rxnDB, you can launch the Shiny app directly from the command line:
+After installing rxnDB using either methods above, you can launch the Shiny app directly from the command line:
 
 ``` bash
 # Activate conda environment
@@ -78,5 +78,5 @@ rxndb --host 127.0.0.1 --port 8000 --launch-browser --reload
 
 ## Acknowledgement
 
-This work was funded by the UKRI NERC Large Grant no. NE/V018477/1 awarded to John Wheeler at the University of Liverpool.
+The UKRI NERC Large Grant no. NE/V018477/1 awarded to John Wheeler at the University of Liverpool funded this work.
 

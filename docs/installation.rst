@@ -27,4 +27,4 @@ If you want to install the development version for local testing in "editable" m
 
     # Create conda environment and install rxnDB locally in editable mode
     # including optional development and documentation dependencies
-    make create_conda_env
+    make environment

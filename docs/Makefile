@@ -3,8 +3,7 @@ PROJECT_ROOT := $(realpath $(dir $(lastword $(MAKEFILE_LIST)))/..)
 DOCS := $(PROJECT_ROOT)/docs
 
 # Python config
-CONDA_ENV_ID := rxnDB
-CONDA_SPHINX_BUILD := $$(conda run -n $(CONDA_ENV_ID) which sphinx-build)
+SPHINX_BUILD := sphinx-build
 
 # Sphinx build
 SPHINX_OPTS ?=
@@ -18,10 +17,10 @@ CLEAN := $(BUILD_DIR)/*
 .PHONY: help Makefile
 
 help:
-	@$(CONDA_SPHINX_BUILD) -M help "$(SOURCE_DIR)" "$(BUILD_DIR)" $(SPHINX_OPTS) $(O)
+	@$(SPHINX_BUILD) -M help "$(SOURCE_DIR)" "$(BUILD_DIR)" $(SPHINX_OPTS) $(O)
 
 %: Makefile
-	@$(CONDA_SPHINX_BUILD) -M $@ "$(SOURCE_DIR)" "$(BUILD_DIR)" $(SPHINX_OPTS) $(O)
+	@$(SPHINX_BUILD) -M $@ "$(SOURCE_DIR)" "$(BUILD_DIR)" $(SPHINX_OPTS) $(O)
 
 clean:
 	@for item in $(CLEAN); do \

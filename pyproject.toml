@@ -27,6 +27,7 @@ dependencies = [
     "plotly",
     "ruamel.yaml",
     "fastparquet",
+    "faicons",
 ]
 
 [project.optional-dependencies]
