@@ -116,9 +116,9 @@ class RxnDBProcessor:
         self._group_rank = group_rank
 
         for abbrev, info in MAP.items():
-            name = f"{abbrev} ({info["name"]})"
+            name = f"{abbrev} ({info['name']})"
             group = info["group"]
-            formula = f"{abbrev} ({info["formula"]})"
+            formula = f"{abbrev} ({info['formula']})"
 
             if name not in self._phase_name_to_abbrev_lookup:
                 self._phase_name_to_abbrev_lookup[name] = set()
