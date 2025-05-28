@@ -1,0 +1,47 @@
+---
+reactants:
+  ky:
+  and:
+  sill:
+products:
+  ky:
+  and:
+  sill:
+data:
+  type: triple_point
+  units:
+    T: C
+    P: GPa
+  points:
+    T:
+      value:
+        - 530.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 0.42
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: jimmy-030
+  reference:
+    authors:
+      - Bohlen
+      - Montana
+      - Kerrick
+    year: 1991
+    title: >-
+      Precise determinations of the equilibria kyanite - sillimanite
+      and kyanite - andalusite and a revised triple point for
+      Al2SiO5 polymorphs
+    journal: American Mineralogist
+    volume: "76"
+    pages: 677-680
+    doi: http://www.minsocam.org/ammin/AM76/AM76_677.pdf
+    short_cite: Bohlen et al. (1991)
+  method:
+    name: Experimental
+  comments: |-
+    Formula: Al2SiO5
+    Data Constraint Confidence: Good

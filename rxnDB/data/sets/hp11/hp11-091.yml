@@ -1,0 +1,38 @@
+---
+reactants:
+  atg:
+  fo:
+products:
+  phA:
+  en:
+data:
+  type: phase_boundary
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 550.0
+      uncertainty:
+        - 0.0
+    P:
+      value:
+        - 56.5
+      uncertainty:
+        - 2.5
+    lnK:
+      value:
+        - 0.0
+      uncertainty:
+        - 0.0
+metadata:
+  unique_id: hp11-091
+  reference:
+    short_cite: Bose & Navrotsky, 1998
+    authors:
+      - Bose
+      - Navrotsky
+    year: 1998
+  method:
+  comments:

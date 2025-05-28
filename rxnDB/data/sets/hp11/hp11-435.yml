@@ -1,0 +1,49 @@
+---
+reactants:
+  usp:
+products:
+  ilm:
+  iron:
+  O2:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1100.0
+        - 1150.0
+        - 1200.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 0.0
+        - 0.0
+        - 0.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+    lnK:
+      value:
+        - -32.005
+        - -30.275
+        - -29.015
+      uncertainty:
+        - 0.345
+        - 0.345
+        - 0.345
+metadata:
+  unique_id: hp11-435
+  reference:
+    short_cite: Anovitz et al., 1985
+    authors:
+      - Anovitz et al.
+    year: 1985
+  method:
+  comments:

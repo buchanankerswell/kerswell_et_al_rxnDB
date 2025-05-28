@@ -1,0 +1,49 @@
+---
+reactants:
+  hed:
+  en:
+products:
+  fs:
+  di:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 990.0
+        - 910.0
+        - 810.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 15.0
+        - 15.0
+        - 15.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+    lnK:
+      value:
+        - 0.325
+        - 0.665
+        - 0.68
+      uncertainty:
+        - 0.105
+        - 0.305
+        - 0.12
+metadata:
+  unique_id: hp11-448
+  reference:
+    short_cite: Lindsley, 1983
+    authors:
+      - Lindsley
+    year: 1983
+  method:
+  comments:

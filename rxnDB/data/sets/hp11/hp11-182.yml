@@ -1,0 +1,54 @@
+---
+reactants:
+  per:
+  cor:
+products:
+  sp:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1200.0
+        - 1200.0
+        - 1250.0
+        - 1300.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    lnK:
+      value:
+        - 2.785
+        - 2.865
+        - 2.945
+        - 2.82
+      uncertainty:
+        - 0.075
+        - 0.205
+        - 0.235
+        - 0.2
+metadata:
+  unique_id: hp11-182
+  reference:
+    short_cite: Chamberlin et al., 1995
+    authors:
+      - Chamberlin et al.
+    year: 1995
+  method:
+  comments:

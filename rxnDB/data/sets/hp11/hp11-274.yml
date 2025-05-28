@@ -1,0 +1,68 @@
+---
+reactants:
+  clin:
+  ky:
+products:
+  crd:
+  cor:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 610.0
+        - 620.0
+        - 640.0
+        - 650.0
+        - 655.0
+        - 670.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 5.0
+        - 5.0
+        - 6.0
+        - 6.0
+        - 7.0
+        - 7.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    lnK:
+      value:
+        - -7.81
+        - -7.4
+        - -8.87
+        - -8.35
+        - -9.87
+        - -9.27
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-274
+  reference:
+    short_cite: Seifert, 1973
+    authors:
+      - Seifert
+    year: 1973
+  method:
+  comments:

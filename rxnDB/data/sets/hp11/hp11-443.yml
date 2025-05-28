@@ -1,0 +1,49 @@
+---
+reactants:
+  dol:
+  sid:
+products:
+  ank:
+  mag:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 400.0
+        - 450.0
+        - 500.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 3.0
+        - 3.0
+        - 3.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+    lnK:
+      value:
+        - -0.355
+        - -0.635
+        - -0.63
+      uncertainty:
+        - 0.145
+        - 0.235
+        - 0.24
+metadata:
+  unique_id: hp11-443
+  reference:
+    short_cite: Rosenberg, 1967
+    authors:
+      - Rosenberg
+    year: 1967
+  method:
+  comments:

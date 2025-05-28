@@ -1,0 +1,41 @@
+---
+name: Build and Check Docs
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+jobs:
+  docs:
+    name: Test on ${{ matrix.os }} with Python ${{ matrix.python-version }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        python-version: ["3.13"]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+      - name: Install documentation dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+          pip install -r docs/requirements.txt
+      - name: Build documentation
+        run: |
+          cd docs
+          make html
+      - name: Upload docs as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-docs-${{ matrix.os }}-python-${{ matrix.python-version }}
+          path: docs/_build/html
+          if-no-files-found: error

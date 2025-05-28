@@ -1,0 +1,66 @@
+---
+reactants:
+  iron:
+  O2:
+products:
+  mt:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 482.0
+        - 472.0
+        - 532.0
+        - 522.0
+        - 565.0
+        - 555.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    lnK:
+      value:
+        - 138.74
+        - 138.27
+        - 127.8
+        - 127.32
+        - 121.32
+        - 120.84
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+metadata:
+  unique_id: hp11-381
+  reference:
+    short_cite: O’Neill, 1988
+    authors:
+      - O’Neill
+    year: 1988
+  method:
+  comments:

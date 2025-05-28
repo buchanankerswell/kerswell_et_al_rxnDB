@@ -1,0 +1,68 @@
+---
+reactants:
+  kos:
+  sp:
+products:
+  jd:
+  picr:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 1100.0
+        - 1100.0
+        - 1100.0
+        - 1100.0
+        - 1100.0
+        - 1100.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 25.0
+        - 25.0
+        - 25.0
+        - 25.0
+        - 25.0
+        - 25.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    lnK:
+      value:
+        - 1.75
+        - 1.82
+        - 2.055
+        - 1.88
+        - 2.24
+        - 1.77
+      uncertainty:
+        - 0.41
+        - 0.36
+        - 0.285
+        - 0.31
+        - 0.29
+        - 0.26
+metadata:
+  unique_id: hp11-003
+  reference:
+    short_cite: Carroll Webb & Wood 1986
+    authors:
+      - Carroll Webb
+      - Wood
+    year: 1986
+  method:
+  comments:

@@ -1,0 +1,69 @@
+---
+reactants:
+  ames:
+products:
+  clin:
+  cor:
+  sp:
+  H2O:
+data:
+  type: calibration
+  units:
+    T: C
+    P: kbar
+  points:
+    T:
+      value:
+        - 780.0
+        - 800.0
+        - 820.0
+        - 800.0
+        - 800.0
+        - 800.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    P:
+      value:
+        - 14.0
+        - 14.0
+        - 14.0
+        - 12.0
+        - 14.0
+        - 16.0
+      uncertainty:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+    lnK:
+      value:
+        - 2.985
+        - 3.47
+        - 3.955
+        - 3.185
+        - 3.47
+        - 2.845
+      uncertainty:
+        - 0.805
+        - 0.96
+        - 0.895
+        - 0.675
+        - 0.96
+        - 0.775
+metadata:
+  unique_id: hp11-247
+  reference:
+    short_cite: Baker & Holland, 1996
+    authors:
+      - Baker
+      - Holland
+    year: 1996
+  method:
+  comments:

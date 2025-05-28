@@ -1,0 +1,32 @@
+:root {
+/*  --bslib-sidebar-main-bg: #F8F8F8; */
+}
+.accordion-body {
+}
+.accordion-title {
+}
+.dark-mode-switch {
+    margin: 0.5rem 1rem;
+    color: #6C757D;
+    cursor: pointer;
+}
+.popover-gear-icon {
+    font-size: 1.1rem;
+    position: absolute;
+    right: 1rem;
+    color: #6C757D;
+    cursor: pointer;
+}
+.sidebar-panel-container {
+}
+.sidebar-popover-container {
+    z-index: 10;
+}
+.sidebar-popover-icon {
+    font-size: 1.1rem;
+    color: #6C757D;
+    cursor: pointer;
+}
+.sidebar-popover-radio-btns .control-label {
+    margin-bottom: 1rem;
+}
