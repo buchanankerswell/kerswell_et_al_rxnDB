@@ -4,7 +4,7 @@ reactants:
 products:
   neL:
 data:
-  type: phase_boundary
+  type: melting_curve
   units:
     T: C
     P: kbar
