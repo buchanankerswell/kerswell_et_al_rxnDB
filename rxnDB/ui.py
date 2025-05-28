@@ -44,7 +44,7 @@ def configure_ui() -> ui.Tag:
                                 "Toggle Data Type",
                                 class_="popover-btn",
                             ),
-                            "Show points, curves, or both",
+                            "Show phase boundaries, calibrations, melting curves, or all",
                         ),
                         ui.tooltip(
                             ui.input_action_button(

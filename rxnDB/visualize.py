@@ -79,7 +79,8 @@ class RxnDBPlotter:
         hovertemplate = (
             "%{customdata[0]}<br>"
             "%{customdata[1]}<br>"
-            f"(%{{x:.1f}} {temperature_units_label}, %{{y:.2f}} {pressure_units_label})<extra></extra>"
+            f"(%{{x:.1f}} {temperature_units_label}, %{{y:.2f}} {pressure_units_label})<br>"
+            "%{customdata[2]}<extra></extra>"
         )
 
         for rid in self.ids:
@@ -98,7 +99,9 @@ class RxnDBPlotter:
                         mode="lines",
                         line=dict(width=2, color=color),
                         hovertemplate=hovertemplate,
-                        customdata=np.stack((d["reaction"], d["unique_id"]), axis=-1),
+                        customdata=np.stack(
+                            (d["reaction"], d["unique_id"], d["type"]), axis=-1
+                        ),
                     )
                 )
             elif plot_type == "point":
@@ -115,7 +118,9 @@ class RxnDBPlotter:
                             type="data", array=d["P_uncertainty"], visible=True
                         ),
                         hovertemplate=hovertemplate,
-                        customdata=np.stack((d["reaction"], d["unique_id"]), axis=-1),
+                        customdata=np.stack(
+                            (d["reaction"], d["unique_id"], d["type"]), axis=-1
+                        ),
                     )
                 )
 

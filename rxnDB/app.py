@@ -350,9 +350,9 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
             return
 
         if _rv_toggle_similar_reactions() == "off":
-            _rv_toggle_similar_reactions.set("or")
-        elif _rv_toggle_similar_reactions() == "or":
             _rv_toggle_similar_reactions.set("and")
+        elif _rv_toggle_similar_reactions() == "and":
+            _rv_toggle_similar_reactions.set("or")
         else:
             _rv_toggle_similar_reactions.set("off")
 
@@ -365,9 +365,11 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
             return
 
         if _rv_toggle_data_type() == "all":
-            _rv_toggle_data_type.set("curves")
-        elif _rv_toggle_data_type() == "curves":
-            _rv_toggle_data_type.set("points")
+            _rv_toggle_data_type.set("phase_boundary")
+        elif _rv_toggle_data_type() == "phase_boundary":
+            _rv_toggle_data_type.set("calibration")
+        elif _rv_toggle_data_type() == "calibration":
+            _rv_toggle_data_type.set("melting_curve")
         else:
             _rv_toggle_data_type.set("all")
 
@@ -503,7 +505,7 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
         df = rc_get_filtered_data()
         selected_table_rows = _rv_selected_table_rows()
         find_similar_mode = _rv_toggle_similar_reactions()
-        data_plot_type = _rv_toggle_data_type()
+        data_type = _rv_toggle_data_type()
 
         if selected_table_rows:
             if find_similar_mode != "off":
@@ -522,18 +524,24 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
             else:
                 df = df[df["unique_id"].isin(selected_table_rows)]
 
-        if data_plot_type == "all":
+        if data_type == "all":
             return df
-        elif data_plot_type == "points":
+        elif data_type == "phase_boundary":
             return (
-                df[df["plot_type"] == "point"]
-                if "plot_type" in df.columns
+                df[df["type"] == "phase_boundary"]
+                if "type" in df.columns
                 else pd.DataFrame(columns=df.columns)
             )
-        elif data_plot_type == "curves":
+        elif data_type == "calibration":
             return (
-                df[df["plot_type"] == "curve"]
-                if "plot_type" in df.columns
+                df[df["type"] == "calibration"]
+                if "type" in df.columns
+                else pd.DataFrame(columns=df.columns)
+            )
+        elif data_type == "melting_curve":
+            return (
+                df[df["type"] == "melting_curve"]
+                if "type" in df.columns
                 else pd.DataFrame(columns=df.columns)
             )
         else:
@@ -542,9 +550,8 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def convert_units(df: pd.DataFrame) -> pd.DataFrame:
         """"""
-        with reactive.isolate():
-            current_temperature_units = _rv_selected_temperature_units()
-            current_pressure_units = _rv_selected_pressure_units()
+        current_temperature_units = _rv_selected_temperature_units()
+        current_pressure_units = _rv_selected_pressure_units()
 
         if current_temperature_units == "celcius":
             df = pd.DataFrame(df.apply(processor.convert_T_to_celcius, axis=1))
@@ -593,7 +600,6 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
         if not _rv_ui_initialized():
             return go.FigureWidget()
 
-        print("Rendering plot ...")
         with reactive.isolate():
             df = rc_get_plotly_data()
             current_temperature_units = _rv_selected_temperature_units()
@@ -624,7 +630,6 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
         if widget is None:
             return
 
-        print("Updating plot ...")
         df = rc_get_plotly_data()
         current_temperature_units = _rv_selected_temperature_units()
         current_pressure_units = _rv_selected_pressure_units()
@@ -648,7 +653,7 @@ def server(input: Inputs, output: Outputs, session: Session) -> None:
     @render.text
     def plot_settings() -> str:
         """Show plot settings info"""
-        data_type = f"Data type: {_rv_toggle_data_type()}\n"
+        data_type = f"Type: {_rv_toggle_data_type()}\n"
         similar_reactions = f"Similar rxns: {_rv_toggle_similar_reactions()}\n"
 
         selected_rows = _rv_selected_table_rows()
