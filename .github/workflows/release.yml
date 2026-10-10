@@ -103,7 +103,7 @@ jobs:
           TWINE_USERNAME: "__token__"
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
       - name: Upload dist to GitHub release
-        if: needs.check-version.outputs.is_major_minor == 'true'
         uses: softprops/action-gh-release@v1
         with:
           files: dist/*
+          prerelease: ${{ needs.check-version.outputs.is_major_minor != 'true' }}
