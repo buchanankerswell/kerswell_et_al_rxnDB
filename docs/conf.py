@@ -64,7 +64,6 @@ html_context = {
         "menu": [
             {"title": "Installation", "url": "installation.html"},
             {"title": "Usage", "url": "usage.html"},
-            {"title": "GitHub", "url": "https://github.com/buchanankerswell/kerswell_et_al_rxnDB"}
         ]
     }
 }
