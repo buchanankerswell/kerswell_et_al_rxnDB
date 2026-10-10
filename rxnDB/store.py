@@ -39,8 +39,43 @@ def search_reactions(
     if reaction_type:
         found = [reaction for reaction in found if reaction.reaction_type == reaction_type]
     if query:
-        needle = query.lower()
-        found = [reaction for reaction in found if needle in searchable_text(reaction)]
+        tokens = query.lower().split()
+        # Words prefixed with `-` drop records holding them; a bare `-`
+        # carries no meaning and is ignored.
+        excluded = set()
+        positives = []
+        for token in tokens:
+            if token.startswith("-") and len(token) > 1:
+                excluded.add(token[1:])
+            elif token != "-":
+                positives.append(token)
+        tokens = positives
+        if tokens or excluded:
+            # Fuzzy compromise: one word behaves explicitly, while several
+            # words keep records holding a combination (two or more) of them
+            # and rank the most overlapping records first. Tokens naming a
+            # reaction identifier always match that record explicitly.
+            known = {reaction.reaction_identifier.lower() for reaction in found}
+            names = {token for token in tokens if token in known}
+            words = [token for token in tokens if token not in known]
+            scored = []
+            for reaction in found:
+                text = searchable_text(reaction)
+                if any(part in text for part in excluded):
+                    continue
+                if reaction.reaction_identifier.lower() in names:
+                    hits = sum(1 for token in tokens if token in text)
+                    scored.append((hits, reaction.reaction_identifier, reaction))
+                    continue
+                if not words:
+                    if not tokens:
+                        scored.append((0, reaction.reaction_identifier, reaction))
+                    continue
+                hits = sum(1 for token in words if token in text)
+                if hits >= min(2, len(words)):
+                    scored.append((hits, reaction.reaction_identifier, reaction))
+            scored.sort(key=lambda row: (-row[0], row[1]))
+            found = [reaction for _, _, reaction in scored]
     return found
 
 

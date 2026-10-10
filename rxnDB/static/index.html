@@ -3,165 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>rxnDB</title>
+<title>rxnDB — Mineral Reaction Database</title>
+<link rel="stylesheet" href="/static/app.css">
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-<style>
-  :root { color-scheme: light dark; }
-  body { font-family: system-ui, sans-serif; margin: 0; }
-  header { display: flex; gap: 0.5rem; padding: 0.75rem; align-items: center; flex-wrap: wrap; }
-  input, select, button { font-size: 1rem; padding: 0.4rem 0.6rem; }
-  #layout { display: grid; grid-template-columns: 300px 1fr; gap: 1rem; padding: 0 0.75rem; }
-  #plot { min-height: 420px; }
-  table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
-  th, td { border: 1px solid #8884; padding: 0.3rem 0.5rem; text-align: left; }
-  @media (max-width: 800px) { #layout { grid-template-columns: 1fr; } }
-</style>
+<script src="/static/app.js" defer></script>
 </head>
 <body>
-<header>
-  <input id="query" type="search" placeholder="Search: Ky Sil type:phase_boundary" size="40">
-  <select id="reaction_type">
-    <option value="">all types</option>
-    <option value="phase_boundary">phase_boundary</option>
-    <option value="calibration">calibration</option>
-    <option value="melting_curve">melting_curve</option>
-  </select>
-  <button id="export">Download JSON</button>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand"><strong>rxnDB</strong><span>Mineral Reaction Database</span></div>
+    <div class="controls">
+      <input id="query" type="search" placeholder="Search minerals, authors, IDs… (e.g. Qz Coe)" size="40" aria-label="Search reactions">
+      <select id="reaction_type" aria-label="Reaction type">
+        <option value="">all types</option>
+        <option value="phase_boundary">phase_boundary</option>
+        <option value="calibration">calibration</option>
+        <option value="melting_curve">melting_curve</option>
+      </select>
+      <button id="export" type="button">Download JSON</button>
+    </div>
+  </div>
 </header>
+<main>
 <div id="layout">
-  <div>
-    <p>Press <kbd>/</kbd> to focus search. Filters live in the URL. Click a reaction to fit it and score next points.</p>
+  <div class="card side">
+    <p class="hint">Press <kbd>/</kbd> to search. Click a reaction to fit it.</p>
+    <p id="count" role="status" aria-live="polite"></p>
+    <hr>
     <ul id="reaction_list"></ul>
   </div>
   <div>
-    <div id="plot"></div>
-    <table id="table">
-      <thead><tr><th>reaction</th><th>T (°C)</th><th>P (GPa)</th><th>outcome</th><th>source</th></tr></thead>
-      <tbody></tbody>
-    </table>
+    <div class="card plot-wrap"><div id="plot"></div></div>
+    <div class="card table-wrap" style="margin-top:1rem">
+      <table id="table">
+        <thead><tr><th>reaction</th><th>T (°C)</th><th>P (GPa)</th><th>outcome</th><th>source</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="foot">Curves clip to their stated valid ranges. Entries marked <em>review</em> are suspect.</p>
   </div>
 </div>
-<script>
-const query_input = document.getElementById("query");
-const type_select = document.getElementById("reaction_type");
-
-function read_state() {
-  const params = new URLSearchParams(location.search);
-  return { query: params.get("query") || "", reaction_type: params.get("reaction_type") || "", selected: params.get("selected") || "" };
-}
-
-function write_state(state) {
-  const params = new URLSearchParams();
-  if (state.query) params.set("query", state.query);
-  if (state.reaction_type) params.set("reaction_type", state.reaction_type);
-  if (state.selected) params.set("selected", state.selected);
-  history.replaceState(null, "", "?" + params.toString());
-}
-
-function symbols(reaction) {
-  return [...reaction.reactants, ...reaction.products].map(p => p.mineral_symbol).join(" + ");
-}
-
-function boundary_trace(reaction, boundary) {
-  const low = boundary.valid_temperature_min_celsius ?? 400;
-  const high = boundary.valid_temperature_max_celsius ?? 1800;
-  const floor = Math.max(boundary.valid_pressure_min_gigapascal ?? 0, 0);
-  const ceiling = boundary.valid_pressure_max_gigapascal ?? null;
-  const grid = Array.from({ length: 40 }, (_, i) => low + (high - low) * i / 39);
-  return {
-    x: grid,
-    y: grid.map(t => {
-      const p = boundary.pressure_intercept_gigapascal
-        + boundary.pressure_slope_gigapascal_per_celsius * t
-        + boundary.pressure_curvature_gigapascal_per_celsius_squared * t * t
-        + boundary.pressure_cubic_gigapascal_per_celsius_cubed * t * t * t;
-      return (p < floor || (ceiling !== null && p > ceiling)) ? null : p;
-    }),
-    mode: "lines", type: "scatter", line: { dash: "dash" },
-    name: reaction.reaction_identifier + " (published)",
-  };
-}
-
-function suspect(reaction) {
-  return reaction.extensions && reaction.extensions.verification_status === "suspect";
-}
-
-let selected = "";
-
-async function refresh() {
-  const state = { query: query_input.value, reaction_type: type_select.value, selected };
-  write_state(state);
-  const params = new URLSearchParams();
-  if (state.query) params.set("query", state.query);
-  if (state.reaction_type) params.set("reaction_type", state.reaction_type);
-  const records = await (await fetch("/reactions?" + params.toString())).json();
-
-  document.getElementById("reaction_list").innerHTML = records.map(r =>
-    `<li><a href="#" data-id="${r.reaction_identifier}" style="${r.reaction_identifier === selected ? "font-weight:bold" : ""}">${r.reaction_identifier}: ${symbols(r)}${suspect(r) ? " (review)" : ""}</a></li>`).join("");
-  document.querySelectorAll("#reaction_list a").forEach(link =>
-    link.addEventListener("click", event => { event.preventDefault(); selected = link.dataset.id; refresh(); }));
-
-  const traces = records.flatMap(r => [
-    {
-      x: r.observations.map(o => o.temperature_celsius),
-      y: r.observations.map(o => o.pressure_gigapascal),
-      error_x: { array: r.observations.map(o => o.temperature_uncertainty_celsius) },
-      error_y: { array: r.observations.map(o => o.pressure_uncertainty_gigapascal) },
-      mode: "markers", type: "scatter", name: r.reaction_identifier,
-    },
-    ...r.interpreted_boundaries.map(b => boundary_trace(r, b)),
-  ]);
-
-  const target = records.find(r => r.reaction_identifier === selected);
-  if (target && target.observations.length >= 2) {
-    const fit = await (await fetch("/fit/boundary", {
-      method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ reaction_identifier: selected }),
-    })).json();
-    traces.push({
-      x: fit.line.map(p => p.temperature_celsius), y: fit.line.map(p => p.pressure_gigapascal),
-      mode: "lines", type: "scatter", name: selected + " (fit)",
-    });
-    traces.push({
-      x: [...fit.line.map(p => p.temperature_celsius), ...fit.line.map(p => p.temperature_celsius).reverse()],
-      y: [...fit.line.map(p => p.pressure_gigapascal + p.band_gigapascal), ...fit.line.map(p => p.pressure_gigapascal - p.band_gigapascal).reverse()],
-      fill: "toself", type: "scatter", mode: "none", name: selected + " (95% band)", opacity: 0.2,
-    });
-    const design = await (await fetch("/design/next-point", {
-      method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ reaction_identifier: selected, candidate_count: 20 }),
-    })).json();
-    const top = design.candidates.slice(0, 5);
-    const drops = top.map(c => c.expected_variance_drop);
-    const largest = Math.max(...drops, 1e-12);
-    traces.push({
-      x: top.map(c => c.temperature_celsius), y: top.map(c => c.pressure_gigapascal),
-      mode: "markers", type: "scatter", name: "next-point candidates",
-      marker: { size: drops.map(d => 8 + 20 * d / largest), symbol: "star" },
-    });
-  }
-
-  Plotly.react("plot", traces, { xaxis: { title: "Temperature (°C)" }, yaxis: { title: "Pressure (GPa)" } });
-
-  document.querySelector("#table tbody").innerHTML = records.flatMap(r =>
-    r.observations.map(o => `<tr><td>${r.reaction_identifier}</td><td>${o.temperature_celsius}</td><td>${o.pressure_gigapascal}</td><td>${o.experimental_outcome}</td><td>${r.source.short_citation}</td></tr>`)
-  ).join("");
-}
-
-document.addEventListener("keydown", event => {
-  if (event.key === "/" && document.activeElement !== query_input) { event.preventDefault(); query_input.focus(); }
-});
-query_input.addEventListener("input", refresh);
-type_select.addEventListener("change", refresh);
-document.getElementById("export").addEventListener("click", () => {
-  window.location = "/export?" + new URLSearchParams({ query: query_input.value, reaction_type: type_select.value }).toString();
-});
-
-const initial = read_state();
-query_input.value = initial.query;
-type_select.value = initial.reaction_type;
-selected = initial.selected;
-refresh();
-</script>
+</main>
 </body>
 </html>

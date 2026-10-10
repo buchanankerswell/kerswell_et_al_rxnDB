@@ -43,6 +43,6 @@ where = ["."]
 include = ["rxnDB*"]
 
 [tool.setuptools.package-data]
-rxnDB = ["*.json", "schema/*.json", "static/*.html", "data/*.json"]
+rxnDB = ["*.json", "schema/*.json", "static/*", "data/*.json"]
 
 [tool.setuptools_scm]

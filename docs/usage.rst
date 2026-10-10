@@ -37,7 +37,7 @@ To reach the same view by hand:
 
 The API is the URL itself:
 
-* ``query=qz+coe`` matches ``Qz`` and ``Coe`` against the database. Matching ignores case and treats the value as one substring; ``+`` decodes to a space.
+* ``query=qz+coe`` matches ``Qz`` and ``Coe`` against the database. Matching ignores case and splits on spaces, so ``qz coe`` and ``coe qz`` find the same records; ``+`` decodes to a space.
 * ``reaction_type=phase_boundary`` keeps only phase boundaries. Other values are ``calibration``, ``melting_curve``, and ``triple_point``.
 * ``selected=hp11-016`` highlights that reaction and draws its fit.
 
@@ -49,15 +49,25 @@ The app rewrites the URL on every keystroke and selection, so copy the URL to sh
 Search syntax
 -------------
 
-The ``query`` box matches one substring against the database fields.
+The ``query`` box splits on spaces and matches words in any order. One word
+matches directly; several words keep only records holding a combination (two
+or more) of them, with the most overlapping records first. Tokens naming a
+reaction identifier always match that record explicitly. Prefix a word with
+``-`` to drop records holding it.
 
 Examples:
 
 * ``qz`` finds all quartz-bearing records.
+* ``qz coe`` and ``coe qz`` find the same quartz-coesite records.
+* ``coe sti qz`` finds records pairing any two of those phases, such as
+  ``coe sti``, ``coe qz``, and ``coe sti qz`` combinations, without the
+  records holding only one of them.
+* ``jimmy-032 hp11-133`` shows exactly those two records.
+* ``coe sti qz -h2o`` keeps those pairings but drops any holding ``H2O``.
 * ``bose`` finds records citing Bose & Ganguly.
 * ``hp11-016`` jumps to one record.
 
-The ``mineral_symbol`` API parameter differs: it tests set membership and accepts comma-separated symbols (``?mineral_symbol=Qz,Coe``), while ``query`` tests one substring.
+The ``mineral_symbol`` API parameter differs: it tests set membership and accepts comma-separated symbols (``?mineral_symbol=Qz,Coe``), while ``query`` tests words in any order.
 
 Download matching records
 -------------------------
@@ -130,7 +140,7 @@ Each file under ``rxnDB/data/`` holds one reaction. Curves store polynomial coef
 Troubleshooting
 ---------------
 
-* The page loads but the plot is empty. The filters exclude everything; clear search and set the type dropdown to ``all types``.
+* The page loads but the plot is empty. The filters exclude everything; clear search and set the type dropdown to ``all types``. With more than 200 matches the plot shows the first 200 and says so; the list and table still show everything.
 * ``/fit/boundary`` returns 422. The record holds fewer than two observations; pick a record with a point set.
 * ``/validate`` rejects a symbol. Check ``rxnDB/registry.json`` for the canonical form and fix the ``mineral_symbol``, ``mineral_name``, and ``chemical_formula`` triple together.
 * Port 8000 is busy. Start the app on another port: ``python -m uvicorn rxnDB.api:app --port 8001``.
