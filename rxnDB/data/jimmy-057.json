@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-057",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Mwd",
+      "mineral_name": "Mg-wadsleyite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mrw",
+      "mineral_name": "Mg-ringwoodite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 14.219,
+      "pressure_slope_gigapascal_per_celsius": 0.0041,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 1200.0,
+      "valid_temperature_max_celsius": 1500.0,
+      "valid_pressure_min_gigapascal": 18.5,
+      "valid_pressure_max_gigapascal": 19.5
+    }
+  ],
+  "method": {
+    "description": "In situ X-ray",
+    "pressure_calibration": "Au (Anderson et al 1989 & Shim et al 2002)",
+    "temperature_calibration": "W75-Re25/W97-Re3"
+  },
+  "source": {
+    "authors": [
+      "Inoue",
+      "Irifune",
+      "Higo",
+      "Sanehira",
+      "Sueda",
+      "Yamada",
+      "Shinmei",
+      "Yamazaki",
+      "Ando",
+      "Funakoshi",
+      "Utsumi"
+    ],
+    "year": 2006,
+    "short_citation": "Inoue et al. (2006)",
+    "doi": "10.1007/s00269-005-0053-y",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

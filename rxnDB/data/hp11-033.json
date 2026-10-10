@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-033",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Mpv",
+      "mineral_name": "Mg-perovskite",
+      "chemical_formula": "MgSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mak",
+      "mineral_name": "akimotoite",
+      "chemical_formula": "MgSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1000.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 24.25,
+      "pressure_uncertainty_gigapascal": 0.75,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1300.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 23.75,
+      "pressure_uncertainty_gigapascal": 0.75,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1600.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 22.950000000000003,
+      "pressure_uncertainty_gigapascal": 0.65,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Ito",
+      "Takahashi"
+    ],
+    "year": 1989,
+    "short_citation": "Ito & Takahashi 1989",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-093",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Cumm",
+      "mineral_name": "cummingtonite",
+      "chemical_formula": "Mg7Si8O22(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "En",
+      "mineral_name": "enstatite",
+      "chemical_formula": "Mg2Si2O6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 718.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.29,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.7,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 748.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.29,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.72,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 728.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.49000000000000005,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -1.02,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 758.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.49000000000000005,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -1.04,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Fonarev",
+      "Korolkov"
+    ],
+    "year": 1980,
+    "short_citation": "Fonarev & Korolkov, 1980",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

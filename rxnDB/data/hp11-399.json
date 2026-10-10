@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-399",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Fctd",
+      "mineral_name": "Fe-chloritoid",
+      "chemical_formula": "FeAl2SiO5(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Fcrd",
+      "mineral_name": "Fe-cordierite",
+      "chemical_formula": "Fe2Al4Si5O18",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Herc",
+      "mineral_name": "hercynite",
+      "chemical_formula": "FeAl2O4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 537.5,
+      "temperature_uncertainty_celsius": 12.5,
+      "pressure_gigapascal": 0.1,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 562.5,
+      "temperature_uncertainty_celsius": 12.5,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Grieve",
+      "Fawcett"
+    ],
+    "year": 1974,
+    "short_citation": "Grieve & Fawcett, 1974",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

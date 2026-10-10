@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-470",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Rhc",
+      "mineral_name": "rhodochrosite",
+      "chemical_formula": "MnCO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Pxmn",
+      "mineral_name": "pyroxmangite",
+      "chemical_formula": "MnSiO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "CO2",
+      "mineral_name": "carbon dioxide",
+      "chemical_formula": "CO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 506.0,
+      "temperature_uncertainty_celsius": 3.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.11,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 496.5,
+      "temperature_uncertainty_celsius": 6.5,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.51,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Peters"
+    ],
+    "year": 1971,
+    "short_citation": "Peters, 1971",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-377",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Fa",
+      "mineral_name": "fayalite",
+      "chemical_formula": "Fe2SiO4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "O2",
+      "mineral_name": "oxygen",
+      "chemical_formula": "O2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Mt",
+      "mineral_name": "magnetite",
+      "chemical_formula": "Fe3O4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 666.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 41.85,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 656.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 41.07,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 716.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 38.55,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 706.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 37.77,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 721.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 38.09,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 711.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 37.31,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 750.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 36.63,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 740.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 35.85,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 770.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 35.77,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 760.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 34.99,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1123.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 21.81,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1113.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 21.03,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1138.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 21.33,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1128.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 20.55,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Myers",
+      "Eugster"
+    ],
+    "year": 1983,
+    "short_citation": "Myers & Eugster, 1983",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

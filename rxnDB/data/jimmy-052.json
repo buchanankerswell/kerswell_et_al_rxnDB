@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-052",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Fa",
+      "mineral_name": "fayalite",
+      "chemical_formula": "Fe2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Fasp",
+      "mineral_name": "fayalite [spinel]",
+      "chemical_formula": "Fe2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 2.0,
+      "pressure_slope_gigapascal_per_celsius": 0.0033,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 725.0,
+      "valid_temperature_max_celsius": 1425.0,
+      "valid_pressure_min_gigapascal": 4.4,
+      "valid_pressure_max_gigapascal": 6.4
+    }
+  ],
+  "method": {
+    "description": "Calorimetrics",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Akaogi",
+      "Ito",
+      "Navrotsky"
+    ],
+    "year": 1989,
+    "short_citation": "Akaogi et al. (1989)",
+    "doi": "10.1029/JB094iB11p15671",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

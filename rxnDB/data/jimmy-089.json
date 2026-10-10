@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-089",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Py",
+      "mineral_name": "pyrope",
+      "chemical_formula": "Mg3Al2Si3O12",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mpv",
+      "mineral_name": "Mg-perovskite",
+      "chemical_formula": "MgSiO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Crn",
+      "mineral_name": "corundum",
+      "chemical_formula": "Al2O3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 25.072,
+      "pressure_slope_gigapascal_per_celsius": 0.009,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 1365.0,
+      "valid_temperature_max_celsius": 2000.0,
+      "valid_pressure_min_gigapascal": 26.3,
+      "valid_pressure_max_gigapascal": 27.0
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "RT+HT",
+    "temperature_calibration": "Pt/Pt-Rh13"
+  },
+  "source": {
+    "authors": [
+      "Kubo",
+      "Akaogi"
+    ],
+    "year": 2000,
+    "short_citation": "Kubo & Akaogi (2000)",
+    "doi": "10.1016/S0031-9201(00)00162-X",
+    "license": "unknown"
+  },
+  "extensions": {
+    "verification_status": "suspect",
+    "verification_note": "Evaluated curve spans 37.4 to 43.1 GPa against stated 26.3-27.0 GPa limits; the slope carries it more than 10 GPa above the stated range. Pending check against Kubo & Akaogi (2000)."
+  }
+}

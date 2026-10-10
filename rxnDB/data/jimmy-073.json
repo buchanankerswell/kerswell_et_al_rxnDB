@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-073",
+  "reaction_type": "melting_curve",
+  "reactants": [
+    {
+      "mineral_symbol": "Ag",
+      "mineral_name": "silver",
+      "chemical_formula": "Ag",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Melt",
+      "mineral_name": "silicate melt",
+      "chemical_formula": "melt",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": -19.891,
+      "pressure_slope_gigapascal_per_celsius": 0.03278,
+      "pressure_curvature_gigapascal_per_celsius_squared": 2e-05,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 8000000000.0,
+      "valid_temperature_min_celsius": 959.0,
+      "valid_temperature_max_celsius": 1304.0,
+      "valid_pressure_min_gigapascal": 0.0,
+      "valid_pressure_max_gigapascal": 6.5
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "",
+    "temperature_calibration": "Pt/Pt-Rh90"
+  },
+  "source": {
+    "authors": [
+      "Akella",
+      "Kennedy"
+    ],
+    "year": 1971,
+    "short_citation": "Akella & Kennedy (1971)",
+    "doi": "10.1029/JB076i020p04969",
+    "license": "unknown"
+  },
+  "extensions": {
+    "verification_status": "suspect",
+    "verification_note": "Cubic term 8e9 exceeds sibling-fit scale by nine orders; evaluated curve spans 7e18 GPa against stated 0-6.5 GPa limits, and the remaining terms alone slope 4x steeper than the published initial slope. Pending check against Akella & Kennedy 1971."
+  }
+}

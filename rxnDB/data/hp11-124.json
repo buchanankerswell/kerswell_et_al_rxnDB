@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-124",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Dol",
+      "mineral_name": "dolomite",
+      "chemical_formula": "CaMg(CO3)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Ta",
+      "mineral_name": "talc",
+      "chemical_formula": "Mg3Si4O10(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Cc",
+      "mineral_name": "calcite",
+      "chemical_formula": "CaCO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "CO2",
+      "mineral_name": "carbon dioxide",
+      "chemical_formula": "CO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 495.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.30000000000000004,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -1.54,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 560.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -1.57,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 550.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.6000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -4.06,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 450.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -1.89,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 472.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.96,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 470.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.73,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 497.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.45,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 519.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 2.29,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Eggert",
+      "Kerrick",
+      "Metz",
+      "Puhan",
+      "Gordon & Greenwood"
+    ],
+    "year": [
+      1981,
+      1971
+    ],
+    "short_citation": "Eggert & Kerrick, 1981; Metz & Puhan, 1971; Gordon & Greenwood",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

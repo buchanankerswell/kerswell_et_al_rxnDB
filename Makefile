@@ -9,20 +9,20 @@ CONDA_ENV_ID := rxnDB
 CONDA_ENV_YML := environment.yml
 CONDA_PYTHON = $$(conda run -n $(CONDA_ENV_ID) which python)
 
-# Shiny app
-APP_CLI := $(APP)/cli.py
-
-# Cleanup directory
-CLEAN := $(APP)/**/__pycache__ $(APP)/**/*.pyc $(TESTS)/**/__pycache__ $(CURDIR)/.pytest_cache $(CURDIR)/build $(CURDIR)/dist $(CURDIR)/*.egg-info $(CURDIR)/.coverage $(CURDIR)/coverage.xml
-DEEP_CLEAN :=
+# Server
+APP_MODULE := rxnDB.api:app
 
 # Targets
 .PHONY: run docs test environment clean deep-clean
 
 all: environment test run
 
-run: $(APP_CLI)
-	@$(CONDA_PYTHON) $(APP_CLI) --host 127.0.0.1 --port 8000 --launch-browser --reload
+run:
+	@$(CONDA_PYTHON) -m uvicorn $(APP_MODULE) --host 127.0.0.1 --port 8000 --reload
+
+# Cleanup directory
+CLEAN := $(APP)/**/__pycache__ $(APP)/**/*.pyc $(TESTS)/**/__pycache__ $(CURDIR)/.pytest_cache $(CURDIR)/build $(CURDIR)/dist $(CURDIR)/*.egg-info $(CURDIR)/.coverage $(CURDIR)/coverage.xml
+DEEP_CLEAN :=
 
 docs:
 	@$(MAKE) -C docs html

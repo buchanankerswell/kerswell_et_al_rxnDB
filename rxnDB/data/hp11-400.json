@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-400",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Fgl",
+      "mineral_name": "ferroglaucophane",
+      "chemical_formula": "Na2Fe3Al2Si8O22(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Abh",
+      "mineral_name": "albite [high]",
+      "chemical_formula": "NaAlSi3O8",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Fa",
+      "mineral_name": "fayalite",
+      "chemical_formula": "Fe2SiO4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 355.0,
+      "temperature_uncertainty_celsius": 15.0,
+      "pressure_gigapascal": 0.30000000000000004,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 360.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Hoffmann"
+    ],
+    "year": 1972,
+    "short_citation": "Hoffmann, 1972",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

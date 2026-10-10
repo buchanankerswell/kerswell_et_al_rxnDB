@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-098",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Mag",
+      "mineral_name": "magnesite",
+      "chemical_formula": "MgCO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Per",
+      "mineral_name": "periclase",
+      "chemical_formula": "MgO",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "CO2",
+      "mineral_name": "carbon dioxide",
+      "chemical_formula": "CO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 740.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.06999999999999999,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 812.5,
+      "temperature_uncertainty_celsius": 12.5,
+      "pressure_gigapascal": 0.13999999999999999,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 837.5,
+      "temperature_uncertainty_celsius": 37.5,
+      "pressure_gigapascal": 0.21000000000000002,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 887.5,
+      "temperature_uncertainty_celsius": 12.5,
+      "pressure_gigapascal": 0.27999999999999997,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 952.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.30000000000000004,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 992.5,
+      "temperature_uncertainty_celsius": 15.5,
+      "pressure_gigapascal": 0.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Harker",
+      "Tuttle",
+      "Goldsmith",
+      "Heard"
+    ],
+    "year": [
+      1955,
+      1962
+    ],
+    "short_citation": "Harker & Tuttle, 1955; Goldsmith & Heard, 1962",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

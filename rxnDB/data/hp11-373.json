@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-373",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Fs",
+      "mineral_name": "ferrosilite",
+      "chemical_formula": "Fe2Si2O6",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Fa",
+      "mineral_name": "fayalite",
+      "chemical_formula": "Fe2SiO4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 700.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.05,
+      "pressure_uncertainty_gigapascal": 0.020000000000000004,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 750.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.1,
+      "pressure_uncertainty_gigapascal": 0.020000000000000004,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.1500000000000001,
+      "pressure_uncertainty_gigapascal": 0.020000000000000004,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 850.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.2000000000000002,
+      "pressure_uncertainty_gigapascal": 0.020000000000000004,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 900.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.2650000000000001,
+      "pressure_uncertainty_gigapascal": 0.025,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 950.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.33,
+      "pressure_uncertainty_gigapascal": 0.020000000000000004,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1000.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.4100000000000001,
+      "pressure_uncertainty_gigapascal": 0.020000000000000004,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1050.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.4800000000000002,
+      "pressure_uncertainty_gigapascal": 0.020000000000000004,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Bohlen et al."
+    ],
+    "year": 1980,
+    "short_citation": "Bohlen et al., 1980",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

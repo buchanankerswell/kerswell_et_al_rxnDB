@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-335",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Hol",
+      "mineral_name": "hollandite",
+      "chemical_formula": "KAlSi3O8",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Wa",
+      "mineral_name": "Si-wadeite",
+      "chemical_formula": "K2Si4O9",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Ky",
+      "mineral_name": "kyanite",
+      "chemical_formula": "Al2SiO5",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Coe",
+      "mineral_name": "coesite",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 700.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 8.9,
+      "pressure_uncertainty_gigapascal": 0.7000000000000001,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 9.700000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 850.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 8.200000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1000.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 9.200000000000001,
+      "pressure_uncertainty_gigapascal": 0.5,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1200.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 9.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1100.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 8.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1300.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 9.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1390.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 9.1,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Yagi et al",
+      "Urakawa et al"
+    ],
+    "year": [
+      1994,
+      1994
+    ],
+    "short_citation": "Yagi et al 1994; Urakawa et al 1994",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

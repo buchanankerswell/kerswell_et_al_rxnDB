@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-003",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Cdgeilm",
+      "mineral_name": "cadmium germinate [ilmenite]",
+      "chemical_formula": "CdGeO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Cdgepv",
+      "mineral_name": "cadmium germinate [perovskite]",
+      "chemical_formula": "CdGeO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 11.8934,
+      "pressure_slope_gigapascal_per_celsius": -0.0017,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 1073.0,
+      "valid_temperature_max_celsius": 1773.0,
+      "valid_pressure_min_gigapascal": 10.0,
+      "valid_pressure_max_gigapascal": 11.0
+    }
+  ],
+  "method": {
+    "description": "Experimental+Calorimetrics",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Akaogi",
+      "Navrotsky"
+    ],
+    "year": 1987,
+    "short_citation": "Akaogi & Navrotsky (1987)",
+    "doi": "10.1007/BF00628820",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-233",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Hcrd",
+      "mineral_name": "hydrous-cordierite",
+      "chemical_formula": "Mg2Al4Si5O17(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Crd",
+      "mineral_name": "cordierite",
+      "chemical_formula": "Mg2Al4Si5O18",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 775.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.375,
+      "pressure_uncertainty_gigapascal": 0.045000000000000005,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.53,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 900.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.36000000000000004,
+      "pressure_uncertainty_gigapascal": 0.06,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.28,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 955.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.36000000000000004,
+      "pressure_uncertainty_gigapascal": 0.03,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.2,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1105.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.33,
+      "pressure_uncertainty_gigapascal": 0.03,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Seifert"
+    ],
+    "year": 1974,
+    "short_citation": "Seifert, 1974",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

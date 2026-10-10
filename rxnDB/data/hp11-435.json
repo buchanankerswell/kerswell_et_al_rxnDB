@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-435",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Usp",
+      "mineral_name": "ulvospinel",
+      "chemical_formula": "Fe2TiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Ilm",
+      "mineral_name": "ilmenite",
+      "chemical_formula": "FeTiO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Iron",
+      "mineral_name": "iron",
+      "chemical_formula": "Fe",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "O2",
+      "mineral_name": "oxygen",
+      "chemical_formula": "O2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1100.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -32.005,
+      "natural_log_equilibrium_constant_uncertainty": 0.345
+    },
+    {
+      "temperature_celsius": 1150.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -30.275,
+      "natural_log_equilibrium_constant_uncertainty": 0.345
+    },
+    {
+      "temperature_celsius": 1200.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -29.015,
+      "natural_log_equilibrium_constant_uncertainty": 0.345
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Anovitz et al."
+    ],
+    "year": 1985,
+    "short_citation": "Anovitz et al., 1985",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

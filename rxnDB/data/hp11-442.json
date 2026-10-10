@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-442",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Dol",
+      "mineral_name": "dolomite",
+      "chemical_formula": "CaMg(CO3)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Sid",
+      "mineral_name": "siderite",
+      "chemical_formula": "FeCO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Ank",
+      "mineral_name": "ankerite",
+      "chemical_formula": "CaFe(CO3)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Mag",
+      "mineral_name": "magnesite",
+      "chemical_formula": "MgCO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 375.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.4,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.49,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 425.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.4,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.75,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Anovitz",
+      "Essene"
+    ],
+    "year": 1987,
+    "short_citation": "Anovitz & Essene, 1987",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

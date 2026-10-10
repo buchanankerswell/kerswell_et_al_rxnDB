@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-101",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Irpv",
+      "mineral_name": "calcium-iridium perovskite",
+      "chemical_formula": "CaIrO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Irppv",
+      "mineral_name": "calcium-iridium post-perovskite",
+      "chemical_formula": "CaIrO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": -21.085,
+      "pressure_slope_gigapascal_per_celsius": 0.0158,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 1375.0,
+      "valid_temperature_max_celsius": 1550.0,
+      "valid_pressure_min_gigapascal": 1.0,
+      "valid_pressure_max_gigapascal": 3.0
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "After Takahashi 1986",
+    "temperature_calibration": "W5-Re95/W26-Re74"
+  },
+  "source": {
+    "authors": [
+      "Hirose",
+      "Fujita"
+    ],
+    "year": 2005,
+    "short_citation": "Hirose & Fujita (2005)",
+    "doi": "10.1029/2005GL023219",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

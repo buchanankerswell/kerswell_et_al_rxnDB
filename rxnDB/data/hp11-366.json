@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-366",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Naph",
+      "mineral_name": "sodaphlogopite",
+      "chemical_formula": "NaMg3AlSi3O10(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "En",
+      "mineral_name": "enstatite",
+      "chemical_formula": "Mg2Si2O6",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Abh",
+      "mineral_name": "albite [high]",
+      "chemical_formula": "NaAlSi3O8",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Fo",
+      "mineral_name": "forsterite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 836.0,
+      "temperature_uncertainty_celsius": 16.0,
+      "pressure_gigapascal": 0.08000000000000002,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 860.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.16000000000000003,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Carman",
+      "Gilbert"
+    ],
+    "year": 1985,
+    "short_citation": "Carman & Gilbert, 1985",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

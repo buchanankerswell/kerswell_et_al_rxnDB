@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-215",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "En",
+      "mineral_name": "enstatite",
+      "chemical_formula": "Mg2Si2O6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Spr5",
+      "mineral_name": "sapphirine [351]",
+      "chemical_formula": "Mg3Al10SiO20",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mgts",
+      "mineral_name": "Mg-tschermaks pyroxene",
+      "chemical_formula": "MgAl2SiO6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Spr4",
+      "mineral_name": "sapphirine [221]",
+      "chemical_formula": "Mg4Al8Si2O20",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1050.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.08,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.02,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1050.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.21,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.17,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1200.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.33,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.11,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1200.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.56,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.05,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1300.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.42,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.14,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1300.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.6100000000000003,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.02,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1400.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.6100000000000003,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.17,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1400.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.8,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.08,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1400.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.6500000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.18,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1400.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.75,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.07,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1475.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.6600000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.18,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1475.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.75,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.12,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Newton",
+      "Hensen"
+    ],
+    "year": [
+      1972,
+      1972
+    ],
+    "short_citation": "Newton, 1972; Hensen, 1972",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-006",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Cdgegt",
+      "mineral_name": "cadmium germinate [garnet]",
+      "chemical_formula": "CdGeO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Cdgepv",
+      "mineral_name": "cadmium germinate [perovskite]",
+      "chemical_formula": "CdGeO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 7.8,
+      "pressure_slope_gigapascal_per_celsius": -0.0022,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 600.0,
+      "valid_temperature_max_celsius": 1300.0,
+      "valid_pressure_min_gigapascal": 5.3,
+      "valid_pressure_max_gigapascal": 7.0
+    }
+  ],
+  "method": {
+    "description": "Experimental+Calorimetrics (Calculated)",
+    "pressure_calibration": "RT",
+    "temperature_calibration": "Pt/Pt-Rh13"
+  },
+  "source": {
+    "authors": [
+      "Ross",
+      "Akaogi",
+      "Navrotsky",
+      "Susaki",
+      "McMillan"
+    ],
+    "year": 1986,
+    "short_citation": "Ross et al. (1986)",
+    "doi": "10.1007/BF00202573",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

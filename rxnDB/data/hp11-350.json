@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-350",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Ta",
+      "mineral_name": "talc",
+      "chemical_formula": "Mg3Si4O10(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Ky",
+      "mineral_name": "kyanite",
+      "chemical_formula": "Al2SiO5",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Tats",
+      "mineral_name": "tschermak-talc",
+      "chemical_formula": "Mg2Al2Si3O10(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Coe",
+      "mineral_name": "coesite",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 750.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 4.0,
+      "pressure_uncertainty_gigapascal": 0.1,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -16.29,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 670.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 4.0,
+      "pressure_uncertainty_gigapascal": 0.1,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -17.97,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 770.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 3.5,
+      "pressure_uncertainty_gigapascal": 0.1,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -14.97,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 666.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 3.5,
+      "pressure_uncertainty_gigapascal": 0.1,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -16.87,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 754.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 3.0,
+      "pressure_uncertainty_gigapascal": 0.1,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -14.15,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 685.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 3.0,
+      "pressure_uncertainty_gigapascal": 0.1,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -15.43,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Massonne",
+      "Schreyer"
+    ],
+    "year": 1989,
+    "short_citation": "Massonne & Schreyer, 1989",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

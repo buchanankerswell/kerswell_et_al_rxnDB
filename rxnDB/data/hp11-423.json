@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-423",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Pmt",
+      "mineral_name": "piemontite [ordered]",
+      "chemical_formula": "Ca2MnAl2Si3O12(OH)",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Cup",
+      "mineral_name": "cuprite",
+      "chemical_formula": "Cu2O",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Gr",
+      "mineral_name": "grossular",
+      "chemical_formula": "Ca3Al2Si3O12",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Spss",
+      "mineral_name": "spessartine",
+      "chemical_formula": "Mn3Al2Si3O12",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Ten",
+      "mineral_name": "tenorite",
+      "chemical_formula": "CuO",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 591.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.1,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -22.82,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 617.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -22.82,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Keskinen",
+      "Liou"
+    ],
+    "year": 1979,
+    "short_citation": "Keskinen & Liou, 1979",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

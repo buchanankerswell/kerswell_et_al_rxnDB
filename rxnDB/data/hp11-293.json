@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-293",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Ts",
+      "mineral_name": "tschermakite",
+      "chemical_formula": "Ca2Mg3Al4Si6O22(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Tr",
+      "mineral_name": "tremolite",
+      "chemical_formula": "Ca2Mg5Si8O22(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Ky",
+      "mineral_name": "kyanite",
+      "chemical_formula": "Al2SiO5",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Zo",
+      "mineral_name": "zoisite",
+      "chemical_formula": "Ca2Al3Si3O12(OH)",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 710.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 5.7,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 626.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 6.07,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 725.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 9.96,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 675.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 10.22,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 750.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 2.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 13.78,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 700.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 2.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 14.08,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Hoschek"
+    ],
+    "year": 1995,
+    "short_citation": "Hoschek 1995",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

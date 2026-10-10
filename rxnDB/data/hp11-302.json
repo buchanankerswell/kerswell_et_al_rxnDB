@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-302",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Vsv",
+      "mineral_name": "vesuvianite",
+      "chemical_formula": "Ca19Mg2Al11Si18O69(OH)9",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Gr",
+      "mineral_name": "grossular",
+      "chemical_formula": "Ca3Al2Si3O12",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Di",
+      "mineral_name": "diopside",
+      "chemical_formula": "CaMgSi2O6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Wo",
+      "mineral_name": "wollastonite",
+      "chemical_formula": "CaSiO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 382.5,
+      "temperature_uncertainty_celsius": 7.5,
+      "pressure_gigapascal": 0.1,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 407.5,
+      "temperature_uncertainty_celsius": 7.5,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Hochella et al."
+    ],
+    "year": 1980,
+    "short_citation": "Hochella et al., 1980",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

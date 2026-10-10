@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-074",
+  "reaction_type": "melting_curve",
+  "reactants": [
+    {
+      "mineral_symbol": "Cu",
+      "mineral_name": "copper",
+      "chemical_formula": "Cu",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Melt",
+      "mineral_name": "silicate melt",
+      "chemical_formula": "melt",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": -229.07,
+      "pressure_slope_gigapascal_per_celsius": 0.54991,
+      "pressure_curvature_gigapascal_per_celsius_squared": -0.00046,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 1e-07,
+      "valid_temperature_min_celsius": 1082.0,
+      "valid_temperature_max_celsius": 1310.0,
+      "valid_pressure_min_gigapascal": 0.0,
+      "valid_pressure_max_gigapascal": 6.5
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "",
+    "temperature_calibration": "Pt/Pt-Rh90"
+  },
+  "source": {
+    "authors": [
+      "Akella",
+      "Kennedy"
+    ],
+    "year": 1971,
+    "short_citation": "Akella & Kennedy (1971)",
+    "doi": "10.1029/JB076i020p04969",
+    "license": "unknown"
+  },
+  "extensions": {
+    "verification_status": "suspect",
+    "verification_note": "Evaluated curve spans -73 to -46 GPa against stated 0-6.5 GPa limits; negative melting pressures are unphysical and the slope sign contradicts the published positive initial slope. Pending check against Akella & Kennedy 1971."
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-110",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Tr",
+      "mineral_name": "tremolite",
+      "chemical_formula": "Ca2Mg5Si8O22(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "En",
+      "mineral_name": "enstatite",
+      "chemical_formula": "Mg2Si2O6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Di",
+      "mineral_name": "diopside",
+      "chemical_formula": "CaMgSi2O6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 665.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.010000000000000002,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 735.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.020000000000000004,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 765.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.03,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 810.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.08000000000000002,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 830.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.13999999999999999,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Yin",
+      "Greenwood"
+    ],
+    "year": 1983,
+    "short_citation": "Yin & Greenwood, 1983",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

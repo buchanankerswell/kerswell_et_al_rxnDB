@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-035",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Dol",
+      "mineral_name": "dolomite",
+      "chemical_formula": "CaMg(CO3)2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Arag",
+      "mineral_name": "aragonite",
+      "chemical_formula": "CaCO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Mag",
+      "mineral_name": "magnesite",
+      "chemical_formula": "MgCO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 1.75,
+      "pressure_slope_gigapascal_per_celsius": 0.0016,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 600.0,
+      "valid_temperature_max_celsius": 1200.0,
+      "valid_pressure_min_gigapascal": 5.0,
+      "valid_pressure_max_gigapascal": 8.5
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "HT",
+    "temperature_calibration": "W97-Re3/W75-Re25"
+  },
+  "source": {
+    "authors": [
+      "Sato",
+      "Katsura"
+    ],
+    "year": 2001,
+    "short_citation": "Sato & Katsura (2001)",
+    "doi": "10.1016/S0012-821X(00)00346-0",
+    "license": "unknown"
+  },
+  "extensions": {
+    "verification_status": "suspect",
+    "verification_note": "Evaluated curve spans 2.7 to 3.7 GPa against stated 5.0-8.5 GPa limits; roughly half the stated pressures throughout. Pending check against Sato & Katsura (2001)."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-440",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Mag",
+      "mineral_name": "magnesite",
+      "chemical_formula": "MgCO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Fa",
+      "mineral_name": "fayalite",
+      "chemical_formula": "Fe2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Fo",
+      "mineral_name": "forsterite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Sid",
+      "mineral_name": "siderite",
+      "chemical_formula": "FeCO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1000.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 2.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -1.35,
+      "natural_log_equilibrium_constant_uncertainty": 0.28
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Dalton",
+      "Wood"
+    ],
+    "year": 1993,
+    "short_citation": "Dalton & Wood, 1993",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

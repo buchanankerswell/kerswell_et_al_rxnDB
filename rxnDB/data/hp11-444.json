@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-444",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Py",
+      "mineral_name": "pyrope",
+      "chemical_formula": "Mg3Al2Si3O12",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Ann",
+      "mineral_name": "annite",
+      "chemical_formula": "KFe3AlSi3O10(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Alm",
+      "mineral_name": "almandine",
+      "chemical_formula": "Fe3Al2Si3O12",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Phl",
+      "mineral_name": "phlogopite",
+      "chemical_formula": "KMg3AlSi3O10(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 550.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 5.075,
+      "natural_log_equilibrium_constant_uncertainty": 0.165
+    },
+    {
+      "temperature_celsius": 600.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 4.765,
+      "natural_log_equilibrium_constant_uncertainty": 0.245
+    },
+    {
+      "temperature_celsius": 650.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 4.26,
+      "natural_log_equilibrium_constant_uncertainty": 0.14
+    },
+    {
+      "temperature_celsius": 700.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 3.82,
+      "natural_log_equilibrium_constant_uncertainty": 0.19
+    },
+    {
+      "temperature_celsius": 745.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 3.71,
+      "natural_log_equilibrium_constant_uncertainty": 0.27
+    },
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 3.425,
+      "natural_log_equilibrium_constant_uncertainty": 0.285
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Ferry",
+      "Spear"
+    ],
+    "year": 1978,
+    "short_citation": "Ferry & Spear, 1978",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-389",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Alm",
+      "mineral_name": "almandine",
+      "chemical_formula": "Fe3Al2Si3O12",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Sil",
+      "mineral_name": "sillimanite",
+      "chemical_formula": "Al2SiO5",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Herc",
+      "mineral_name": "hercynite",
+      "chemical_formula": "FeAl2O4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.30000000000000004,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 780.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.29,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 872.5,
+      "temperature_uncertainty_celsius": 7.5,
+      "pressure_gigapascal": 0.52,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 880.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.53,
+      "pressure_uncertainty_gigapascal": 0.020000000000000004,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 940.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.67,
+      "pressure_uncertainty_gigapascal": 0.020000000000000004,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1020.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.87,
+      "pressure_uncertainty_gigapascal": 0.020000000000000004,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1025.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.8800000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Bohlen et al."
+    ],
+    "year": 1986,
+    "short_citation": "Bohlen et al., 1986",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

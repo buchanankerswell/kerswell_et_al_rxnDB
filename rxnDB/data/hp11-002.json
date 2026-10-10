@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-002",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Knr",
+      "mineral_name": "knorringite",
+      "chemical_formula": "Mg3Cr2Si3O12",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Fo",
+      "mineral_name": "forsterite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Picr",
+      "mineral_name": "picrochromite",
+      "chemical_formula": "MgCr2O4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "En",
+      "mineral_name": "enstatite",
+      "chemical_formula": "Mg2Si2O6",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1200.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 8.35,
+      "pressure_uncertainty_gigapascal": 0.65,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1400.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 7.2,
+      "pressure_uncertainty_gigapascal": 0.8,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1600.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 6.25,
+      "pressure_uncertainty_gigapascal": 0.75,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Klemme"
+    ],
+    "year": 2004,
+    "short_citation": "Klemme 2004",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

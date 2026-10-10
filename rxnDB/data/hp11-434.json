@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-434",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Usp",
+      "mineral_name": "ulvospinel",
+      "chemical_formula": "Fe2TiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Ilm",
+      "mineral_name": "ilmenite",
+      "chemical_formula": "FeTiO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Iron",
+      "mineral_name": "iron",
+      "chemical_formula": "Fe",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "O2",
+      "mineral_name": "oxygen",
+      "chemical_formula": "O2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 850.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -42.29,
+      "natural_log_equilibrium_constant_uncertainty": 0.07
+    },
+    {
+      "temperature_celsius": 950.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -37.725,
+      "natural_log_equilibrium_constant_uncertainty": 0.065
+    },
+    {
+      "temperature_celsius": 1050.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -33.85,
+      "natural_log_equilibrium_constant_uncertainty": 0.09
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "O\u2019Neill et al."
+    ],
+    "year": 1988,
+    "short_citation": "O\u2019Neill et al., 1988",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

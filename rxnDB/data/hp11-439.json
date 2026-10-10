@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-439",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "NiO",
+      "mineral_name": "nickel oxide",
+      "chemical_formula": "NiO",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Ni",
+      "mineral_name": "nickel",
+      "chemical_formula": "Ni",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "O2",
+      "mineral_name": "oxygen",
+      "chemical_formula": "O2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 600.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -44.18,
+      "natural_log_equilibrium_constant_uncertainty": 0.23
+    },
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -32.08,
+      "natural_log_equilibrium_constant_uncertainty": 0.23
+    },
+    {
+      "temperature_celsius": 900.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -27.59,
+      "natural_log_equilibrium_constant_uncertainty": 0.23
+    },
+    {
+      "temperature_celsius": 1100.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -20.59,
+      "natural_log_equilibrium_constant_uncertainty": 0.23
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "O\u2019Neill"
+    ],
+    "year": 1987,
+    "short_citation": "O\u2019Neill, 1987",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

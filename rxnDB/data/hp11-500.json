@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-500",
+  "reaction_type": "melting_curve",
+  "reactants": [
+    {
+      "mineral_symbol": "Fo",
+      "mineral_name": "forsterite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "FoL",
+      "mineral_name": "forsterite liquid",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1890.0,
+      "temperature_uncertainty_celsius": 5.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1917.5,
+      "temperature_uncertainty_celsius": 12.5,
+      "pressure_gigapascal": 0.55,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1962.5,
+      "temperature_uncertainty_celsius": 12.5,
+      "pressure_gigapascal": 1.25,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1980.0,
+      "temperature_uncertainty_celsius": 25.0,
+      "pressure_gigapascal": 1.8,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 2030.0,
+      "temperature_uncertainty_celsius": 25.0,
+      "pressure_gigapascal": 2.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 2030.0,
+      "temperature_uncertainty_celsius": 25.0,
+      "pressure_gigapascal": 3.0500000000000003,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 2092.5,
+      "temperature_uncertainty_celsius": 12.5,
+      "pressure_gigapascal": 3.95,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 2117.5,
+      "temperature_uncertainty_celsius": 12.5,
+      "pressure_gigapascal": 4.65,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Davis",
+      "England"
+    ],
+    "year": 1964,
+    "short_citation": "Davis & England, 1964",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

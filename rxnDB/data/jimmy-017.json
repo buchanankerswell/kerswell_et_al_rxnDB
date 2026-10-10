@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-017",
+  "reaction_type": "melting_curve",
+  "reactants": [
+    {
+      "mineral_symbol": "Mpv",
+      "mineral_name": "Mg-perovskite",
+      "chemical_formula": "MgSiO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Cpv",
+      "mineral_name": "Ca-perovskite",
+      "chemical_formula": "CaSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Melt",
+      "mineral_name": "silicate melt",
+      "chemical_formula": "melt",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": -6.677,
+      "pressure_slope_gigapascal_per_celsius": 0.0144,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 2140.0,
+      "valid_temperature_max_celsius": 2250.0,
+      "valid_pressure_min_gigapascal": 24.1,
+      "valid_pressure_max_gigapascal": 25.7
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "After Funamori et al 1996",
+    "temperature_calibration": "W95-Re5/ W74-Re26"
+  },
+  "source": {
+    "authors": [
+      "Oguri",
+      "Funamori",
+      "Sakai",
+      "Kondo",
+      "Uchida",
+      "Yagi"
+    ],
+    "year": 1997,
+    "short_citation": "Oguri et al. (1997)",
+    "doi": "10.1016/S0031-9201(97)00029-0",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

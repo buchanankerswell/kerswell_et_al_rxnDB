@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-032",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Ky",
+      "mineral_name": "kyanite",
+      "chemical_formula": "Al2SiO5",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Crn",
+      "mineral_name": "corundum",
+      "chemical_formula": "Al2O3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Sti",
+      "mineral_name": "stishovite",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 10.256,
+      "pressure_slope_gigapascal_per_celsius": 0.0035,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 650.0,
+      "valid_temperature_max_celsius": 2000.0,
+      "valid_pressure_min_gigapascal": 12.2,
+      "valid_pressure_max_gigapascal": 18.0
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "HT",
+    "temperature_calibration": "Pt/Pt90-Rh10"
+  },
+  "source": {
+    "authors": [
+      "Schmidt",
+      "Polo",
+      "Comodi",
+      "Zanazzi"
+    ],
+    "year": 1997,
+    "short_citation": "Schmidt et al. (1997)",
+    "doi": "http://www.minsocam.org/MSA/AmMin/toc/Articles_Free/1997/Schmidt_p460-466_97.pdf",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

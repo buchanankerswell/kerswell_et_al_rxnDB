@@ -46,29 +46,20 @@ make environment
 
 ## Usage Guide
 
-After installing rxnDB using either methods above, you can launch the Shiny app directly from the command line:
+After installing rxnDB using either method above, launch the server from the command line:
 
 ``` bash
 # Activate conda environment
 conda activate rxnDB
 
-# Launch app
+# Launch server (UI at http://127.0.0.1:8000/)
 rxndb
 ```
 
-For more advanced usage, you can use the following options:
+The same JSON serves browsers and agents:
 
 ``` bash
-# Activate conda environment
-conda activate rxnDB
-
-# rxndb --host 0.0.0.0   (Make accessible from other machines)
-# rxndb --port 8080      (Run on a specific port)
-# rxndb --launch-browser (Open browser automatically)
-# rxndb --reload         (Auto-reload when files change)
-
-# Default command
-rxndb --host 127.0.0.1 --port 8000 --launch-browser --reload
+curl 'http://127.0.0.1:8000/reactions?mineral_symbol=Qz' | head -c 300
 ```
 
 ## Coauthors

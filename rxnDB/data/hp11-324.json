@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-324",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Smul",
+      "mineral_name": "Si-mullite",
+      "chemical_formula": "Al2SiO5",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Spr4",
+      "mineral_name": "sapphirine [221]",
+      "chemical_formula": "Mg4Al8Si2O20",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Crn",
+      "mineral_name": "corundum",
+      "chemical_formula": "Al2O3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Crd",
+      "mineral_name": "cordierite",
+      "chemical_formula": "Mg2Al4Si5O18",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1275.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 8.57,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1260.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 8.66,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1305.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.1,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 8.16,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1200.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.1,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 8.33,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1305.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.30000000000000004,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 7.33,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1205.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.30000000000000004,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 7.71,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1210.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 6.46,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1160.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 7.07,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Seifert"
+    ],
+    "year": 1974,
+    "short_citation": "Seifert 1974",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

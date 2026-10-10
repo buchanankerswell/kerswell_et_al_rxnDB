@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-182",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Per",
+      "mineral_name": "periclase",
+      "chemical_formula": "MgO",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Crn",
+      "mineral_name": "corundum",
+      "chemical_formula": "Al2O3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Sp",
+      "mineral_name": "spinel",
+      "chemical_formula": "MgAl2O4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1200.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 2.785,
+      "natural_log_equilibrium_constant_uncertainty": 0.075
+    },
+    {
+      "temperature_celsius": 1200.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 2.865,
+      "natural_log_equilibrium_constant_uncertainty": 0.205
+    },
+    {
+      "temperature_celsius": 1250.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 2.945,
+      "natural_log_equilibrium_constant_uncertainty": 0.235
+    },
+    {
+      "temperature_celsius": 1300.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 2.82,
+      "natural_log_equilibrium_constant_uncertainty": 0.2
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Chamberlin et al."
+    ],
+    "year": 1995,
+    "short_citation": "Chamberlin et al., 1995",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

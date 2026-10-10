@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-029",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "And",
+      "mineral_name": "andalusite",
+      "chemical_formula": "Al2SiO5",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Sil",
+      "mineral_name": "sillimanite",
+      "chemical_formula": "Al2SiO5",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 1.4214,
+      "pressure_slope_gigapascal_per_celsius": -0.0024,
+      "pressure_curvature_gigapascal_per_celsius_squared": 9e-07,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 530.0,
+      "valid_temperature_max_celsius": 920.0,
+      "valid_pressure_min_gigapascal": null,
+      "valid_pressure_max_gigapascal": 0.42
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "",
+    "temperature_calibration": "Pt/Pt90-Rh10"
+  },
+  "source": {
+    "authors": [
+      "Bohlen",
+      "Montana",
+      "Kerrick"
+    ],
+    "year": 1991,
+    "short_citation": "Bohlen et al. (1991)",
+    "doi": "http://www.minsocam.org/ammin/AM76/AM76_677.pdf",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

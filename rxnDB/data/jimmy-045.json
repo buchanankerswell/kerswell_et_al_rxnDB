@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-045",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Maj",
+      "mineral_name": "majorite",
+      "chemical_formula": "Mg4Si4O12",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mwd",
+      "mineral_name": "Mg-wadsleyite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Sti",
+      "mineral_name": "stishovite",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": -39487.0,
+      "pressure_slope_gigapascal_per_celsius": 42.329,
+      "pressure_curvature_gigapascal_per_celsius_squared": -0.0113,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 1596.0,
+      "valid_temperature_max_celsius": 1603.0,
+      "valid_pressure_min_gigapascal": 16.5,
+      "valid_pressure_max_gigapascal": 17.5
+    }
+  ],
+  "method": {
+    "description": "Thermodynamic Calcs",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Gasparik"
+    ],
+    "year": 2003,
+    "short_citation": "Gasparik (2003)",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {
+    "verification_status": "suspect",
+    "verification_note": "Evaluated curve spans -713 to -670 GPa against stated 16.5-17.5 GPa limits over a 7 C window; coefficients look ill-conditioned or mistyped. Pending check against Gasparik 2003."
+  }
+}

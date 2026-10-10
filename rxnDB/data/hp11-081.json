@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-081",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Br",
+      "mineral_name": "brucite",
+      "chemical_formula": "Mg(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Chr",
+      "mineral_name": "chrysotile",
+      "chemical_formula": "Mg3Si2O5(OH)4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Fo",
+      "mineral_name": "forsterite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 360.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.1,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 390.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.30000000000000004,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 412.5,
+      "temperature_uncertainty_celsius": 17.5,
+      "pressure_gigapascal": 0.4,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 427.5,
+      "temperature_uncertainty_celsius": 12.5,
+      "pressure_gigapascal": 0.7000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 485.0,
+      "temperature_uncertainty_celsius": 35.0,
+      "pressure_gigapascal": 1.82,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 490.0,
+      "temperature_uncertainty_celsius": 30.0,
+      "pressure_gigapascal": 2.7300000000000004,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Johannes",
+      "Kitahara et al."
+    ],
+    "year": [
+      1968,
+      1966
+    ],
+    "short_citation": "Johannes, 1968; Kitahara et al., 1966",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

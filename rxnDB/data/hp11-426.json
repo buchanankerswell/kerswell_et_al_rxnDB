@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-426",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Osm1",
+      "mineral_name": "osumilite [I]",
+      "chemical_formula": "KMg2Al5Si10O30",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Fs",
+      "mineral_name": "ferrosilite",
+      "chemical_formula": "Fe2Si2O6",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Fosm",
+      "mineral_name": "Fe-osumilite",
+      "chemical_formula": "KFe2Al5Si10O30",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "En",
+      "mineral_name": "enstatite",
+      "chemical_formula": "Mg2Si2O6",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 875.0,
+      "temperature_uncertainty_celsius": 50.0,
+      "pressure_gigapascal": 0.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -1.58,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Holland et al."
+    ],
+    "year": 1996,
+    "short_citation": "Holland et al., 1996",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

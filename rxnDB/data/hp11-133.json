@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-133",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Crn",
+      "mineral_name": "corundum",
+      "chemical_formula": "Al2O3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Sti",
+      "mineral_name": "stishovite",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Ky",
+      "mineral_name": "kyanite",
+      "chemical_formula": "Al2SiO5",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1000.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 13.3,
+      "pressure_uncertainty_gigapascal": 0.5,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1300.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 14.05,
+      "pressure_uncertainty_gigapascal": 0.25,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1580.0,
+      "temperature_uncertainty_celsius": 30.0,
+      "pressure_gigapascal": 14.700000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 2000.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 16.650000000000002,
+      "pressure_uncertainty_gigapascal": 0.9500000000000001,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Schmidt et al"
+    ],
+    "year": 1997,
+    "short_citation": "Schmidt et al 1997",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

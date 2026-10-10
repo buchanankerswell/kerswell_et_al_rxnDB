@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-390",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Alm",
+      "mineral_name": "almandine",
+      "chemical_formula": "Fe3Al2Si3O12",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Crn",
+      "mineral_name": "corundum",
+      "chemical_formula": "Al2O3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Herc",
+      "mineral_name": "hercynite",
+      "chemical_formula": "FeAl2O4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Sil",
+      "mineral_name": "sillimanite",
+      "chemical_formula": "Al2SiO5",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 850.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.7200000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 900.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.81,
+      "pressure_uncertainty_gigapascal": 0.020000000000000004,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1000.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.0250000000000001,
+      "pressure_uncertainty_gigapascal": 0.034999999999999996,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1100.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.21,
+      "pressure_uncertainty_gigapascal": 0.020000000000000004,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Shulters",
+      "Bohlen"
+    ],
+    "year": 1989,
+    "short_citation": "Shulters & Bohlen, 1989",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

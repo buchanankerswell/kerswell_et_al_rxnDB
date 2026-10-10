@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-401",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Rieb",
+      "mineral_name": "riebeckite",
+      "chemical_formula": "Na2Fe5Si8O22(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Hem",
+      "mineral_name": "hematite",
+      "chemical_formula": "Fe2O3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Acm",
+      "mineral_name": "acmite",
+      "chemical_formula": "NaFeSi2O6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Mt",
+      "mineral_name": "magnetite",
+      "chemical_formula": "Fe3O4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 477.5,
+      "temperature_uncertainty_celsius": 12.5,
+      "pressure_gigapascal": 0.05,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 494.0,
+      "temperature_uncertainty_celsius": 5.0,
+      "pressure_gigapascal": 0.1,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 513.5,
+      "temperature_uncertainty_celsius": 2.5,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Ernst"
+    ],
+    "year": 1962,
+    "short_citation": "Ernst, 1962",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

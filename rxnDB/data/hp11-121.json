@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-121",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Ta",
+      "mineral_name": "talc",
+      "chemical_formula": "Mg3Si4O10(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Cc",
+      "mineral_name": "calcite",
+      "chemical_formula": "CaCO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Di",
+      "mineral_name": "diopside",
+      "chemical_formula": "CaMgSi2O6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "CO2",
+      "mineral_name": "carbon dioxide",
+      "chemical_formula": "CO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 497.5,
+      "temperature_uncertainty_celsius": 17.5,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -2.45,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Skippen"
+    ],
+    "year": 1971,
+    "short_citation": "Skippen, 1971",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

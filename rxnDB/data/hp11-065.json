@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-065",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Ta",
+      "mineral_name": "talc",
+      "chemical_formula": "Mg3Si4O10(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "En",
+      "mineral_name": "enstatite",
+      "chemical_formula": "Mg2Si2O6",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Anth",
+      "mineral_name": "anthophyllite",
+      "chemical_formula": "Mg7Si8O22(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 767.5,
+      "temperature_uncertainty_celsius": 12.5,
+      "pressure_gigapascal": 1.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Chernosky et al."
+    ],
+    "year": 1985,
+    "short_citation": "Chernosky et al., 1985",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

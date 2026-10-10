@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-447",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Alm",
+      "mineral_name": "almandine",
+      "chemical_formula": "Fe3Al2Si3O12",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Cel",
+      "mineral_name": "celadonite",
+      "chemical_formula": "KMgAlSi4O10(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Py",
+      "mineral_name": "pyrope",
+      "chemical_formula": "Mg3Al2Si3O12",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Fcel",
+      "mineral_name": "ferroceladonite",
+      "chemical_formula": "KFeAlSi4O10(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 470.0,
+      "temperature_uncertainty_celsius": 50.0,
+      "pressure_gigapascal": 0.7000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -7.69,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 470.0,
+      "temperature_uncertainty_celsius": 50.0,
+      "pressure_gigapascal": 0.7000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -6.84,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 470.0,
+      "temperature_uncertainty_celsius": 50.0,
+      "pressure_gigapascal": 0.7000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -7.22,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Hynes",
+      "Forest"
+    ],
+    "year": 1988,
+    "short_citation": "Hynes & Forest, 1988",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

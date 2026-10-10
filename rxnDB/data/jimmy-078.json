@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-078",
+  "reaction_type": "melting_curve",
+  "reactants": [
+    {
+      "mineral_symbol": "Cu",
+      "mineral_name": "copper",
+      "chemical_formula": "Cu",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Melt",
+      "mineral_name": "silicate melt",
+      "chemical_formula": "melt",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": -26.25,
+      "pressure_slope_gigapascal_per_celsius": 0.0331,
+      "pressure_curvature_gigapascal_per_celsius_squared": -2e-05,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 8e-09,
+      "valid_temperature_min_celsius": 1085.0,
+      "valid_temperature_max_celsius": 1897.0,
+      "valid_pressure_min_gigapascal": 0.0,
+      "valid_pressure_max_gigapascal": 30.0
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "",
+    "temperature_calibration": "Pt/Pt-Rh90"
+  },
+  "source": {
+    "authors": [
+      "Mirwald",
+      "Kennedy"
+    ],
+    "year": 1979,
+    "short_citation": "Mirwald & Kennedy (1979)",
+    "doi": "10.1029/JB084iB12p06750",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

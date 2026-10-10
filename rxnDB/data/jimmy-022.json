@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-022",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Mwd",
+      "mineral_name": "Mg-wadsleyite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Sti",
+      "mineral_name": "stishovite",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Cpv",
+      "mineral_name": "Ca-perovskite",
+      "chemical_formula": "CaSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mrw",
+      "mineral_name": "Mg-ringwoodite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Sti",
+      "mineral_name": "stishovite",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Cpv",
+      "mineral_name": "Ca-perovskite",
+      "chemical_formula": "CaSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 15.275,
+      "pressure_slope_gigapascal_per_celsius": 0.0029,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 940.0,
+      "valid_temperature_max_celsius": 1450.0,
+      "valid_pressure_min_gigapascal": 17.9,
+      "valid_pressure_max_gigapascal": 19.5
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "RT+HT",
+    "temperature_calibration": "Pt/Pt-Rh13"
+  },
+  "source": {
+    "authors": [
+      "Akaogi",
+      "Yano",
+      "Tejima",
+      "Iijima",
+      "Kojitani"
+    ],
+    "year": 2004,
+    "short_citation": "Akaogi et al. (2004)",
+    "doi": "10.1016/j.pepi.2003.08.008",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

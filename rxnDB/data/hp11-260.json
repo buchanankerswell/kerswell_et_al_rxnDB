@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-260",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Hcrd",
+      "mineral_name": "hydrous-cordierite",
+      "chemical_formula": "Mg2Al4Si5O17(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Crd",
+      "mineral_name": "cordierite",
+      "chemical_formula": "Mg2Al4Si5O18",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 733.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.35000000000000003,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.79,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 740.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.30000000000000004,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.63,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 730.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.4,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.95,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 750.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.47000000000000003,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -1.15,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 744.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -1.23,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Jenkins",
+      "Chernosky"
+    ],
+    "year": 1986,
+    "short_citation": "Jenkins & Chernosky, 1986",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

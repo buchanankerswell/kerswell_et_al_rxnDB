@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-499",
+  "reaction_type": "melting_curve",
+  "reactants": [
+    {
+      "mineral_symbol": "Lime",
+      "mineral_name": "lime",
+      "chemical_formula": "CaO",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "LimL",
+      "mineral_name": "CaO liquid",
+      "chemical_formula": "CaO",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 2572.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Rankin",
+      "Wright"
+    ],
+    "year": 1915,
+    "short_citation": "Rankin & Wright, 1915",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

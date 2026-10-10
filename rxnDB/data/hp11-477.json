@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-477",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Phl",
+      "mineral_name": "phlogopite",
+      "chemical_formula": "KMg3AlSi3O10(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Mnst",
+      "mineral_name": "Mn-staurolite",
+      "chemical_formula": "Mn4Al18Si7.5O44(OH)4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mnbi",
+      "mineral_name": "Mn-biotite",
+      "chemical_formula": "KMn3AlSi3O10(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Mst",
+      "mineral_name": "Mg-staurolite",
+      "chemical_formula": "Mg4Al18Si7.5O44(OH)4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 550.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.45,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -37.635,
+      "natural_log_equilibrium_constant_uncertainty": 0.695
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Mahar et al."
+    ],
+    "year": 1997,
+    "short_citation": "Mahar et al., 1997",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

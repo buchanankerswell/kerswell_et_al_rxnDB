@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-112",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Tr",
+      "mineral_name": "tremolite",
+      "chemical_formula": "Ca2Mg5Si8O22(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Fo",
+      "mineral_name": "forsterite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "En",
+      "mineral_name": "enstatite",
+      "chemical_formula": "Mg2Si2O6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Di",
+      "mineral_name": "diopside",
+      "chemical_formula": "CaMgSi2O6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 830.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.045,
+      "natural_log_equilibrium_constant_uncertainty": 0.045
+    },
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.8,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.045,
+      "natural_log_equilibrium_constant_uncertainty": 0.045
+    },
+    {
+      "temperature_celsius": 780.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 1.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.045,
+      "natural_log_equilibrium_constant_uncertainty": 0.045
+    },
+    {
+      "temperature_celsius": 650.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 2.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.045,
+      "natural_log_equilibrium_constant_uncertainty": 0.045
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Jenkins"
+    ],
+    "year": 1983,
+    "short_citation": "Jenkins, 1983",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

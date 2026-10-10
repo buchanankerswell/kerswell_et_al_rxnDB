@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-083",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Liz",
+      "mineral_name": "lizardite",
+      "chemical_formula": "Mg3Si2O5(OH)4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Chr",
+      "mineral_name": "chrysotile",
+      "chemical_formula": "Mg3Si2O5(OH)4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 422.0,
+      "temperature_uncertainty_celsius": 9.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Chernosky"
+    ],
+    "year": 1975,
+    "short_citation": "Chernosky, 1975",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

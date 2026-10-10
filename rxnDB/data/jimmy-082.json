@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-082",
+  "reaction_type": "melting_curve",
+  "reactants": [
+    {
+      "mineral_symbol": "Pb",
+      "mineral_name": "lead",
+      "chemical_formula": "Pb",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Melt",
+      "mineral_name": "silicate melt",
+      "chemical_formula": "melt",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": -4.0905,
+      "pressure_slope_gigapascal_per_celsius": 0.0108,
+      "pressure_curvature_gigapascal_per_celsius_squared": 5e-06,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 1200.0,
+      "valid_temperature_max_celsius": 2800.0,
+      "valid_pressure_min_gigapascal": 0.0,
+      "valid_pressure_max_gigapascal": 100.0
+    }
+  ],
+  "method": {
+    "description": "X-Ray DAC",
+    "pressure_calibration": "NaCl/Ar Ross1986/Ono2006",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Dewaele",
+      "Mezouar",
+      "Guignot",
+      "Loubeyre"
+    ],
+    "year": 2007,
+    "short_citation": "Dewaele et al. (2007)",
+    "doi": "10.1103/PhysRevB.76.144106",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

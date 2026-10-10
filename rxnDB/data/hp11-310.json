@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-310",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Sdl",
+      "mineral_name": "sodalite",
+      "chemical_formula": "Na8Al6Si6O24Cl2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Cgh",
+      "mineral_name": "carnegieite [high]",
+      "chemical_formula": "NaAlSiO4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "HltL",
+      "mineral_name": "halite liquid",
+      "chemical_formula": "NaCl",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1377.5,
+      "temperature_uncertainty_celsius": 7.5,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Sharp et al"
+    ],
+    "year": 1989,
+    "short_citation": "Sharp et al 1989",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

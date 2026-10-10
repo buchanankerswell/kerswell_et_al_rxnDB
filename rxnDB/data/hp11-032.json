@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-032",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Mpv",
+      "mineral_name": "Mg-perovskite",
+      "chemical_formula": "MgSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mak",
+      "mineral_name": "akimotoite",
+      "chemical_formula": "MgSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1025.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 24.0,
+      "pressure_uncertainty_gigapascal": 1.5,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1225.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 23.5,
+      "pressure_uncertainty_gigapascal": 1.5,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1425.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 23.0,
+      "pressure_uncertainty_gigapascal": 1.5,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1625.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 22.5,
+      "pressure_uncertainty_gigapascal": 1.5,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 22.5,
+      "pressure_uncertainty_gigapascal": 0.5,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1825.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 22.0,
+      "pressure_uncertainty_gigapascal": 1.5,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1925.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 21.5,
+      "pressure_uncertainty_gigapascal": 1.5,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Katsura",
+      "Ito 1989, Ohtani"
+    ],
+    "year": 1991,
+    "short_citation": "Katsura & Ito 1989, Ohtani 1991",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-303",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Cg",
+      "mineral_name": "carnegieite [low]",
+      "chemical_formula": "NaAlSiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Cgh",
+      "mineral_name": "carnegieite [high]",
+      "chemical_formula": "NaAlSiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 692.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 708.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Bowen",
+      "Greig",
+      "Cohen",
+      "Klement"
+    ],
+    "year": [
+      1925,
+      1976
+    ],
+    "short_citation": "Bowen & Greig, 1925; Cohen & Klement, 1976",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

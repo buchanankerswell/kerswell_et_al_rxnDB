@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-091",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Atg",
+      "mineral_name": "antigorite",
+      "chemical_formula": "Mg48Si34O85(OH)62",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Fo",
+      "mineral_name": "forsterite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "PhA",
+      "mineral_name": "phaseA",
+      "chemical_formula": "Mg7Si2O8(OH)6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "En",
+      "mineral_name": "enstatite",
+      "chemical_formula": "Mg2Si2O6",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 550.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 5.65,
+      "pressure_uncertainty_gigapascal": 0.25,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Bose",
+      "Navrotsky"
+    ],
+    "year": 1998,
+    "short_citation": "Bose & Navrotsky, 1998",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

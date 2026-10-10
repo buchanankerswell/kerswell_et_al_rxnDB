@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-037",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Coe",
+      "mineral_name": "coesite",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Sti",
+      "mineral_name": "stishovite",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 6.1,
+      "pressure_slope_gigapascal_per_celsius": 0.0026,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 500.0,
+      "valid_temperature_max_celsius": 1530.0,
+      "valid_pressure_min_gigapascal": 7.5,
+      "valid_pressure_max_gigapascal": 11.5
+    }
+  ],
+  "method": {
+    "description": "In situ X-ray",
+    "pressure_calibration": "NaCl (Decker 1971)",
+    "temperature_calibration": "W86-Re24/W94-Re6"
+  },
+  "source": {
+    "authors": [
+      "Zhang",
+      "Li",
+      "Utsumi",
+      "Liebermann"
+    ],
+    "year": 1996,
+    "short_citation": "Zhang et al. (1996)",
+    "doi": "10.1007/BF00202987",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

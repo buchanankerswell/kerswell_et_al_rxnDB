@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-020",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Arag",
+      "mineral_name": "aragonite",
+      "chemical_formula": "CaCO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Cc",
+      "mineral_name": "calcite",
+      "chemical_formula": "CaCO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 400.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.9,
+      "pressure_uncertainty_gigapascal": 0.05,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 450.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.0,
+      "pressure_uncertainty_gigapascal": 0.05,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 500.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.135,
+      "pressure_uncertainty_gigapascal": 0.034999999999999996,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 550.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.25,
+      "pressure_uncertainty_gigapascal": 0.05,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 600.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.4000000000000001,
+      "pressure_uncertainty_gigapascal": 0.04000000000000001,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 650.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.5550000000000002,
+      "pressure_uncertainty_gigapascal": 0.05500000000000001,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 750.0,
+      "temperature_uncertainty_celsius": 25.0,
+      "pressure_gigapascal": 1.8,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 750.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.8850000000000002,
+      "pressure_uncertainty_gigapascal": 0.18500000000000003,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Goldsmith",
+      "Newton"
+    ],
+    "year": 1969,
+    "short_citation": "Goldsmith & Newton, 1969",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

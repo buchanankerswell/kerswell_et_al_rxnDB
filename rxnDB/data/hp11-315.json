@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-315",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Jd",
+      "mineral_name": "jadeite",
+      "chemical_formula": "NaAlSi2O6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Anl",
+      "mineral_name": "analcite",
+      "chemical_formula": "NaAlSi2O5(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 350.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.87,
+      "pressure_uncertainty_gigapascal": 0.22999999999999998,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 450.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.8250000000000001,
+      "pressure_uncertainty_gigapascal": 0.07500000000000001,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 500.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.875,
+      "pressure_uncertainty_gigapascal": 0.07500000000000001,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 550.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.9,
+      "pressure_uncertainty_gigapascal": 0.1,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 575.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.0,
+      "pressure_uncertainty_gigapascal": 0.1,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Manghnani"
+    ],
+    "year": 1970,
+    "short_citation": "Manghnani, 1970",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

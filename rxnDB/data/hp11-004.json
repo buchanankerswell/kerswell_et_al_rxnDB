@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-004",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Lot",
+      "mineral_name": "low troilite",
+      "chemical_formula": "FeS",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Tro",
+      "mineral_name": "troilite",
+      "chemical_formula": "FeS",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 144.0,
+      "temperature_uncertainty_celsius": 5.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "fix"
+    ],
+    "year": null,
+    "short_citation": "fix",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

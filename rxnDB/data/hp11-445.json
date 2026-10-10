@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-445",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Fcrd",
+      "mineral_name": "Fe-cordierite",
+      "chemical_formula": "Fe2Al4Si5O18",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Py",
+      "mineral_name": "pyrope",
+      "chemical_formula": "Mg3Al2Si3O12",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Crd",
+      "mineral_name": "cordierite",
+      "chemical_formula": "Mg2Al4Si5O18",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Alm",
+      "mineral_name": "almandine",
+      "chemical_formula": "Fe3Al2Si3O12",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 700.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.6000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 11.525,
+      "natural_log_equilibrium_constant_uncertainty": 0.625
+    },
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.6000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 9.73,
+      "natural_log_equilibrium_constant_uncertainty": 0.6
+    },
+    {
+      "temperature_celsius": 900.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.6000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 8.275,
+      "natural_log_equilibrium_constant_uncertainty": 0.605
+    },
+    {
+      "temperature_celsius": 1000.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.6000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 7.03,
+      "natural_log_equilibrium_constant_uncertainty": 0.6
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Perchuk",
+      "Lavrenteva"
+    ],
+    "year": 1983,
+    "short_citation": "Perchuk & Lavrenteva, 1983",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-039",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Mpv",
+      "mineral_name": "Mg-perovskite",
+      "chemical_formula": "MgSiO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Per",
+      "mineral_name": "periclase",
+      "chemical_formula": "MgO",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mrw",
+      "mineral_name": "Mg-ringwoodite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1040.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 24.75,
+      "pressure_uncertainty_gigapascal": 0.75,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1150.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 24.5,
+      "pressure_uncertainty_gigapascal": 0.5,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1375.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 24.0,
+      "pressure_uncertainty_gigapascal": 0.5,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1400.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 24.25,
+      "pressure_uncertainty_gigapascal": 0.75,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1625.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 24.0,
+      "pressure_uncertainty_gigapascal": 0.5,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1850.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 23.25,
+      "pressure_uncertainty_gigapascal": 0.75,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 2080.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 22.6,
+      "pressure_uncertainty_gigapascal": 0.6000000000000001,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Shim et al",
+      "Ito",
+      "Takashi",
+      "Fei et al"
+    ],
+    "year": [
+      2001,
+      1989,
+      2004
+    ],
+    "short_citation": "Shim et al 2001; Ito & Takashi 1989; Fei et al 2004",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

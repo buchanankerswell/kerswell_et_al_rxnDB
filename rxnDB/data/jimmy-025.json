@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-025",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Maj",
+      "mineral_name": "majorite",
+      "chemical_formula": "Mg4Si4O12",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Cpv",
+      "mineral_name": "Ca-perovskite",
+      "chemical_formula": "CaSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mak",
+      "mineral_name": "akimotoite",
+      "chemical_formula": "MgSiO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Cpv",
+      "mineral_name": "Ca-perovskite",
+      "chemical_formula": "CaSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 13.38,
+      "pressure_slope_gigapascal_per_celsius": 0.0045,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 1495.0,
+      "valid_temperature_max_celsius": 1860.0,
+      "valid_pressure_min_gigapascal": 20.1,
+      "valid_pressure_max_gigapascal": 21.75
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "RT+HT",
+    "temperature_calibration": "Pt/Pt-Rh13"
+  },
+  "source": {
+    "authors": [
+      "Akaogi",
+      "Yano",
+      "Tejima",
+      "Iijima",
+      "Kojitani"
+    ],
+    "year": 2004,
+    "short_citation": "Akaogi et al. (2004)",
+    "doi": "10.1016/j.pepi.2003.08.008",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

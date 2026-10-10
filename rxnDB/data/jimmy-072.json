@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-072",
+  "reaction_type": "melting_curve",
+  "reactants": [
+    {
+      "mineral_symbol": "Au",
+      "mineral_name": "gold",
+      "chemical_formula": "Au",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Melt",
+      "mineral_name": "silicate melt",
+      "chemical_formula": "melt",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": -82.174,
+      "pressure_slope_gigapascal_per_celsius": 0.18343,
+      "pressure_curvature_gigapascal_per_celsius_squared": -0.00014,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 4e-08,
+      "valid_temperature_min_celsius": 1062.0,
+      "valid_temperature_max_celsius": 1404.0,
+      "valid_pressure_min_gigapascal": null,
+      "valid_pressure_max_gigapascal": 6.5
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "",
+    "temperature_calibration": "Pt/Pt-Rh90"
+  },
+  "source": {
+    "authors": [
+      "Akella",
+      "Kennedy"
+    ],
+    "year": 1971,
+    "short_citation": "Akella & Kennedy (1971)",
+    "doi": "10.1029/JB076i020p04969",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

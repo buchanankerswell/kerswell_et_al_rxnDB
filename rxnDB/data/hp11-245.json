@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-245",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Clin",
+      "mineral_name": "clinochlore [ordered]",
+      "chemical_formula": "Mg5Al2Si3O10(OH)8",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Fo",
+      "mineral_name": "forsterite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Mgts",
+      "mineral_name": "Mg-tschermaks pyroxene",
+      "chemical_formula": "MgAl2SiO6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 780.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.4000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -3.455,
+      "natural_log_equilibrium_constant_uncertainty": 0.045
+    },
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.4000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -2.995,
+      "natural_log_equilibrium_constant_uncertainty": 0.045
+    },
+    {
+      "temperature_celsius": 840.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.4000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -2.005,
+      "natural_log_equilibrium_constant_uncertainty": 0.055
+    },
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -2.285,
+      "natural_log_equilibrium_constant_uncertainty": 0.055
+    },
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.2000000000000002,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -2.605,
+      "natural_log_equilibrium_constant_uncertainty": 0.055
+    },
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.6,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -3.015,
+      "natural_log_equilibrium_constant_uncertainty": 0.055
+    },
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.8,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -3.565,
+      "natural_log_equilibrium_constant_uncertainty": 0.035
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Baker",
+      "Holland"
+    ],
+    "year": 1996,
+    "short_citation": "Baker & Holland, 1996",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

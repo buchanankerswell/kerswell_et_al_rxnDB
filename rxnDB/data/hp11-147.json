@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-147",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Gr",
+      "mineral_name": "grossular",
+      "chemical_formula": "Ca3Al2Si3O12",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Wo",
+      "mineral_name": "wollastonite",
+      "chemical_formula": "CaSiO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Geh",
+      "mineral_name": "gehlenite",
+      "chemical_formula": "Ca2Al2SiO7",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "An",
+      "mineral_name": "anorthite",
+      "chemical_formula": "CaAl2Si2O8",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 890.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.1,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 930.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 972.5,
+      "temperature_uncertainty_celsius": 12.5,
+      "pressure_gigapascal": 0.30000000000000004,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1135.0,
+      "temperature_uncertainty_celsius": 15.0,
+      "pressure_gigapascal": 0.75,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1240.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.02,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1210.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.8800000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1200.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.875,
+      "pressure_uncertainty_gigapascal": 0.125,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1250.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.0,
+      "pressure_uncertainty_gigapascal": 0.1,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Huckenholz et al.",
+      "Hays"
+    ],
+    "year": [
+      1975,
+      1967
+    ],
+    "short_citation": "Huckenholz et al., 1975; Hays, 1967",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

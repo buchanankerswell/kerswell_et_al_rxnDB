@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-411",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Andr",
+      "mineral_name": "andradite",
+      "chemical_formula": "Ca3Fe2Si3O12",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Fa",
+      "mineral_name": "fayalite",
+      "chemical_formula": "Fe2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mt",
+      "mineral_name": "magnetite",
+      "chemical_formula": "Fe3O4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Wo",
+      "mineral_name": "wollastonite",
+      "chemical_formula": "CaSiO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 750.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.05,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 766.5,
+      "temperature_uncertainty_celsius": 6.5,
+      "pressure_gigapascal": 0.1,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 791.0,
+      "temperature_uncertainty_celsius": 6.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Gustavson"
+    ],
+    "year": 1974,
+    "short_citation": "Gustavson, 1974",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

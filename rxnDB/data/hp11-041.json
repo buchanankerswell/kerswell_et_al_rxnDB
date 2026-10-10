@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-041",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Mpv",
+      "mineral_name": "Mg-perovskite",
+      "chemical_formula": "MgSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mak",
+      "mineral_name": "akimotoite",
+      "chemical_formula": "MgSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1100.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 25.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.055,
+      "natural_log_equilibrium_constant_uncertainty": 0.075
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Ito",
+      "Yamada"
+    ],
+    "year": 1982,
+    "short_citation": "Ito & Yamada 1982",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

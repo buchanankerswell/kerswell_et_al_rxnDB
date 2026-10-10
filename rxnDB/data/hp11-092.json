@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-092",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Anth",
+      "mineral_name": "anthophyllite",
+      "chemical_formula": "Mg7Si8O22(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Cumm",
+      "mineral_name": "cummingtonite",
+      "chemical_formula": "Mg7Si8O22(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 20.0,
+      "pressure_gigapascal": 0.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Ghiorso",
+      "Evans"
+    ],
+    "year": 2002,
+    "short_citation": "Ghiorso & Evans 2002",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

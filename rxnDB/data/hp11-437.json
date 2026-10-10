@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-437",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Zrc",
+      "mineral_name": "zircon",
+      "chemical_formula": "ZrSiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Bdy",
+      "mineral_name": "baddeleyite",
+      "chemical_formula": "ZrO2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Crst",
+      "mineral_name": "cristobalite [high]",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1675.0,
+      "temperature_uncertainty_celsius": 15.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Butterman",
+      "Foster"
+    ],
+    "year": 1967,
+    "short_citation": "Butterman & Foster, 1967",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

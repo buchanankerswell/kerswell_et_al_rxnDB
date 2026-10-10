@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-059",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Mwd",
+      "mineral_name": "Mg-wadsleyite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mrw",
+      "mineral_name": "Mg-ringwoodite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 11.8,
+      "pressure_slope_gigapascal_per_celsius": 0.0052,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 525.0,
+      "valid_temperature_max_celsius": 1525.0,
+      "valid_pressure_min_gigapascal": 15.75,
+      "valid_pressure_max_gigapascal": 19.5
+    }
+  ],
+  "method": {
+    "description": "Calorimetrics",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Akaogi",
+      "Takayama",
+      "Kojitani",
+      "Kawaji",
+      "Atake"
+    ],
+    "year": 2007,
+    "short_citation": "Akaogi et al. (2007)",
+    "doi": "10.1007/s00269-006-0137-3",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-138",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Dsp",
+      "mineral_name": "diaspore",
+      "chemical_formula": "AlO(OH)",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Coe",
+      "mineral_name": "coesite",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Prl",
+      "mineral_name": "pyrophyllite",
+      "chemical_formula": "Al2Si4O10(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 550.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 2.715,
+      "pressure_uncertainty_gigapascal": 0.11499999999999999,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Theye et al."
+    ],
+    "year": 1997,
+    "short_citation": "Theye et al., 1997",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

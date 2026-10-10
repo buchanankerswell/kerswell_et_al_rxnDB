@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-280",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Mst",
+      "mineral_name": "Mg-staurolite",
+      "chemical_formula": "Mg4Al18Si7.5O44(OH)4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Ta",
+      "mineral_name": "talc",
+      "chemical_formula": "Mg3Si4O10(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Ky",
+      "mineral_name": "kyanite",
+      "chemical_formula": "Al2SiO5",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Crn",
+      "mineral_name": "corundum",
+      "chemical_formula": "Al2O3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 779.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.2300000000000002,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -1.91,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 779.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.1300000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -1.47,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Fockenberg"
+    ],
+    "year": 1998,
+    "short_citation": "Fockenberg, 1998",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

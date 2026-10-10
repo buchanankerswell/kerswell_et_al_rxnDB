@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-154",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "An",
+      "mineral_name": "anorthite",
+      "chemical_formula": "CaAl2Si2O8",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Cc",
+      "mineral_name": "calcite",
+      "chemical_formula": "CaCO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Me",
+      "mineral_name": "meionite",
+      "chemical_formula": "Ca4Al6Si6CO27",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 853.5,
+      "temperature_uncertainty_celsius": 6.5,
+      "pressure_gigapascal": 0.15000000000000002,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 848.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.36000000000000004,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 865.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.32000000000000006,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 853.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.67,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 873.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.7200000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 872.5,
+      "temperature_uncertainty_celsius": 7.5,
+      "pressure_gigapascal": 1.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Baker",
+      "Newton"
+    ],
+    "year": 1994,
+    "short_citation": "Baker & Newton, 1994",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

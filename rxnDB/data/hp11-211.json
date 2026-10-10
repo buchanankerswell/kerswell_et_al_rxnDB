@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-211",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Crd",
+      "mineral_name": "cordierite",
+      "chemical_formula": "Mg2Al4Si5O18",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Spr4",
+      "mineral_name": "sapphirine [221]",
+      "chemical_formula": "Mg4Al8Si2O20",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1250.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.7000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -1.07,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1250.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.76,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -1.08,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1280.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.7000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -1.1,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1280.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.76,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -1.09,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Newton",
+      "Perkins et al"
+    ],
+    "year": [
+      1972,
+      1981
+    ],
+    "short_citation": "Newton, 1972; Perkins et al 1981",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

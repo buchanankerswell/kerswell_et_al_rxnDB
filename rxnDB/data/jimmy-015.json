@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-015",
+  "reaction_type": "melting_curve",
+  "reactants": [
+    {
+      "mineral_symbol": "Di",
+      "mineral_name": "diopside",
+      "chemical_formula": "CaMgSi2O6",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "DiL",
+      "mineral_name": "diopside liquid",
+      "chemical_formula": "CaMgSi2O6",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": -102.02,
+      "pressure_slope_gigapascal_per_celsius": 0.0606,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 1900.0,
+      "valid_temperature_max_celsius": 1970.0,
+      "valid_pressure_min_gigapascal": 14.2,
+      "valid_pressure_max_gigapascal": 17.6
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "After Funamori et al 1996",
+    "temperature_calibration": "W95-Re5/ W74-Re26"
+  },
+  "source": {
+    "authors": [
+      "Oguri",
+      "Funamori",
+      "Sakai",
+      "Kondo",
+      "Uchida",
+      "Yagi"
+    ],
+    "year": 1997,
+    "short_citation": "Oguri et al. (1997)",
+    "doi": "10.1016/S0031-9201(97)00029-0",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

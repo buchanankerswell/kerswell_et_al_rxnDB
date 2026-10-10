@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "rxnDB"
 dynamic = ["version"]
-description = "A Python Shiny app for reaction database management"
+description = "A FastAPI service and dataset of mineral reaction boundaries"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
@@ -20,24 +20,20 @@ classifiers = [
 ]
 authors = [{ name = "Buchanan Kerswell", email = "buck.kerswell@gmail.com" }]
 dependencies = [
-    "shiny",
-    "shinywidgets",
-    "anywidget",
-    "pandas",
-    "plotly",
-    "ruamel.yaml",
-    "fastparquet",
-    "faicons",
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "pydantic>=2.0",
+    "numpy",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "pip", "pytest-cov", "pandas-stubs", "shinylive"]
+dev = ["pytest", "pytest-cov", "httpx"]
 
 [project.urls]
 Repository = "https://github.com/buchanankerswell/kerswell_et_al_rxnDB"
 
 [project.scripts]
-rxndb = "rxnDB.cli:main"
+rxndb = "rxnDB.api:main"
 
 [tool.setuptools]
 license-files = ["LICENSE"]
@@ -45,5 +41,8 @@ license-files = ["LICENSE"]
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["rxnDB*"]
+
+[tool.setuptools.package-data]
+rxnDB = ["*.json", "schema/*.json", "static/*.html", "data/*.json"]
 
 [tool.setuptools_scm]

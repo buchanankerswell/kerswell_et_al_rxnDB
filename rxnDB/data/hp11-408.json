@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-408",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Fstp",
+      "mineral_name": "ferrostilpnomelane",
+      "chemical_formula": "K0.5Fe5Al2Si8O18(OH)12.5",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Ann",
+      "mineral_name": "annite",
+      "chemical_formula": "KFe3AlSi3O10(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Grun",
+      "mineral_name": "grunerite",
+      "chemical_formula": "Fe7Si8O22(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Alm",
+      "mineral_name": "almandine",
+      "chemical_formula": "Fe3Al2Si3O12",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 500.0,
+      "temperature_uncertainty_celsius": 20.0,
+      "pressure_gigapascal": 0.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Miyano",
+      "Klein"
+    ],
+    "year": 1989,
+    "short_citation": "Miyano & Klein 1989",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

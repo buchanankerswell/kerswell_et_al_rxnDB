@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-048",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Mpv",
+      "mineral_name": "Mg-perovskite",
+      "chemical_formula": "MgSiO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Frw",
+      "mineral_name": "Fe-ringwoodite",
+      "chemical_formula": "Fe2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Fpv",
+      "mineral_name": "Fe-perovskite",
+      "chemical_formula": "FeSiO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Mrw",
+      "mineral_name": "Mg-ringwoodite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1100.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 25.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -3.785,
+      "natural_log_equilibrium_constant_uncertainty": 0.765
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Ito",
+      "Yamada"
+    ],
+    "year": 1982,
+    "short_citation": "Ito & Yamada 1982",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

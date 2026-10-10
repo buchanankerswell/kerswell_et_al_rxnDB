@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-046",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Fpv",
+      "mineral_name": "Fe-perovskite",
+      "chemical_formula": "FeSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Fak",
+      "mineral_name": "Fe-akimotoite",
+      "chemical_formula": "FeSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1100.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 25.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.805,
+      "natural_log_equilibrium_constant_uncertainty": 1.125
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Ito",
+      "Yamada"
+    ],
+    "year": 1982,
+    "short_citation": "Ito & Yamada 1982",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}
