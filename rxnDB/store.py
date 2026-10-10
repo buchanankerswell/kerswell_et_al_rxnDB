@@ -1,4 +1,4 @@
-"""Load and search JSON records. Small corpus, plain linear scan."""
+"""Load and search JSON records. Small database, plain linear scan."""
 
 import json
 import os
