@@ -84,3 +84,14 @@ def test_design_next_point_ranks_extension():
     drops = [candidate["expected_variance_drop"] for candidate in candidates]
     assert drops == sorted(drops, reverse=True)
     assert max(drops) > 0
+
+
+def test_ui_is_console_theme_without_plotly():
+    page = client.get("/").text
+    assert "plot.ly" not in page
+    assert 'id="plot"' in page and 'id="plot_tip"' in page
+    js = client.get("/static/app.js").text
+    assert "Plotly" not in js
+    assert "clipPath" in js and "data-tip" in js
+    css = client.get("/static/app.css").text
+    assert "--accent: #3b5cf6" in css

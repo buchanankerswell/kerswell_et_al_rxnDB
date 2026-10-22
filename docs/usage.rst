@@ -15,7 +15,7 @@ The command launches the app on http://127.0.0.1:8000/.
 Open the interface
 ------------------
 
-Visit http://127.0.0.1:8000/. The page shows a search box, a reaction-type dropdown, a reaction list, a pressure-temperature plot, and an observation table. Press ``/`` to focus search. ``Download JSON`` exports the current filter set.
+Visit http://127.0.0.1:8000/. The page shows a search box, a reaction-type dropdown, a reaction list, a dependency-free SVG pressure-temperature plot, and an observation table. Press ``/`` to focus search. ``Download JSON`` exports the current filter set.
 
 Worked example: coesite-quartz
 ------------------------------

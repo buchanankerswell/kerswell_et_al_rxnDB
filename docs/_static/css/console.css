@@ -1,0 +1,97 @@
+/* rxnDB docs — OpenCode console alignment. Loaded after darkmode.css. */
+
+body,
+.rst-content,
+.wy-nav-content {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+h1, h2, h3, h4,
+.rst-content h1, .rst-content h2, .rst-content h3, .rst-content h4 {
+  font-weight: 530;
+  letter-spacing: -0.01em;
+}
+
+a, .rst-content a {
+  color: #3b5cf6;
+}
+
+a:hover, .rst-content a:hover {
+  color: #3250df;
+}
+
+/* Console-style data tables: muted header, tall rows, tabular numerals. */
+.rst-content table.docutils thead th,
+table.docutils thead th {
+  font-weight: 500;
+  font-size: 0.8125rem;
+  color: #5c5c5c;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: 0 0.75rem;
+  height: 2rem;
+  background: #fff;
+  border-bottom: 0.5px solid rgb(0 0 0 / 0.2);
+}
+
+.rst-content table.docutils td,
+table.docutils td {
+  padding: 0 0.75rem;
+  height: 3rem;
+  vertical-align: middle;
+  font-variant-numeric: tabular-nums;
+  border-bottom: 0.5px solid rgb(0 0 0 / 0.08);
+}
+
+/* Code: layer fills with hairline, soft radius. */
+.rst-content code.literal, code.literal {
+  background: #f2f2f2;
+  border-radius: 4px;
+  padding: 0 0.35rem;
+  border: none;
+  color: inherit;
+}
+
+.rst-content pre, pre {
+  background: #fafafa;
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 0.5px rgb(0 0 0 / 0.08);
+  border: none;
+}
+
+/* Admonitions and sidebar panels as flat hairline cards. */
+.rst-content .admonition,
+.wy-side-nav-search {
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 0.5px rgb(0 0 0 / 0.08);
+}
+
+:root.dark-mode body,
+.dark-mode body,
+.dark-mode .rst-content table.docutils thead th,
+.dark-mode table.docutils thead th {
+  color: #aeaeae;
+  background: #161616;
+  border-bottom-color: rgb(255 255 255 / 0.2);
+}
+
+.dark-mode .rst-content table.docutils td,
+.dark-mode table.docutils td {
+  border-bottom-color: rgb(255 255 255 / 0.08);
+}
+
+.dark-mode .rst-content code.literal,
+.dark-mode code.literal {
+  background: #2e2e2e;
+}
+
+.dark-mode .rst-content pre,
+.dark-mode pre {
+  background: #242424;
+  box-shadow: inset 0 0 0 0.5px rgb(255 255 255 / 0.08);
+}
+
+.dark-mode a, .dark-mode .rst-content a {
+  color: #7698fd;
+}

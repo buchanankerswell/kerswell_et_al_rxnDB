@@ -44,7 +44,7 @@ intersphinx_mapping = {
 #html_theme = "sphinx_rtd_theme"
 html_theme = "revitron_sphinx_theme"
 html_static_path = ["_static"]
-html_css_files = ["css/darkmode.css"]
+html_css_files = ["css/darkmode.css", "css/console.css"]
 html_js_files = ["js/darkmode.js"]
 
 html_theme_options = {

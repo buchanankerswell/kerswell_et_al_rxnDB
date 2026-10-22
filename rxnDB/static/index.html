@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>rxnDB — Mineral Reaction Database</title>
 <link rel="stylesheet" href="/static/app.css">
-<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 <script src="/static/app.js" defer></script>
 </head>
 <body>
@@ -13,7 +12,13 @@
   <div class="topbar-inner">
     <div class="brand"><strong>rxnDB</strong><span>Mineral Reaction Database</span></div>
     <div class="controls">
-      <input id="query" type="search" placeholder="Search minerals, authors, IDs… (e.g. Qz Coe)" size="40" aria-label="Search reactions">
+      <div class="search-wrap">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.2"></circle>
+          <path d="M10.5 10.5 14 14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+        </svg>
+        <input id="query" type="search" placeholder="Search minerals, authors, IDs… (e.g. Qz Coe)" size="40" aria-label="Search reactions">
+      </div>
       <select id="reaction_type" aria-label="Reaction type">
         <option value="">all types</option>
         <option value="phase_boundary">phase_boundary</option>
@@ -26,21 +31,45 @@
 </header>
 <main>
 <div id="layout">
-  <div class="card side">
-    <p class="hint">Press <kbd>/</kbd> to search. Click a reaction to fit it.</p>
-    <p id="count" role="status" aria-live="polite"></p>
-    <hr>
-    <ul id="reaction_list"></ul>
-  </div>
-  <div>
-    <div class="card plot-wrap"><div id="plot"></div></div>
-    <div class="card table-wrap" style="margin-top:1rem">
-      <table id="table">
-        <thead><tr><th>reaction</th><th>T (°C)</th><th>P (GPa)</th><th>outcome</th><th>source</th></tr></thead>
-        <tbody></tbody>
-      </table>
+  <section class="card side" aria-label="Reactions">
+    <div class="section-head">
+      <div>
+        <h2>Reactions</h2>
+        <p class="hint">Press <kbd>/</kbd> to search. Click a reaction to fit it.</p>
+      </div>
+      <p id="count" role="status" aria-live="polite"></p>
     </div>
-    <p class="foot">Curves clip to their stated valid ranges. Entries marked <em>review</em> are suspect.</p>
+    <ul id="reaction_list"></ul>
+  </section>
+  <div class="main-col">
+    <section class="card plot-card" aria-label="Pressure-temperature plot">
+      <div class="section-head">
+        <div>
+          <h2>Pressure&ndash;Temperature</h2>
+          <p>Observations with uncertainty, published curves, and the fitted boundary. Dashed curves clip to valid ranges.</p>
+        </div>
+      </div>
+      <p id="plot_note" class="plot-note" hidden></p>
+      <div class="plot-body">
+        <svg id="plot" viewBox="0 0 720 440" role="img" aria-label="Pressure-temperature plot"></svg>
+        <div id="plot_tip" class="plot-tip" hidden></div>
+      </div>
+    </section>
+    <section class="card table-card" aria-label="Observations">
+      <div class="section-head">
+        <div>
+          <h2>Observations</h2>
+          <p>Every matching observation, in ranked reaction order.</p>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table id="table">
+          <thead><tr><th>reaction</th><th class="num">T (&deg;C)</th><th class="num">P (GPa)</th><th>outcome</th><th>source</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+    <p class="foot">Entries marked <em>review</em> are suspect.</p>
   </div>
 </div>
 </main>
