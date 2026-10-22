@@ -3,21 +3,37 @@
 const query_input = document.getElementById("query");
 const type_select = document.getElementById("reaction_type");
 const count_el = document.getElementById("count");
+const obs_count_el = document.getElementById("obs_count");
 const plot_svg = document.getElementById("plot");
 const plot_tip = document.getElementById("plot_tip");
-const plot_note = document.getElementById("plot_note");
+const plot_reset = document.getElementById("plot_reset");
+const tab_links = Array.from(document.querySelectorAll(".tabs-inner a[data-tab]"));
+const tab_indicator = document.getElementById("tab_indicator");
+const view_reactions = document.getElementById("view-reactions");
+const view_observations = document.getElementById("view-observations");
+
+function tab_from_path(pathname) {
+  return pathname.replace(/\/+$/, "").endsWith("/observations") ? "observations" : "reactions";
+}
+
+function path_for_tab(tab) {
+  return tab === "observations" ? "/observations" : "/";
+}
 
 function read_state() {
   const params = new URLSearchParams(location.search);
-  return { query: params.get("query") || "", reaction_type: params.get("reaction_type") || "", selected: params.get("selected") || "" };
+  return { query: params.get("query") || "", reaction_type: params.get("reaction_type") || "", selected: params.get("selected") || "", tab: tab_from_path(location.pathname) };
 }
 
-function write_state(state) {
+function write_state(state, options) {
   const params = new URLSearchParams();
   if (state.query) params.set("query", state.query);
   if (state.reaction_type) params.set("reaction_type", state.reaction_type);
   if (state.selected) params.set("selected", state.selected);
-  history.replaceState(null, "", "?" + params.toString());
+  const query = params.toString();
+  const url = path_for_tab(state.tab) + (query ? "?" + query : "");
+  if (options && options.push) history.pushState(null, "", url);
+  else history.replaceState(null, "", url);
 }
 
 function escape_html(text) {
@@ -26,6 +42,10 @@ function escape_html(text) {
 
 function symbols(reaction) {
   return [...reaction.reactants, ...reaction.products].map(p => p.mineral_symbol).join(" + ");
+}
+
+function phase_names(reaction) {
+  return [...reaction.reactants, ...reaction.products].map(p => p.mineral_name).join(" + ");
 }
 
 function suspect(reaction) {
@@ -49,6 +69,7 @@ function sample_curve(boundary) {
 }
 
 let selected = "";
+let active_tab = "reactions";
 let refresh_seq = 0;
 let plot_seq = 0;
 let list_controller = null;
@@ -62,9 +83,16 @@ let plot_owners = [];
 
 const DIM_OPACITY = 0.5;
 let hovered = null;
-const PLOT_LIMIT = 200;
 
-const SVG_W = 720, SVG_H = 440;
+// Pan/zoom view state. full_view fits every point of the current filter set;
+// view is the visible window. draw_cache holds the last computed series so
+// pans and zooms redraw without refetching or refitting.
+let view = null;
+let full_view = null;
+let draw_cache = null;
+let draw_queued = false;
+
+const SVG_W = 720, SVG_H = 560;
 const PAD = { left: 52, right: 14, top: 10, bottom: 46 };
 
 function nice_step(span, target = 4) {
@@ -120,6 +148,43 @@ function clear_emphasis() {
   apply_spotlight();
 }
 
+function move_tab_indicator() {
+  if (!tab_indicator || tab_links.length === 0) return;
+  const active = tab_links.find(a => a.dataset.tab === active_tab) || tab_links[0];
+  const parent_rect = active.parentElement.getBoundingClientRect();
+  const rect = active.getBoundingClientRect();
+  tab_indicator.style.width = rect.width + "px";
+  tab_indicator.style.transform = `translateX(${rect.left - parent_rect.left}px)`;
+}
+
+// Console-style page switch: slide the underline, crossfade the panels, and
+// push a history entry so back/forward moves between / and /observations.
+function set_tab(tab, options) {
+  if (tab !== "observations") tab = "reactions";
+  const changed = tab !== active_tab;
+  active_tab = tab;
+  tab_links.forEach(a => {
+    a.setAttribute("aria-current", String(a.dataset.tab === active_tab));
+  });
+  const show_reactions = active_tab === "reactions";
+  view_reactions.hidden = !show_reactions;
+  view_observations.hidden = show_reactions;
+  for (const panel of [view_reactions, view_observations]) {
+    if (!panel.hidden) {
+      panel.classList.remove("switch-in");
+      void panel.offsetWidth;
+      panel.classList.add("switch-in");
+    }
+  }
+  move_tab_indicator();
+  write_state({ query: query_input.value, reaction_type: type_select.value, selected, tab: active_tab }, { push: changed && !(options && options.replace) });
+  if (changed && show_reactions && last_records.length > 0) {
+    clearTimeout(plot_timer);
+    plot_pending = null;
+    render_plot(last_records);
+  }
+}
+
 async function analysis_for(identifier) {
   if (analysis_cache.has(identifier)) return analysis_cache.get(identifier);
   const [fit, design] = await Promise.all([
@@ -139,11 +204,12 @@ async function analysis_for(identifier) {
 
 async function refresh() {
   const seq = ++refresh_seq;
-  const state = { query: query_input.value, reaction_type: type_select.value, selected };
+  const state = { query: query_input.value, reaction_type: type_select.value, selected, tab: active_tab };
   write_state(state);
   if (list_controller) list_controller.abort();
   list_controller = new AbortController();
   count_el.textContent = "Searching…";
+  if (obs_count_el) obs_count_el.textContent = "Searching…";
   const params = new URLSearchParams();
   if (state.query) params.set("query", state.query);
   if (state.reaction_type) params.set("reaction_type", state.reaction_type);
@@ -165,23 +231,36 @@ async function refresh() {
     `<li><a href="#" data-id="${escape_html(r.reaction_identifier)}" aria-current="${r.reaction_identifier === selected}">` +
     `<span class="row-main"><span class="id">${escape_html(r.reaction_identifier)}</span>` +
     `${suspect(r) ? `<span class="pill">review</span>` : ""}</span>` +
-    `<span class="sym">${escape_html(symbols(r))}</span></a></li>`).join("");
+    `<span class="sym">${escape_html(symbols(r))}</span><span class="name-cell">${escape_html(phase_names(r))}</span></a></li>`).join("");
   document.querySelectorAll("#reaction_list a").forEach(link =>
     link.addEventListener("click", event => { event.preventDefault(); select(link.dataset.id); }));
 
   schedule_plot(records);
 
-  const rows = records.flatMap(r =>
-    r.observations.map(o => `<tr><td>${escape_html(r.reaction_identifier)}</td><td class="num">${o.temperature_celsius}</td><td class="num">${o.pressure_gigapascal.toFixed(2)}</td><td>${escape_html(o.experimental_outcome)}</td><td>${escape_html(r.source.short_citation)}</td></tr>`)
-  );
+  let observation_total = 0;
+  const rows = records.flatMap(r => {
+    observation_total += r.observations.length;
+    const phases = symbols(r);
+    const names = phase_names(r);
+    return r.observations.map(o => `<tr><td>${escape_html(r.reaction_identifier)}</td><td><div class="sym-cell">${escape_html(phases)}</div><div class="name-cell">${escape_html(names)}</div></td><td class="num">${o.temperature_celsius}</td><td class="num">${o.pressure_gigapascal.toFixed(2)}</td><td>${escape_html(r.reaction_type)}</td><td>${escape_html(r.source.short_citation)}</td></tr>`);
+  });
   document.querySelector("#table tbody").innerHTML = rows.join("");
+  if (obs_count_el) {
+    obs_count_el.textContent = observation_total === 0 && records.length === 0 ? "No observations match."
+      : `${observation_total} observation${observation_total === 1 ? "" : "s"} · ${total} reaction${total === 1 ? "" : "s"}`;
+  }
 }
 
 // The list and table redraw cheaply on every keystroke, but a full plot
 // redraw is slow with hundreds of series, so filter changes only schedule
 // the plot trailing-edge: typing stays instant and the plot catches up.
+// While the observations tab is showing the plot stays deferred and renders
+// on the way back to the reactions tab.
 function schedule_plot(records) {
-  if (!plot_ready) {
+  if (active_tab !== "reactions") {
+    plot_pending = records;
+    return;
+  }  if (!plot_ready) {
     plot_ready = true;
     render_plot(records);
     return;
@@ -199,31 +278,20 @@ function schedule_plot(records) {
 // fetched records, so the list and table never flash.
 async function select(identifier) {
   selected = (selected === identifier) ? "" : identifier;
-  write_state({ query: query_input.value, reaction_type: type_select.value, selected });
+  write_state({ query: query_input.value, reaction_type: type_select.value, selected, tab: active_tab });
   document.querySelectorAll("#reaction_list a").forEach(other => {
     other.setAttribute("aria-current", String(other.dataset.id === selected));
   });
   clearTimeout(plot_timer);
   plot_pending = null;
-  await render_plot(last_records);
+  if (active_tab === "reactions") await render_plot(last_records);
 }
 
 async function render_plot(records) {
   const seq = ++plot_seq;
-  // The plot covers the first PLOT_LIMIT matches (ranked most relevant
-  // first) so redraws stay instant; the list and table below stay complete.
-  const plotted = records.slice(0, PLOT_LIMIT);
-
-  if (records.length > plotted.length) {
-    plot_note.hidden = false;
-    plot_note.textContent = `Plot shows first ${plotted.length} of ${records.length} — narrow the query for more.`;
-  } else {
-    plot_note.hidden = true;
-    plot_note.textContent = "";
-  }
 
   const points = [];
-  plotted.forEach(r => {
+  records.forEach(r => {
     r.observations.forEach(o => points.push({ t: o.temperature_celsius, p: o.pressure_gigapascal }));
     r.interpreted_boundaries.forEach(b => sample_curve(b).forEach(s => {
       if (s.p !== null) points.push({ t: s.t, p: s.p });
@@ -232,8 +300,12 @@ async function render_plot(records) {
 
   if (points.length === 0) {
     plot_owners = [];
+    draw_cache = null;
+    view = null;
+    full_view = null;
     plot_svg.innerHTML = `<text x="${SVG_W / 2}" y="${SVG_H / 2}" text-anchor="middle" class="plot-empty">No points in this filter set.</text>`;
     plot_tip.hidden = true;
+    plot_reset.hidden = true;
     return;
   }
 
@@ -245,6 +317,42 @@ async function render_plot(records) {
   if (pmax - pmin < 1e-9) { pmin -= 0.1; pmax += 0.1; }
   const tpad = (tmax - tmin) * 0.04, ppad = (pmax - pmin) * 0.06;
   tmin -= tpad; tmax += tpad; pmin -= ppad; pmax += ppad;
+  full_view = { tmin, tmax, pmin, pmax };
+  // The zoom/pan window persists across searches and selections; it only
+  // (re)fits when empty or on explicit reset.
+  if (view === null) view = { ...full_view };
+
+  let fit = null, design = null;
+  const target = records.find(r => r.reaction_identifier === selected);
+  if (target && target.observations.length >= 2) {
+    const result = await analysis_for(selected);
+    if (seq !== plot_seq) return;
+    fit = result.fit;
+    design = result.design;
+  }
+  draw_cache = { records, fit, design };
+  draw_plot();
+}
+
+function views_equal(a, b) {
+  if (!a || !b) return true;
+  const keys = ["tmin", "tmax", "pmin", "pmax"];
+  return keys.every(k => Math.abs(a[k] - b[k]) <= 1e-9 * Math.max(1, Math.abs(a[k]), Math.abs(b[k])));
+}
+
+function request_draw() {
+  if (draw_queued || !draw_cache) return;
+  draw_queued = true;
+  requestAnimationFrame(() => {
+    draw_queued = false;
+    draw_plot();
+  });
+}
+
+function draw_plot() {
+  if (!draw_cache || !view) return;
+  const { records, fit, design } = draw_cache;
+  const { tmin, tmax, pmin, pmax } = view;
 
   const PW = SVG_W - PAD.left - PAD.right;
   const PH = SVG_H - PAD.top - PAD.bottom;
@@ -272,10 +380,12 @@ async function render_plot(records) {
 
   svg += `<g clip-path="url(#plot_clip)">`;
   plot_owners = [];
-  plotted.forEach(r => {
+  records.forEach(r => {
     const id = escape_html(r.reaction_identifier);
     plot_owners.push(r.reaction_identifier);
     let g = `<g class="series" data-owner="${id}">`;
+    const phases = symbols(r);
+    const names = phase_names(r);
     r.observations.forEach(o => {
       const cx = X(o.temperature_celsius).toFixed(1), cy = Y(o.pressure_gigapascal).toFixed(1);
       const tu = o.temperature_uncertainty_celsius || 0;
@@ -286,7 +396,7 @@ async function render_plot(records) {
       if (pu > 0) {
         g += `<line x1="${cx}" y1="${Y(o.pressure_gigapascal - pu).toFixed(1)}" x2="${cx}" y2="${Y(o.pressure_gigapascal + pu).toFixed(1)}" class="eb"/>`;
       }
-      g += `<circle cx="${cx}" cy="${cy}" r="4" class="pt" data-tip="${id} · T ${o.temperature_celsius} °C · P ${o.pressure_gigapascal.toFixed(2)} GPa"/>`;
+      g += `<circle cx="${cx}" cy="${cy}" r="4" class="pt" data-tip="${id} · ${escape_html(phases)} · ${escape_html(names)} · ${o.temperature_celsius} °C · ${o.pressure_gigapascal.toFixed(2)} GPa"/>`;
     });
     r.interpreted_boundaries.forEach(b => {
       let segment = [];
@@ -303,11 +413,11 @@ async function render_plot(records) {
     svg += g;
   });
 
-  const target = records.find(r => r.reaction_identifier === selected);
-  if (target && target.observations.length >= 2) {
-    const { fit, design } = await analysis_for(selected);
-    if (seq !== plot_seq) return;
-    const sid = escape_html(selected);
+  const sid = escape_html(selected);
+  if (fit && design) {
+    const sel_rec = records.find(r => r.reaction_identifier === selected);
+    const sel_phases = sel_rec ? symbols(sel_rec) : "";
+    const sel_names = sel_rec ? phase_names(sel_rec) : "";
     plot_owners.push(selected, selected, selected);
     let g = `<g class="series" data-owner="${sid}">`;
     const upper = fit.line.map(p => `${X(p.temperature_celsius).toFixed(1)},${Y(p.pressure_gigapascal + p.band_gigapascal).toFixed(1)}`).join(" ");
@@ -319,7 +429,7 @@ async function render_plot(records) {
     const largest = Math.max(...top.map(c => c.expected_variance_drop), 1e-12);
     top.forEach(c => {
       const r = 5 + 7 * c.expected_variance_drop / largest;
-      g += `<polygon points="${star_points(X(c.temperature_celsius), Y(c.pressure_gigapascal), r)}" class="star" data-tip="candidate · T ${c.temperature_celsius.toFixed(0)} °C · P ${c.pressure_gigapascal.toFixed(2)} GPa"/>`;
+      g += `<polygon points="${star_points(X(c.temperature_celsius), Y(c.pressure_gigapascal), r)}" class="star" data-tip="candidate (${sid}) · ${escape_html(sel_phases)} · ${escape_html(sel_names)} · ${c.temperature_celsius.toFixed(0)} °C · ${c.pressure_gigapascal.toFixed(2)} GPa"/>`;
     });
     g += `</g><g class="series" data-owner="${sid}"></g>`;
     svg += g;
@@ -328,7 +438,123 @@ async function render_plot(records) {
 
   plot_svg.innerHTML = svg;
   apply_spotlight();
+  plot_reset.hidden = views_equal(view, full_view);
 }
+
+// Pan and zoom. The wheel zooms around the cursor, drag pans, and a
+// double-click (or the Reset view button) returns to the full filter set.
+// Redraws reuse the cached series and are throttled to one per frame.
+function svg_point(event) {
+  const rect = plot_svg.getBoundingClientRect();
+  return {
+    x: (event.clientX - rect.left) / rect.width * SVG_W,
+    y: (event.clientY - rect.top) / rect.height * SVG_H,
+  };
+}
+
+function plot_area() {
+  return { PW: SVG_W - PAD.left - PAD.right, PH: SVG_H - PAD.top - PAD.bottom };
+}
+
+function clamp_view() {
+  if (!full_view) return;
+  const ft = full_view.tmax - full_view.tmin;
+  const fp = full_view.pmax - full_view.pmin;
+  const tspan = Math.min(Math.max(view.tmax - view.tmin, ft * 1e-4), ft * 1e3);
+  const pspan = Math.min(Math.max(view.pmax - view.pmin, fp * 1e-4), fp * 1e3);
+  const tc = (view.tmin + view.tmax) / 2, pc = (view.pmin + view.pmax) / 2;
+  view.tmin = tc - tspan / 2; view.tmax = tc + tspan / 2;
+  view.pmin = pc - pspan / 2; view.pmax = pc + pspan / 2;
+}
+
+function reset_view() {
+  if (!full_view) return;
+  view = { ...full_view };
+  request_draw();
+}
+
+plot_svg.addEventListener("wheel", event => {
+  if (!draw_cache || !view) return;
+  event.preventDefault();
+  const { PW, PH } = plot_area();
+  const pt = svg_point(event);
+  const anchor_t = view.tmin + (pt.x - PAD.left) / PW * (view.tmax - view.tmin);
+  const anchor_p = view.pmax - (pt.y - PAD.top) / PH * (view.pmax - view.pmin);
+  const factor = Math.exp(event.deltaY * 0.0015);
+  view.tmin = anchor_t - (anchor_t - view.tmin) * factor;
+  view.tmax = anchor_t + (view.tmax - anchor_t) * factor;
+  view.pmin = anchor_p - (anchor_p - view.pmin) * factor;
+  view.pmax = anchor_p + (view.pmax - anchor_p) * factor;
+  clamp_view();
+  request_draw();
+}, { passive: false });
+
+let pan_start = null;
+let suppress_click = false;
+// Pointer capture retargets later events at the svg root, so the pressed
+// series is recorded here for the pointerup select below.
+let down_owner = null;
+plot_svg.addEventListener("pointerdown", event => {
+  if (!draw_cache || !view) return;
+  const down_series = event.target.closest("g.series");
+  down_owner = (down_series && down_series.dataset.owner) || null;
+  if (event.pointerType === "mouse" && event.button !== 0) return;
+  const pt = svg_point(event);
+  pan_start = { x: pt.x, y: pt.y, view: { ...view } };
+  suppress_click = false;
+  plot_svg.setPointerCapture(event.pointerId);
+  plot_svg.classList.add("panning");
+  plot_tip.hidden = true;
+});
+plot_svg.addEventListener("pointermove", event => {
+  if (!pan_start) return;
+  const pt = svg_point(event);
+  const { PW, PH } = plot_area();
+  const tspan = pan_start.view.tmax - pan_start.view.tmin;
+  const pspan = pan_start.view.pmax - pan_start.view.pmin;
+  const dt = (pt.x - pan_start.x) / PW * tspan;
+  const dp = (pt.y - pan_start.y) / PH * pspan;
+  view.tmin = pan_start.view.tmin - dt;
+  view.tmax = pan_start.view.tmax - dt;
+  view.pmin = pan_start.view.pmin + dp;
+  view.pmax = pan_start.view.pmax + dp;
+  if (Math.hypot(pt.x - pan_start.x, pt.y - pan_start.y) > 4) suppress_click = true;
+  request_draw();
+});
+function end_pan() {
+  if (!pan_start) return;
+  pan_start = null;
+  plot_svg.classList.remove("panning");
+}
+plot_svg.addEventListener("pointercancel", () => { down_owner = null; });
+plot_svg.addEventListener("pointerup", end_pan);
+plot_svg.addEventListener("pointercancel", end_pan);
+// A drag across the svg must never become a text selection wash.
+plot_svg.addEventListener("selectstart", event => event.preventDefault());
+plot_svg.addEventListener("dblclick", reset_view);
+plot_reset.addEventListener("click", reset_view);
+
+// Ctrl-click (or Cmd-click) a series to select that reaction, then centre it
+// in the side card. A drag ending in a click never selects; on macOS the
+// Ctrl-triggered context menu is suppressed so Ctrl-click just selects.
+// Ctrl-click (or Cmd-click) a series to select that reaction, then centre it
+// in the side card. Handled on pointerup rather than click so the gesture
+// works uniformly: macOS Ctrl-click arrives as a right-click and never
+// produces a click event. A drag ending in a pointerup never selects.
+plot_svg.addEventListener("pointerup", async event => {
+  const owner = down_owner;
+  down_owner = null;
+  if (suppress_click) { suppress_click = false; return; }
+  if (!(event.ctrlKey || event.metaKey)) return;
+  if (!owner) return;
+  event.preventDefault();
+  await select(owner);
+  const link = document.querySelector(`#reaction_list a[data-id="${owner}"]`);
+  if (link) link.scrollIntoView({ block: "center", behavior: "smooth" });
+});
+plot_svg.addEventListener("contextmenu", event => {
+  if (event.ctrlKey) event.preventDefault();
+});
 
 function schedule_refresh(immediate = false) {
   if (immediate) { refresh(); return; }
@@ -338,7 +564,12 @@ function schedule_refresh(immediate = false) {
 
 document.addEventListener("keydown", event => {
   if (event.key === "/" && document.activeElement !== query_input) { event.preventDefault(); query_input.focus(); }
+  if (event.metaKey || event.ctrlKey) plot_svg.classList.add("select-mod");
 });
+document.addEventListener("keyup", event => {
+  if (!event.metaKey && !event.ctrlKey) plot_svg.classList.remove("select-mod");
+});
+window.addEventListener("blur", () => plot_svg.classList.remove("select-mod"));
 query_input.addEventListener("input", () => schedule_refresh(false));
 type_select.addEventListener("change", () => schedule_refresh(true));
 document.getElementById("export").addEventListener("click", () => {
@@ -355,13 +586,22 @@ list_el.addEventListener("mouseover", event => {
 });
 list_el.addEventListener("mouseleave", clear_emphasis);
 
-// Console-style tooltip: point markers carry their own readout.
+// Console-style tooltip: point markers carry their own readout. Hovering any
+// part of a series also emphasizes that whole reaction, matching list hover.
 plot_svg.addEventListener("mousemove", event => {
+  if (pan_start) { plot_tip.hidden = true; return; }
+  const series = event.target.closest("g.series");
+  if (series && series.dataset.owner) emphasize(series.dataset.owner);
+  else clear_emphasis();
   const mark = event.target.closest("[data-tip]");
   const body = plot_svg.parentElement.getBoundingClientRect();
   if (!mark) { plot_tip.hidden = true; return; }
-  const [tip, detail] = mark.getAttribute("data-tip").split(" · ");
-  plot_tip.innerHTML = `<strong>${escape_html(tip)}</strong><br><span>${escape_html(detail || "")}</span>`;
+  const [title, phases, names, temp, pressure] = mark.getAttribute("data-tip").split(" · ");
+  plot_tip.innerHTML = `<strong>${escape_html(title)}</strong>` +
+    (phases ? `<br><span>${escape_html(phases)}</span>` : "") +
+    (names ? `<br><span>${escape_html(names)}</span>` : "") +
+    (temp ? `<br><span>Temperature: ${escape_html(temp)}</span>` : "") +
+    (pressure ? `<br><span>Pressure: ${escape_html(pressure)}</span>` : "");
   plot_tip.hidden = false;
   let x = event.clientX - body.left + 14, y = event.clientY - body.top + 14;
   if (x + 200 > body.width) x -= 214;
@@ -369,10 +609,39 @@ plot_svg.addEventListener("mousemove", event => {
   plot_tip.style.left = x + "px";
   plot_tip.style.top = y + "px";
 });
-plot_svg.addEventListener("mouseleave", () => { plot_tip.hidden = true; });
+plot_svg.addEventListener("mouseleave", () => { plot_tip.hidden = true; clear_emphasis(); });
 
 const initial = read_state();
 query_input.value = initial.query;
 type_select.value = initial.reaction_type;
 selected = initial.selected;
+active_tab = initial.tab;
+tab_links.forEach(a => {
+  a.setAttribute("aria-current", String(a.dataset.tab === active_tab));
+});
+view_reactions.hidden = active_tab !== "reactions";
+view_observations.hidden = active_tab !== "observations";
+tab_links.forEach(a => {
+  a.addEventListener("click", event => {
+    event.preventDefault();
+    if (a.dataset.tab === active_tab) return;
+    query_input.focus({ preventScroll: true });
+    set_tab(a.dataset.tab, { push: true });
+  });
+});
+window.addEventListener("popstate", () => {
+  const state = read_state();
+  query_input.value = state.query;
+  type_select.value = state.reaction_type;
+  selected = state.selected;
+  document.querySelectorAll("#reaction_list a").forEach(other => {
+    other.setAttribute("aria-current", String(other.dataset.id === selected));
+  });
+  if (state.tab !== active_tab) set_tab(state.tab, { replace: true });
+  refresh();
+});
+window.addEventListener("resize", move_tab_indicator);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(move_tab_indicator);
+requestAnimationFrame(move_tab_indicator);
+setTimeout(move_tab_indicator, 100);
 refresh();

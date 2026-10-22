@@ -93,5 +93,53 @@ def test_ui_is_console_theme_without_plotly():
     js = client.get("/static/app.js").text
     assert "Plotly" not in js
     assert "clipPath" in js and "data-tip" in js
+    assert "Temperature:" in js and "Pressure:" in js and "Phases:" not in js
+    assert "PLOT_LIMIT" not in js and "plot_note" not in js
     css = client.get("/static/app.css").text
     assert "--accent: #3b5cf6" in css
+
+
+def test_ui_tabs_share_filtering_with_animation():
+    for path in ("/", "/observations"):
+        response = client.get(path)
+        assert response.status_code == 200
+        page = response.text
+        assert 'data-tab="reactions"' in page
+        assert 'data-tab="observations"' in page
+        assert 'id="tab_indicator"' in page
+        assert 'id="view-reactions"' in page
+        assert 'id="view-observations"' in page
+        assert 'id="obs_count"' in page
+        assert "<th>reaction</th>" in page and "<th>phases</th>" in page
+        assert "<th>type</th>" in page and "<th>outcome</th>" not in page
+        assert "Phase Diagram" in page and "Pressure&ndash;Temperature" not in page
+    css = client.get("/static/app.css").text
+    assert "#tab_indicator" in css and "view-in" in css
+    js = client.get("/static/app.js").text
+    assert "set_tab" in js and "move_tab_indicator" in js
+    assert "popstate" in js and "switch-in" in js
+    assert "sym-cell" in js and "name-cell" in js
+    assert "phase_names" in js and "mineral_name" in js
+    assert "reaction_type" in js and "experimental_outcome" not in js
+
+
+def test_ui_plot_pan_zoom_controls():
+    page = client.get("/").text
+    assert 'id="plot_reset"' in page
+    js = client.get("/static/app.js").text
+    assert '"wheel"' in js and '"pointerdown"' in js and '"dblclick"' in js
+    assert "reset_view" in js and "request_draw" in js and "draw_cache" in js
+    css = client.get("/static/app.css").text
+    assert "touch-action: none" in css and ".panning" in css
+
+
+def test_ui_plot_hover_emphasis_and_ctrl_click_select():
+    page = client.get("/").text
+    assert 'id="plot_reset"' in page
+    js = client.get("/static/app.js").text
+    assert 'closest("g.series")' in js and "clear_emphasis" in js
+    assert "metaKey" in js and "scrollIntoView" in js
+    assert "suppress_click" in js and '"contextmenu"' in js
+    assert "down_owner" in js and "select-mod" in js
+    css = client.get("/static/app.css").text
+    assert "#plot.select-mod" in css

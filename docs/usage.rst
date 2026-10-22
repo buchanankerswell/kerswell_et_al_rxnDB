@@ -15,7 +15,7 @@ The command launches the app on http://127.0.0.1:8000/.
 Open the interface
 ------------------
 
-Visit http://127.0.0.1:8000/. The page shows a search box, a reaction-type dropdown, a reaction list, a dependency-free SVG pressure-temperature plot, and an observation table. Press ``/`` to focus search. ``Download JSON`` exports the current filter set.
+Visit http://127.0.0.1:8000/. The page shows a search box, a reaction-type dropdown, and two tabs: ``Reactions`` (reaction list plus a dependency-free SVG phase diagram) and ``Observations`` (every matching observation, with a reaction column). Press ``/`` to focus search on either tab. ``Download JSON`` exports the current filter set.
 
 Worked example: coesite-quartz
 ------------------------------
@@ -44,7 +44,21 @@ The API is the URL itself:
 Share URL to reproduce results
 ------------------------------
 
-The app rewrites the URL on every keystroke and selection, so copy the URL to share exactly what you see. An empty filter shows the full database.
+The app rewrites the URL on every keystroke and selection, so copy the URL to share exactly what you see. An empty filter shows the full database. The tab is part of the path: ``/`` holds the reactions explorer and ``/observations`` holds the table, with the same ``query``, ``reaction_type``, and ``selected`` parameters on both. Switching tabs slides the underline, crossfades the view, and pushes a history entry, so back and forward move between tabs.
+
+Tabs
+----
+
+Both tabs share one search box and one filter set:
+
+* ``Reactions`` (``/``): ranked reaction list plus the phase diagram. Click a reaction to fit it. Hovering a point emphasizes its whole reaction; Ctrl-click (or Cmd-click) a point to select that reaction and centre it in the list. Scroll to zoom around the cursor, drag to pan, double-click (or ``Reset view``) to return to the full filter set.
+* ``Observations`` (``/observations``): one row per observation with ``reaction``, ``phases`` (symbols plus long-form names), ``T``, ``P``, ``type``, and ``source`` columns, in ranked reaction order.
+
+The same ``/`` address from the worked example opens the table here:
+
+.. code-block:: bash
+
+    http://127.0.0.1:8000/observations?query=qz+coe&reaction_type=phase_boundary
 
 Search syntax
 -------------
@@ -89,7 +103,8 @@ Endpoint                    Purpose
 ``POST /validate``          Validate a record body; 422 names the fault.
 ``POST /fit/boundary``      Fit a line to a record's observations.
 ``POST /design/next-point`` Rank candidate temperatures by expected slope-variance drop.
-``GET /``                   The search page.
+``GET /``                   The reactions explorer (list plus plot).
+``GET /observations``       The observations table; same filters as ``/``.
 =========================== ====================================================
 
 The worked example above corresponds to:
@@ -140,7 +155,7 @@ Each file under ``rxnDB/data/`` holds one reaction. Curves store polynomial coef
 Troubleshooting
 ---------------
 
-* The page loads but the plot is empty. The filters exclude everything; clear search and set the type dropdown to ``all types``. With more than 200 matches the plot shows the first 200 and says so; the list and table still show everything.
+* The page loads but the plot is empty. The filters exclude everything; clear search and set the type dropdown to ``all types``. The plot draws every match, so a very broad filter renders hundreds of series at once.
 * ``/fit/boundary`` returns 422. The record holds fewer than two observations; pick a record with a point set.
 * ``/validate`` rejects a symbol. Check ``rxnDB/registry.json`` for the canonical form and fix the ``mineral_symbol``, ``mineral_name``, and ``chemical_formula`` triple together.
 * Port 8000 is busy. Start the app on another port: ``python -m uvicorn rxnDB.api:app --port 8001``.

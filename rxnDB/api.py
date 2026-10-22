@@ -134,6 +134,11 @@ def index() -> FileResponse:
     return FileResponse(Path(__file__).parent / "static" / "index.html")
 
 
+@app.get("/observations")
+def observations_page() -> FileResponse:
+    return FileResponse(Path(__file__).parent / "static" / "index.html")
+
+
 def main() -> None:
     import uvicorn
 

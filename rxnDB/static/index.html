@@ -17,7 +17,7 @@
           <circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.2"></circle>
           <path d="M10.5 10.5 14 14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
         </svg>
-        <input id="query" type="search" placeholder="Search minerals, authors, IDs… (e.g. Qz Coe)" size="40" aria-label="Search reactions">
+        <input id="query" type="search" placeholder="Search minerals, authors, IDs… (press / to search)" size="40" aria-label="Search reactions">
       </div>
       <select id="reaction_type" aria-label="Reaction type">
         <option value="">all types</option>
@@ -28,49 +28,51 @@
       <button id="export" type="button">Download JSON</button>
     </div>
   </div>
+  <nav class="tabs" aria-label="Views">
+    <div class="tabs-inner">
+      <a href="/" data-tab="reactions" aria-current="true">Reactions</a>
+      <a href="/observations" data-tab="observations" aria-current="false">Observations</a>
+      <span id="tab_indicator" aria-hidden="true"></span>
+    </div>
+  </nav>
 </header>
 <main>
+<div id="view-reactions" class="tab-panel" role="tabpanel" aria-label="Reactions explorer">
 <div id="layout">
   <section class="card side" aria-label="Reactions">
     <div class="section-head">
-      <div>
-        <h2>Reactions</h2>
-        <p class="hint">Press <kbd>/</kbd> to search. Click a reaction to fit it.</p>
-      </div>
+      <h2>Reactions</h2>
       <p id="count" role="status" aria-live="polite"></p>
     </div>
     <ul id="reaction_list"></ul>
   </section>
   <div class="main-col">
-    <section class="card plot-card" aria-label="Pressure-temperature plot">
+    <section class="card plot-card" aria-label="Phase diagram">
       <div class="section-head">
-        <div>
-          <h2>Pressure&ndash;Temperature</h2>
-          <p>Observations with uncertainty, published curves, and the fitted boundary. Dashed curves clip to valid ranges.</p>
-        </div>
+        <h2>Phase Diagram</h2>
       </div>
-      <p id="plot_note" class="plot-note" hidden></p>
       <div class="plot-body">
-        <svg id="plot" viewBox="0 0 720 440" role="img" aria-label="Pressure-temperature plot"></svg>
+        <svg id="plot" viewBox="0 0 720 560" role="img" aria-label="Phase diagram"></svg>
         <div id="plot_tip" class="plot-tip" hidden></div>
+        <button id="plot_reset" type="button" hidden>Reset view</button>
       </div>
     </section>
-    <section class="card table-card" aria-label="Observations">
-      <div class="section-head">
-        <div>
-          <h2>Observations</h2>
-          <p>Every matching observation, in ranked reaction order.</p>
-        </div>
-      </div>
-      <div class="table-wrap">
-        <table id="table">
-          <thead><tr><th>reaction</th><th class="num">T (&deg;C)</th><th class="num">P (GPa)</th><th>outcome</th><th>source</th></tr></thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </section>
-    <p class="foot">Entries marked <em>review</em> are suspect.</p>
   </div>
+</div>
+</div>
+<div id="view-observations" class="tab-panel" role="tabpanel" aria-label="Observations table" hidden>
+  <section class="card table-card" aria-label="Observations">
+    <div class="section-head">
+      <h2>Observations</h2>
+      <p id="obs_count" role="status" aria-live="polite"></p>
+    </div>
+    <div class="table-wrap">
+      <table id="table">
+        <thead><tr><th>reaction</th><th>phases</th><th class="num">T (&deg;C)</th><th class="num">P (GPa)</th><th>type</th><th>source</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
 </div>
 </main>
 </body>

@@ -191,9 +191,87 @@ button:active {
 button:focus-visible,
 #query:focus-visible,
 select:focus-visible,
+.tabs-inner a:focus-visible,
 #reaction_list a:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 1px;
+}
+
+/* Tabs: console top-nav style (Overview / Logs / …) with a sliding underline. */
+.tabs {
+  border-top: 0.5px solid var(--hair);
+}
+
+.tabs-inner {
+  position: relative;
+  max-width: 1368px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.tabs-inner a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 2.75rem;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 440;
+  color: var(--muted);
+  transition: color 0.15s ease;
+}
+
+.tabs-inner a:hover {
+  color: var(--ink);
+}
+
+.tabs-inner a[aria-current="true"] {
+  color: var(--ink);
+  font-weight: 530;
+}
+
+#tab_indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--ink);
+  border-radius: 2px;
+  transform: translateX(0);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tab panels: console-like page switch (fade + slight rise). */
+.tab-panel[hidden] {
+  display: none;
+}
+
+.tab-panel.switch-in {
+  animation: view-in 0.18s ease;
+}
+
+@keyframes view-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #tab_indicator {
+    transition: none;
+  }
+
+  .tab-panel.switch-in {
+    animation: none;
+  }
 }
 
 /* Layout */
@@ -207,7 +285,7 @@ main {
   display: grid;
   grid-template-columns: 352px minmax(0, 1fr);
   gap: 2rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 .main-col {
@@ -215,6 +293,13 @@ main {
   flex-direction: column;
   gap: 2rem;
   min-width: 0;
+  min-height: 0;
+}
+
+.main-col > .plot-card {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .card {
@@ -225,6 +310,9 @@ main {
 
 .side {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .section-head {
@@ -245,25 +333,12 @@ main {
 
 .section-head p {
   color: var(--muted);
-  margin: 0.25rem 0 0;
-}
-
-.hint {
-  color: var(--muted);
-  margin: 0 0 0.75rem;
-}
-
-kbd {
-  font: 0.75rem var(--font);
-  border: 0;
-  border-radius: 4px;
-  padding: 0 0.35rem;
-  background: var(--layer-2);
-  box-shadow: inset 0 0 0 0.5px var(--hair-base);
+  margin: 0;
 }
 
 /* Result list */
-#count {
+#count,
+#obs_count {
   color: var(--muted);
   margin: 0;
   min-height: 1.2em;
@@ -277,7 +352,9 @@ kbd {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  max-height: 62vh;
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: 74vh;
   overflow: auto;
 }
 
@@ -323,6 +400,11 @@ kbd {
   white-space: nowrap;
 }
 
+#reaction_list .name-cell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .pill {
   margin-left: auto;
   flex: none;
@@ -344,12 +426,6 @@ kbd {
   padding: 1rem 1.25rem 0;
 }
 
-.plot-note {
-  color: var(--muted);
-  margin: 0.25rem 0 0;
-  padding: 0 1.25rem;
-}
-
 .plot-body {
   position: relative;
   padding: 0.5rem 1.5rem 0.75rem 0.5rem;
@@ -359,6 +435,33 @@ kbd {
   display: block;
   width: 100%;
   height: auto;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#plot.panning {
+  cursor: grabbing;
+}
+
+#plot.select-mod {
+  cursor: pointer;
+}
+
+#plot.panning.select-mod {
+  cursor: grabbing;
+}
+
+#plot_reset {
+  position: absolute;
+  top: 0.75rem;
+  right: 1.75rem;
+  z-index: 6;
+}
+
+#plot_reset[hidden] {
+  display: none;
 }
 
 #plot text {
@@ -466,6 +569,14 @@ kbd {
   box-shadow: var(--elev-raised);
 }
 
+#view-observations .table-wrap {
+  max-height: 74vh;
+}
+
+#view-observations .table-card {
+  margin-bottom: 1.5rem;
+}
+
 table {
   border-collapse: separate;
   border-spacing: 0;
@@ -507,9 +618,17 @@ tbody tr:hover td {
   background: var(--layer);
 }
 
-.foot {
+.sym-cell {
   color: var(--muted);
-  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.name-cell {
+  color: var(--muted);
+  font-size: 0.75rem;
+  white-space: nowrap;
 }
 
 /* Narrow screens */
