@@ -29,6 +29,6 @@ jobs:
             [[ "$branch" == main ]] && continue
             printf '%s\n' "$tagged" | grep -qx "$sha" && continue
             [[ "$created" < "$cutoff" ]] || continue
-            gh run delete --yes "$id"
+            gh api -X DELETE "repos/$REPOSITORY/actions/runs/$id" --silent
             echo "deleted run $id on $branch"
           done
