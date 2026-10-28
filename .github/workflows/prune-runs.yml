@@ -1,0 +1,29 @@
+---
+name: Prune workflow runs
+on:
+  schedule:
+    - cron: "0 3 * * 0"
+  workflow_dispatch:
+permissions:
+  actions: write
+jobs:
+  prune:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Delete runs that are neither on main nor on a tag
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY: ${{ github.repository }}
+          GRACE_DAYS: "7"
+        run: |
+          cutoff=$(date -u -d "$GRACE_DAYS days ago" +%Y-%m-%dT%H:%M:%SZ)
+          tagged=$(gh api "repos/$REPOSITORY/tags?per_page=100" --paginate -q '.[].commit.sha')
+          gh api "repos/$REPOSITORY/actions/runs?per_page=100" --paginate \
+            -q '.workflow_runs[] | "\(.id) \(.head_branch) \(.head_sha) \(.created_at)"' |
+          while read -r id branch sha created; do
+            [[ "$branch" == main ]] && continue
+            printf '%s\n' "$tagged" | grep -qx "$sha" && continue
+            [[ "$created" < "$cutoff" ]] || continue
+            gh run delete --yes "$id"
+            echo "deleted run $id on $branch"
+          done
