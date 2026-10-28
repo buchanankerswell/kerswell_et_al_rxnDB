@@ -1,5 +1,6 @@
 # rxnDB: a mineral reaction database
 
+[![PyPI](https://img.shields.io/pypi/v/rxnDB)](https://pypi.org/project/rxnDB/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23736048.svg)](https://doi.org/10.5281/zenodo.23736048)
 
 📚 See the [documentation](https://kerswell-et-al-rxndb.readthedocs.io/en/latest/) for details.
