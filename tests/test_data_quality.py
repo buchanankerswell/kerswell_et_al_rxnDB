@@ -13,9 +13,15 @@ JSON_DIRECTORY = Path(__file__).resolve().parent.parent / "rxnDB" / "data"
 
 def test_suspect_records_carry_notes():
     for identifier in (
-        "jimmy-073", "jimmy-074", "jimmy-045",
-        "jimmy-035", "jimmy-060", "jimmy-089",
-        "jimmy-091", "jimmy-099", "jimmy-100",
+        "jimmy-073",
+        "jimmy-074",
+        "jimmy-045",
+        "jimmy-035",
+        "jimmy-060",
+        "jimmy-089",
+        "jimmy-091",
+        "jimmy-099",
+        "jimmy-100",
     ):
         record = Reaction.model_validate(json.loads((JSON_DIRECTORY / f"{identifier}.json").read_text()))
         assert is_suspect(record)

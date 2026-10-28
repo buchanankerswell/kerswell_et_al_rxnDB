@@ -15,7 +15,32 @@ The command launches the app on http://127.0.0.1:8000/.
 Open the interface
 ------------------
 
-Visit http://127.0.0.1:8000/. The page shows a search box, a reaction-type dropdown, and two tabs: ``Reactions`` (reaction list plus a dependency-free SVG phase diagram) and ``Observations`` (every matching observation, with a reaction column). Press ``/`` to focus search on either tab. ``Download JSON`` exports the current filter set.
+Visit http://127.0.0.1:8000/. A search box and a reaction-type dropdown sit above two tabs. ``Reactions`` pairs the reaction list with a plain SVG phase diagram. ``Observations`` lists every matching observation with its reaction. Press ``/`` to jump to search from either tab. ``Download JSON`` exports the current filter set.
+
+Data format
+-----------
+
+Each reaction is one JSON record: named phases on each side of the change, at least one observation or published curve, and a source. A minimal record with two observations validates as-is:
+
+.. code-block:: json
+
+    {
+      "reaction_identifier": "example-001",
+      "reaction_type": "phase_boundary",
+      "reactants": [
+        {"mineral_symbol": "Coe", "mineral_name": "coesite", "chemical_formula": "SiO2", "coefficient": 1.0}
+      ],
+      "products": [
+        {"mineral_symbol": "Qz", "mineral_name": "quartz", "chemical_formula": "SiO2", "coefficient": 1.0}
+      ],
+      "observations": [
+        {"temperature_celsius": 500, "temperature_uncertainty_celsius": 10, "pressure_gigapascal": 2.7, "pressure_uncertainty_gigapascal": 0.05},
+        {"temperature_celsius": 800, "temperature_uncertainty_celsius": 10, "pressure_gigapascal": 3.0, "pressure_uncertainty_gigapascal": 0.05}
+      ],
+      "source": {"authors": ["Bose", "Ganguly"], "year": 1995, "short_citation": "Bose & Ganguly, 1995"}
+    }
+
+Each file under ``rxnDB/data/`` holds one such record. The exact format lives in :doc:`api`.
 
 Worked example: coesite-quartz
 ------------------------------
@@ -37,21 +62,21 @@ To reach the same view by hand:
 
 The API is the URL itself:
 
-* ``query=qz+coe`` matches ``Qz`` and ``Coe`` against the database. Matching ignores case and splits on spaces, so ``qz coe`` and ``coe qz`` find the same records; ``+`` decodes to a space.
+* ``query=qz+coe`` matches ``Qz`` and ``Coe`` against the database. Matching ignores case and splits on spaces, so ``qz coe`` and ``coe qz`` find the same records. ``+`` decodes to a space.
 * ``reaction_type=phase_boundary`` keeps only phase boundaries. Other values are ``calibration``, ``melting_curve``, and ``triple_point``.
 * ``selected=hp11-016`` highlights that reaction and draws its fit.
 
 Share URL to reproduce results
 ------------------------------
 
-The app rewrites the URL on every keystroke and selection, so copy the URL to share exactly what you see. An empty filter shows the full database. The tab is part of the path: ``/`` holds the reactions explorer and ``/observations`` holds the table, with the same ``query``, ``reaction_type``, and ``selected`` parameters on both. Switching tabs slides the underline, crossfades the view, and pushes a history entry, so back and forward move between tabs.
+The app rewrites the URL on every keystroke and selection. Copy the URL to share exactly what you see. An empty filter shows the full database. The tab lives in the path: ``/`` holds the reactions explorer and ``/observations`` holds the table, with the same ``query``, ``reaction_type``, and ``selected`` parameters on both. Switching tabs slides the underline, crossfades the view, and adds a history entry, so the back and forward buttons move between tabs.
 
 Tabs
 ----
 
 Both tabs share one search box and one filter set:
 
-* ``Reactions`` (``/``): ranked reaction list plus the phase diagram. Click a reaction to fit it. Hovering a point emphasizes its whole reaction; Ctrl-click (or Cmd-click) a point to select that reaction and centre it in the list. Scroll to zoom around the cursor, drag to pan, double-click (or ``Reset view``) to return to the full filter set.
+* ``Reactions`` (``/``): ranked reaction list plus the phase diagram. Click a reaction to fit it. Hovering a point lights up its whole reaction. Ctrl-click (or Cmd-click) a point to select that reaction and centre it in the list. Scroll to zoom around the cursor, drag to pan, double-click (or ``Reset view``) to return to the full filter set.
 * ``Observations`` (``/observations``): one row per observation with ``reaction``, ``phases`` (symbols plus long-form names), ``T``, ``P``, ``type``, and ``source`` columns, in ranked reaction order.
 
 The same ``/`` address from the worked example opens the table here:
@@ -64,7 +89,7 @@ Search syntax
 -------------
 
 The ``query`` box splits on spaces and matches words in any order. One word
-matches directly; several words keep only records holding a combination (two
+matches directly. Several words keep only records holding a combination (two
 or more) of them, with the most overlapping records first. Tokens naming a
 reaction identifier always match that record explicitly. Prefix a word with
 ``-`` to drop records holding it.
@@ -86,66 +111,12 @@ The ``mineral_symbol`` API parameter differs: it tests set membership and accept
 Download matching records
 -------------------------
 
-``Download JSON`` calls ``GET /export`` with the current filters and saves ``rxndb-export.json``. The file holds full records in the same schema as the API.
+``Download JSON`` calls ``GET /export`` with the current filters and saves ``rxndb-export.json``. The file holds the full records behind the current filters.
 
 Call the API
 ------------
 
-Browsers and scripts share these endpoints:
-
-=========================== ====================================================
-Endpoint                    Purpose
-=========================== ====================================================
-``GET /health``             Liveness check, returns ``{"status": "ok"}``.
-``GET /reactions``          List records; accepts ``query``, ``mineral_symbol``, ``reaction_type``.
-``GET /reactions/{id}``     Fetch one record by identifier; 404 when unknown.
-``GET /export``             Download filtered records as a JSON attachment.
-``POST /validate``          Validate a record body; 422 names the fault.
-``POST /fit/boundary``      Fit a line to a record's observations.
-``POST /design/next-point`` Rank candidate temperatures by expected slope-variance drop.
-``GET /``                   The reactions explorer (list plus plot).
-``GET /observations``       The observations table; same filters as ``/``.
-=========================== ====================================================
-
-The worked example above corresponds to:
-
-.. code-block:: bash
-
-    curl 'http://127.0.0.1:8000/reactions?query=qz%20coe&reaction_type=phase_boundary'
-    curl 'http://127.0.0.1:8000/reactions/hp11-016'
-    curl 'http://127.0.0.1:8000/export?query=qz%20coe&reaction_type=phase_boundary' -o coe-qz.json
-
-Validate a candidate record before upload:
-
-.. code-block:: bash
-
-    curl -X POST http://127.0.0.1:8000/validate \
-        -H 'Content-Type: application/json' \
-        -d @my-reaction.json
-
-Unknown mineral symbols fail with a suggestion, for example ``legacy symbol 'q': use 'Qz'``. IMA Warr (2021) symbols pass. The remaining registry entries are provisional single-symbol forms awaiting verification.
-
-Fit a boundary
---------------
-
-.. code-block:: bash
-
-    curl -X POST http://127.0.0.1:8000/fit/boundary \
-        -H 'Content-Type: application/json' \
-        -d '{"reaction_identifier": "hp11-016"}'
-
-The response reports slope in GPa per C, intercept in GPa, standard errors, observation count, method name, and a 20-point line with band half-widths. The method is iterated weighted least squares with temperature-error propagation. Records with fewer than two observations return 422.
-
-Pick the next experiment
-------------------------
-
-.. code-block:: bash
-
-    curl -X POST http://127.0.0.1:8000/design/next-point \
-        -H 'Content-Type: application/json' \
-        -d '{"reaction_identifier": "hp11-016", "candidate_count": 5}'
-
-Each candidate returns a temperature, the predicted pressure, and the expected slope-variance drop. The plot stars the top five candidate experiments and scales each star by its variance drop. Optional fields narrow the grid (``temperature_min_celsius``, ``temperature_max_celsius``) or restate the assumed point errors (``assumed_temperature_uncertainty_celsius``, ``assumed_pressure_uncertainty_gigapascal``).
+Scripts and agents can call the same URLs the browser uses. The full technical reference lives in :doc:`api`.
 
 Data and symbols
 ----------------
@@ -155,7 +126,7 @@ Each file under ``rxnDB/data/`` holds one reaction. Curves store polynomial coef
 Troubleshooting
 ---------------
 
-* The page loads but the plot is empty. The filters exclude everything; clear search and set the type dropdown to ``all types``. The plot draws every match, so a very broad filter renders hundreds of series at once.
-* ``/fit/boundary`` returns 422. The record holds fewer than two observations; pick a record with a point set.
+* The page loads but the plot is empty. The filters exclude everything. Clear search and set the type dropdown to ``all types``. The plot draws every match, so a very broad filter renders hundreds of series at once.
+* ``/fit/boundary`` returns 422. The record holds fewer than two observations. Pick a record that has observations.
 * ``/validate`` rejects a symbol. Check ``rxnDB/registry.json`` for the canonical form and fix the ``mineral_symbol``, ``mineral_name``, and ``chemical_formula`` triple together.
 * Port 8000 is busy. Start the app on another port: ``python -m uvicorn rxnDB.api:app --port 8001``.

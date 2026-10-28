@@ -8,12 +8,8 @@ from rxnDB.models import Reaction
 VALID = {
     "reaction_identifier": "test-and-ky",
     "reaction_type": "phase_boundary",
-    "reactants": [
-        {"mineral_symbol": "And", "mineral_name": "andalusite", "chemical_formula": "Al2SiO5", "coefficient": 1.0}
-    ],
-    "products": [
-        {"mineral_symbol": "Ky", "mineral_name": "kyanite", "chemical_formula": "Al2SiO5", "coefficient": 1.0}
-    ],
+    "reactants": [{"mineral_symbol": "And", "mineral_name": "andalusite", "chemical_formula": "Al2SiO5", "coefficient": 1.0}],
+    "products": [{"mineral_symbol": "Ky", "mineral_name": "kyanite", "chemical_formula": "Al2SiO5", "coefficient": 1.0}],
     "observations": [
         {
             "temperature_celsius": 500.0,
@@ -35,25 +31,19 @@ def test_accept_valid_reaction():
 
 
 def test_reject_legacy_symbol_with_suggestion():
-    record = {**VALID, "reactants": [
-        {"mineral_symbol": "q", "mineral_name": "quartz", "chemical_formula": "SiO2", "coefficient": 1.0}
-    ]}
+    record = {**VALID, "reactants": [{"mineral_symbol": "q", "mineral_name": "quartz", "chemical_formula": "SiO2", "coefficient": 1.0}]}
     with pytest.raises(ValidationError, match="use 'Qz'"):
         Reaction.model_validate(record)
 
 
 def test_reject_unknown_symbol():
-    record = {**VALID, "reactants": [
-        {"mineral_symbol": "Xx", "mineral_name": "nope", "chemical_formula": "Xx", "coefficient": 1.0}
-    ]}
+    record = {**VALID, "reactants": [{"mineral_symbol": "Xx", "mineral_name": "nope", "chemical_formula": "Xx", "coefficient": 1.0}]}
     with pytest.raises(ValidationError, match="unknown mineral symbol"):
         Reaction.model_validate(record)
 
 
 def test_reject_mismatched_name():
-    record = {**VALID, "reactants": [
-        {"mineral_symbol": "Qz", "mineral_name": "coesite", "chemical_formula": "SiO2", "coefficient": 1.0}
-    ]}
+    record = {**VALID, "reactants": [{"mineral_symbol": "Qz", "mineral_name": "coesite", "chemical_formula": "SiO2", "coefficient": 1.0}]}
     with pytest.raises(ValidationError, match="must pair"):
         Reaction.model_validate(record)
 

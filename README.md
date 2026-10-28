@@ -33,8 +33,8 @@ If you want to install the development version for local testing in "editable" m
 
 ``` bash
 # Clone repo
-git clone https://github.com/buchanankerswell/kerswell_et_al_rxnDB.git
-cd kerswell_et_al_rxnDB
+git clone https://github.com/buchanankerswell/rxndb.git
+cd rxndb
 
 # Checkout develop branch
 git checkout develop

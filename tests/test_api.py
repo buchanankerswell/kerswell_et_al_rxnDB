@@ -45,9 +45,7 @@ def test_export_json_only():
 def test_validate_accepts_and_rejects():
     valid = client.get("/reactions/hp11-001").json()
     assert client.post("/validate", json=valid).status_code == 200
-    invalid = {**valid, "reactants": [
-        {"mineral_symbol": "q", "mineral_name": "quartz", "chemical_formula": "SiO2", "coefficient": 1.0}
-    ]}
+    invalid = {**valid, "reactants": [{"mineral_symbol": "q", "mineral_name": "quartz", "chemical_formula": "SiO2", "coefficient": 1.0}]}
     response = client.post("/validate", json=invalid)
     assert response.status_code == 422
     assert "Qz" in str(response.json())

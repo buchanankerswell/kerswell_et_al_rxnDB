@@ -31,11 +31,7 @@ def search_reactions(
     found = reactions
     if mineral_symbol:
         wanted = {s.strip() for s in mineral_symbol.split(",") if s.strip()}
-        found = [
-            reaction
-            for reaction in found
-            if wanted & participant_symbols(reaction)
-        ]
+        found = [reaction for reaction in found if wanted & participant_symbols(reaction)]
     if reaction_type:
         found = [reaction for reaction in found if reaction.reaction_type == reaction_type]
     if query:

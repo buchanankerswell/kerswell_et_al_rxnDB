@@ -20,7 +20,7 @@ def fit_line(
     pressure_errors: list[float] | None = None,
     correlations: list[float] | None = None,
 ) -> dict:
-    """Fit pressure = intercept + slope * temperature. Units pass through."""
+    """Fit :math:`P = P_0 + mT` (pressure from intercept and slope). Units pass through."""
     temperature = np.asarray(temperatures, dtype=float)
     pressure = np.asarray(pressures, dtype=float)
     count = temperature.size
@@ -131,9 +131,7 @@ def evaluate_line(fit: dict, temperatures: list[float], width: float = 1.96) -> 
     for temperature in temperatures:
         mean = intercept + slope * temperature
         variance = (
-            fit["intercept_variance"]
-            + temperature * temperature * fit["slope_variance"]
-            + 2.0 * temperature * fit["slope_intercept_covariance"]
+            fit["intercept_variance"] + temperature * temperature * fit["slope_variance"] + 2.0 * temperature * fit["slope_intercept_covariance"]
         )
         out.append({"temperature": float(temperature), "pressure": float(mean), "band": float(width * np.sqrt(max(variance, 0.0)))})
     return out
@@ -148,7 +146,7 @@ def rank_candidates(
 ) -> list[dict]:
     """Rank candidate temperatures by expected slope-variance drop.
 
-    Uses the WLS identity Var(slope) = 1/Sxx and adds each candidate with
+    Uses the WLS identity :math:`\\mathrm{Var}(\\hat m) = 1/S_{xx}` and adds each candidate with
     its assumed weight. Tbar shift is ignored; the ordering is what matters.
     """
     slope, current = fit["slope"], fit["slope_variance"]

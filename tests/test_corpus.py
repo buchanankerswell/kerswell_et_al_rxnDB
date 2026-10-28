@@ -11,10 +11,7 @@ JSON_DIRECTORY = Path(__file__).resolve().parent.parent / "rxnDB" / "data"
 
 
 def load_database() -> list[Reaction]:
-    return [
-        Reaction.model_validate(json.loads(path.read_text()))
-        for path in sorted(JSON_DIRECTORY.glob("*.json"))
-    ]
+    return [Reaction.model_validate(json.loads(path.read_text())) for path in sorted(JSON_DIRECTORY.glob("*.json"))]
 
 
 def test_database_counts():
@@ -50,6 +47,13 @@ def test_fully_clipped_boundaries_are_documented():
             if not kept:
                 fully_clipped.add(record.reaction_identifier)
     assert fully_clipped == {
-        "jimmy-035", "jimmy-045", "jimmy-060", "jimmy-073", "jimmy-074",
-        "jimmy-089", "jimmy-091", "jimmy-099", "jimmy-100",
+        "jimmy-035",
+        "jimmy-045",
+        "jimmy-060",
+        "jimmy-073",
+        "jimmy-074",
+        "jimmy-089",
+        "jimmy-091",
+        "jimmy-099",
+        "jimmy-100",
     }

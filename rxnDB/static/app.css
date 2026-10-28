@@ -188,6 +188,30 @@ button:active {
   background: var(--layer-3);
 }
 
+.btn-docs {
+  height: var(--control-height);
+  padding: 0 11px;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  font-weight: 530;
+  border-radius: var(--radius);
+  background: var(--btn);
+  color: var(--ink);
+  box-shadow: var(--elev-button);
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.btn-docs:hover {
+  background: var(--layer-2);
+}
+
+.btn-docs:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+}
+
 button:focus-visible,
 #query:focus-visible,
 select:focus-visible,
@@ -241,7 +265,9 @@ select:focus-visible,
   background: var(--ink);
   border-radius: 2px;
   transform: translateX(0);
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Tab panels: console-like page switch (fade + slight rise). */

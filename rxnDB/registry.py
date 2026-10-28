@@ -53,8 +53,5 @@ def check_participant(symbol: str, name: str, formula: str) -> str:
     canonical = normalize_symbol(symbol)
     entry = _phases()[canonical]
     if name != entry["mineral_name"] or formula != entry["chemical_formula"]:
-        raise ValueError(
-            f"{canonical!r} must pair {entry['mineral_name']!r} with "
-            f"{entry['chemical_formula']!r}; got {name!r} with {formula!r}"
-        )
+        raise ValueError(f"{canonical!r} must pair {entry['mineral_name']!r} with {entry['chemical_formula']!r}; got {name!r} with {formula!r}")
     return canonical
