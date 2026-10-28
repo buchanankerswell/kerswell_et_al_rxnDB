@@ -1,8 +1,6 @@
 rxnDB: Mineral Reaction Database
 ================================
 
-.. image:: rxndb-logo.svg
-
 .. container:: .large
 
     rxnDB collects published high-pressure mineral reactions in one searchable place. Look up an experiment, fit the data, plan your next run.
@@ -15,13 +13,13 @@ Quickstart
     pip install rxnDB
     rxndb
 
-The data can be queried from your browser using FastAPI:
+Query the data from your browser or a script:
 
 .. code-block:: bash
 
     http://127.0.0.1:8000/?query=qz+coe&reaction_type=phase_boundary&selected=hp11-016
 
-That view shows the coesite-quartz boundary with its experimental data and uncertainty. See :doc:`installation` for environment setup and :doc:`usage` for the full walkthrough.
+The link opens the coesite-quartz boundary with its experimental data and uncertainty. See :doc:`installation` for environment setup and :doc:`usage` for the full walkthrough.
 
 .. toctree::
    :maxdepth: 2
@@ -30,4 +28,5 @@ That view shows the coesite-quartz boundary with its experimental data and uncer
 
    installation
    usage
+   api
    autoapi/index

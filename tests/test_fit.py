@@ -42,8 +42,7 @@ def test_band_grows_from_center():
     assert rows[700.0] > rows[500.0]
 
 
-def linear_boundary(intercept=10.256, slope=0.0035, curvature=0.0, cubic=0.0,
-                      t_min=650.0, t_max=2000.0, p_min=12.2, p_max=18.0):
+def linear_boundary(intercept=10.256, slope=0.0035, curvature=0.0, cubic=0.0, t_min=650.0, t_max=2000.0, p_min=12.2, p_max=18.0):
     return {
         "pressure_intercept_gigapascal": intercept,
         "pressure_slope_gigapascal_per_celsius": slope,
@@ -70,8 +69,16 @@ def test_sample_boundary_blanks_out_of_range():
 
 
 def test_sample_boundary_empty_for_corrupt_coefficients():
-    samples = sample_boundary(linear_boundary(
-        intercept=-19.891, slope=0.03278, curvature=2e-05, cubic=8e9,
-        t_min=959.0, t_max=1304.0, p_min=0.0, p_max=6.5,
-    ))
+    samples = sample_boundary(
+        linear_boundary(
+            intercept=-19.891,
+            slope=0.03278,
+            curvature=2e-05,
+            cubic=8e9,
+            t_min=959.0,
+            t_max=1304.0,
+            p_min=0.0,
+            p_max=6.5,
+        )
+    )
     assert all(s["pressure_gigapascal"] is None for s in samples)

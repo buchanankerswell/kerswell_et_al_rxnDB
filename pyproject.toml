@@ -27,10 +27,10 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "pytest-cov", "httpx"]
+dev = ["pytest", "pytest-cov", "httpx", "ruff"]
 
 [project.urls]
-Repository = "https://github.com/buchanankerswell/kerswell_et_al_rxnDB"
+Repository = "https://github.com/buchanankerswell/rxndb"
 
 [project.scripts]
 rxndb = "rxnDB.api:main"

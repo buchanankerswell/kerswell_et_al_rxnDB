@@ -13,7 +13,7 @@ CONDA_PYTHON = $$(conda run -n $(CONDA_ENV_ID) which python)
 APP_MODULE := rxnDB.api:app
 
 # Targets
-.PHONY: run docs test environment clean deep-clean
+.PHONY: run docs test format environment clean deep-clean
 
 all: environment test run
 
@@ -29,6 +29,10 @@ docs:
 
 test:
 	@$(CONDA_PYTHON) -m pytest --cov=rxnDB --cov-branch --cov-report=xml
+
+format:
+	@$(CONDA_PYTHON) -m ruff format .
+	@npx --yes prettier --write "rxnDB/static/*.js" "rxnDB/static/*.css"
 
 environment: $(CONDA_ENV_YML)
 	@if conda info --envs | awk '{print $$1}' | grep -qx "$(CONDA_ENV_ID)"; then \
@@ -86,6 +90,7 @@ help:
 	@echo "  run          Run rxnDB app locally"
 	@echo "  docs         Build documentation"
 	@echo "  test         Run unit tests"
+	@echo "  format       Format code to 150 columns (ruff + prettier)"
 	@echo "  environment  Create Conda environment"
 	@echo "  clean        Cleanup unnecessary files and directories (safe)"
 	@echo "  deep-clean   Deep clean figures and results (use with caution!)"
