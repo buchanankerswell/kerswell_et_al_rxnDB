@@ -106,27 +106,13 @@ Examples:
 * ``bose`` finds records citing Bose & Ganguly.
 * ``hp11-016`` jumps to one record.
 
-The ``mineral_symbol`` API parameter differs: it tests set membership and accepts comma-separated symbols (``?mineral_symbol=Qz,Coe``), while ``query`` tests words in any order.
-
-Download matching records
--------------------------
-
-``Download JSON`` calls ``GET /export`` with the current filters and saves ``rxndb-export.json``. The file holds the full records behind the current filters.
-
 Call the API
 ------------
 
 Scripts and agents can call the same URLs the browser uses. The full technical reference lives in :doc:`api`.
 
-Data and symbols
-----------------
-
-Each file under ``rxnDB/data/`` holds one reaction. Curves store polynomial coefficients with valid ranges. JSON Schema is at ``rxnDB/schema/reaction.json``.
-
 Troubleshooting
 ---------------
 
 * The page loads but the plot is empty. The filters exclude everything. Clear search and set the type dropdown to ``all types``. The plot draws every match, so a very broad filter renders hundreds of series at once.
-* ``/fit/boundary`` returns 422. The record holds fewer than two observations. Pick a record that has observations.
-* ``/validate`` rejects a symbol. Check ``rxnDB/registry.json`` for the canonical form and fix the ``mineral_symbol``, ``mineral_name``, and ``chemical_formula`` triple together.
 * Port 8000 is busy. Start the app on another port: ``python -m uvicorn rxnDB.api:app --port 8001``.

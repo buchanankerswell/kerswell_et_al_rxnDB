@@ -1,5 +1,7 @@
 # rxnDB: a mineral reaction database
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23736048.svg)](https://doi.org/10.5281/zenodo.23736048)
+
 📚 See the [documentation](https://kerswell-et-al-rxndb.readthedocs.io/en/latest/) for details.
 
 ## Prerequisite software
@@ -29,24 +31,9 @@ conda activate rxnDB
 pip install rxnDB
 ```
 
-If you want to install the development version for local testing in "editable" mode:
-
-``` bash
-# Clone repo
-git clone https://github.com/buchanankerswell/rxndb.git
-cd rxndb
-
-# Checkout develop branch
-git checkout develop
-
-# Create conda environment and install rxnDB locally in editable mode
-# including optional development and documentation dependencies
-make environment
-```
-
 ## Usage Guide
 
-After installing rxnDB using either method above, launch the server from the command line:
+After installing rxnDB, launch the server from the command line:
 
 ``` bash
 # Activate conda environment
@@ -60,6 +47,21 @@ The same JSON serves browsers and agents:
 
 ``` bash
 curl 'http://127.0.0.1:8000/reactions?mineral_symbol=Qz' | head -c 300
+```
+
+## Citation
+
+```bibtex
+@software{rxndb,
+  author       = {Kerswell, Buchanan},
+  title        = {rxnDB: a mineral reaction database},
+  month        = oct,
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {latest},
+  doi          = {10.5281/zenodo.23736048},
+  url          = {https://doi.org/10.5281/zenodo.23736048},
+}
 ```
 
 ## Coauthors

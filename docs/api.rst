@@ -1,5 +1,5 @@
-API reference
-=============
+Agent API
+=========
 
 For autonomous agents. Humans: start with :doc:`usage`.
 
@@ -30,20 +30,22 @@ Minimal valid record (validates as-is against ``POST /validate``):
 
 Field rules: ``reaction_identifier`` matches ``^[A-Za-z0-9][A-Za-z0-9._-]*$``. ``reaction_type`` is one of ``phase_boundary``, ``calibration``, ``melting_curve``, ``triple_point``. ``reactants`` and ``products`` are non-empty. Each phase names a canonical ``mineral_symbol`` plus its exact ``mineral_name`` and ``chemical_formula`` triple from ``rxnDB/registry.json`` and a positive ``coefficient``. At least one of ``observations`` or ``interpreted_boundaries`` must be present. ``observations`` carry temperatures in C and pressures in GPa with non-negative uncertainties and a correlation in [-1, 1]. ``source.authors`` is non-empty. Full schema: ``rxnDB/schema/reaction.json``.
 
+Data files: each file under ``rxnDB/data/`` holds one reaction. Curves store polynomial coefficients with valid ranges. JSON Schema is at ``rxnDB/schema/reaction.json``.
+
 Endpoints
 ---------
 
 ``GET /health`` returns ``{"status": "ok"}``.
 
-``GET /reactions`` lists records. Filters: ``mineral_symbol`` tests set membership, comma-separated (``?mineral_symbol=Qz,Coe``). ``reaction_type`` keeps one type. ``query`` splits on spaces and matches words in any order. It keeps records holding two or more of them, ranked by overlap. Prefix a word with ``-`` to drop holders, and bare identifiers match explicitly.
+``GET /reactions`` lists records. Filters: ``mineral_symbol`` tests set membership and accepts comma-separated symbols (``?mineral_symbol=Qz,Coe``), while ``query`` tests words in any order. ``reaction_type`` keeps one type. ``query`` splits on spaces and matches words in any order. It keeps records holding two or more of them, ranked by overlap. Prefix a word with ``-`` to drop holders, and bare identifiers match explicitly.
 
 ``GET /reactions/{id}`` fetches one record. 404 means an unknown identifier.
 
-``GET /export`` downloads the filtered records as a ``rxndb-export.json`` attachment. It accepts the ``/reactions`` filters.
+``GET /export`` downloads the filtered records as a ``rxndb-export.json`` attachment. It accepts the ``/reactions`` filters. The file holds the full records behind the current filters.
 
-``POST /validate`` echoes a record body. 422 names the fault, for example ``legacy symbol 'q': use 'Qz'``.
+``POST /validate`` echoes a record body. 422 names the fault, for example ``legacy symbol 'q': use 'Qz'``. When a symbol is rejected, check ``rxnDB/registry.json`` for the canonical form and fix the ``mineral_symbol``, ``mineral_name``, and ``chemical_formula`` triple together.
 
-``POST /fit/boundary`` takes ``{"reaction_identifier": "<id>"}`` and returns the slope in GPa per C, intercept in GPa, their standard errors, the observation count, the method name, and a 20-point line with band half-widths. 404 means an unknown identifier. 422 means a record with fewer than two observations.
+``POST /fit/boundary`` takes ``{"reaction_identifier": "<id>"}`` and returns the slope in GPa per C, intercept in GPa, their standard errors, the observation count, the method name, and a 20-point line with band half-widths. 404 means an unknown identifier. 422 means the record holds fewer than two observations; pick a record that has observations.
 
 ``POST /design/next-point`` takes ``{"reaction_identifier": "<id>", "candidate_count": 5}`` plus optional ``temperature_min_celsius``, ``temperature_max_celsius``, ``assumed_temperature_uncertainty_celsius`` (default 10.0), and ``assumed_pressure_uncertainty_gigapascal`` (default 0.05). Each candidate returns a temperature, the predicted pressure, and the expected slope-variance drop, ranked best first.
 
