@@ -16,7 +16,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-24.04, macos-latest, windows-latest]
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
+        python-version: ["3.12", "3.13"]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -35,7 +35,7 @@ jobs:
         run: |
           pytest --cov=rxnDB --cov-branch --cov-report=xml
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 # v7.1.1, node24 (v5 tag still nests github-script v7/node20)
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
   check-version:
