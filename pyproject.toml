@@ -7,7 +7,7 @@ name = "rxnDB"
 dynamic = ["version"]
 description = "A FastAPI service and dataset of mineral reaction boundaries"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.13"
 license = {text = "MIT"}
 classifiers = [
     "Natural Language :: English",
