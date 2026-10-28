@@ -51,7 +51,18 @@ curl 'http://127.0.0.1:8000/reactions?mineral_symbol=Qz' | head -c 300
 
 ## Citation
 
-Cite this release as Kerswell, B. (2026). rxnDB: a mineral reaction database. Zenodo. https://doi.org/10.5281/zenodo.23736048
+```bibtex
+@software{kerswell_2026_23736049,
+  author       = {Kerswell, Buchanan},
+  title        = {rxnDB: a mineral reaction database},
+  month        = oct,
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {latest},
+  doi          = {10.5281/zenodo.23736048},
+  url          = {https://doi.org/10.5281/zenodo.23736048},
+}
+```
 
 ## Coauthors
 
