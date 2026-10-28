@@ -76,7 +76,7 @@ Tabs
 
 Both tabs share one search box and one filter set:
 
-* ``Reactions`` (``/``): ranked reaction list plus the phase diagram. Click a reaction to fit it. Hovering a point lights up its whole reaction. Ctrl-click (or Cmd-click) a point to select that reaction and centre it in the list. Scroll to zoom around the cursor, drag to pan, double-click (or ``Reset view``) to return to the full filter set.
+* ``Reactions`` (``/``): ranked reaction list plus the phase diagram. Click a reaction to fit it. Hovering a point lights up its whole reaction. Ctrl-click (or Cmd-click) a point to select that reaction and center it in the list. Scroll to zoom around the cursor, drag to pan, double-click (or ``Reset view``) to return to the full filter set.
 * ``Observations`` (``/observations``): one row per observation with ``reaction``, ``phases`` (symbols plus long-form names), ``T``, ``P``, ``type``, and ``source`` columns, in ranked reaction order.
 
 The same ``/`` address from the worked example opens the table here:
