@@ -31,7 +31,7 @@ Cite this release:
 
 .. code-block:: bibtex
 
-    @software{kerswell_2026_23736049,
+    @software{rxndb,
       author       = {Kerswell, Buchanan},
       title        = {rxnDB: a mineral reaction database},
       month        = oct,

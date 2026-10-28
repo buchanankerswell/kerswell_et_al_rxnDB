@@ -52,7 +52,7 @@ curl 'http://127.0.0.1:8000/reactions?mineral_symbol=Qz' | head -c 300
 ## Citation
 
 ```bibtex
-@software{kerswell_2026_23736049,
+@software{rxndb,
   author       = {Kerswell, Buchanan},
   title        = {rxnDB: a mineral reaction database},
   month        = oct,
