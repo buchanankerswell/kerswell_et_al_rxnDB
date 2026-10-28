@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-092",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Py",
+      "mineral_name": "pyrope",
+      "chemical_formula": "Mg3Al2Si3O12",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mpv",
+      "mineral_name": "Mg-perovskite",
+      "chemical_formula": "MgSiO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Crn",
+      "mineral_name": "corundum",
+      "chemical_formula": "Al2O3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 26.157,
+      "pressure_slope_gigapascal_per_celsius": -0.0008,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 1200.0,
+      "valid_temperature_max_celsius": 2000.0,
+      "valid_pressure_min_gigapascal": 24.5,
+      "valid_pressure_max_gigapascal": 25.2
+    }
+  ],
+  "method": {
+    "description": "In situ X-ray",
+    "pressure_calibration": "Gold (Anderson et al 1989)",
+    "temperature_calibration": "W5-Re95/W26-Re74"
+  },
+  "source": {
+    "authors": [
+      "Hirose",
+      "Fei",
+      "Ono",
+      "Yagi",
+      "Funakoshi"
+    ],
+    "year": 2001,
+    "short_citation": "Hirose et al. (2001)",
+    "doi": "10.1016/S0012-821X(00)00354-X",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

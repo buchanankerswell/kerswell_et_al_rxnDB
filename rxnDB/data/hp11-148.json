@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-148",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Gr",
+      "mineral_name": "grossular",
+      "chemical_formula": "Ca3Al2Si3O12",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Crn",
+      "mineral_name": "corundum",
+      "chemical_formula": "Al2O3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Cats",
+      "mineral_name": "Ca-tschermaks pyroxene",
+      "chemical_formula": "CaAl2SiO6",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1170.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.205,
+      "pressure_uncertainty_gigapascal": 0.07500000000000001,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1230.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.495,
+      "pressure_uncertainty_gigapascal": 0.05500000000000001,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1270.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.645,
+      "pressure_uncertainty_gigapascal": 0.05500000000000001,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1300.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.75,
+      "pressure_uncertainty_gigapascal": 0.06,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1400.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 2.31,
+      "pressure_uncertainty_gigapascal": 0.06,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1500.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 2.875,
+      "pressure_uncertainty_gigapascal": 0.05500000000000001,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Gasparik"
+    ],
+    "year": 1984,
+    "short_citation": "Gasparik, 1984",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

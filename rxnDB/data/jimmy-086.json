@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-086",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Tit",
+      "mineral_name": "titanite",
+      "chemical_formula": "CaTiSiO5",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Ilm",
+      "mineral_name": "ilmenite",
+      "chemical_formula": "FeTiO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Ru",
+      "mineral_name": "rutile",
+      "chemical_formula": "TiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": -0.9,
+      "pressure_slope_gigapascal_per_celsius": 0.0035,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 1020.0,
+      "valid_temperature_max_celsius": 1370.0,
+      "valid_pressure_min_gigapascal": 1.9,
+      "valid_pressure_max_gigapascal": 4.0
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "After Kennedy & LaMori 1962",
+    "temperature_calibration": "Pt/Pt-Rh13"
+  },
+  "source": {
+    "authors": [
+      "Akimoto",
+      "Syono"
+    ],
+    "year": 1967,
+    "short_citation": "Akimoto & Syono (1967)",
+    "doi": "10.1063/1.1712170",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

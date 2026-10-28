@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-524",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Fo",
+      "mineral_name": "forsterite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "FoL",
+      "mineral_name": "forsterite liquid",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1300.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -2.045,
+      "natural_log_equilibrium_constant_uncertainty": 0.245
+    },
+    {
+      "temperature_celsius": 1400.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -1.515,
+      "natural_log_equilibrium_constant_uncertainty": 0.095
+    },
+    {
+      "temperature_celsius": 1500.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -1.235,
+      "natural_log_equilibrium_constant_uncertainty": 0.055
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Bowen",
+      "Shairer"
+    ],
+    "year": 1935,
+    "short_citation": "Bowen & Shairer 1935",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

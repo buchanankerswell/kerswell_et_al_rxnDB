@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-095",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Mggeol",
+      "mineral_name": "magnesium germinate [olivine]",
+      "chemical_formula": "Mg2GeO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mggesp",
+      "mineral_name": "magnesium germinate [spinel]",
+      "chemical_formula": "Mg2GeO4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": -2.767,
+      "pressure_slope_gigapascal_per_celsius": 0.0035,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 737.0,
+      "valid_temperature_max_celsius": 1900.0,
+      "valid_pressure_min_gigapascal": 0.0,
+      "valid_pressure_max_gigapascal": 4.0
+    }
+  ],
+  "method": {
+    "description": "Vibrational Spectroscopy+review",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Ross",
+      "Navrotsky"
+    ],
+    "year": 1987,
+    "short_citation": "Ross & Navrotsky (1987)",
+    "doi": "10.1007/BF00628825",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

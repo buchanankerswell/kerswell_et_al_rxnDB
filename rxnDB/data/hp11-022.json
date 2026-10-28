@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-022",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Arag",
+      "mineral_name": "aragonite",
+      "chemical_formula": "CaCO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Mag",
+      "mineral_name": "magnesite",
+      "chemical_formula": "MgCO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Dol",
+      "mineral_name": "dolomite",
+      "chemical_formula": "CaMg(CO3)2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 620.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 4.65,
+      "pressure_uncertainty_gigapascal": 0.15000000000000002,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 760.0,
+      "temperature_uncertainty_celsius": 40.0,
+      "pressure_gigapascal": 5.4,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 925.0,
+      "temperature_uncertainty_celsius": 25.0,
+      "pressure_gigapascal": 6.300000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1075.0,
+      "temperature_uncertainty_celsius": 25.0,
+      "pressure_gigapascal": 7.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Morlidge et al"
+    ],
+    "year": 2006,
+    "short_citation": "Morlidge et al 2006",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

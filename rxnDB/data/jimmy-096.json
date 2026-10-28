@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-096",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Mggesp",
+      "mineral_name": "magnesium germinate [spinel]",
+      "chemical_formula": "Mg2GeO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mggeilm",
+      "mineral_name": "magnesium germinate [ilmenite]",
+      "chemical_formula": "MgGeO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "GeO2",
+      "mineral_name": "germanium oxide",
+      "chemical_formula": "GeO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 12.016,
+      "pressure_slope_gigapascal_per_celsius": 0.0049,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 300.0,
+      "valid_temperature_max_celsius": 1400.0,
+      "valid_pressure_min_gigapascal": 13.5,
+      "valid_pressure_max_gigapascal": 18.8
+    }
+  ],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Liu",
+      "Bassett"
+    ],
+    "year": 1986,
+    "short_citation": "Liu & Bassett (1986)",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

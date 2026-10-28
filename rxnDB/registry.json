@@ -1,0 +1,1984 @@
+{
+  "phases": {
+    "Ab": {
+      "mineral_name": "albite",
+      "chemical_formula": "NaAlSi3O8",
+      "mineral_group": "Feldspars & feldspathoid",
+      "symbol_source": "provisional"
+    },
+    "AbL": {
+      "mineral_name": "albite liquid",
+      "chemical_formula": "NaAlSi3O8",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "Abh": {
+      "mineral_name": "albite [high]",
+      "chemical_formula": "NaAlSi3O8",
+      "mineral_group": "Feldspars & feldspathoid",
+      "symbol_source": "provisional"
+    },
+    "Acm": {
+      "mineral_name": "acmite",
+      "chemical_formula": "NaFeSi2O6",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Afchl": {
+      "mineral_name": "Al-free chlorite",
+      "chemical_formula": "Mg6Si4O10(OH)8",
+      "mineral_group": "Chlorites",
+      "symbol_source": "provisional"
+    },
+    "Ag": {
+      "mineral_name": "silver",
+      "chemical_formula": "Ag",
+      "mineral_group": "Elements",
+      "symbol_source": "provisional"
+    },
+    "Ak": {
+      "mineral_name": "akermanite",
+      "chemical_formula": "Ca2MgSi2O7",
+      "mineral_group": "Other orthosilicates",
+      "symbol_source": "provisional"
+    },
+    "Al+++": {
+      "mineral_name": "aluminium ion",
+      "chemical_formula": "Al+++",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "AlOH3": {
+      "mineral_name": "aluminium hydroxide",
+      "chemical_formula": "Al(OH)3",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "AlOH4-": {
+      "mineral_name": "aluminium hydroxide",
+      "chemical_formula": "Al(OH)4-",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "Alm": {
+      "mineral_name": "almandine",
+      "chemical_formula": "Fe3Al2Si3O12",
+      "mineral_group": "Garnets & olivines",
+      "symbol_source": "provisional"
+    },
+    "Ames": {
+      "mineral_name": "amesite [14A]",
+      "chemical_formula": "Mg4Al4Si2O10(OH)8",
+      "mineral_group": "Chlorites",
+      "symbol_source": "provisional"
+    },
+    "Amul": {
+      "mineral_name": "Al-mullite",
+      "chemical_formula": "Al2.5Si0.5O4.75",
+      "mineral_group": "Aluminosilicates",
+      "symbol_source": "provisional"
+    },
+    "An": {
+      "mineral_name": "anorthite",
+      "chemical_formula": "CaAl2Si2O8",
+      "mineral_group": "Feldspars & feldspathoid",
+      "symbol_source": "provisional"
+    },
+    "AnL": {
+      "mineral_name": "anorthite liquid",
+      "chemical_formula": "CaAl2Si2O8",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "And": {
+      "mineral_name": "andalusite",
+      "chemical_formula": "Al2SiO5",
+      "mineral_group": "Aluminosilicates",
+      "symbol_source": "IMA"
+    },
+    "Andr": {
+      "mineral_name": "andradite",
+      "chemical_formula": "Ca3Fe2Si3O12",
+      "mineral_group": "Garnets & olivines",
+      "symbol_source": "provisional"
+    },
+    "Ank": {
+      "mineral_name": "ankerite",
+      "chemical_formula": "CaFe(CO3)2",
+      "mineral_group": "Carbonates",
+      "symbol_source": "provisional"
+    },
+    "Anl": {
+      "mineral_name": "analcite",
+      "chemical_formula": "NaAlSi2O5(OH)2",
+      "mineral_group": "Feldspars & feldspathoid",
+      "symbol_source": "provisional"
+    },
+    "Ann": {
+      "mineral_name": "annite",
+      "chemical_formula": "KFe3AlSi3O10(OH)2",
+      "mineral_group": "Micas",
+      "symbol_source": "provisional"
+    },
+    "Anth": {
+      "mineral_name": "anthophyllite",
+      "chemical_formula": "Mg7Si8O22(OH)2",
+      "mineral_group": "Amphibole",
+      "symbol_source": "provisional"
+    },
+    "Any": {
+      "mineral_name": "anhydrite",
+      "chemical_formula": "CaSO4",
+      "mineral_group": "Halides & sulphides",
+      "symbol_source": "provisional"
+    },
+    "Apv": {
+      "mineral_name": "Al-perovskite",
+      "chemical_formula": "AlAlO3",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "AqSi": {
+      "mineral_name": "silica [aq]",
+      "chemical_formula": "SiO2",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "Arag": {
+      "mineral_name": "aragonite",
+      "chemical_formula": "CaCO3",
+      "mineral_group": "Carbonates",
+      "symbol_source": "provisional"
+    },
+    "Atg": {
+      "mineral_name": "antigorite",
+      "chemical_formula": "Mg48Si34O85(OH)62",
+      "mineral_group": "Other sheet silicates",
+      "symbol_source": "provisional"
+    },
+    "Au": {
+      "mineral_name": "gold",
+      "chemical_formula": "Au",
+      "mineral_group": "Elements",
+      "symbol_source": "provisional"
+    },
+    "Bdy": {
+      "mineral_name": "baddeleyite",
+      "chemical_formula": "ZrO2",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Bix": {
+      "mineral_name": "bixbyite",
+      "chemical_formula": "Mn2O3",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Br": {
+      "mineral_name": "brucite",
+      "chemical_formula": "Mg(OH)2",
+      "mineral_group": "Hydroxides",
+      "symbol_source": "provisional"
+    },
+    "CH4": {
+      "mineral_name": "methane",
+      "chemical_formula": "CH4",
+      "mineral_group": "Gas species",
+      "symbol_source": "provisional"
+    },
+    "CO": {
+      "mineral_name": "carbon monoxide",
+      "chemical_formula": "CO",
+      "mineral_group": "Gas species",
+      "symbol_source": "provisional"
+    },
+    "CO2": {
+      "mineral_name": "carbon dioxide",
+      "chemical_formula": "CO2",
+      "mineral_group": "Gas species",
+      "symbol_source": "species"
+    },
+    "CO3-": {
+      "mineral_name": "carbonate ion",
+      "chemical_formula": "CO3--",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "Ca++": {
+      "mineral_name": "calcium ion",
+      "chemical_formula": "Ca++",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "CaCl+": {
+      "mineral_name": "calcium chloride",
+      "chemical_formula": "CaCl+",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "CaCl2": {
+      "mineral_name": "calcium chloride",
+      "chemical_formula": "CaCl2",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "Caes": {
+      "mineral_name": "Ca-eskola pyroxene",
+      "chemical_formula": "Ca0.5AlSi2O6",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Cats": {
+      "mineral_name": "Ca-tschermaks pyroxene",
+      "chemical_formula": "CaAl2SiO6",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Cc": {
+      "mineral_name": "calcite",
+      "chemical_formula": "CaCO3",
+      "mineral_group": "Carbonates",
+      "symbol_source": "provisional"
+    },
+    "Cdgegt": {
+      "mineral_name": "cadmium germinate [garnet]",
+      "chemical_formula": "CdGeO3",
+      "mineral_group": "Garnets & olivines",
+      "symbol_source": "provisional"
+    },
+    "Cdgeilm": {
+      "mineral_name": "cadmium germinate [ilmenite]",
+      "chemical_formula": "CdGeO3",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Cdgepv": {
+      "mineral_name": "cadmium germinate [perovskite]",
+      "chemical_formula": "CdGeO3",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Cdgepx": {
+      "mineral_name": "cadmium germinate [pyroxene]",
+      "chemical_formula": "CdGeO3",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Cdgewo": {
+      "mineral_name": "cadmium germinate [wollastonite]",
+      "chemical_formula": "CdGeO3",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Cel": {
+      "mineral_name": "celadonite",
+      "chemical_formula": "KMgAlSi4O10(OH)2",
+      "mineral_group": "Micas",
+      "symbol_source": "provisional"
+    },
+    "Cen": {
+      "mineral_name": "clino enstatite",
+      "chemical_formula": "Mg2Si2O6",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Cfs": {
+      "mineral_name": "clino ferrosilite",
+      "chemical_formula": "Fe2Si2O6",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Cg": {
+      "mineral_name": "carnegieite [low]",
+      "chemical_formula": "NaAlSiO4",
+      "mineral_group": "Feldspars & feldspathoid",
+      "symbol_source": "provisional"
+    },
+    "Cgh": {
+      "mineral_name": "carnegieite [high]",
+      "chemical_formula": "NaAlSiO4",
+      "mineral_group": "Feldspars & feldspathoid",
+      "symbol_source": "provisional"
+    },
+    "Chr": {
+      "mineral_name": "chrysotile",
+      "chemical_formula": "Mg3Si2O5(OH)4",
+      "mineral_group": "Other sheet silicates",
+      "symbol_source": "provisional"
+    },
+    "Chum": {
+      "mineral_name": "clinohumite",
+      "chemical_formula": "Mg9Si4O16(OH)2",
+      "mineral_group": "Garnets & olivines",
+      "symbol_source": "provisional"
+    },
+    "Cl-": {
+      "mineral_name": "chloride ion",
+      "chemical_formula": "Cl\u2212",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "Clin": {
+      "mineral_name": "clinochlore [ordered]",
+      "chemical_formula": "Mg5Al2Si3O10(OH)8",
+      "mineral_group": "Chlorites",
+      "symbol_source": "provisional"
+    },
+    "Cocpx": {
+      "mineral_name": "cobalt silicate [clinopyroxene]",
+      "chemical_formula": "CoSiO3",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Coe": {
+      "mineral_name": "coesite",
+      "chemical_formula": "SiO2",
+      "mineral_group": "Silica minerals",
+      "symbol_source": "IMA"
+    },
+    "Cool": {
+      "mineral_name": "cobalt silicate [olivine]",
+      "chemical_formula": "Co2SiO4",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Coopx": {
+      "mineral_name": "cobalt silicate [orthopyroxene]",
+      "chemical_formula": "CoSiO3",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "CorL": {
+      "mineral_name": "corundum liquid",
+      "chemical_formula": "Al2O3",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "Cosp": {
+      "mineral_name": "cobalt silicate [spinel]",
+      "chemical_formula": "Co2SiO4",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Cpv": {
+      "mineral_name": "Ca-perovskite",
+      "chemical_formula": "CaSiO3",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Crd": {
+      "mineral_name": "cordierite",
+      "chemical_formula": "Mg2Al4Si5O18",
+      "mineral_group": "Cyclosilicates",
+      "symbol_source": "provisional"
+    },
+    "Crn": {
+      "mineral_name": "corundum",
+      "chemical_formula": "Al2O3",
+      "mineral_group": "Oxides",
+      "symbol_source": "IMA"
+    },
+    "Crst": {
+      "mineral_name": "cristobalite [high]",
+      "chemical_formula": "SiO2",
+      "mineral_group": "Silica minerals",
+      "symbol_source": "provisional"
+    },
+    "Cstn": {
+      "mineral_name": "CaSi-titanite",
+      "chemical_formula": "CaSi2O5",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Cu": {
+      "mineral_name": "copper",
+      "chemical_formula": "Cu",
+      "mineral_group": "Elements",
+      "symbol_source": "provisional"
+    },
+    "Cumm": {
+      "mineral_name": "cummingtonite",
+      "chemical_formula": "Mg7Si8O22(OH)2",
+      "mineral_group": "Amphibole",
+      "symbol_source": "provisional"
+    },
+    "Cup": {
+      "mineral_name": "cuprite",
+      "chemical_formula": "Cu2O",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Cz": {
+      "mineral_name": "clinozoisite",
+      "chemical_formula": "Ca2Al3Si3O12(OH)",
+      "mineral_group": "Sorosilicates",
+      "symbol_source": "provisional"
+    },
+    "Daph": {
+      "mineral_name": "daphnite",
+      "chemical_formula": "Fe5Al2Si3O10(OH)8",
+      "mineral_group": "Chlorites",
+      "symbol_source": "provisional"
+    },
+    "Deer": {
+      "mineral_name": "deerite",
+      "chemical_formula": "Fe18Si12O40(OH)10",
+      "mineral_group": "Other chain silicates",
+      "symbol_source": "provisional"
+    },
+    "Di": {
+      "mineral_name": "diopside",
+      "chemical_formula": "CaMgSi2O6",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "DiL": {
+      "mineral_name": "diopside liquid",
+      "chemical_formula": "CaMgSi2O6",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "Diam": {
+      "mineral_name": "diamond",
+      "chemical_formula": "C",
+      "mineral_group": "Elements",
+      "symbol_source": "provisional"
+    },
+    "Dol": {
+      "mineral_name": "dolomite",
+      "chemical_formula": "CaMg(CO3)2",
+      "mineral_group": "Carbonates",
+      "symbol_source": "provisional"
+    },
+    "Dsp": {
+      "mineral_name": "diaspore",
+      "chemical_formula": "AlO(OH)",
+      "mineral_group": "Hydroxides",
+      "symbol_source": "provisional"
+    },
+    "East": {
+      "mineral_name": "eastonite",
+      "chemical_formula": "KMg2Al3Si2O10(OH)2",
+      "mineral_group": "Micas",
+      "symbol_source": "provisional"
+    },
+    "En": {
+      "mineral_name": "enstatite",
+      "chemical_formula": "Mg2Si2O6",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "IMA"
+    },
+    "EnL": {
+      "mineral_name": "enstatite liquid",
+      "chemical_formula": "Mg2Si2O6",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "Ep": {
+      "mineral_name": "epidote [ordered]",
+      "chemical_formula": "Ca2FeAl2Si3O12(OH)",
+      "mineral_group": "Sorosilicates",
+      "symbol_source": "provisional"
+    },
+    "Esk": {
+      "mineral_name": "eskolaite",
+      "chemical_formula": "Cr2O3",
+      "mineral_group": "Oxides",
+      "symbol_source": "IMA"
+    },
+    "Fa": {
+      "mineral_name": "fayalite",
+      "chemical_formula": "Fe2SiO4",
+      "mineral_group": "Garnets & olivines",
+      "symbol_source": "IMA"
+    },
+    "FaL": {
+      "mineral_name": "fayalite liquid",
+      "chemical_formula": "Fe2SiO4",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "Fact": {
+      "mineral_name": "ferroactinolite",
+      "chemical_formula": "Ca2Fe5Si8O22(OH)2",
+      "mineral_group": "Amphibole",
+      "symbol_source": "provisional"
+    },
+    "Fak": {
+      "mineral_name": "Fe-akimotoite",
+      "chemical_formula": "FeSiO3",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Fanth": {
+      "mineral_name": "Fe-anthophyllite",
+      "chemical_formula": "Fe7Si8O22(OH)2",
+      "mineral_group": "Amphibole",
+      "symbol_source": "provisional"
+    },
+    "Fasp": {
+      "mineral_name": "fayalite [spinel]",
+      "chemical_formula": "Fe2SiO4",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Fcar": {
+      "mineral_name": "ferrocarpholite",
+      "chemical_formula": "FeAl2Si2O6(OH)4",
+      "mineral_group": "Other chain silicates",
+      "symbol_source": "provisional"
+    },
+    "Fcel": {
+      "mineral_name": "ferroceladonite",
+      "chemical_formula": "KFeAlSi4O10(OH)2",
+      "mineral_group": "Micas",
+      "symbol_source": "provisional"
+    },
+    "Fcrd": {
+      "mineral_name": "Fe-cordierite",
+      "chemical_formula": "Fe2Al4Si5O18",
+      "mineral_group": "Cyclosilicates",
+      "symbol_source": "provisional"
+    },
+    "Fctd": {
+      "mineral_name": "Fe-chloritoid",
+      "chemical_formula": "FeAl2SiO5(OH)2",
+      "mineral_group": "Aluminosilicates",
+      "symbol_source": "provisional"
+    },
+    "Fe++": {
+      "mineral_name": "ferrous ion",
+      "chemical_formula": "Fe++",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "FeCl2": {
+      "mineral_name": "ferrous chloride",
+      "chemical_formula": "FeCl2",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "Fep": {
+      "mineral_name": "Fe-epidote",
+      "chemical_formula": "Ca2Fe2AlSi3O12(OH)",
+      "mineral_group": "Sorosilicates",
+      "symbol_source": "provisional"
+    },
+    "Fgl": {
+      "mineral_name": "ferroglaucophane",
+      "chemical_formula": "Na2Fe3Al2Si8O22(OH)2",
+      "mineral_group": "Amphibole",
+      "symbol_source": "provisional"
+    },
+    "Fo": {
+      "mineral_name": "forsterite",
+      "chemical_formula": "Mg2SiO4",
+      "mineral_group": "Garnets & olivines",
+      "symbol_source": "IMA"
+    },
+    "FoL": {
+      "mineral_name": "forsterite liquid",
+      "chemical_formula": "Mg2SiO4",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "Fosm": {
+      "mineral_name": "Fe-osumilite",
+      "chemical_formula": "KFe2Al5Si10O30",
+      "mineral_group": "Cyclosilicates",
+      "symbol_source": "provisional"
+    },
+    "Fosp": {
+      "mineral_name": "forsterite [spinel]",
+      "chemical_formula": "Mg2SiO4",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Fper": {
+      "mineral_name": "ferropericlase",
+      "chemical_formula": "FeO",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Fpm": {
+      "mineral_name": "pumpellyite [FeAl]",
+      "chemical_formula": "Ca4FeAl5Si6O21(OH)7",
+      "mineral_group": "Other orthosilicates",
+      "symbol_source": "provisional"
+    },
+    "Fpre": {
+      "mineral_name": "ferri-prehnite",
+      "chemical_formula": "Ca2FeAlSi3O10(OH)2",
+      "mineral_group": "Other sheet silicates",
+      "symbol_source": "provisional"
+    },
+    "Fpv": {
+      "mineral_name": "Fe-perovskite",
+      "chemical_formula": "FeSiO3",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Frw": {
+      "mineral_name": "Fe-ringwoodite",
+      "chemical_formula": "Fe2SiO4",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Fs": {
+      "mineral_name": "ferrosilite",
+      "chemical_formula": "Fe2Si2O6",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Fspr": {
+      "mineral_name": "Fe-sapphirine [221]",
+      "chemical_formula": "Fe4Al8Si2O20",
+      "mineral_group": "Other chain silicates",
+      "symbol_source": "provisional"
+    },
+    "Fst": {
+      "mineral_name": "Fe-staurolite",
+      "chemical_formula": "Fe4Al18Si7.5O44(OH)4",
+      "mineral_group": "Aluminosilicates",
+      "symbol_source": "provisional"
+    },
+    "Fstp": {
+      "mineral_name": "ferrostilpnomelane",
+      "chemical_formula": "K0.5Fe5Al2Si8O18(OH)12.5",
+      "mineral_group": "Other sheet silicates",
+      "symbol_source": "provisional"
+    },
+    "Fsud": {
+      "mineral_name": "ferrosudoite",
+      "chemical_formula": "Fe2Al4Si3O10(OH)8",
+      "mineral_group": "Chlorites",
+      "symbol_source": "provisional"
+    },
+    "Fta": {
+      "mineral_name": "ferrotalc",
+      "chemical_formula": "Fe3Si4O10(OH)2",
+      "mineral_group": "Other sheet silicates",
+      "symbol_source": "provisional"
+    },
+    "Fwd": {
+      "mineral_name": "Fe-wadsleyite",
+      "chemical_formula": "Fe2SiO4",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Ge": {
+      "mineral_name": "germanium",
+      "chemical_formula": "Ge",
+      "mineral_group": "Elements",
+      "symbol_source": "provisional"
+    },
+    "GeO2": {
+      "mineral_name": "germanium oxide",
+      "chemical_formula": "GeO2",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Geh": {
+      "mineral_name": "gehlenite",
+      "chemical_formula": "Ca2Al2SiO7",
+      "mineral_group": "Other orthosilicates",
+      "symbol_source": "provisional"
+    },
+    "Geik": {
+      "mineral_name": "geikielite",
+      "chemical_formula": "MgTiO3",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Gl": {
+      "mineral_name": "glaucophane",
+      "chemical_formula": "Na2Mg3Al2Si8O22(OH)2",
+      "mineral_group": "Amphibole",
+      "symbol_source": "provisional"
+    },
+    "Glt": {
+      "mineral_name": "greenalite",
+      "chemical_formula": "Fe3Si2O5(OH)4",
+      "mineral_group": "Other sheet silicates",
+      "symbol_source": "provisional"
+    },
+    "Gph": {
+      "mineral_name": "graphite",
+      "chemical_formula": "C",
+      "mineral_group": "Elements",
+      "symbol_source": "provisional"
+    },
+    "Gr": {
+      "mineral_name": "grossular",
+      "chemical_formula": "Ca3Al2Si3O12",
+      "mineral_group": "Garnets & olivines",
+      "symbol_source": "provisional"
+    },
+    "Grun": {
+      "mineral_name": "grunerite",
+      "chemical_formula": "Fe7Si8O22(OH)2",
+      "mineral_group": "Amphibole",
+      "symbol_source": "provisional"
+    },
+    "Gth": {
+      "mineral_name": "goethite",
+      "chemical_formula": "FeO(OH)",
+      "mineral_group": "Hydroxides",
+      "symbol_source": "provisional"
+    },
+    "H+": {
+      "mineral_name": "hydrogen ion",
+      "chemical_formula": "H+",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "H2": {
+      "mineral_name": "hydrogen",
+      "chemical_formula": "H2",
+      "mineral_group": "Gas species",
+      "symbol_source": "provisional"
+    },
+    "H2O": {
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "mineral_group": "Gas species",
+      "symbol_source": "species"
+    },
+    "H2S": {
+      "mineral_name": "hydrogen sulphide",
+      "chemical_formula": "H2S",
+      "mineral_group": "Gas species",
+      "symbol_source": "provisional"
+    },
+    "H2oL": {
+      "mineral_name": "H2O liquid",
+      "chemical_formula": "H2O",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "HCl": {
+      "mineral_name": "hydrogen chloride",
+      "chemical_formula": "HCl",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "HS-": {
+      "mineral_name": "sulphide [aq]",
+      "chemical_formula": "HS-",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "HSO3-": {
+      "mineral_name": "sulphite [aq]",
+      "chemical_formula": "HSO3-",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "HSO4-": {
+      "mineral_name": "sulphate2 [aq]",
+      "chemical_formula": "HSO4-",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "Hcrd": {
+      "mineral_name": "hydrous-cordierite",
+      "chemical_formula": "Mg2Al4Si5O17(OH)2",
+      "mineral_group": "Cyclosilicates",
+      "symbol_source": "provisional"
+    },
+    "Hed": {
+      "mineral_name": "hedenbergite",
+      "chemical_formula": "CaFeSi2O6",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Hem": {
+      "mineral_name": "hematite",
+      "chemical_formula": "Fe2O3",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Hen": {
+      "mineral_name": "Hi-P clinoenstatite",
+      "chemical_formula": "Mg2Si2O6",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Herc": {
+      "mineral_name": "hercynite",
+      "chemical_formula": "FeAl2O4",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Heu": {
+      "mineral_name": "heulandite",
+      "chemical_formula": "CaAl2Si7O12(OH)12",
+      "mineral_group": "Other framework silicates",
+      "symbol_source": "provisional"
+    },
+    "Hlt": {
+      "mineral_name": "halite",
+      "chemical_formula": "NaCl",
+      "mineral_group": "Halides & sulphides",
+      "symbol_source": "provisional"
+    },
+    "HltL": {
+      "mineral_name": "halite liquid",
+      "chemical_formula": "NaCl",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "Hol": {
+      "mineral_name": "hollandite",
+      "chemical_formula": "KAlSi3O8",
+      "mineral_group": "Other framework silicates",
+      "symbol_source": "provisional"
+    },
+    "Ilm": {
+      "mineral_name": "ilmenite",
+      "chemical_formula": "FeTiO3",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Iron": {
+      "mineral_name": "iron",
+      "chemical_formula": "Fe",
+      "mineral_group": "Elements",
+      "symbol_source": "provisional"
+    },
+    "Irppv": {
+      "mineral_name": "calcium-iridium post-perovskite",
+      "chemical_formula": "CaIrO3",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Irpv": {
+      "mineral_name": "calcium-iridium perovskite",
+      "chemical_formula": "CaIrO3",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Jd": {
+      "mineral_name": "jadeite",
+      "chemical_formula": "NaAlSi2O6",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Jgd": {
+      "mineral_name": "julgoldite [FeFe]",
+      "chemical_formula": "Ca4Fe6Si6O21(OH)7",
+      "mineral_group": "Other orthosilicates",
+      "symbol_source": "provisional"
+    },
+    "K+": {
+      "mineral_name": "potassium ion",
+      "chemical_formula": "K+",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "KCl": {
+      "mineral_name": "potassium chloride",
+      "chemical_formula": "KCl",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "KOH": {
+      "mineral_name": "potassium hydroxide",
+      "chemical_formula": "K(OH)",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "Kao": {
+      "mineral_name": "kaolinite",
+      "chemical_formula": "Al2Si2O5(OH)4",
+      "mineral_group": "Other sheet silicates",
+      "symbol_source": "provisional"
+    },
+    "Kcm": {
+      "mineral_name": "K-cymrite",
+      "chemical_formula": "KAlSi3O7(OH)2",
+      "mineral_group": "Feldspars & feldspathoid",
+      "symbol_source": "provisional"
+    },
+    "Kls": {
+      "mineral_name": "kalsilite",
+      "chemical_formula": "KAlSiO4",
+      "mineral_group": "Feldspars & feldspathoid",
+      "symbol_source": "provisional"
+    },
+    "Knr": {
+      "mineral_name": "knorringite",
+      "chemical_formula": "Mg3Cr2Si3O12",
+      "mineral_group": "Garnets & olivines",
+      "symbol_source": "IMA"
+    },
+    "Kos": {
+      "mineral_name": "kosmochlor",
+      "chemical_formula": "NaCrSi2O6",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "KspL": {
+      "mineral_name": "K-feldspar liquid",
+      "chemical_formula": "KAlSi3O8",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "Ky": {
+      "mineral_name": "kyanite",
+      "chemical_formula": "Al2SiO5",
+      "mineral_group": "Aluminosilicates",
+      "symbol_source": "IMA"
+    },
+    "Law": {
+      "mineral_name": "lawsonite",
+      "chemical_formula": "CaAl2Si2O6(OH)4",
+      "mineral_group": "Sorosilicates",
+      "symbol_source": "provisional"
+    },
+    "Lc": {
+      "mineral_name": "leucite",
+      "chemical_formula": "KAlSi2O6",
+      "mineral_group": "Feldspars & feldspathoid",
+      "symbol_source": "provisional"
+    },
+    "LcL": {
+      "mineral_name": "leucite liquid",
+      "chemical_formula": "KAlSi2O6",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "LimL": {
+      "mineral_name": "CaO liquid",
+      "chemical_formula": "CaO",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "Lime": {
+      "mineral_name": "lime",
+      "chemical_formula": "CaO",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Liz": {
+      "mineral_name": "lizardite",
+      "chemical_formula": "Mg3Si2O5(OH)4",
+      "mineral_group": "Other sheet silicates",
+      "symbol_source": "provisional"
+    },
+    "Lmt": {
+      "mineral_name": "laumontite",
+      "chemical_formula": "CaAl2Si4O8(OH)8",
+      "mineral_group": "Other framework silicates",
+      "symbol_source": "provisional"
+    },
+    "Lot": {
+      "mineral_name": "low troilite",
+      "chemical_formula": "FeS",
+      "mineral_group": "Halides & sulphides",
+      "symbol_source": "provisional"
+    },
+    "Lrn": {
+      "mineral_name": "larnite",
+      "chemical_formula": "Ca2SiO4",
+      "mineral_group": "Garnets & olivines",
+      "symbol_source": "provisional"
+    },
+    "Ma": {
+      "mineral_name": "margarite",
+      "chemical_formula": "CaAl4Si2O10(OH)2",
+      "mineral_group": "Micas",
+      "symbol_source": "provisional"
+    },
+    "Mag": {
+      "mineral_name": "magnesite",
+      "chemical_formula": "MgCO3",
+      "mineral_group": "Carbonates",
+      "symbol_source": "provisional"
+    },
+    "Maj": {
+      "mineral_name": "majorite",
+      "chemical_formula": "Mg4Si4O12",
+      "mineral_group": "Garnets & olivines",
+      "symbol_source": "provisional"
+    },
+    "Mak": {
+      "mineral_name": "akimotoite",
+      "chemical_formula": "MgSiO3",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Mang": {
+      "mineral_name": "manganosite",
+      "chemical_formula": "MnO",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Mcar": {
+      "mineral_name": "magnesiocarpholite",
+      "chemical_formula": "MgAl2Si2O6(OH)4",
+      "mineral_group": "Other chain silicates",
+      "symbol_source": "provisional"
+    },
+    "Mcor": {
+      "mineral_name": "MgSi-corundum",
+      "chemical_formula": "MgSiO3",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Mctd": {
+      "mineral_name": "Mg-chloritoid",
+      "chemical_formula": "MgAl2SiO5(OH)2",
+      "mineral_group": "Aluminosilicates",
+      "symbol_source": "provisional"
+    },
+    "Me": {
+      "mineral_name": "meionite",
+      "chemical_formula": "Ca4Al6Si6CO27",
+      "mineral_group": "Other framework silicates",
+      "symbol_source": "provisional"
+    },
+    "Melt": {
+      "mineral_name": "silicate melt",
+      "chemical_formula": "melt",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "Merw": {
+      "mineral_name": "merwinite",
+      "chemical_formula": "Ca3MgSi2O8",
+      "mineral_group": "Other orthosilicates",
+      "symbol_source": "provisional"
+    },
+    "Mft": {
+      "mineral_name": "magnesioferrite",
+      "chemical_formula": "MgFe2O4",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Mg++": {
+      "mineral_name": "magnesium ion",
+      "chemical_formula": "Mg++",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "MgCl+": {
+      "mineral_name": "magnesium chloride",
+      "chemical_formula": "MgCl+",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "MgCl2": {
+      "mineral_name": "magnesium chloride",
+      "chemical_formula": "MgCl2",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "Mggecpx": {
+      "mineral_name": "magnesium germinate [clinopyroxene]",
+      "chemical_formula": "MgGeO3",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Mggeilm": {
+      "mineral_name": "magnesium germinate [ilmenite]",
+      "chemical_formula": "MgGeO3",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Mggeol": {
+      "mineral_name": "magnesium germinate [olivine]",
+      "chemical_formula": "Mg2GeO4",
+      "mineral_group": "Garnets & olivines",
+      "symbol_source": "provisional"
+    },
+    "Mggesp": {
+      "mineral_name": "magnesium germinate [spinel]",
+      "chemical_formula": "Mg2GeO4",
+      "mineral_group": "Garnets & olivines",
+      "symbol_source": "provisional"
+    },
+    "Mgts": {
+      "mineral_name": "Mg-tschermaks pyroxene",
+      "chemical_formula": "MgAl2SiO6",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Mic": {
+      "mineral_name": "microcline",
+      "chemical_formula": "KAlSi3O8",
+      "mineral_group": "Feldspars & feldspathoid",
+      "symbol_source": "provisional"
+    },
+    "Minm": {
+      "mineral_name": "Mg-minnesotaite",
+      "chemical_formula": "Mg3Si4O10(OH)2",
+      "mineral_group": "Other sheet silicates",
+      "symbol_source": "provisional"
+    },
+    "Minn": {
+      "mineral_name": "minnesotaite",
+      "chemical_formula": "Fe3Si4O10(OH)2",
+      "mineral_group": "Other sheet silicates",
+      "symbol_source": "provisional"
+    },
+    "Mnbi": {
+      "mineral_name": "Mn-biotite",
+      "chemical_formula": "KMn3AlSi3O10(OH)2",
+      "mineral_group": "Micas",
+      "symbol_source": "provisional"
+    },
+    "Mnchl": {
+      "mineral_name": "Mn-chlorite",
+      "chemical_formula": "Mn5Al2Si3O10(OH)8",
+      "mineral_group": "Chlorites",
+      "symbol_source": "provisional"
+    },
+    "Mncrd": {
+      "mineral_name": "Mn-cordierite",
+      "chemical_formula": "Mn2Al4Si5O18",
+      "mineral_group": "Cyclosilicates",
+      "symbol_source": "provisional"
+    },
+    "Mnctd": {
+      "mineral_name": "Mn-chloritoid",
+      "chemical_formula": "MnAl2SiO5(OH)2",
+      "mineral_group": "Aluminosilicates",
+      "symbol_source": "provisional"
+    },
+    "Mnst": {
+      "mineral_name": "Mn-staurolite",
+      "chemical_formula": "Mn4Al18Si7.5O44(OH)4",
+      "mineral_group": "Aluminosilicates",
+      "symbol_source": "provisional"
+    },
+    "Mont": {
+      "mineral_name": "monticellite",
+      "chemical_formula": "CaMgSiO4",
+      "mineral_group": "Garnets & olivines",
+      "symbol_source": "provisional"
+    },
+    "Mpm": {
+      "mineral_name": "pumpellyite [MgAl]",
+      "chemical_formula": "Ca4MgAl5Si6O21(OH)7",
+      "mineral_group": "Other orthosilicates",
+      "symbol_source": "provisional"
+    },
+    "Mpv": {
+      "mineral_name": "Mg-perovskite",
+      "chemical_formula": "MgSiO3",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Mrw": {
+      "mineral_name": "Mg-ringwoodite",
+      "chemical_formula": "Mg2SiO4",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Mst": {
+      "mineral_name": "Mg-staurolite",
+      "chemical_formula": "Mg4Al18Si7.5O44(OH)4",
+      "mineral_group": "Aluminosilicates",
+      "symbol_source": "provisional"
+    },
+    "Mstp": {
+      "mineral_name": "Mg-stilpnomelane",
+      "chemical_formula": "K0.5Mg5Al2Si8O18(OH)12.5",
+      "mineral_group": "Other sheet silicates",
+      "symbol_source": "provisional"
+    },
+    "Mt": {
+      "mineral_name": "magnetite",
+      "chemical_formula": "Fe3O4",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Mu": {
+      "mineral_name": "muscovite",
+      "chemical_formula": "KAl3Si3O10(OH)2",
+      "mineral_group": "Micas",
+      "symbol_source": "provisional"
+    },
+    "Mwd": {
+      "mineral_name": "Mg-wadsleyite",
+      "chemical_formula": "Mg2SiO4",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Na+": {
+      "mineral_name": "sodium ion",
+      "chemical_formula": "Na+",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "NaCl": {
+      "mineral_name": "sodium chloride",
+      "chemical_formula": "NaCl",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "Nacoppv": {
+      "mineral_name": "sodium-cobalt post-perovskite",
+      "chemical_formula": "NaCoF3",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Nacopv": {
+      "mineral_name": "sodium-cobalt perovskite",
+      "chemical_formula": "NaCoF3",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Naph": {
+      "mineral_name": "sodaphlogopite",
+      "chemical_formula": "NaMg3AlSi3O10(OH)2",
+      "mineral_group": "Micas",
+      "symbol_source": "provisional"
+    },
+    "Ne": {
+      "mineral_name": "nepheline",
+      "chemical_formula": "NaAlSiO4",
+      "mineral_group": "Feldspars & feldspathoid",
+      "symbol_source": "provisional"
+    },
+    "NeL": {
+      "mineral_name": "nepheline liquid",
+      "chemical_formula": "NaAlSiO4",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "Ni": {
+      "mineral_name": "nickel",
+      "chemical_formula": "Ni",
+      "mineral_group": "Elements",
+      "symbol_source": "provisional"
+    },
+    "NiO": {
+      "mineral_name": "nickel oxide",
+      "chemical_formula": "NiO",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Niol": {
+      "mineral_name": "nickel silicate [olivine]",
+      "chemical_formula": "Ni2SiO4",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Nisp": {
+      "mineral_name": "nickel silicate [spinel]",
+      "chemical_formula": "Ni2SiO4",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "O2": {
+      "mineral_name": "oxygen",
+      "chemical_formula": "O2",
+      "mineral_group": "Gas species",
+      "symbol_source": "provisional"
+    },
+    "OH-": {
+      "mineral_name": "hydroxyl ion",
+      "chemical_formula": "HO\u2212",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "Osm1": {
+      "mineral_name": "osumilite [I]",
+      "chemical_formula": "KMg2Al5Si10O30",
+      "mineral_group": "Cyclosilicates",
+      "symbol_source": "provisional"
+    },
+    "Osm2": {
+      "mineral_name": "osumilite [II]",
+      "chemical_formula": "KMg3Al3Si11O30",
+      "mineral_group": "Cyclosilicates",
+      "symbol_source": "provisional"
+    },
+    "Pa": {
+      "mineral_name": "paragonite",
+      "chemical_formula": "NaAl3Si3O10(OH)2",
+      "mineral_group": "Micas",
+      "symbol_source": "provisional"
+    },
+    "Parg": {
+      "mineral_name": "pargasite",
+      "chemical_formula": "NaCa2Mg4Al3Si6O22(OH)2",
+      "mineral_group": "Amphibole",
+      "symbol_source": "provisional"
+    },
+    "Pb": {
+      "mineral_name": "lead",
+      "chemical_formula": "Pb",
+      "mineral_group": "Elements",
+      "symbol_source": "provisional"
+    },
+    "PbO2": {
+      "mineral_name": "lead oxide",
+      "chemical_formula": "PbO2",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Per": {
+      "mineral_name": "periclase",
+      "chemical_formula": "MgO",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "PerL": {
+      "mineral_name": "MgO liquid",
+      "chemical_formula": "MgO",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "PhA": {
+      "mineral_name": "phaseA",
+      "chemical_formula": "Mg7Si2O8(OH)6",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Phl": {
+      "mineral_name": "phlogopite",
+      "chemical_formula": "KMg3AlSi3O10(OH)2",
+      "mineral_group": "Micas",
+      "symbol_source": "provisional"
+    },
+    "Picr": {
+      "mineral_name": "picrochromite",
+      "chemical_formula": "MgCr2O4",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Pmt": {
+      "mineral_name": "piemontite [ordered]",
+      "chemical_formula": "Ca2MnAl2Si3O12(OH)",
+      "mineral_group": "Sorosilicates",
+      "symbol_source": "provisional"
+    },
+    "Pnt": {
+      "mineral_name": "pyrophanite",
+      "chemical_formula": "MnTiO3",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Pntpv": {
+      "mineral_name": "pyrophanite [perovskite]",
+      "chemical_formula": "MnTiO3",
+      "mineral_group": "High-P phases",
+      "symbol_source": "provisional"
+    },
+    "Pre": {
+      "mineral_name": "prehnite",
+      "chemical_formula": "Ca2Al2Si3O10(OH)2",
+      "mineral_group": "Other sheet silicates",
+      "symbol_source": "provisional"
+    },
+    "Pren": {
+      "mineral_name": "protoenstatite",
+      "chemical_formula": "Mg2Si2O6",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Prl": {
+      "mineral_name": "pyrophyllite",
+      "chemical_formula": "Al2Si4O10(OH)2",
+      "mineral_group": "Other sheet silicates",
+      "symbol_source": "provisional"
+    },
+    "Pswo": {
+      "mineral_name": "pseudowollastonite",
+      "chemical_formula": "CaSiO3",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Pt": {
+      "mineral_name": "platinum",
+      "chemical_formula": "Pt",
+      "mineral_group": "Elements",
+      "symbol_source": "provisional"
+    },
+    "Pxmn": {
+      "mineral_name": "pyroxmangite",
+      "chemical_formula": "MnSiO3",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Py": {
+      "mineral_name": "pyrope",
+      "chemical_formula": "Mg3Al2Si3O12",
+      "mineral_group": "Garnets & olivines",
+      "symbol_source": "provisional"
+    },
+    "Pyilm": {
+      "mineral_name": "pyrope [ilmenite]",
+      "chemical_formula": "Mg3Al2Si3O12",
+      "mineral_group": "Garnets & olivines",
+      "symbol_source": "provisional"
+    },
+    "Pyr": {
+      "mineral_name": "pyrite",
+      "chemical_formula": "FeS2",
+      "mineral_group": "Halides & sulphides",
+      "symbol_source": "provisional"
+    },
+    "QL": {
+      "mineral_name": "quartz liquid",
+      "chemical_formula": "SiO2",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "Qz": {
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "mineral_group": "Silica minerals",
+      "symbol_source": "IMA"
+    },
+    "Rhc": {
+      "mineral_name": "rhodochrosite",
+      "chemical_formula": "MnCO3",
+      "mineral_group": "Carbonates",
+      "symbol_source": "provisional"
+    },
+    "Rhod": {
+      "mineral_name": "rhodonite",
+      "chemical_formula": "MnSiO3",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Rieb": {
+      "mineral_name": "riebeckite",
+      "chemical_formula": "Na2Fe5Si8O22(OH)2",
+      "mineral_group": "Amphibole",
+      "symbol_source": "provisional"
+    },
+    "Rnk": {
+      "mineral_name": "rankinite",
+      "chemical_formula": "Ca3Si2O7",
+      "mineral_group": "Other orthosilicates",
+      "symbol_source": "provisional"
+    },
+    "Ru": {
+      "mineral_name": "rutile",
+      "chemical_formula": "TiO2",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "S": {
+      "mineral_name": "sulphur",
+      "chemical_formula": "S",
+      "mineral_group": "Elements",
+      "symbol_source": "provisional"
+    },
+    "S2": {
+      "mineral_name": "sulphur gas",
+      "chemical_formula": "S2",
+      "mineral_group": "Gas species",
+      "symbol_source": "provisional"
+    },
+    "SO4--": {
+      "mineral_name": "sulphate [aq]",
+      "chemical_formula": "SO4--",
+      "mineral_group": "Aqueous species",
+      "symbol_source": "provisional"
+    },
+    "San": {
+      "mineral_name": "sanidine",
+      "chemical_formula": "KAlSi3O8",
+      "mineral_group": "Feldspars & feldspathoid",
+      "symbol_source": "provisional"
+    },
+    "Sdl": {
+      "mineral_name": "sodalite",
+      "chemical_formula": "Na8Al6Si6O24Cl2",
+      "mineral_group": "Other framework silicates",
+      "symbol_source": "provisional"
+    },
+    "Sid": {
+      "mineral_name": "siderite",
+      "chemical_formula": "FeCO3",
+      "mineral_group": "Carbonates",
+      "symbol_source": "provisional"
+    },
+    "Sil": {
+      "mineral_name": "sillimanite",
+      "chemical_formula": "Al2SiO5",
+      "mineral_group": "Aluminosilicates",
+      "symbol_source": "IMA"
+    },
+    "SilL": {
+      "mineral_name": "sillimanite liquid",
+      "chemical_formula": "Al2SiO5",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "Smul": {
+      "mineral_name": "Si-mullite",
+      "chemical_formula": "Al2SiO5",
+      "mineral_group": "Aluminosilicates",
+      "symbol_source": "provisional"
+    },
+    "Sp": {
+      "mineral_name": "spinel",
+      "chemical_formula": "MgAl2O4",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Sph": {
+      "mineral_name": "sphene",
+      "chemical_formula": "CaTiSiO5",
+      "mineral_group": "Other orthosilicates",
+      "symbol_source": "provisional"
+    },
+    "Spr4": {
+      "mineral_name": "sapphirine [221]",
+      "chemical_formula": "Mg4Al8Si2O20",
+      "mineral_group": "Other chain silicates",
+      "symbol_source": "provisional"
+    },
+    "Spr5": {
+      "mineral_name": "sapphirine [351]",
+      "chemical_formula": "Mg3Al10SiO20",
+      "mineral_group": "Other chain silicates",
+      "symbol_source": "provisional"
+    },
+    "Spss": {
+      "mineral_name": "spessartine",
+      "chemical_formula": "Mn3Al2Si3O12",
+      "mineral_group": "Garnets & olivines",
+      "symbol_source": "provisional"
+    },
+    "Spu": {
+      "mineral_name": "spurrite",
+      "chemical_formula": "Ca5Si2CO11",
+      "mineral_group": "Other orthosilicates",
+      "symbol_source": "provisional"
+    },
+    "Sti": {
+      "mineral_name": "stishovite",
+      "chemical_formula": "SiO2",
+      "mineral_group": "Silica minerals",
+      "symbol_source": "IMA"
+    },
+    "Stlb": {
+      "mineral_name": "stilbite",
+      "chemical_formula": "CaAl2Si7O11(OH)14",
+      "mineral_group": "Other framework silicates",
+      "symbol_source": "provisional"
+    },
+    "Sud": {
+      "mineral_name": "sudoite",
+      "chemical_formula": "Mg2Al4Si3O10(OH)8",
+      "mineral_group": "Chlorites",
+      "symbol_source": "provisional"
+    },
+    "Syv": {
+      "mineral_name": "sylvite",
+      "chemical_formula": "KCl",
+      "mineral_group": "Halides & sulphides",
+      "symbol_source": "provisional"
+    },
+    "SyvL": {
+      "mineral_name": "sylvite liquid",
+      "chemical_formula": "KCl",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "Ta": {
+      "mineral_name": "talc",
+      "chemical_formula": "Mg3Si4O10(OH)2",
+      "mineral_group": "Other sheet silicates",
+      "symbol_source": "provisional"
+    },
+    "Tap": {
+      "mineral_name": "prl-talc",
+      "chemical_formula": "Al2Si4O10(OH)2",
+      "mineral_group": "Other sheet silicates",
+      "symbol_source": "provisional"
+    },
+    "Tats": {
+      "mineral_name": "tschermak-talc",
+      "chemical_formula": "Mg2Al2Si3O10(OH)2",
+      "mineral_group": "Other sheet silicates",
+      "symbol_source": "provisional"
+    },
+    "Ten": {
+      "mineral_name": "tenorite",
+      "chemical_formula": "CuO",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Teph": {
+      "mineral_name": "tephroite",
+      "chemical_formula": "Mn2SiO4",
+      "mineral_group": "Garnets & olivines",
+      "symbol_source": "provisional"
+    },
+    "Tit": {
+      "mineral_name": "titanite",
+      "chemical_formula": "CaTiSiO5",
+      "mineral_group": "Other orthosilicates",
+      "symbol_source": "provisional"
+    },
+    "Tpz": {
+      "mineral_name": "hydroxy-topaz",
+      "chemical_formula": "Al2SiO4(OH)2",
+      "mineral_group": "Aluminosilicates",
+      "symbol_source": "provisional"
+    },
+    "Tr": {
+      "mineral_name": "tremolite",
+      "chemical_formula": "Ca2Mg5Si8O22(OH)2",
+      "mineral_group": "Amphibole",
+      "symbol_source": "provisional"
+    },
+    "Trd": {
+      "mineral_name": "tridymite [high]",
+      "chemical_formula": "SiO2",
+      "mineral_group": "Silica minerals",
+      "symbol_source": "provisional"
+    },
+    "Triple": {
+      "mineral_name": "triple point",
+      "chemical_formula": "Al2SiO5",
+      "mineral_group": "Aluminosilicates",
+      "symbol_source": "provisional"
+    },
+    "Tro": {
+      "mineral_name": "troilite",
+      "chemical_formula": "FeS",
+      "mineral_group": "Halides & sulphides",
+      "symbol_source": "provisional"
+    },
+    "Trot": {
+      "mineral_name": "pyrrhotite",
+      "chemical_formula": "FeS",
+      "mineral_group": "Halides & sulphides",
+      "symbol_source": "provisional"
+    },
+    "Trov": {
+      "mineral_name": "pyrrhotite",
+      "chemical_formula": "Fe0.875S",
+      "mineral_group": "Halides & sulphides",
+      "symbol_source": "provisional"
+    },
+    "Ts": {
+      "mineral_name": "tschermakite",
+      "chemical_formula": "Ca2Mg3Al4Si6O22(OH)2",
+      "mineral_group": "Amphibole",
+      "symbol_source": "provisional"
+    },
+    "Ty": {
+      "mineral_name": "tilleyite",
+      "chemical_formula": "Ca5Si2C2O13",
+      "mineral_group": "Other orthosilicates",
+      "symbol_source": "provisional"
+    },
+    "Usp": {
+      "mineral_name": "ulvospinel",
+      "chemical_formula": "Fe2TiO4",
+      "mineral_group": "Oxides",
+      "symbol_source": "provisional"
+    },
+    "Vsv": {
+      "mineral_name": "vesuvianite",
+      "chemical_formula": "Ca19Mg2Al11Si18O69(OH)9",
+      "mineral_group": "Sorosilicates",
+      "symbol_source": "provisional"
+    },
+    "Wa": {
+      "mineral_name": "Si-wadeite",
+      "chemical_formula": "K2Si4O9",
+      "mineral_group": "Other framework silicates",
+      "symbol_source": "provisional"
+    },
+    "Wal": {
+      "mineral_name": "walstromite",
+      "chemical_formula": "CaSiO3",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "Wo": {
+      "mineral_name": "wollastonite",
+      "chemical_formula": "CaSiO3",
+      "mineral_group": "Pyroxenes & pyroxenoids",
+      "symbol_source": "provisional"
+    },
+    "WoL": {
+      "mineral_name": "wollastonite liquid",
+      "chemical_formula": "CaSiO3",
+      "mineral_group": "Melt species",
+      "symbol_source": "provisional"
+    },
+    "Wrk": {
+      "mineral_name": "wairakite",
+      "chemical_formula": "CaAl2Si4O10(OH)4",
+      "mineral_group": "Other framework silicates",
+      "symbol_source": "provisional"
+    },
+    "Zn": {
+      "mineral_name": "zinc",
+      "chemical_formula": "Zn",
+      "mineral_group": "Elements",
+      "symbol_source": "provisional"
+    },
+    "Zo": {
+      "mineral_name": "zoisite",
+      "chemical_formula": "Ca2Al3Si3O12(OH)",
+      "mineral_group": "Sorosilicates",
+      "symbol_source": "provisional"
+    },
+    "Zrc": {
+      "mineral_name": "zircon",
+      "chemical_formula": "ZrSiO4",
+      "mineral_group": "Other orthosilicates",
+      "symbol_source": "provisional"
+    }
+  },
+  "aliases": {
+    "ab": "Ab",
+    "abL": "AbL",
+    "abh": "Abh",
+    "acm": "Acm",
+    "afchl": "Afchl",
+    "ak": "Ak",
+    "alm": "Alm",
+    "ames": "Ames",
+    "amul": "Amul",
+    "an": "An",
+    "anL": "AnL",
+    "and": "And",
+    "andr": "Andr",
+    "ank": "Ank",
+    "anl": "Anl",
+    "ann": "Ann",
+    "anth": "Anth",
+    "any": "Any",
+    "apv": "Apv",
+    "aqSi": "AqSi",
+    "arag": "Arag",
+    "atg": "Atg",
+    "bdy": "Bdy",
+    "bix": "Bix",
+    "br": "Br",
+    "caes": "Caes",
+    "cats": "Cats",
+    "cc": "Cc",
+    "cdgegt": "Cdgegt",
+    "cdgeilm": "Cdgeilm",
+    "cdgepv": "Cdgepv",
+    "cdgepx": "Cdgepx",
+    "cdgewo": "Cdgewo",
+    "cel": "Cel",
+    "cen": "Cen",
+    "cfs": "Cfs",
+    "cg": "Cg",
+    "cgh": "Cgh",
+    "chr": "Chr",
+    "chum": "Chum",
+    "clin": "Clin",
+    "cocpx": "Cocpx",
+    "coe": "Coe",
+    "cool": "Cool",
+    "coopx": "Coopx",
+    "cor": "Crn",
+    "corL": "CorL",
+    "cosp": "Cosp",
+    "cpv": "Cpv",
+    "crd": "Crd",
+    "crst": "Crst",
+    "cstn": "Cstn",
+    "cumm": "Cumm",
+    "cup": "Cup",
+    "cz": "Cz",
+    "daph": "Daph",
+    "deer": "Deer",
+    "di": "Di",
+    "diL": "DiL",
+    "diam": "Diam",
+    "dol": "Dol",
+    "dsp": "Dsp",
+    "east": "East",
+    "en": "En",
+    "enL": "EnL",
+    "ep": "Ep",
+    "esk": "Esk",
+    "fa": "Fa",
+    "faL": "FaL",
+    "fact": "Fact",
+    "fak": "Fak",
+    "fanth": "Fanth",
+    "fasp": "Fasp",
+    "fcar": "Fcar",
+    "fcel": "Fcel",
+    "fcrd": "Fcrd",
+    "fctd": "Fctd",
+    "fep": "Fep",
+    "fgl": "Fgl",
+    "fo": "Fo",
+    "foL": "FoL",
+    "fosm": "Fosm",
+    "fosp": "Fosp",
+    "fper": "Fper",
+    "fpm": "Fpm",
+    "fpre": "Fpre",
+    "fpv": "Fpv",
+    "frw": "Frw",
+    "fs": "Fs",
+    "fspr": "Fspr",
+    "fst": "Fst",
+    "fstp": "Fstp",
+    "fsud": "Fsud",
+    "fta": "Fta",
+    "fwd": "Fwd",
+    "geh": "Geh",
+    "geik": "Geik",
+    "gl": "Gl",
+    "glt": "Glt",
+    "gph": "Gph",
+    "gr": "Gr",
+    "grun": "Grun",
+    "gth": "Gth",
+    "h2oL": "H2oL",
+    "hcrd": "Hcrd",
+    "hed": "Hed",
+    "hem": "Hem",
+    "hen": "Hen",
+    "herc": "Herc",
+    "heu": "Heu",
+    "hlt": "Hlt",
+    "hltL": "HltL",
+    "hol": "Hol",
+    "ilm": "Ilm",
+    "iron": "Iron",
+    "irppv": "Irppv",
+    "irpv": "Irpv",
+    "jd": "Jd",
+    "jgd": "Jgd",
+    "kao": "Kao",
+    "kcm": "Kcm",
+    "kls": "Kls",
+    "knor": "Knr",
+    "kos": "Kos",
+    "kspL": "KspL",
+    "ky": "Ky",
+    "law": "Law",
+    "lc": "Lc",
+    "lcL": "LcL",
+    "limL": "LimL",
+    "lime": "Lime",
+    "liz": "Liz",
+    "lmt": "Lmt",
+    "lot": "Lot",
+    "lrn": "Lrn",
+    "ma": "Ma",
+    "mag": "Mag",
+    "maj": "Maj",
+    "mak": "Mak",
+    "mang": "Mang",
+    "mcar": "Mcar",
+    "mcor": "Mcor",
+    "mctd": "Mctd",
+    "me": "Me",
+    "melt": "Melt",
+    "merw": "Merw",
+    "mft": "Mft",
+    "mggecpx": "Mggecpx",
+    "mggeilm": "Mggeilm",
+    "mggeol": "Mggeol",
+    "mggesp": "Mggesp",
+    "mgts": "Mgts",
+    "mic": "Mic",
+    "minm": "Minm",
+    "minn": "Minn",
+    "mnbi": "Mnbi",
+    "mnchl": "Mnchl",
+    "mncrd": "Mncrd",
+    "mnctd": "Mnctd",
+    "mnst": "Mnst",
+    "mont": "Mont",
+    "mpm": "Mpm",
+    "mpv": "Mpv",
+    "mrw": "Mrw",
+    "mst": "Mst",
+    "mstp": "Mstp",
+    "mt": "Mt",
+    "mu": "Mu",
+    "mwd": "Mwd",
+    "nacoppv": "Nacoppv",
+    "nacopv": "Nacopv",
+    "naph": "Naph",
+    "ne": "Ne",
+    "neL": "NeL",
+    "niol": "Niol",
+    "nisp": "Nisp",
+    "osm1": "Osm1",
+    "osm2": "Osm2",
+    "pa": "Pa",
+    "parg": "Parg",
+    "per": "Per",
+    "perL": "PerL",
+    "phA": "PhA",
+    "phl": "Phl",
+    "picr": "Picr",
+    "pmt": "Pmt",
+    "pnt": "Pnt",
+    "pntpv": "Pntpv",
+    "pre": "Pre",
+    "pren": "Pren",
+    "prl": "Prl",
+    "pswo": "Pswo",
+    "pxmn": "Pxmn",
+    "py": "Py",
+    "pyilm": "Pyilm",
+    "pyr": "Pyr",
+    "q": "Qz",
+    "qL": "QL",
+    "rhc": "Rhc",
+    "rhod": "Rhod",
+    "rieb": "Rieb",
+    "rnk": "Rnk",
+    "ru": "Ru",
+    "san": "San",
+    "sdl": "Sdl",
+    "sid": "Sid",
+    "silL": "SilL",
+    "sill": "Sil",
+    "smul": "Smul",
+    "sp": "Sp",
+    "sph": "Sph",
+    "spr4": "Spr4",
+    "spr5": "Spr5",
+    "spss": "Spss",
+    "spu": "Spu",
+    "stlb": "Stlb",
+    "stv": "Sti",
+    "sud": "Sud",
+    "syv": "Syv",
+    "syvL": "SyvL",
+    "ta": "Ta",
+    "tap": "Tap",
+    "tats": "Tats",
+    "ten": "Ten",
+    "teph": "Teph",
+    "tit": "Tit",
+    "tpz": "Tpz",
+    "tr": "Tr",
+    "trd": "Trd",
+    "triple": "Triple",
+    "tro": "Tro",
+    "trot": "Trot",
+    "trov": "Trov",
+    "ts": "Ts",
+    "ty": "Ty",
+    "usp": "Usp",
+    "vsv": "Vsv",
+    "wa": "Wa",
+    "wal": "Wal",
+    "wo": "Wo",
+    "woL": "WoL",
+    "wrk": "Wrk",
+    "zo": "Zo",
+    "zrc": "Zrc"
+  }
+}

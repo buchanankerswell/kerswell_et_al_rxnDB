@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-424",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "En",
+      "mineral_name": "enstatite",
+      "chemical_formula": "Mg2Si2O6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "San",
+      "mineral_name": "sanidine",
+      "chemical_formula": "KAlSi3O8",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Sil",
+      "mineral_name": "sillimanite",
+      "chemical_formula": "Al2SiO5",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Osm1",
+      "mineral_name": "osumilite [I]",
+      "chemical_formula": "KMg2Al5Si10O30",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 900.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.8,
+      "pressure_uncertainty_gigapascal": 0.03,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.13,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Carrington",
+      "Harley"
+    ],
+    "year": 1995,
+    "short_citation": "Carrington & Harley, 1995",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

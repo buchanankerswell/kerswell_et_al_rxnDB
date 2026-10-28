@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-367",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Phl",
+      "mineral_name": "phlogopite",
+      "chemical_formula": "KMg3AlSi3O10(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Cc",
+      "mineral_name": "calcite",
+      "chemical_formula": "CaCO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Tr",
+      "mineral_name": "tremolite",
+      "chemical_formula": "Ca2Mg5Si8O22(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "San",
+      "mineral_name": "sanidine",
+      "chemical_formula": "KAlSi3O8",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "CO2",
+      "mineral_name": "carbon dioxide",
+      "chemical_formula": "CO2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 610.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.6000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -4.52,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 630.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.6000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -4.59,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 610.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.6000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -5.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 625.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.6000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -5.18,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Hewitt"
+    ],
+    "year": 1975,
+    "short_citation": "Hewitt, 1975",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

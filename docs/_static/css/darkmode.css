@@ -1,0 +1,33 @@
+/* Dark Mode Styles */
+:root[data-theme="dark"], .dark-mode {
+    --hue: 215;
+    --sat: 6%;
+    --bg: hsl(var(--hue), var(--sat), 14%);
+    --bg-nav: var(--bg);
+    --bg-nav-current: hsl(var(--hue), var(--sat), 26%);
+    --bg-nav-current-list: hsl(var(--hue), var(--sat), 17%);
+    --bg-nav-hover: hsl(var(--hue), var(--sat), 20%);
+    --bg-code: hsl(var(--hue), var(--sat), 17%);
+    --bg-code-highlight: hsl(var(--hue), var(--sat), 21%);
+    --bg-panel: var(--bg-code);
+    --text: hsl(var(--hue), var(--sat), 94%);
+    --link: inherit;
+    --nav: hsl(var(--hue), var(--sat), 52%);
+    --code: hsl(var(--hue), var(--sat), 86%);
+    --headline: var(--text);
+    --nav-current: var(--text);
+    --border: hsl(var(--hue), var(--sat), 20%);
+    --muted: hsl(var(--hue), var(--sat), 38%);
+    --info-text: var(--text);
+    --info-bg: hsl(var(--hue), var(--sat), 26%);
+    --danger-text: #f28f88;
+    --danger-bg: #362b2b;
+    --warning-text: #ebdc8e;
+    --warning-bg: #323129;
+    --bg-highlight: #2e6eb8;
+    --font-weight-factor:0.95
+}
+
+.dark-mode .rst-content img {
+    filter: invert(1);
+}

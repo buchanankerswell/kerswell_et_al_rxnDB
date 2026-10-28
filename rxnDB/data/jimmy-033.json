@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-033",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Ky",
+      "mineral_name": "kyanite",
+      "chemical_formula": "Al2SiO5",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Crn",
+      "mineral_name": "corundum",
+      "chemical_formula": "Al2O3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Sti",
+      "mineral_name": "stishovite",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 10.637,
+      "pressure_slope_gigapascal_per_celsius": 0.0016,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 900.0,
+      "valid_temperature_max_celsius": 1600.0,
+      "valid_pressure_min_gigapascal": 5.0,
+      "valid_pressure_max_gigapascal": 15.0
+    }
+  ],
+  "method": {
+    "description": "In situ X-ray",
+    "pressure_calibration": "Pt (Holmes et al 1989)",
+    "temperature_calibration": "W3-Re97/W25-Re75"
+  },
+  "source": {
+    "authors": [
+      "Ono",
+      "Nakajima",
+      "Funakoshi"
+    ],
+    "year": 2007,
+    "short_citation": "Ono et al. (2007)",
+    "doi": "10.2138/am.2007.2492",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-040",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Mwd",
+      "mineral_name": "Mg-wadsleyite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Sti",
+      "mineral_name": "stishovite",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mak",
+      "mineral_name": "akimotoite",
+      "chemical_formula": "MgSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 18.538,
+      "pressure_slope_gigapascal_per_celsius": -0.000632,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 1100.0,
+      "valid_temperature_max_celsius": 1600.0,
+      "valid_pressure_min_gigapascal": null,
+      "valid_pressure_max_gigapascal": null
+    }
+  ],
+  "method": {
+    "description": "Thermodynamic Calcs",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Gasparik"
+    ],
+    "year": 2003,
+    "short_citation": "Gasparik (2003)",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

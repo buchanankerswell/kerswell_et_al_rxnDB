@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-034",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Frw",
+      "mineral_name": "Fe-ringwoodite",
+      "chemical_formula": "Fe2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Fa",
+      "mineral_name": "fayalite",
+      "chemical_formula": "Fe2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 500.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 3.8000000000000003,
+      "pressure_uncertainty_gigapascal": 0.2,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 4.7,
+      "pressure_uncertainty_gigapascal": 0.2,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1000.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 5.300000000000001,
+      "pressure_uncertainty_gigapascal": 0.2,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1200.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 5.800000000000001,
+      "pressure_uncertainty_gigapascal": 0.2,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Yagi et al",
+      "Akimoto et al 1965"
+    ],
+    "year": [
+      1987,
+      1967
+    ],
+    "short_citation": "Yagi et al 1987; Akimoto et al 1965, 1967",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

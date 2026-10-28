@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools", "wheel", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rxnDB"
+dynamic = ["version"]
+description = "A FastAPI service and dataset of mineral reaction boundaries"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+classifiers = [
+    "Natural Language :: English",
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Visualization"
+]
+authors = [{ name = "Buchanan Kerswell", email = "buck.kerswell@gmail.com" }]
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "pydantic>=2.0",
+    "numpy",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "httpx", "ruff"]
+
+[project.urls]
+Repository = "https://github.com/buchanankerswell/rxndb"
+
+[project.scripts]
+rxndb = "rxnDB.api:main"
+
+[tool.setuptools]
+license-files = ["LICENSE"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["rxnDB*"]
+
+[tool.setuptools.package-data]
+rxnDB = ["*.json", "schema/*.json", "static/*", "data/*.json"]
+
+[tool.setuptools_scm]

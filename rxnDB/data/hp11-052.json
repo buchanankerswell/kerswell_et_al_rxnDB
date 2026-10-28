@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-052",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Wo",
+      "mineral_name": "wollastonite",
+      "chemical_formula": "CaSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Pswo",
+      "mineral_name": "pseudowollastonite",
+      "chemical_formula": "CaSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1125.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1550.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 2.15,
+      "pressure_uncertainty_gigapascal": 0.05,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Osborne",
+      "Shairer",
+      "Huang",
+      "Wyllie"
+    ],
+    "year": [
+      1941,
+      1975
+    ],
+    "short_citation": "Osborne & Shairer, 1941; Huang & Wyllie, 1975",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

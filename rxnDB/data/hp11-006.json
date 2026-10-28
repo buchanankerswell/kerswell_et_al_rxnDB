@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-006",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Trov",
+      "mineral_name": "pyrrhotite",
+      "chemical_formula": "Fe0.875S",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2",
+      "mineral_name": "hydrogen",
+      "chemical_formula": "H2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Trot",
+      "mineral_name": "pyrrhotite",
+      "chemical_formula": "FeS",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2S",
+      "mineral_name": "hydrogen sulphide",
+      "chemical_formula": "H2S",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.585,
+      "natural_log_equilibrium_constant_uncertainty": 0.115
+    },
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.615,
+      "natural_log_equilibrium_constant_uncertainty": 0.135
+    },
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.71,
+      "natural_log_equilibrium_constant_uncertainty": 0.14
+    },
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.605,
+      "natural_log_equilibrium_constant_uncertainty": 0.145
+    },
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -0.575,
+      "natural_log_equilibrium_constant_uncertainty": 0.155
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Lin"
+    ],
+    "year": 1976,
+    "short_citation": "Lin 1976",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

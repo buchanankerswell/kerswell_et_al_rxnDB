@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-068",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Ru",
+      "mineral_name": "rutile",
+      "chemical_formula": "TiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "PbO2",
+      "mineral_name": "lead oxide",
+      "chemical_formula": "PbO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 3.5,
+      "pressure_slope_gigapascal_per_celsius": 0.0038,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 500.0,
+      "valid_temperature_max_celsius": 900.0,
+      "valid_pressure_min_gigapascal": 4.6,
+      "valid_pressure_max_gigapascal": 8.5
+    }
+  ],
+  "method": {
+    "description": "In situ X-ray",
+    "pressure_calibration": "NaCl (Decker 1971)",
+    "temperature_calibration": "Pt/Pt-Rh13"
+  },
+  "source": {
+    "authors": [
+      "Akagoi",
+      "Kusaba",
+      "Susaki",
+      "Yagi",
+      "Matsui",
+      "Kikegawa",
+      "Yusa",
+      "Ito"
+    ],
+    "year": 1992,
+    "short_citation": "Akagoi et al. (1992)",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

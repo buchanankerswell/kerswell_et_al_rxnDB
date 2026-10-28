@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-454",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Fa",
+      "mineral_name": "fayalite",
+      "chemical_formula": "Fe2SiO4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Mft",
+      "mineral_name": "magnesioferrite",
+      "chemical_formula": "MgFe2O4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mt",
+      "mineral_name": "magnetite",
+      "chemical_formula": "Fe3O4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Fo",
+      "mineral_name": "forsterite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1300.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 3.63,
+      "natural_log_equilibrium_constant_uncertainty": 0.28
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Jamieson",
+      "Roeder"
+    ],
+    "year": 1984,
+    "short_citation": "Jamieson & Roeder, 1984",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

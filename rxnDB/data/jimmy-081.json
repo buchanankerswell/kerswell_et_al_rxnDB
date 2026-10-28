@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-081",
+  "reaction_type": "melting_curve",
+  "reactants": [
+    {
+      "mineral_symbol": "Ni",
+      "mineral_name": "nickel",
+      "chemical_formula": "Ni",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Melt",
+      "mineral_name": "silicate melt",
+      "chemical_formula": "melt",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 335.458,
+      "pressure_slope_gigapascal_per_celsius": -0.5509,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.000271,
+      "pressure_cubic_gigapascal_per_celsius_cubed": -3.53e-08,
+      "valid_temperature_min_celsius": 1450.0,
+      "valid_temperature_max_celsius": 2250.0,
+      "valid_pressure_min_gigapascal": 0.0,
+      "valid_pressure_max_gigapascal": 120.0
+    }
+  ],
+  "method": {
+    "description": "X-Ray DAC",
+    "pressure_calibration": "Ruby",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Japel",
+      "Schwager",
+      "Boehler",
+      "Ross"
+    ],
+    "year": 2005,
+    "short_citation": "Japel et al. (2005)",
+    "doi": "10.1103/PhysRevLett.95.167801",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

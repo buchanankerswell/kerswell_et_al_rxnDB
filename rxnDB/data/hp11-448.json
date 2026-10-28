@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-448",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Hed",
+      "mineral_name": "hedenbergite",
+      "chemical_formula": "CaFeSi2O6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "En",
+      "mineral_name": "enstatite",
+      "chemical_formula": "Mg2Si2O6",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Fs",
+      "mineral_name": "ferrosilite",
+      "chemical_formula": "Fe2Si2O6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Di",
+      "mineral_name": "diopside",
+      "chemical_formula": "CaMgSi2O6",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 990.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.325,
+      "natural_log_equilibrium_constant_uncertainty": 0.105
+    },
+    {
+      "temperature_celsius": 910.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.665,
+      "natural_log_equilibrium_constant_uncertainty": 0.305
+    },
+    {
+      "temperature_celsius": 810.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.68,
+      "natural_log_equilibrium_constant_uncertainty": 0.12
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Lindsley"
+    ],
+    "year": 1983,
+    "short_citation": "Lindsley, 1983",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

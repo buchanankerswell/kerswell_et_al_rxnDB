@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-297",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Ts",
+      "mineral_name": "tschermakite",
+      "chemical_formula": "Ca2Mg3Al4Si6O22(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Di",
+      "mineral_name": "diopside",
+      "chemical_formula": "CaMgSi2O6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Tr",
+      "mineral_name": "tremolite",
+      "chemical_formula": "Ca2Mg5Si8O22(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "An",
+      "mineral_name": "anorthite",
+      "chemical_formula": "CaAl2Si2O8",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 607.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 4.445,
+      "natural_log_equilibrium_constant_uncertainty": 0.515
+    },
+    {
+      "temperature_celsius": 698.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 4.335,
+      "natural_log_equilibrium_constant_uncertainty": 0.705
+    },
+    {
+      "temperature_celsius": 797.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.2,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 4.155,
+      "natural_log_equilibrium_constant_uncertainty": 0.735
+    },
+    {
+      "temperature_celsius": 674.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.45,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 3.12,
+      "natural_log_equilibrium_constant_uncertainty": 0.41
+    },
+    {
+      "temperature_celsius": 776.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.45,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 3.095,
+      "natural_log_equilibrium_constant_uncertainty": 0.515
+    },
+    {
+      "temperature_celsius": 650.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.7000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 2.305,
+      "natural_log_equilibrium_constant_uncertainty": 0.245
+    },
+    {
+      "temperature_celsius": 750.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.7000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 2.5,
+      "natural_log_equilibrium_constant_uncertainty": 0.63
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Jenkins"
+    ],
+    "year": 1994,
+    "short_citation": "Jenkins, 1994",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-037",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Mwd",
+      "mineral_name": "Mg-wadsleyite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Fo",
+      "mineral_name": "forsterite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1200.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 12.75,
+      "pressure_uncertainty_gigapascal": 0.25,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.18,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1400.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 13.0,
+      "pressure_uncertainty_gigapascal": 0.30000000000000004,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.18,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Fei",
+      "Bertka",
+      "Frost",
+      "Katsura",
+      "Ito",
+      "Akimoto"
+    ],
+    "year": [
+      1999,
+      2003,
+      1989,
+      1987
+    ],
+    "short_citation": "Fei & Bertka 1999; Frost 2003; Katsura & Ito 1989; Akimoto 1987",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

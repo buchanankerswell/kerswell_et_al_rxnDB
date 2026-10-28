@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-336",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Kls",
+      "mineral_name": "kalsilite",
+      "chemical_formula": "KAlSiO4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "San",
+      "mineral_name": "sanidine",
+      "chemical_formula": "KAlSi3O8",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Lc",
+      "mineral_name": "leucite",
+      "chemical_formula": "KAlSi2O6",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 614.0,
+      "temperature_uncertainty_celsius": 14.0,
+      "pressure_gigapascal": 0.4,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 687.5,
+      "temperature_uncertainty_celsius": 12.5,
+      "pressure_gigapascal": 0.6000000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 737.5,
+      "temperature_uncertainty_celsius": 12.5,
+      "pressure_gigapascal": 0.8,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1200.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 2.35,
+      "pressure_uncertainty_gigapascal": 0.15000000000000002,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 915.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.4050000000000002,
+      "pressure_uncertainty_gigapascal": 0.095,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1058.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 1.8,
+      "pressure_uncertainty_gigapascal": 0.2,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Scarfe et al.",
+      "Lindsley",
+      "Fasshauer et al"
+    ],
+    "year": [
+      1965,
+      1966,
+      1998
+    ],
+    "short_citation": "Scarfe et al., 1965; Lindsley 1966; Fasshauer et al 1998",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

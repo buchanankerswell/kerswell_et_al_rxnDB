@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-080",
+  "reaction_type": "melting_curve",
+  "reactants": [
+    {
+      "mineral_symbol": "Ni",
+      "mineral_name": "nickel",
+      "chemical_formula": "Ni",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Melt",
+      "mineral_name": "silicate melt",
+      "chemical_formula": "melt",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": -578.64,
+      "pressure_slope_gigapascal_per_celsius": 0.972,
+      "pressure_curvature_gigapascal_per_celsius_squared": -0.0005573,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 1.11e-07,
+      "valid_temperature_min_celsius": 1500.0,
+      "valid_temperature_max_celsius": 2600.0,
+      "valid_pressure_min_gigapascal": 0.0,
+      "valid_pressure_max_gigapascal": 120.0
+    }
+  ],
+  "method": {
+    "description": "X-Ray DAC",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Wang",
+      "Lazor",
+      "Saxena"
+    ],
+    "year": 2001,
+    "short_citation": "Wang et al. (2001)",
+    "doi": "10.1016/S0921-4526(00)00542-1",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

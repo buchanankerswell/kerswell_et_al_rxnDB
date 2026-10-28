@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-031",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Ky",
+      "mineral_name": "kyanite",
+      "chemical_formula": "Al2SiO5",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Crn",
+      "mineral_name": "corundum",
+      "chemical_formula": "Al2O3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Sti",
+      "mineral_name": "stishovite",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 15.6,
+      "pressure_slope_gigapascal_per_celsius": 0.0011,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": null,
+      "valid_temperature_max_celsius": null,
+      "valid_pressure_min_gigapascal": null,
+      "valid_pressure_max_gigapascal": null
+    }
+  ],
+  "method": {
+    "description": "X-Ray DAC",
+    "pressure_calibration": "NaCl (unstated)",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Liu"
+    ],
+    "year": 1974,
+    "short_citation": "Liu (1974)",
+    "doi": "10.1016/0012-821X(74)90100-9",
+    "license": "unknown"
+  },
+  "extensions": {
+    "data_note": "Source limits (530 C, 0.42 GPa) duplicate the Al2SiO5 triple point and are impossible for stishovite-bearing products; cleared pending literature check. Polynomial transcribed as published."
+  }
+}

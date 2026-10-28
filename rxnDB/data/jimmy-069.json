@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-069",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "PbO2",
+      "mineral_name": "lead oxide",
+      "chemical_formula": "PbO2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Bdy",
+      "mineral_name": "baddeleyite",
+      "chemical_formula": "ZrO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 11.619,
+      "pressure_slope_gigapascal_per_celsius": 0.005299,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 100.0,
+      "valid_temperature_max_celsius": 900.0,
+      "valid_pressure_min_gigapascal": 11.0,
+      "valid_pressure_max_gigapascal": 16.0
+    }
+  ],
+  "method": {
+    "description": "In situ X-ray",
+    "pressure_calibration": "NaCl (Decker 1971)",
+    "temperature_calibration": "Pt/Pt-Rh13"
+  },
+  "source": {
+    "authors": [
+      "Tang",
+      "Endo"
+    ],
+    "year": 1993,
+    "short_citation": "Tang & Endo (1993)",
+    "doi": "10.1111/j.1151-2916.1993.tb03683.x",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

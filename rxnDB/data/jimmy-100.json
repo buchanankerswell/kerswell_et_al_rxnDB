@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-100",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Coopx",
+      "mineral_name": "cobalt silicate [orthopyroxene]",
+      "chemical_formula": "CoSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Cocpx",
+      "mineral_name": "cobalt silicate [clinopyroxene]",
+      "chemical_formula": "CoSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 11.0,
+      "pressure_slope_gigapascal_per_celsius": 0.0044,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 600.0,
+      "valid_temperature_max_celsius": 1300.0,
+      "valid_pressure_min_gigapascal": 4.0,
+      "valid_pressure_max_gigapascal": 7.0
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "RT",
+    "temperature_calibration": "Pt/Pt-Rh15"
+  },
+  "source": {
+    "authors": [
+      "Akimoto",
+      "Katsura",
+      "Syono",
+      "Fujisawa",
+      "Komada"
+    ],
+    "year": 1965,
+    "short_citation": "Akimoto et al. (1965)",
+    "doi": "10.1029/JZ070i020p05269",
+    "license": "unknown"
+  },
+  "extensions": {
+    "verification_status": "suspect",
+    "verification_note": "Evaluated curve spans 13.6 to 16.7 GPa against stated 4.0-7.0 GPa limits; the intercept alone doubles the stated range. Pending check against Akimoto et al. (1965)."
+  }
+}

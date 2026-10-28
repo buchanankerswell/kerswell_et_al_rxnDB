@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-054",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Lrn",
+      "mineral_name": "larnite",
+      "chemical_formula": "Ca2SiO4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Cstn",
+      "mineral_name": "CaSi-titanite",
+      "chemical_formula": "CaSi2O5",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Wal",
+      "mineral_name": "walstromite",
+      "chemical_formula": "CaSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1150.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 9.5,
+      "pressure_uncertainty_gigapascal": 0.5,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1600.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 10.0,
+      "pressure_uncertainty_gigapascal": 0.5,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Gasparik et al."
+    ],
+    "year": 1994,
+    "short_citation": "Gasparik et al., 1994",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

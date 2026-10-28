@@ -1,0 +1,8 @@
+# For deployment on RTD
+sphinx<7.0
+sphinx-rtd-theme
+sphinx-autoapi
+# autoapi 3.x uses the astroid 3 builder API; astroid>=4 breaks module parsing
+astroid<4
+sphinxcontrib-httpdomain
+https://github.com/revitron/revitron-sphinx-theme/archive/master.zip

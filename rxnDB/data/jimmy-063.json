@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-063",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Mwd",
+      "mineral_name": "Mg-wadsleyite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mpv",
+      "mineral_name": "Mg-perovskite",
+      "chemical_formula": "MgSiO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Per",
+      "mineral_name": "periclase",
+      "chemical_formula": "MgO",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 16.02,
+      "pressure_slope_gigapascal_per_celsius": 0.004,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 1800.0,
+      "valid_temperature_max_celsius": 1850.0,
+      "valid_pressure_min_gigapascal": 23.2,
+      "valid_pressure_max_gigapascal": 23.5
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "RT+HT",
+    "temperature_calibration": "Pt/Pt-Rh13"
+  },
+  "source": {
+    "authors": [
+      "Ishii",
+      "Kojitani",
+      "Akaogi"
+    ],
+    "year": 2011,
+    "short_citation": "Ishii et al. (2011)",
+    "doi": "10.1016/j.espl.2011.06.023",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,328 @@
+{
+  "$defs": {
+    "InterpretedBoundary": {
+      "description": "A published P(T) curve stored as coefficients, not sampled points.",
+      "properties": {
+        "description": {
+          "default": "",
+          "title": "Description",
+          "type": "string"
+        },
+        "pressure_intercept_gigapascal": {
+          "title": "Pressure Intercept Gigapascal",
+          "type": "number"
+        },
+        "pressure_slope_gigapascal_per_celsius": {
+          "default": 0.0,
+          "title": "Pressure Slope Gigapascal Per Celsius",
+          "type": "number"
+        },
+        "pressure_curvature_gigapascal_per_celsius_squared": {
+          "default": 0.0,
+          "title": "Pressure Curvature Gigapascal Per Celsius Squared",
+          "type": "number"
+        },
+        "pressure_cubic_gigapascal_per_celsius_cubed": {
+          "default": 0.0,
+          "title": "Pressure Cubic Gigapascal Per Celsius Cubed",
+          "type": "number"
+        },
+        "valid_temperature_min_celsius": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Valid Temperature Min Celsius"
+        },
+        "valid_temperature_max_celsius": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Valid Temperature Max Celsius"
+        },
+        "valid_pressure_min_gigapascal": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Valid Pressure Min Gigapascal"
+        },
+        "valid_pressure_max_gigapascal": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Valid Pressure Max Gigapascal"
+        }
+      },
+      "required": [
+        "pressure_intercept_gigapascal"
+      ],
+      "title": "InterpretedBoundary",
+      "type": "object"
+    },
+    "Method": {
+      "properties": {
+        "description": {
+          "default": "",
+          "title": "Description",
+          "type": "string"
+        },
+        "pressure_calibration": {
+          "default": "",
+          "title": "Pressure Calibration",
+          "type": "string"
+        },
+        "temperature_calibration": {
+          "default": "",
+          "title": "Temperature Calibration",
+          "type": "string"
+        }
+      },
+      "title": "Method",
+      "type": "object"
+    },
+    "Observation": {
+      "properties": {
+        "temperature_celsius": {
+          "title": "Temperature Celsius",
+          "type": "number"
+        },
+        "temperature_uncertainty_celsius": {
+          "minimum": 0,
+          "title": "Temperature Uncertainty Celsius",
+          "type": "number"
+        },
+        "pressure_gigapascal": {
+          "title": "Pressure Gigapascal",
+          "type": "number"
+        },
+        "pressure_uncertainty_gigapascal": {
+          "minimum": 0,
+          "title": "Pressure Uncertainty Gigapascal",
+          "type": "number"
+        },
+        "pressure_temperature_correlation": {
+          "default": 0.0,
+          "maximum": 1,
+          "minimum": -1,
+          "title": "Pressure Temperature Correlation",
+          "type": "number"
+        },
+        "experimental_outcome": {
+          "default": "unknown",
+          "enum": [
+            "growth",
+            "no_growth",
+            "reversal",
+            "synthesis",
+            "unknown"
+          ],
+          "title": "Experimental Outcome",
+          "type": "string"
+        },
+        "natural_log_equilibrium_constant": {
+          "default": 0.0,
+          "title": "Natural Log Equilibrium Constant",
+          "type": "number"
+        },
+        "natural_log_equilibrium_constant_uncertainty": {
+          "default": 0.0,
+          "minimum": 0,
+          "title": "Natural Log Equilibrium Constant Uncertainty",
+          "type": "number"
+        }
+      },
+      "required": [
+        "temperature_celsius",
+        "temperature_uncertainty_celsius",
+        "pressure_gigapascal",
+        "pressure_uncertainty_gigapascal"
+      ],
+      "title": "Observation",
+      "type": "object"
+    },
+    "PhaseParticipant": {
+      "properties": {
+        "mineral_symbol": {
+          "title": "Mineral Symbol",
+          "type": "string"
+        },
+        "mineral_name": {
+          "title": "Mineral Name",
+          "type": "string"
+        },
+        "chemical_formula": {
+          "title": "Chemical Formula",
+          "type": "string"
+        },
+        "coefficient": {
+          "exclusiveMinimum": 0,
+          "title": "Coefficient",
+          "type": "number"
+        }
+      },
+      "required": [
+        "mineral_symbol",
+        "mineral_name",
+        "chemical_formula",
+        "coefficient"
+      ],
+      "title": "PhaseParticipant",
+      "type": "object"
+    },
+    "Source": {
+      "properties": {
+        "authors": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Authors",
+          "type": "array"
+        },
+        "year": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Year"
+        },
+        "short_citation": {
+          "default": "",
+          "title": "Short Citation",
+          "type": "string"
+        },
+        "doi": {
+          "default": "",
+          "title": "Doi",
+          "type": "string"
+        },
+        "license": {
+          "default": "unknown",
+          "title": "License",
+          "type": "string"
+        }
+      },
+      "required": [
+        "authors"
+      ],
+      "title": "Source",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "reaction_identifier": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$",
+      "title": "Reaction Identifier",
+      "type": "string"
+    },
+    "reaction_type": {
+      "enum": [
+        "phase_boundary",
+        "calibration",
+        "melting_curve",
+        "triple_point"
+      ],
+      "title": "Reaction Type",
+      "type": "string"
+    },
+    "reactants": {
+      "items": {
+        "$ref": "#/$defs/PhaseParticipant"
+      },
+      "minItems": 1,
+      "title": "Reactants",
+      "type": "array"
+    },
+    "products": {
+      "items": {
+        "$ref": "#/$defs/PhaseParticipant"
+      },
+      "minItems": 1,
+      "title": "Products",
+      "type": "array"
+    },
+    "observations": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Observation"
+      },
+      "title": "Observations",
+      "type": "array"
+    },
+    "interpreted_boundaries": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/InterpretedBoundary"
+      },
+      "title": "Interpreted Boundaries",
+      "type": "array"
+    },
+    "method": {
+      "$ref": "#/$defs/Method",
+      "default": {
+        "description": "",
+        "pressure_calibration": "",
+        "temperature_calibration": ""
+      }
+    },
+    "source": {
+      "$ref": "#/$defs/Source"
+    },
+    "extensions": {
+      "additionalProperties": true,
+      "default": {},
+      "title": "Extensions",
+      "type": "object"
+    }
+  },
+  "required": [
+    "reaction_identifier",
+    "reaction_type",
+    "reactants",
+    "products",
+    "source"
+  ],
+  "title": "Reaction",
+  "type": "object"
+}

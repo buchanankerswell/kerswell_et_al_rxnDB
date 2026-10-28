@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-475",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Spss",
+      "mineral_name": "spessartine",
+      "chemical_formula": "Mn3Al2Si3O12",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Ilm",
+      "mineral_name": "ilmenite",
+      "chemical_formula": "FeTiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Alm",
+      "mineral_name": "almandine",
+      "chemical_formula": "Fe3Al2Si3O12",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Pnt",
+      "mineral_name": "pyrophanite",
+      "chemical_formula": "MnTiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 600.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -5.55,
+      "natural_log_equilibrium_constant_uncertainty": 0.57
+    },
+    {
+      "temperature_celsius": 700.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -4.68,
+      "natural_log_equilibrium_constant_uncertainty": 0.64
+    },
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -3.935,
+      "natural_log_equilibrium_constant_uncertainty": 0.605
+    },
+    {
+      "temperature_celsius": 900.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.5,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -3.34,
+      "natural_log_equilibrium_constant_uncertainty": 0.59
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Pownceby et al."
+    ],
+    "year": 1987,
+    "short_citation": "Pownceby et al., 1987",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

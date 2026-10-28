@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-329",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Amul",
+      "mineral_name": "Al-mullite",
+      "chemical_formula": "Al2.5Si0.5O4.75",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "QL",
+      "mineral_name": "quartz liquid",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "SilL",
+      "mineral_name": "sillimanite liquid",
+      "chemical_formula": "Al2SiO5",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1550.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 12.45,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 1580.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 4.98,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Klug et al"
+    ],
+    "year": 1987,
+    "short_citation": "Klug et al 1987",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-488",
+  "reaction_type": "melting_curve",
+  "reactants": [
+    {
+      "mineral_symbol": "Crst",
+      "mineral_name": "cristobalite [high]",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "QL",
+      "mineral_name": "quartz liquid",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1723.0,
+      "temperature_uncertainty_celsius": 13.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Jackson"
+    ],
+    "year": 1976,
+    "short_citation": "Jackson, 1976",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

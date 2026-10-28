@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-048",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Mak",
+      "mineral_name": "akimotoite",
+      "chemical_formula": "MgSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mpv",
+      "mineral_name": "Mg-perovskite",
+      "chemical_formula": "MgSiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 25.0,
+      "pressure_slope_gigapascal_per_celsius": -0.003,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 1000.0,
+      "valid_temperature_max_celsius": 1800.0,
+      "valid_pressure_min_gigapascal": 19.7,
+      "valid_pressure_max_gigapascal": 22.4
+    }
+  ],
+  "method": {
+    "description": "In situ X-ray",
+    "pressure_calibration": "Au (Anderson et al 1989)",
+    "temperature_calibration": "W75-Re25/W93-Re7"
+  },
+  "source": {
+    "authors": [
+      "Kuroda",
+      "Irifune",
+      "Inoue",
+      "Nishiyama",
+      "Miyashita",
+      "Funakoshi",
+      "Utsumi"
+    ],
+    "year": 2000,
+    "short_citation": "Kuroda et al. (2000)",
+    "doi": "10.1007/s002690000096",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-433",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Ilm",
+      "mineral_name": "ilmenite",
+      "chemical_formula": "FeTiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Iron",
+      "mineral_name": "iron",
+      "chemical_formula": "Fe",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Ru",
+      "mineral_name": "rutile",
+      "chemical_formula": "TiO2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "O2",
+      "mineral_name": "oxygen",
+      "chemical_formula": "O2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 1000.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -37.875,
+      "natural_log_equilibrium_constant_uncertainty": 0.345
+    },
+    {
+      "temperature_celsius": 1025.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -36.725,
+      "natural_log_equilibrium_constant_uncertainty": 0.345
+    },
+    {
+      "temperature_celsius": 1050.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -35.805,
+      "natural_log_equilibrium_constant_uncertainty": 0.345
+    },
+    {
+      "temperature_celsius": 1075.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -34.885,
+      "natural_log_equilibrium_constant_uncertainty": 0.345
+    },
+    {
+      "temperature_celsius": 1100.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -33.965,
+      "natural_log_equilibrium_constant_uncertainty": 0.345
+    },
+    {
+      "temperature_celsius": 1125.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -32.925,
+      "natural_log_equilibrium_constant_uncertainty": 0.345
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Anovitz et al."
+    ],
+    "year": 1985,
+    "short_citation": "Anovitz et al., 1985",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

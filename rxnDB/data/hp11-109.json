@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-109",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Spu",
+      "mineral_name": "spurrite",
+      "chemical_formula": "Ca5Si2CO11",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Mont",
+      "mineral_name": "monticellite",
+      "chemical_formula": "CaMgSiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Merw",
+      "mineral_name": "merwinite",
+      "chemical_formula": "Ca3MgSi2O8",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Cc",
+      "mineral_name": "calcite",
+      "chemical_formula": "CaCO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 818.0,
+      "temperature_uncertainty_celsius": 6.0,
+      "pressure_gigapascal": 0.03,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 810.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.1,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Walter"
+    ],
+    "year": 1965,
+    "short_citation": "Walter, 1965",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

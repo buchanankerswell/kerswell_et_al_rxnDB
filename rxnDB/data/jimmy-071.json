@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-071",
+  "reaction_type": "melting_curve",
+  "reactants": [
+    {
+      "mineral_symbol": "Ge",
+      "mineral_name": "germanium",
+      "chemical_formula": "Ge",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Melt",
+      "mineral_name": "silicate melt",
+      "chemical_formula": "melt",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": -31.245,
+      "pressure_slope_gigapascal_per_celsius": 0.15703,
+      "pressure_curvature_gigapascal_per_celsius_squared": -0.0002,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 7e-08,
+      "valid_temperature_min_celsius": 680.0,
+      "valid_temperature_max_celsius": 936.0,
+      "valid_pressure_min_gigapascal": null,
+      "valid_pressure_max_gigapascal": 6.5
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "",
+    "temperature_calibration": "Pt/Pt-Rh90"
+  },
+  "source": {
+    "authors": [
+      "Vaidya",
+      "Akella",
+      "Kennedy"
+    ],
+    "year": 1968,
+    "short_citation": "Vaidya et al. (1968)",
+    "doi": "10.1016/0022-3697(69)90203-0,",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

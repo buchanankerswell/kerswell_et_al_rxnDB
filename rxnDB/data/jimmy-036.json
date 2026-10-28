@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-036",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Qz",
+      "mineral_name": "quartz",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Coe",
+      "mineral_name": "coesite",
+      "chemical_formula": "SiO2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 2.383,
+      "pressure_slope_gigapascal_per_celsius": 0.00069,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 500.0,
+      "valid_temperature_max_celsius": 1200.0,
+      "valid_pressure_min_gigapascal": 2.7,
+      "valid_pressure_max_gigapascal": 3.2
+    }
+  ],
+  "method": {
+    "description": "PC Experimental",
+    "pressure_calibration": "NBS Standard",
+    "temperature_calibration": "W/Re"
+  },
+  "source": {
+    "authors": [
+      "Bose",
+      "Ganguly"
+    ],
+    "year": 1995,
+    "short_citation": "Bose & Ganguly (1995)",
+    "doi": "http://www.minsocam.org/MSA/AmMin/toc/Articles_Free/1995/Bose_p231-238_95.pdf",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

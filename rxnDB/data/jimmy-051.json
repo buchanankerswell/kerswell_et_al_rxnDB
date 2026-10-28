@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-051",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Fa",
+      "mineral_name": "fayalite",
+      "chemical_formula": "Fe2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Fasp",
+      "mineral_name": "fayalite [spinel]",
+      "chemical_formula": "Fe2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 2.75,
+      "pressure_slope_gigapascal_per_celsius": 0.0025,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 800.0,
+      "valid_temperature_max_celsius": 1200.0,
+      "valid_pressure_min_gigapascal": 4.2,
+      "valid_pressure_max_gigapascal": 6.2
+    }
+  ],
+  "method": {
+    "description": "In situ X-ray",
+    "pressure_calibration": "NaCl (Decker 1971)",
+    "temperature_calibration": "Pt/Pt-Rh13"
+  },
+  "source": {
+    "authors": [
+      "Yagi",
+      "Akaogi",
+      "Shimomura",
+      "Akimoto"
+    ],
+    "year": 1987,
+    "short_citation": "Yagi et al. (1987)",
+    "doi": "10.1029/JB092iB07p06207",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

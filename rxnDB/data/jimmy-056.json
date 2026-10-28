@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-056",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Mrw",
+      "mineral_name": "Mg-ringwoodite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mpv",
+      "mineral_name": "Mg-perovskite",
+      "chemical_formula": "MgSiO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Per",
+      "mineral_name": "periclase",
+      "chemical_formula": "MgO",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 25.12,
+      "pressure_slope_gigapascal_per_celsius": -0.0013,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 1400.0,
+      "valid_temperature_max_celsius": 1900.0,
+      "valid_pressure_min_gigapascal": 22.8,
+      "valid_pressure_max_gigapascal": 23.5
+    }
+  ],
+  "method": {
+    "description": "In situ X-ray",
+    "pressure_calibration": "Au&MgO (Anderson 1989 & Speziale 2001)",
+    "temperature_calibration": "W5-Re95/W26-Re74"
+  },
+  "source": {
+    "authors": [
+      "Fei",
+      "Van Orman",
+      "Li",
+      "Van Wastrenen",
+      "Sanloup",
+      "Minarik",
+      "Hirose",
+      "Komabayashi",
+      "Walter",
+      "Funakoshi"
+    ],
+    "year": 2004,
+    "short_citation": "Fei et al. (2004)",
+    "doi": "10.1029/2003JB002562",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

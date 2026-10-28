@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-407",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Sid",
+      "mineral_name": "siderite",
+      "chemical_formula": "FeCO3",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Minm",
+      "mineral_name": "Mg-minnesotaite",
+      "chemical_formula": "Mg3Si4O10(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Minn",
+      "mineral_name": "minnesotaite",
+      "chemical_formula": "Fe3Si4O10(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Mag",
+      "mineral_name": "magnesite",
+      "chemical_formula": "MgCO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 300.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.1,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 1.64,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Klein"
+    ],
+    "year": 1974,
+    "short_citation": "Klein 1974",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-010",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Mggecpx",
+      "mineral_name": "magnesium germinate [clinopyroxene]",
+      "chemical_formula": "MgGeO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mggeilm",
+      "mineral_name": "magnesium germinate [ilmenite]",
+      "chemical_formula": "MgGeO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 2.4044,
+      "pressure_slope_gigapascal_per_celsius": 0.0018,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 800.0,
+      "valid_temperature_max_celsius": 1300.0,
+      "valid_pressure_min_gigapascal": 3.5,
+      "valid_pressure_max_gigapascal": 5.0
+    }
+  ],
+  "method": {
+    "description": "Experimental+Calorimetrics",
+    "pressure_calibration": "RT+HT",
+    "temperature_calibration": "Pt/Pt-Rh13"
+  },
+  "source": {
+    "authors": [
+      "Ross",
+      "Navrotsky"
+    ],
+    "year": 1988,
+    "short_citation": "Ross & Navrotsky (1988)",
+    "doi": "http://www.minsocam.org/ammin/AM73/AM73_1355.pdf",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

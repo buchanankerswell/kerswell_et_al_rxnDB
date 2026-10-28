@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-464",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Fctd",
+      "mineral_name": "Fe-chloritoid",
+      "chemical_formula": "FeAl2SiO5(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Ta",
+      "mineral_name": "talc",
+      "chemical_formula": "Mg3Si4O10(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mctd",
+      "mineral_name": "Mg-chloritoid",
+      "chemical_formula": "MgAl2SiO5(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Fta",
+      "mineral_name": "ferrotalc",
+      "chemical_formula": "Fe3Si4O10(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 585.0,
+      "temperature_uncertainty_celsius": 35.0,
+      "pressure_gigapascal": 2.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -7.94,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 510.0,
+      "temperature_uncertainty_celsius": 40.0,
+      "pressure_gigapascal": 1.8,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -7.69,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 590.0,
+      "temperature_uncertainty_celsius": 30.0,
+      "pressure_gigapascal": 2.0,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -6.97,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Chinner",
+      "Dixon",
+      "Chopin",
+      "Monie",
+      "Miller"
+    ],
+    "year": [
+      1974,
+      1984,
+      1986
+    ],
+    "short_citation": "Chinner & Dixon, 1974; Chopin & Monie, 1984; Miller, 1986",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,8 @@
+{
+  "title": "rxnDB: a mineral reaction database",
+  "description": "A FastAPI service and dataset of mineral reaction boundaries.",
+  "creators": [{ "name": "Kerswell, Buchanan" }],
+  "license": "MIT",
+  "keywords": ["mineralogy", "reactions", "phase-boundaries", "fastapi"],
+  "upload_type": "software"
+}

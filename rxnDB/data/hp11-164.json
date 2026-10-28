@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-164",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Law",
+      "mineral_name": "lawsonite",
+      "chemical_formula": "CaAl2Si2O6(OH)4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "An",
+      "mineral_name": "anorthite",
+      "chemical_formula": "CaAl2Si2O8",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 425.0,
+      "temperature_uncertainty_celsius": 25.0,
+      "pressure_gigapascal": 0.6900000000000001,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 400.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.525,
+      "pressure_uncertainty_gigapascal": 0.07500000000000001,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    },
+    {
+      "temperature_celsius": 375.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.55,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Crawford",
+      "Fyfe"
+    ],
+    "year": 1965,
+    "short_citation": "Crawford & Fyfe, 1965",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

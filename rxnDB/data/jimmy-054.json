@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-054",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Mwd",
+      "mineral_name": "Mg-wadsleyite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Mrw",
+      "mineral_name": "Mg-ringwoodite",
+      "chemical_formula": "Mg2SiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 10.32,
+      "pressure_slope_gigapascal_per_celsius": 0.00691,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 650.0,
+      "valid_temperature_max_celsius": 1200.0,
+      "valid_pressure_min_gigapascal": 14.8,
+      "valid_pressure_max_gigapascal": 19.5
+    }
+  ],
+  "method": {
+    "description": "In situ X-ray",
+    "pressure_calibration": "NaCl (Brown 1999)",
+    "temperature_calibration": "W3-Re97/W25-Re75"
+  },
+  "source": {
+    "authors": [
+      "Suzuki",
+      "Ohtani",
+      "Morishima",
+      "Kubo",
+      "Kanbe",
+      "Kondo",
+      "Okada",
+      "Terasaki",
+      "Kato",
+      "Kikegawa"
+    ],
+    "year": 2000,
+    "short_citation": "Suzuki et al. (2000)",
+    "doi": "10.1029/1999GL008425",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

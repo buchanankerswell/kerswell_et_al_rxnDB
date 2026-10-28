@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-425",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Py",
+      "mineral_name": "pyrope",
+      "chemical_formula": "Mg3Al2Si3O12",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Osm2",
+      "mineral_name": "osumilite [II]",
+      "chemical_formula": "KMg3Al3Si11O30",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Osm1",
+      "mineral_name": "osumilite [I]",
+      "chemical_formula": "KMg2Al5Si10O30",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "En",
+      "mineral_name": "enstatite",
+      "chemical_formula": "Mg2Si2O6",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 900.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.8,
+      "pressure_uncertainty_gigapascal": 0.03,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 2.12,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Carrington",
+      "Harley"
+    ],
+    "year": 1995,
+    "short_citation": "Carrington & Harley, 1995",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

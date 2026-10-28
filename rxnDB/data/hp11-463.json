@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-463",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Fpm",
+      "mineral_name": "pumpellyite [FeAl]",
+      "chemical_formula": "Ca4FeAl5Si6O21(OH)7",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Ep",
+      "mineral_name": "epidote [ordered]",
+      "chemical_formula": "Ca2FeAl2Si3O12(OH)",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Jgd",
+      "mineral_name": "julgoldite [FeFe]",
+      "chemical_formula": "Ca4Fe6Si6O21(OH)7",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Cz",
+      "mineral_name": "clinozoisite",
+      "chemical_formula": "Ca2Al3Si3O12(OH)",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 200.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 0.1,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": -17.69,
+      "natural_log_equilibrium_constant_uncertainty": 1.15
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Cho et al"
+    ],
+    "year": 1986,
+    "short_citation": "Cho et al, 1986",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-011",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Ab",
+      "mineral_name": "albite",
+      "chemical_formula": "NaAlSi3O8",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Ne",
+      "mineral_name": "nepheline",
+      "chemical_formula": "NaAlSiO4",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Jd",
+      "mineral_name": "jadeite",
+      "chemical_formula": "NaAlSi2O6",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": -0.39,
+      "pressure_slope_gigapascal_per_celsius": 0.0021,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 200.0,
+      "valid_temperature_max_celsius": 1100.0,
+      "valid_pressure_min_gigapascal": 0.1,
+      "valid_pressure_max_gigapascal": 2.0
+    }
+  ],
+  "method": {
+    "description": "Calorimetrics",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Hlabse",
+      "Kleppa"
+    ],
+    "year": 1968,
+    "short_citation": "Hlabse & Kleppa (1968)",
+    "doi": "http://www.minsocam.org/ammin/AM53/AM53_1281.pdf",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

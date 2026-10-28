@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-364",
+  "reaction_type": "calibration",
+  "reactants": [
+    {
+      "mineral_symbol": "Jd",
+      "mineral_name": "jadeite",
+      "chemical_formula": "NaAlSi2O6",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Ta",
+      "mineral_name": "talc",
+      "chemical_formula": "Mg3Si4O10(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Gl",
+      "mineral_name": "glaucophane",
+      "chemical_formula": "Na2Mg3Al2Si8O22(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 800.0,
+      "temperature_uncertainty_celsius": 0.0,
+      "pressure_gigapascal": 3.6,
+      "pressure_uncertainty_gigapascal": 0.1,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.15,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Carman",
+      "Gilbert"
+    ],
+    "year": 1985,
+    "short_citation": "Carman & Gilbert, 1985",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "jimmy-087",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Pnt",
+      "mineral_name": "pyrophanite",
+      "chemical_formula": "MnTiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Pntpv",
+      "mineral_name": "pyrophanite [perovskite]",
+      "chemical_formula": "MnTiO3",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [],
+  "interpreted_boundaries": [
+    {
+      "description": "published polynomial boundary",
+      "pressure_intercept_gigapascal": 11.0,
+      "pressure_slope_gigapascal_per_celsius": -0.0044,
+      "pressure_curvature_gigapascal_per_celsius_squared": 0.0,
+      "pressure_cubic_gigapascal_per_celsius_cubed": 0.0,
+      "valid_temperature_min_celsius": 900.0,
+      "valid_temperature_max_celsius": 1400.0,
+      "valid_pressure_min_gigapascal": 4.5,
+      "valid_pressure_max_gigapascal": 7.5
+    }
+  ],
+  "method": {
+    "description": "Experimental",
+    "pressure_calibration": "After Jeffery et al 1966",
+    "temperature_calibration": "Pt/Pt-Rh13"
+  },
+  "source": {
+    "authors": [
+      "Akimoto",
+      "Syono"
+    ],
+    "year": 1967,
+    "short_citation": "Akimoto & Syono (1967)",
+    "doi": "10.1063/1.1712170",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

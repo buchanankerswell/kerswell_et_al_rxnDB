@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "reaction_identifier": "hp11-406",
+  "reaction_type": "phase_boundary",
+  "reactants": [
+    {
+      "mineral_symbol": "Glt",
+      "mineral_name": "greenalite",
+      "chemical_formula": "Fe3Si2O5(OH)4",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "Minn",
+      "mineral_name": "minnesotaite",
+      "chemical_formula": "Fe3Si4O10(OH)2",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "mineral_symbol": "Grun",
+      "mineral_name": "grunerite",
+      "chemical_formula": "Fe7Si8O22(OH)2",
+      "coefficient": 1.0
+    },
+    {
+      "mineral_symbol": "H2O",
+      "mineral_name": "water",
+      "chemical_formula": "H2O",
+      "coefficient": 1.0
+    }
+  ],
+  "observations": [
+    {
+      "temperature_celsius": 310.0,
+      "temperature_uncertainty_celsius": 10.0,
+      "pressure_gigapascal": 0.1,
+      "pressure_uncertainty_gigapascal": 0.0,
+      "pressure_temperature_correlation": 0.0,
+      "experimental_outcome": "unknown",
+      "natural_log_equilibrium_constant": 0.0,
+      "natural_log_equilibrium_constant_uncertainty": 0.0
+    }
+  ],
+  "interpreted_boundaries": [],
+  "method": {
+    "description": "",
+    "pressure_calibration": "",
+    "temperature_calibration": ""
+  },
+  "source": {
+    "authors": [
+      "Rasmussen et al"
+    ],
+    "year": 1998,
+    "short_citation": "Rasmussen et al 1998",
+    "doi": "",
+    "license": "unknown"
+  },
+  "extensions": {}
+}

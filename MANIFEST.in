@@ -1,0 +1,9 @@
+include README.md
+include LICENSE
+include pyproject.toml
+recursive-include rxnDB *.py
+include rxnDB/registry.json
+recursive-include rxnDB/schema *.json
+recursive-include rxnDB/static *.html *.css *.js
+recursive-include rxnDB/data *.json
+recursive-include tests *.py
