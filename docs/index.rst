@@ -21,6 +21,14 @@ Query the data from your browser or a script:
 
 The link opens the coesite-quartz boundary with its experimental data and uncertainty. See :doc:`installation` for environment setup and :doc:`usage` for the full walkthrough.
 
+Citation
+--------
+
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.23736048.svg
+   :target: https://doi.org/10.5281/zenodo.23736048
+
+Cite this release as Kerswell, B. (2026). rxnDB: a mineral reaction database. Zenodo. https://doi.org/10.5281/zenodo.23736048
+
 .. toctree::
    :maxdepth: 2
    :caption: Documentation
