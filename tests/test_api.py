@@ -84,17 +84,19 @@ def test_design_next_point_ranks_extension():
     assert max(drops) > 0
 
 
-def test_ui_is_console_theme_without_plotly():
+def test_ui_is_canonical_theme_without_plotly():
     page = client.get("/").text
     assert "plot.ly" not in page
     assert 'id="plot"' in page and 'id="plot_tip"' in page
+    assert 'id="help"' in page and 'id="help_btn"' in page
     js = client.get("/static/app.js").text
     assert "Plotly" not in js
     assert "clipPath" in js and "data-tip" in js
     assert "Temperature:" in js and "Pressure:" in js and "Phases:" not in js
     assert "PLOT_LIMIT" not in js and "plot_note" not in js
+    assert "toggleHelp" in js and "initTheme" in js
     css = client.get("/static/app.css").text
-    assert "--accent: #3b5cf6" in css
+    assert "--link: #3b5cf6" in css and "--hairline" in css
 
 
 def test_ui_tabs_share_filtering_with_animation():
