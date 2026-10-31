@@ -11,6 +11,8 @@ const tab_links = Array.from(document.querySelectorAll(".tabs-inner a[data-tab]"
 const tab_indicator = document.getElementById("tab_indicator");
 const view_reactions = document.getElementById("view-reactions");
 const view_observations = document.getElementById("view-observations");
+const help = document.getElementById("help");
+const help_btn = document.getElementById("help_btn");
 
 function tab_from_path(pathname) {
   return pathname.replace(/\/+$/, "").endsWith("/observations") ? "observations" : "reactions";
@@ -642,9 +644,19 @@ function schedule_refresh(immediate = false) {
 }
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "/" && document.activeElement !== query_input) {
+  if (event.key === "Escape" && helpOpen) {
+    closeHelp();
+    return;
+  }
+  const tag = event.target.tagName;
+  if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || event.target.isContentEditable) return;
+  if (event.key === "/") {
     event.preventDefault();
     query_input.focus();
+  }
+  if (event.key === "?") {
+    event.preventDefault();
+    toggleHelp();
   }
   if (event.metaKey || event.ctrlKey) plot_svg.classList.add("select-mod");
 });
@@ -703,6 +715,60 @@ plot_svg.addEventListener("mouseleave", () => {
   plot_tip.hidden = true;
   clear_emphasis();
 });
+
+let helpOpen = false;
+
+function toggleHelp() {
+  helpOpen ? closeHelp() : openHelp();
+}
+
+function openHelp() {
+  help.hidden = false;
+  helpOpen = true;
+  help.querySelector(".help-card").focus();
+}
+
+function closeHelp() {
+  if (!helpOpen) return;
+  help.hidden = true;
+  helpOpen = false;
+}
+
+help_btn.addEventListener("click", toggleHelp);
+// Clicking the dimmed backdrop dismisses the help dialog.
+help.addEventListener("pointerdown", (event) => {
+  if (event.target === help) closeHelp();
+});
+
+function initTheme() {
+  const toggle = document.createElement("button");
+  toggle.className = "pill theme-toggle";
+  toggle.setAttribute("aria-label", "Toggle light and dark mode");
+  const meta = document.getElementById("themeColor");
+  const paint = () => {
+    const dark = document.documentElement.classList.contains("dark-mode");
+    toggle.textContent = dark ? "☀ Light" : "☾ Dark";
+    if (meta) meta.content = getComputedStyle(document.documentElement).getPropertyValue("--bg").trim();
+  };
+  const apply = (dark) => {
+    document.documentElement.classList.toggle("dark-mode", dark);
+    paint();
+  };
+  toggle.addEventListener("click", () => {
+    const dark = !document.documentElement.classList.contains("dark-mode");
+    localStorage.setItem("theme", dark ? "dark" : "light");
+    apply(dark);
+  });
+  // Default to the OS setting; an explicit toggle choice wins afterwards.
+  const stored = localStorage.getItem("theme");
+  apply(stored ? stored === "dark" : matchMedia("(prefers-color-scheme: dark)").matches);
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+    if (!localStorage.getItem("theme")) apply(e.matches);
+  });
+  document.querySelector(".controls").appendChild(toggle);
+}
+
+initTheme();
 
 const initial = read_state();
 query_input.value = initial.query;

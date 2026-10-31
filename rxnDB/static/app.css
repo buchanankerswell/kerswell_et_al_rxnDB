@@ -1,56 +1,38 @@
-/* rxnDB search page — OpenCode console theme (vanilla CSS, no build). */
+/* rxnDB search page — light_slides tokens (Inter, flat hairline cards, pills,
+   light default + dark toggle). Vanilla CSS, no build. */
 
 :root {
-  color-scheme: light dark;
-  --base: #ffffff;
-  --layer: #fafafa;
-  --layer-2: #f2f2f2;
-  --layer-3: #eeeeee;
-  --ink: #161616;
+  --hue: 215;
+  --sat: 6%;
+  --bg: #fff;
+  --panel: #fafafa;
+  --ink: #1a1a1a;
   --muted: #5c5c5c;
-  --faint: #808080;
-  --hair: rgb(0 0 0 / 0.08);
-  --hair-base: rgb(0 0 0 / 0.1);
-  --hair-strong: rgb(0 0 0 / 0.2);
-  --accent: #3b5cf6;
-  --accent-hover: #3250df;
-  --focus: #7698fd;
-  --accent-soft: rgb(59 92 246 / 0.08);
-  --btn: #ffffff;
+  --link: #3b5cf6;
+  --link-hover: #3250df;
+  --hairline: rgb(0 0 0 / 0.08);
+  --hairline-strong: rgb(0 0 0 / 0.2);
+  --radius: 6px;
+  --sel: rgb(59 92 246 / 0.1);
   --review-ink: #954c27;
   --review-bg: #fdf2ed;
-  --radius: 6px;
-  --elev-button: 0 1px 1.5px rgb(0 0 0 / 0.1), 0 0 0 0.5px rgb(0 0 0 / 0.14);
-  --elev-raised: 0 2px 4px rgb(0 0 0 / 0.04), 0 1px 2px -1px rgb(0 0 0 / 0.08), 0 0 0 0.5px rgb(0 0 0 / 0.08);
-  --elev-overlay: 0 16px 32px rgb(0 0 0 / 0.04), 0 8px 16px rgb(0 0 0 / 0.08), 0 0 0 0.5px rgb(0 0 0 / 0.08);
-  --font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  --control-height: 1.75rem;
+  color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --base: #161616;
-    --layer: #242424;
-    --layer-2: #2e2e2e;
-    --layer-3: #3a3a3a;
-    --ink: #fafafa;
-    --muted: #aeaeae;
-    --faint: #808080;
-    --hair: rgb(255 255 255 / 0.08);
-    --hair-base: rgb(255 255 255 / 0.1);
-    --hair-strong: rgb(255 255 255 / 0.2);
-    --accent: #7698fd;
-    --accent-hover: #9db4fd;
-    --focus: #7698fd;
-    --accent-soft: rgb(118 152 253 / 0.14);
-    --btn: rgb(255 255 255 / 0.06);
-    --review-ink: #ffa478;
-    --review-bg: rgb(255 164 120 / 0.12);
-    --elev-button: 0 1px 1.5px rgb(0 0 0 / 0.4), 0 0 0 0.5px rgb(255 255 255 / 0.14);
-    --elev-raised: 0 2px 4px rgb(0 0 0 / 0.3), 0 0 0 0.5px rgb(255 255 255 / 0.08);
-    --elev-overlay: 0 16px 32px rgb(0 0 0 / 0.4), 0 0 0 0.5px rgb(255 255 255 / 0.1);
-  }
+.dark-mode {
+  --bg: hsl(var(--hue), var(--sat), 14%);
+  --panel: hsl(var(--hue), var(--sat), 17%);
+  --ink: hsl(var(--hue), var(--sat), 94%);
+  --muted: hsl(var(--hue), var(--sat), 62%);
+  --link: #7698fd;
+  --link-hover: #9db4fe;
+  --hairline: rgb(255 255 255 / 0.08);
+  --hairline-strong: rgb(255 255 255 / 0.2);
+  --sel: rgb(118 152 253 / 0.16);
+  --review-ink: #ffa478;
+  --review-bg: rgb(255 164 120 / 0.12);
+  color-scheme: dark;
 }
 
 /* Base */
@@ -59,15 +41,25 @@
 }
 
 body {
-  font-family: var(--font);
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
   font-size: 0.8125rem;
-  font-weight: 440;
   line-height: 1.25rem;
-  letter-spacing: -0.04px;
   font-variant-numeric: tabular-nums;
   margin: 0;
-  background: var(--base);
+  background: var(--bg);
   color: var(--ink);
+}
+
+a {
+  color: var(--link);
 }
 
 /* Header */
@@ -75,8 +67,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: var(--base);
-  border-bottom: 0.5px solid var(--hair-strong);
+  background: var(--bg);
+  box-shadow: inset 0 -0.5px 0 var(--hairline-strong);
 }
 
 .topbar-inner {
@@ -100,7 +92,7 @@ body {
 .brand strong {
   font-size: 0.9375rem;
   font-weight: 530;
-  letter-spacing: -0.13px;
+  letter-spacing: -0.01em;
 }
 
 .brand span {
@@ -139,77 +131,67 @@ button {
 
 #query {
   width: 100%;
-  height: var(--control-height);
-  padding: 0 0.7rem 0 2rem;
-  border: 0;
+  padding: 0.45rem 0.7rem 0.45rem 2rem;
+  border: none;
   border-radius: var(--radius);
-  background: var(--base);
+  background: var(--panel);
   color: var(--ink);
-  box-shadow: inset 0 0 0 0.5px var(--hair-strong);
-}
-
-#query:focus {
-  outline: 2px solid var(--focus);
-  outline-offset: 1px;
+  box-shadow: inset 0 0 0 0.5px var(--hairline-strong);
 }
 
 select {
-  height: var(--control-height);
-  padding: 0 0.6rem;
-  border: 0;
+  padding: 0.45rem 0.6rem;
+  border: none;
   border-radius: var(--radius);
-  background: var(--base);
+  background: var(--panel);
   color: var(--ink);
-  box-shadow: inset 0 0 0 0.5px var(--hair-strong);
+  box-shadow: inset 0 0 0 0.5px var(--hairline-strong);
 }
 
 button {
-  height: var(--control-height);
-  padding: 0 11px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  white-space: nowrap;
-  font-weight: 530;
-  border: 0;
-  border-radius: var(--radius);
   cursor: pointer;
-  background: var(--btn);
+}
+
+.pill {
+  font-size: 0.85rem;
   color: var(--ink);
-  box-shadow: var(--elev-button);
-}
-
-button:hover {
-  background: var(--layer-2);
-}
-
-button:active {
-  background: var(--layer-3);
-}
-
-.btn-docs {
-  height: var(--control-height);
-  padding: 0 11px;
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-  font-weight: 530;
-  border-radius: var(--radius);
-  background: var(--btn);
-  color: var(--ink);
-  box-shadow: var(--elev-button);
   text-decoration: none;
-  margin-left: auto;
+  background: var(--panel);
+  box-shadow: inset 0 0 0 0.5px var(--hairline-strong);
+  border-radius: var(--radius);
+  padding: 0.45rem 0.9rem;
+  white-space: nowrap;
 }
 
-.btn-docs:hover {
-  background: var(--layer-2);
+.pill:hover {
+  color: var(--link);
 }
 
-.btn-docs:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 1px;
+button.pill {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+#help_btn {
+  padding: 0.45rem 0.7rem;
+}
+
+.theme-toggle {
+  padding: 0.45rem 0.9rem;
+  border: none;
+  box-shadow: inset 0 0 0 0.5px var(--hairline-strong);
+  border-radius: var(--radius);
+  background: var(--panel);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.theme-toggle:hover {
+  color: var(--link);
 }
 
 button:focus-visible,
@@ -217,13 +199,18 @@ button:focus-visible,
 select:focus-visible,
 .tabs-inner a:focus-visible,
 #reaction_list a:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 1px;
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
 }
 
-/* Tabs: console top-nav style (Overview / Logs / …) with a sliding underline. */
+:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+/* Tabs with a sliding underline. */
 .tabs {
-  border-top: 0.5px solid var(--hair);
+  box-shadow: inset 0 0.5px 0 var(--hairline);
 }
 
 .tabs-inner {
@@ -242,9 +229,7 @@ select:focus-visible,
   height: 2.75rem;
   text-decoration: none;
   font-size: 0.875rem;
-  font-weight: 440;
   color: var(--muted);
-  transition: color 0.15s ease;
 }
 
 .tabs-inner a:hover {
@@ -270,7 +255,7 @@ select:focus-visible,
     width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Tab panels: console-like page switch (fade + slight rise). */
+/* Tab panels: fade + slight rise on switch. */
 .tab-panel[hidden] {
   display: none;
 }
@@ -329,9 +314,9 @@ main {
 }
 
 .card {
-  background: var(--layer);
+  background: var(--panel);
   border-radius: var(--radius);
-  box-shadow: inset 0 0 0 0.5px var(--hair);
+  box-shadow: inset 0 0 0 0.5px var(--hairline);
 }
 
 .side {
@@ -353,7 +338,7 @@ main {
   font-size: 0.9375rem;
   font-weight: 530;
   line-height: 1.25rem;
-  letter-spacing: -0.13px;
+  letter-spacing: -0.01em;
   margin: 0;
 }
 
@@ -397,12 +382,12 @@ main {
 }
 
 #reaction_list a:hover {
-  background: var(--layer-2);
+  background: var(--bg);
 }
 
 #reaction_list a[aria-current="true"] {
-  background: var(--accent-soft);
-  box-shadow: inset 0 0 0 0.5px var(--accent);
+  background: var(--sel);
+  box-shadow: inset 0 0 0 0.5px var(--link);
 }
 
 .row-main {
@@ -433,13 +418,16 @@ main {
 
 .pill {
   margin-left: auto;
+}
+
+#reaction_list .pill {
   flex: none;
   font-size: 0.6875rem;
   font-weight: 530;
   color: var(--review-ink);
   background: var(--review-bg);
   border-radius: 999px;
-  padding: 0 0.45rem;
+  padding: 0.1rem 0.55rem;
   box-shadow: inset 0 0 0 0.5px currentColor;
 }
 
@@ -505,13 +493,13 @@ main {
 }
 
 .grid-line {
-  stroke: var(--hair-strong);
+  stroke: var(--hairline-strong);
   stroke-width: 0.5;
   stroke-dasharray: 4 3;
 }
 
 .grid-solid {
-  stroke: var(--hair-strong);
+  stroke: var(--hairline-strong);
   stroke-width: 0.5;
 }
 
@@ -528,24 +516,24 @@ main {
 
 .pub {
   fill: none;
-  stroke: var(--faint);
+  stroke: var(--muted);
   stroke-width: 1.5;
   stroke-dasharray: 5 4;
 }
 
 .fit-line {
   fill: none;
-  stroke: var(--accent);
+  stroke: var(--link);
   stroke-width: 2;
 }
 
 .fit-band {
-  fill: var(--accent);
+  fill: var(--link);
   fill-opacity: 0.12;
 }
 
 .star {
-  fill: var(--accent);
+  fill: var(--link);
 }
 
 .plot-empty {
@@ -557,10 +545,10 @@ main {
   position: absolute;
   z-index: 5;
   pointer-events: none;
-  background: var(--base);
+  background: var(--bg);
   color: var(--ink);
   border-radius: var(--radius);
-  box-shadow: var(--elev-overlay);
+  box-shadow: 0 12px 32px rgb(0 0 0 / 0.18);
   padding: 0.4rem 0.6rem;
   font-size: 0.75rem;
   line-height: 1.1rem;
@@ -577,7 +565,6 @@ main {
 
 /* Table card */
 .table-card {
-  background: var(--layer-2);
   padding: 2px;
   overflow: hidden;
 }
@@ -590,9 +577,9 @@ main {
   overflow: auto;
   max-height: 36vh;
   margin-top: 0.75rem;
-  background: var(--base);
+  background: var(--bg);
   border-radius: 4px;
-  box-shadow: var(--elev-raised);
+  box-shadow: inset 0 0 0 0.5px var(--hairline);
 }
 
 #view-observations .table-wrap {
@@ -616,10 +603,10 @@ thead th {
   color: var(--muted);
   padding: 0 0.75rem;
   height: 2rem;
-  border-bottom: 0.5px solid var(--hair);
+  border-bottom: 0.5px solid var(--hairline);
   position: sticky;
   top: 0;
-  background: var(--base);
+  background: var(--bg);
   white-space: nowrap;
 }
 
@@ -631,7 +618,7 @@ tbody td.num {
 tbody td {
   padding: 0 0.75rem;
   height: 3rem;
-  border-bottom: 0.5px solid var(--hair);
+  border-bottom: 0.5px solid var(--hairline);
   font-variant-numeric: tabular-nums;
   vertical-align: middle;
 }
@@ -641,7 +628,7 @@ tbody tr:last-child td {
 }
 
 tbody tr:hover td {
-  background: var(--layer);
+  background: var(--panel);
 }
 
 .sym-cell {
@@ -655,6 +642,78 @@ tbody tr:hover td {
   color: var(--muted);
   font-size: 0.75rem;
   white-space: nowrap;
+}
+
+/* Centered help dialog over a dimmed page. */
+.help {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 1100;
+  background: rgb(0 0 0 / 0.35);
+  padding: 1rem;
+}
+
+.help[hidden] {
+  display: none;
+}
+
+.help-card {
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 48px rgb(0 0 0 / 0.3);
+  padding: 1.5rem 1.75rem;
+  max-width: 430px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+}
+
+.help-card h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+.help-list {
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.help-list > div {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+.help-list dt {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.help-list dd {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.help-list kbd {
+  font: inherit;
+  font-size: 0.78rem;
+  background: var(--panel);
+  box-shadow: inset 0 0 0 0.5px var(--hairline-strong);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 860px) {
+  .help-list > div {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 }
 
 /* Narrow screens */
