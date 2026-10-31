@@ -12,7 +12,11 @@ from rxnDB import fit as boundary_fit
 from rxnDB.models import Reaction
 from rxnDB.store import load_reactions, search_reactions
 
-app = FastAPI(title="rxnDB", version="1.0.0")
+app = FastAPI(
+    title="rxnDB",
+    version="1.0.0",
+    description="Agent-facing JSON API. Humans: use the web UI served at /.",
+)
 app.mount("/static", StaticFiles(directory=Path(__file__).parent / "static"), name="static")
 
 
