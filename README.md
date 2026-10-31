@@ -65,12 +65,8 @@ curl 'http://127.0.0.1:8000/reactions?mineral_symbol=Qz' | head -c 300
 }
 ```
 
-## Coauthors
-
- - [Simon Hunt](https://research.manchester.ac.uk/en/persons/simon.hunt) (University of Manchester)
- - [John Wheeler](https://scholar.google.co.uk/citations?user=jsfp2-8AAAAJ&hl=en) (University of Liverpool)
-
 ## Acknowledgement
 
-The UKRI NERC Large Grant no. NE/V018477/1 awarded to John Wheeler at the University of Liverpool funded this work.
+rxnDB was developed with [Simon Hunt](https://research.manchester.ac.uk/en/persons/simon.hunt) (University of Manchester) and [John Wheeler](https://scholar.google.co.uk/citations?user=jsfp2-8AAAAJ&hl=en) (University of Liverpool).
 
+The UKRI NERC Large Grant no. NE/V018477/1 awarded to John Wheeler at the University of Liverpool funded this work.
